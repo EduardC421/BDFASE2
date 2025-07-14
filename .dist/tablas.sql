@@ -645,3 +645,433 @@ INSERT INTO Menu (id, nombre, descripcion, idComercio) VALUES
 (34, 'Menú Español', 'Tapas y platos tradicionales españoles', 34),
 (35, 'Menú Coreano BBQ', 'Barbacoa coreana con cortes selectos', 35);
 
+-- Por lo menos 5 secciones por menú
+INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
+-- Menú Parrillero (idMenu: 1)
+(1, 'Carnes a la Brasa', 'Cortes premium y clásicos de la parrilla', 1),
+(2, 'Contornos', 'Acompañamientos frescos y sabrosos', 1),
+(3, 'Entradas Parrilleras', 'Picadas y aperitivos para empezar', 1),
+(4, 'Postres Criollos', 'Dulces típicos para cerrar con broche de oro', 1),
+(5, 'Bebidas Tradicionales', 'Jugos naturales y refrescos', 1),
+
+-- Menú Sushi Experience (idMenu: 2)
+(6, 'Nigiri y Sashimi', 'Selección de pescados frescos y mariscos', 2),
+(7, 'Rolls Especiales', 'Variedad de makis y uramakis innovadores', 2),
+(8, 'Temaki y Gunkan', 'Conos y barquitos de arroz y alga', 2),
+(9, 'Platos Calientes Japoneses', 'Tempuras, yakitoris y otras delicias', 2),
+(10, 'Ensaladas y Sopas', 'Opciones ligeras y tradicionales', 2),
+
+-- Menú Pasta Artesanal (idMenu: 3)
+(11, 'Pastas Largas', 'Spaghetti, Fettuccine y Linguine con diversas salsas', 3),
+(12, 'Pastas Rellenas', 'Ravioles, Tortellinis y Gnocchis caseros', 3),
+(13, 'Salsas Clásicas', 'Boloñesa, Pesto, Carbonara y más', 3),
+(14, 'Antipastos', 'Entradas italianas para compartir', 3),
+(15, 'Postres Italianos', 'Tiramisú, Panna Cotta y Cannoli', 3),
+
+-- Menú Mexicano (idMenu: 4)
+(16, 'Tacos y Burritos', 'Maíz y trigo con rellenos variados', 4),
+(17, 'Enchiladas y Quesadillas', 'Platillos gratinados y rellenos', 4),
+(18, 'Especialidades Regionales', 'Mole Poblano, Chiles Rellenos, etc.', 4),
+(19, 'Bebidas Típicas', 'Aguas frescas, Horchata y Micheladas', 4),
+(20, 'Sopas y Ensaladas Mexicanas', 'Pozole, Sopa de Tortilla, Ensalada de Nopal', 4),
+
+-- Menú Wok Fusion (idMenu: 5)
+(21, 'Wok de Carnes', 'Res, pollo y cerdo salteados al wok', 5),
+(22, 'Wok de Mariscos y Vegetales', 'Frescos vegetales y frutos del mar', 5),
+(23, 'Fideos y Arroces Wok', 'Chow Mein, Arroz Frito y Pad Thai', 5),
+(24, 'Entradas Asiáticas', 'Rollitos Primavera, Gyozas, Satays', 5),
+(25, 'Salsas Especiales', 'Salsa de ostras, agridulce, cacahuete', 5),
+
+-- Menú Curry Tradicional (idMenu: 6)
+(26, 'Currys Rojos', 'Picantes y aromáticos con leche de coco', 6),
+(27, 'Currys Verdes', 'Ligeros y herbáceos con especias frescas', 6),
+(28, 'Currys Amarillos', 'Suaves y cremosos, ideales para iniciarse', 6),
+(29, 'Acompañamientos', 'Arroz Basmati, Naan, Chutney', 6),
+(30, 'Platos Tandoori', 'Carnes y panes cocidos en horno Tandoor', 6),
+
+-- Menú Mediterráneo (idMenu: 7)
+(31, 'Entradas Griegas y Árabes', 'Hummus, Tzatziki, Baba Ghanoush', 7),
+(32, 'Pescados y Mariscos Frescos', 'A la plancha, al horno y en papillote', 7),
+(33, 'Ensaladas Mediterráneas', 'Tabule, Griega, Caprese', 7),
+(34, 'Platos Principales', 'Moussaka, Kebab, Cuscús', 7),
+(35, 'Postres Ligeros', 'Frutas frescas, Yogur Griego con miel', 7),
+
+-- Menú Arepera 24/7 (idMenu: 8)
+(36, 'Arepas Rellenas Clásicas', 'Reina Pepiada, Dominó, Pelúa', 8),
+(37, 'Arepas Gourmet', 'Combinaciones especiales e ingredientes premium', 8),
+(38, 'Arepas Veganas', 'Opciones con rellenos a base de plantas', 8),
+(39, 'Empanadas y Tequeños', 'Pasapalos venezolanos tradicionales', 8),
+(40, 'Jugos Naturales', 'Bebidas frescas y energéticas', 8),
+
+-- Menú Boulangerie (idMenu: 9)
+(41, 'Panes Artesanales', 'Baguettes, Campesinos, Croissants', 9),
+(42, 'Bollería Fina', 'Pain au chocolat, Brioches, Danesas', 9),
+(43, 'Tartas y Pasteles', 'Éclairs, Tarte Tatin, Mille-feuille', 9),
+(44, 'Sándwiches Gourmet', 'Bocadillos con pan recién horneado', 9),
+(45, 'Bebidas Calientes', 'Café, Chocolate, Infusiones', 9),
+
+-- Menú Paellero (idMenu: 10)
+(46, 'Paellas de Mariscos', 'La clásica valenciana con frutos del mar', 10),
+(47, 'Paellas Mixtas', 'Mariscos y carnes de pollo y conejo', 10),
+(48, 'Paellas de Carne y Vegetales', 'Opciones robustas sin mariscos', 10),
+(49, 'Tapas y Entremeses', 'Patatas Bravas, Gambas al Ajillo, Chorizo a la Sidra', 10),
+(50, 'Bebidas Españolas', 'Sangría, Cava, Vinos de la región', 10),
+
+-- Menú Cevichero (idMenu: 11)
+(51, 'Ceviches Clásicos', 'Pescado blanco, mixtos, con ají amarillo', 11),
+(52, 'Tiraditos y Causas', 'Delicados cortes y purés de papa', 11),
+(53, 'Leche de Tigre', 'La esencia del ceviche para beber', 11),
+(54, 'Platos Calientes Peruanos', 'Lomo Saltado, Ají de Gallina', 11),
+(55, 'Bebidas Peruanas', 'Chicha Morada, Inca Kola', 11),
+
+-- Menú Churrasco (idMenu: 12)
+(56, 'Cortes de Res', 'Picanha, Maminha, Fraldinha', 12),
+(57, 'Cortes de Cerdo y Pollo', 'Costillas, Linguiça, Corazón de Pollo', 12),
+(58, 'Acompañamientos Brasileños', 'Arroz, Feijão, Farofa, Vinagrete', 12),
+(59, 'Ensaladas Frescas', 'Variedad para equilibrar las carnes', 12),
+(60, 'Postres Típicos', 'Brigadeiro, Pudim de Leite Condensado', 12),
+
+-- Menú Coreano (idMenu: 13)
+(61, 'Sopas y Estofados', 'Kimchi Jjigae, Sundubu Jjigae', 13),
+(62, 'Noodles Coreanos', 'Japchae, Bibim Guksu', 13),
+(63, 'Arroces Coreanos', 'Bibimbap, Gimbap', 13),
+(64, 'Acompañamientos (Banchan)', 'Kimchi, Danmuji, Namul', 13),
+(65, 'Fritos y Snacks', 'Tteokbokki, Pajeon', 13),
+
+-- Menú Thai (idMenu: 14)
+(66, 'Currys Tailandeses', 'Massaman, Panang, Gaeng Keow Wan', 14),
+(67, 'Fideos y Arroces', 'Pad Thai, Khao Pad, Pad See Ew', 14),
+(68, 'Sopas Thai', 'Tom Yum Goong, Tom Kha Gai', 14),
+(69, 'Platos Salteados', 'Pad Krapow, Pad Priew Wan', 14),
+(70, 'Entradas y Postres', 'Spring Rolls, Mango Sticky Rice', 14),
+
+-- Menú Vietnamita (idMenu: 15)
+(71, 'Pho y Sopas', 'La icónica sopa de fideos, Bun Bo Hue', 15),
+(72, 'Rollos Frescos y Fritos', 'Gỏi Cuốn (Rollos de Verano), Nem Rán (Rollos Fritos)', 15),
+(73, 'Platos con Arroz', 'Cơm Tấm (Arroz Partido), Arroz Frito Vietnamita', 15),
+(74, 'Platos con Fideos de Arroz', 'Bún Chả, Bún Thịt Nướng', 15),
+(75, 'Bebidas y Postres', 'Café Vietnamita, Chè', 15),
+
+-- Menú Colombiano (idMenu: 16)
+(76, 'Bandejas y Platos Fuertes', 'Bandeja Paisa, Sancocho, Lechona', 16),
+(77, 'Arepas y Empanadas', 'Variedad de rellenos y acompañamientos', 16),
+(78, 'Sopas y Cremas', 'Ajiaco, Crema de Champiñones', 16),
+(79, 'Postres Típicos', 'Obleas, Natilla, Brevas con Arequipe', 16),
+(80, 'Bebidas Colombianas', 'Aguapanela, Jugos en Leche', 16),
+
+-- Menú Sin Gluten (idMenu: 17)
+(81, 'Entradas Libres de Gluten', 'Ensaladas, cremas, y aperitivos sin trigo', 17),
+(82, 'Platos Principales Sin Gluten', 'Carnes, pescados y aves con guarniciones GF', 17),
+(83, 'Pastas y Panes Sin Gluten', 'Opciones seguras y deliciosas', 17),
+(84, 'Postres Sin Gluten', 'Variedad de dulces aptos para celíacos', 17),
+(85, 'Opciones Veganas Sin Gluten', 'Platos basados en plantas y sin gluten', 17),
+
+-- Menú Salvadoreño (idMenu: 18)
+(86, 'Pupusas y Curtido', 'La especialidad salvadoreña por excelencia', 18),
+(87, 'Tamales y Yuca', 'Platos tradicionales con maíz y yuca', 18),
+(88, 'Sopas y Caldos', 'Sopa de Res, Sopa de Pescado', 18),
+(89, 'Platos Fuertes', 'Carne Asada, Pollo Guisado', 18),
+(90, 'Bebidas Tradicionales', 'Horchata de Morro, Tamarindo', 18),
+
+-- Menú Griego (idMenu: 19)
+(91, 'Mezze (Entradas)', 'Tzatziki, Hummus, Dolmades', 19),
+(92, 'Platos Principales Griegos', 'Moussaka, Gyros, Souvlaki', 19),
+(93, 'Ensaladas y Guarniciones', 'Ensalada Griega, Arroz Pilaf', 19),
+(94, 'Mariscos y Pescados', 'Pulpo a la Parrilla, Pescado Fresco', 19),
+(95, 'Postres Griegos', 'Baklava, Loukoumades', 19),
+
+-- Menú Turco (idMenu: 20)
+(96, 'Mezze Fríos', 'Haydari, Ezme, Patlıcan Salatası', 20),
+(97, 'Mezze Calientes', 'Sigara Böreği, Sucuk Izgara', 20),
+(98, 'Kebabs y Carnes a la Parrilla', 'Adana Kebab, Shish Kebab, Köfte', 20),
+(99, 'Platos Principales', 'Testi Kebab, İskender Kebab', 20),
+(100, 'Postres Turcos', 'Baklava, Künefe, Lokum', 20),
+
+-- Menú Alemán (idMenu: 21)
+(101, 'Salchichas y Wurst', 'Bratwurst, Currywurst, Weisswurst', 21),
+(102, 'Platos con Carne', 'Schnitzel, Schweinshaxe (Codillo de cerdo)', 21),
+(103, 'Acompañamientos', 'Sauerkraut, Knödel, Spätzle', 21),
+(104, 'Sopas y Ensaladas', 'Kartoffelsalat (Ensalada de Papa), Goulashsuppe', 21),
+(105, 'Postres Alemanes', 'Apfelstrudel, Schwarzwälder Kirschtorte (Tarta Selva Negra)', 21),
+
+-- Menú Fusión (idMenu: 22)
+(106, 'Entradas Fusion', 'Combinaciones inesperadas de sabores', 22),
+(107, 'Platos Fuertes Fusion', 'Creaciones únicas con influencias diversas', 22),
+(108, 'Wok y Salteados Fusion', 'Técnicas asiáticas con ingredientes occidentales', 22),
+(109, 'Sushi Creativo', 'Rolls con ingredientes no tradicionales', 22),
+(110, 'Postres Innovadores', 'Mezclas de dulces de diferentes culturas', 22),
+
+-- Menú Orgánico (idMenu: 23)
+(111, 'Ensaladas Orgánicas', 'Frescas y de temporada con aderezos naturales', 23),
+(112, 'Platos Principales Orgánicos', 'Carnes, aves y vegetales de granjas sostenibles', 23),
+(113, 'Opciones Veganas Orgánicas', 'Basadas en plantas con certificación orgánica', 23),
+(114, 'Sopas y Cremas Orgánicas', 'Elaboradas con ingredientes de cultivo ecológico', 23),
+(115, 'Bebidas y Postres Orgánicos', 'Jugos, infusiones y dulces saludables', 23),
+
+-- Menú Casero (idMenu: 24)
+(116, 'Sopas y Cremas Caseras', 'Recetas de la abuela, con sabor a hogar', 24),
+(117, 'Platos Principales Caseros', 'Guisos, Asados y Estofados tradicionales', 24),
+(118, 'Contornos Venezolanos', 'Arroz, Tajadas, Ensalada rallada', 24),
+(119, 'Postres de la Abuela', 'Arroz con leche, Dulce de lechosa', 24),
+(120, 'Bebidas Refrescantes', 'Papelón con limón, Chicha', 24),
+
+-- Menú Tex-Mex (idMenu: 25)
+(121, 'Nachos y Entradas Tex-Mex', 'Queso, jalapeños, guacamole', 25),
+(122, 'Fajitas y Chimichangas', 'Con carnes, pollo o vegetales', 25),
+(123, 'Burritos y Enchiladas', 'Rellenos abundantes y salsas picantes', 25),
+(124, 'Chili y Soups', 'Chili con carne, Sopa de tortilla', 25),
+(125, 'Bebidas Americanas', 'Refrescos, Cervezas artesanales', 25),
+
+-- Menú Street Food (idMenu: 26)
+(126, 'Tacos y Arepas Callejeras', 'Variedad de rellenos rápidos', 26),
+(127, 'Burgers y Hot Dogs Gourmet', 'Versiones elevadas de clásicos urbanos', 26),
+(128, 'Brochetas y Pinchos', 'Carnes, vegetales y mariscos a la brasa', 26),
+(129, 'Fritos Internacionales', 'Papas fritas con aderezos, Churros', 26),
+(130, 'Bebidas Refrescantes', 'Limonadas, Tes fríos, Smoothies', 26),
+
+-- Menú Saludable (idMenu: 27)
+(131, 'Ensaladas de Autor', 'Frescas y nutritivas con ingredientes de calidad', 27),
+(132, 'Proteínas Magras', 'Pollo a la plancha, Pescado al vapor, Tofu', 27),
+(133, 'Bowl de Cereales y Vegetales', 'Quinoa, Arroz integral, Legumbres', 27),
+(134, 'Snacks Saludables', 'Frutas, frutos secos, barras energéticas', 27),
+(135, 'Jugos Verdes y Detox', 'Combinaciones de frutas y vegetales', 27),
+
+-- Menú Comfort Food (idMenu: 28)
+(136, 'Sopas y Guisos Reconfortantes', 'Sopa de lentejas, Estofado de res', 28),
+(137, 'Platos Clásicos Americanos', 'Mac and Cheese, Albóndigas, Pastel de carne', 28),
+(138, 'Acompañamientos Abundantes', 'Puré de papa, Patatas asadas', 28),
+(139, 'Postres Caseros', 'Brownies, Crumble de manzana, Cookies', 28),
+(140, 'Bebidas Clásicas', 'Malteadas, Chocolates Calientes', 28),
+
+-- Menú Mar y Tierra (idMenu: 29)
+(141, 'Cortes Premium de Carne', 'Filet Mignon, Ribeye, Lomo de Cerdo', 29),
+(142, 'Mariscos Frescos', 'Langosta, Camarones, Pulpo a la parrilla', 29),
+(143, 'Combinados de Mar y Tierra', 'Surf & Turf, Paella Mixta', 29),
+(144, 'Guarniciones Gourmet', 'Espárragos, Patatas gratinadas, Hongos salteados', 29),
+(145, 'Postres Delicados', 'Mousse de chocolate, Crème brûlée', 29),
+
+-- Menú Pizza Napolitana (idMenu: 30)
+(146, 'Pizzas Clásicas', 'Margherita, Marinara, Prosciutto e Funghi', 30),
+(147, 'Pizzas Especiales', 'Combinaciones únicas con ingredientes frescos', 30),
+(148, 'Focaccias y Calzones', 'Panes y masas rellenas', 30),
+(149, 'Ensaladas Italianas', 'Para acompañar tu pizza', 30),
+(150, 'Bebidas y Cervezas', 'Gaseosas, cervezas artesanales', 30),
+
+-- Menú Oriental (idMenu: 31)
+(151, 'Dim Sum y Dumplings', 'Variedad de rellenos al vapor o fritos', 31),
+(152, 'Platos con Arroz', 'Arroz frito, arroz al vapor, arroces especiales', 31),
+(153, 'Fideos Orientales', 'Chow Mein, Pad Thai, Udon', 31),
+(154, 'Sopas Orientales', 'Sopa wonton, Sopa agripicante, Ramen', 31),
+(155, 'Entradas y Postres', 'Rollitos, helados de té verde', 31),
+
+-- Menú Argentino (idMenu: 32)
+(156, 'Cortes de Res Argentinos', 'Bife de Chorizo, Ojo de Bife, Asado de Tira', 32),
+(157, 'Empanadas Argentinas', 'Carne, Pollo, Jamón y Queso', 32),
+(158, 'Achuras y Provolone', 'Mollejas, Chinchulines, Queso Provolone a la parrilla', 32),
+(159, 'Guarniciones Típicas', 'Papas fritas, Ensalada mixta, Puré de calabaza', 32),
+(160, 'Postres y Bebidas', 'Flan mixto, Alfajores, Vinos argentinos', 32),
+
+-- Menú Francés (idMenu: 33)
+(161, 'Entradas Francesas', 'Sopa de cebolla, Paté, Tartare de bœuf', 33),
+(162, 'Platos Principales Clásicos', 'Coq au Vin, Boeuf Bourguignon, Confit de Canard', 33),
+(163, 'Pescados y Mariscos', 'Meunière, Bouillabaisse', 33),
+(164, 'Guarniciones y Verduras', 'Gratin Dauphinois, Haricots Verts', 33),
+(165, 'Postres y Quesos', 'Crème brûlée, Tarta de manzana, Selección de quesos', 33),
+
+-- Menú Español (idMenu: 34)
+(166, 'Tapas Frías', 'Jamón Serrano, Queso Manchego, Tortilla Española', 34),
+(167, 'Tapas Calientes', 'Gambas al ajillo, Croquetas, Patatas Bravas', 34),
+(168, 'Paellas y Arroces', 'Paella de marisco, Arroz negro, Fideuá', 34),
+(169, 'Platos Principales', 'Cochinillo Asado, Rabo de Toro', 34),
+(170, 'Postres Españoles', 'Churros con chocolate, Crema catalana', 34),
+
+-- Menú Coreano BBQ (idMenu: 35)
+(171, 'Cortes de Carne para BBQ', 'Bulgogi, Galbi, Samgyeopsal', 35),
+(172, 'Marinados Especiales', 'Recetas tradicionales y picantes', 35),
+(173, 'Guarniciones de BBQ (Banchan)', 'Kimchi fresco, Ensaladas de repollo', 35),
+(174, 'Sopas y Arroces Complementarios', 'Doenjang Jjigae, Gyeran Jjim', 35),
+(175, 'Bebidas Coreanas', 'Soju, Makgeolli, Cervezas locales', 35);
+
+
+-- 120 Platos
+
+INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, idSeccion) VALUES
+-- Platos para Menú Parrillero (idMenu: 1, idSeccion: 1-5)
+(1, 'Asado Negro Criollo', 1, 20, 18.50, 'Carne de res cocida lentamente en su jugo oscuro.', 1),
+(2, 'Punta Trasera a la Brasa', 2, 25, 22.00, 'Corte jugoso y tierno, ideal para amantes de la carne.', 1),
+(3, 'Chorizo Parrillero', 3, 30, 8.00, 'Chorizo casero asado a la perfección.', 3),
+(4, 'Ensalada Rallada', 1, 50, 5.00, 'Repollo y zanahoria rallados con aderezo suave.', 2),
+
+-- Platos para Menú Sushi Experience (idMenu: 2, idSeccion: 6-10)
+(5, 'Roll California', 1, 40, 12.00, 'Clásico rollo con cangrejo, aguacate y pepino.', 7),
+(6, 'Nigiri Salmón', 2, 35, 3.50, 'Fina lámina de salmón fresco sobre arroz avinagrado.', 6),
+(7, 'Sopa Miso', 1, 60, 4.00, 'Caldo ligero con tofu, alga nori y cebollín.', 10),
+(8, 'Ebi Tempura', 1, 28, 15.00, 'Camarones en tempura crujiente.', 9),
+
+-- Platos para Menú Pasta Artesanal (idMenu: 3, idSeccion: 11-15)
+(9, 'Fettuccine Alfredo', 1, 30, 14.50, 'Pasta fresca con cremosa salsa Alfredo.', 11),
+(10, 'Lasagna Clásica', 2, 20, 16.00, 'Capas de pasta, carne y bechamel horneadas.', 12),
+(11, 'Ensalada Caprese', 1, 35, 9.00, 'Tomate, mozzarella fresca y albahaca.', 14),
+(12, 'Tiramisú', 1, 25, 7.50, 'Postre italiano con café, mascarpone y bizcochos.', 15),
+
+-- Platos para Menú Mexicano (idMenu: 4, idSeccion: 16-20)
+(13, 'Tacos al Pastor', 1, 45, 10.00, 'Cerdo marinado y asado con piña.', 16),
+(14, 'Burrito de Carnitas', 2, 30, 11.50, 'Tortilla de trigo rellena de cerdo confitado.', 16),
+(15, 'Guacamole con Totopos', 1, 50, 8.00, 'Aguacate fresco machacado con pico de gallo.', 19),
+(16, 'Enchiladas Rojas', 1, 25, 13.00, 'Tortillas rellenas bañadas en salsa roja.', 17),
+
+-- Platos para Menú Wok Fusion (idMenu: 5, idSeccion: 21-25)
+(17, 'Wok de Pollo Teriyaki', 1, 35, 14.00, 'Pollo salteado con vegetales y salsa teriyaki.', 21),
+(18, 'Arroz Frito Especial', 2, 40, 10.50, 'Arroz con camarones, pollo y vegetales.', 23),
+(19, 'Rollitos Primavera', 1, 50, 7.00, 'Vegetales frescos envueltos y fritos.', 24),
+(20, 'Fideos de Arroz con Camarones', 1, 30, 16.00, 'Fideos finos con camarones y salsa suave.', 22),
+
+-- Platos para Menú Curry Tradicional (idMenu: 6, idSeccion: 26-30)
+(21, 'Curry Rojo de Res', 1, 25, 17.00, 'Carne de res en curry rojo tailandés.', 26),
+(22, 'Curry Verde de Pollo', 2, 30, 15.50, 'Pollo en cremoso curry verde.', 27),
+(23, 'Arroz Basmati', 1, 50, 4.00, 'Arroz aromático para acompañar.', 29),
+(24, 'Pan Naan', 1, 40, 3.00, 'Pan plano tradicional indio.', 29),
+
+-- Platos para Menú Mediterráneo (idMenu: 7, idSeccion: 31-35)
+(25, 'Hummus con Pan Pita', 1, 40, 8.50, 'Crema de garbanzos con pan árabe.', 31),
+(26, 'Moussaka', 1, 20, 16.00, 'Pastel de berenjenas, carne y bechamel.', 34),
+(27, 'Ensalada Griega', 1, 35, 9.50, 'Tomate, pepino, cebolla, aceitunas y queso feta.', 33),
+(28, 'Souvlaki de Pollo', 1, 28, 14.00, 'Brochetas de pollo a la parrilla.', 32),
+
+-- Platos para Menú Arepera 24/7 (idMenu: 8, idSeccion: 36-40)
+(29, 'Arepa Reina Pepiada', 1, 60, 9.00, 'Rellena de pollo desmechado con aguacate.', 36),
+(30, 'Arepa Pelúa', 2, 55, 9.50, 'Rellena de carne mechada con queso amarillo.', 36),
+(31, 'Empanada de Carne', 1, 70, 4.00, 'Crujiente empanada frita rellena de carne.', 39),
+(32, 'Jugo de Parchita', 1, 50, 3.50, 'Jugo natural de maracuyá.', 40),
+
+-- Platos para Menú Boulangerie (idMenu: 9, idSeccion: 41-45)
+(33, 'Croissant de Almendras', 1, 40, 4.50, 'Crujiente croissant con crema de almendras.', 42),
+(34, 'Baguette Clásica', 1, 30, 3.00, 'Pan francés recién horneado.', 41),
+(35, 'Éclair de Chocolate', 1, 25, 5.00, 'Dulce francés relleno de crema y cubierto de chocolate.', 43),
+(36, 'Café Latte', 1, 60, 4.00, 'Café con leche espumosa.', 45),
+
+-- Platos para Menú Paellero (idMenu: 10, idSeccion: 46-50)
+(37, 'Paella de Mariscos', 1, 20, 25.00, 'Arroz con azafrán y una variedad de mariscos.', 46),
+(38, 'Tapas de Gambas al Ajillo', 1, 30, 12.00, 'Gambas salteadas en aceite de oliva y ajo.', 49),
+(39, 'Paella Mixta', 2, 18, 24.00, 'Arroz con pollo, cerdo y mariscos.', 47),
+(40, 'Sangría Tradicional', 1, 25, 8.00, 'Vino tinto con frutas y especias.', 50),
+
+-- Platos para Menú Cevichero (idMenu: 11, idSeccion: 51-55)
+(41, 'Ceviche Clásico de Pescado', 1, 30, 18.00, 'Pescado blanco marinado en leche de tigre.', 51),
+(42, 'Tiradito de Pulpo', 1, 25, 19.50, 'Finas láminas de pulpo con salsa de aceitunas.', 52),
+(43, 'Causa Limeña', 1, 28, 14.00, 'Puré de papa amarilla relleno de atún o pollo.', 52),
+(44, 'Chicha Morada', 1, 40, 4.00, 'Bebida de maíz morado.', 55),
+
+-- Platos para Menú Churrasco (idMenu: 12, idSeccion: 56-60)
+(45, 'Picanha a la Espada', 1, 20, 28.00, 'Corte estrella de la churrasquería brasileña.', 56),
+(46, 'Fraldinha', 2, 22, 26.00, 'Corte de falda jugoso y lleno de sabor.', 56),
+(47, 'Arroz Blanco', 1, 50, 4.00, 'Arroz suelto y perfecto para acompañar.', 58),
+(48, 'Brigadeiro', 1, 35, 3.00, 'Dulce de chocolate brasileño.', 60),
+
+-- Platos para Menú Coreano (idMenu: 13, idSeccion: 61-65)
+(49, 'Bibimbap', 1, 30, 16.00, 'Arroz mezclado con vegetales, carne y huevo.', 63),
+(50, 'Kimchi Jjigae', 1, 25, 14.00, 'Estofado picante de kimchi con tofu y carne.', 61),
+(51, 'Japchae', 1, 28, 13.50, 'Fideos de batata salteados con vegetales y carne.', 62),
+(52, 'Kimchi', 1, 50, 5.00, 'Col fermentada picante, acompañamiento esencial.', 64),
+
+-- Platos para Menú Thai (idMenu: 14, idSeccion: 66-70)
+(53, 'Pad Thai con Pollo', 1, 35, 14.00, 'Fideos de arroz salteados con pollo, huevo y cacahuetes.', 67),
+(54, 'Tom Yum Goong', 1, 28, 12.00, 'Sopa picante de camarones con hierbas aromáticas.', 68),
+(55, 'Curry Massaman con Res', 1, 20, 17.50, 'Curry suave y aromático con cacahuetes y papa.', 66),
+(56, 'Mango Sticky Rice', 1, 25, 7.00, 'Arroz pegajoso con mango fresco y leche de coco.', 70),
+
+-- Platos para Menú Vietnamita (idMenu: 15, idSeccion: 71-75)
+(57, 'Pho Bo (Sopa de Res)', 1, 30, 15.00, 'Sopa de fideos de arroz con carne de res y hierbas.', 71),
+(58, 'Gỏi Cuốn (Rollos de Verano)', 1, 40, 9.00, 'Rollos frescos con camarones, cerdo y vegetales.', 72),
+(59, 'Bún Chả', 1, 25, 16.00, 'Fideos de arroz con carne de cerdo a la parrilla.', 74),
+(60, 'Café Vietnamita con Leche Condensada', 1, 35, 5.00, 'Café fuerte con leche condensada dulce.', 75),
+
+-- Platos para Menú Colombiano (idMenu: 16, idSeccion: 76-80)
+(61, 'Bandeja Paisa', 1, 20, 20.00, 'Plato insignia con carne, frijoles, arroz, huevo, etc.', 76),
+(62, 'Ajiaco Santafereño', 1, 25, 15.00, 'Sopa de pollo y papas con mazorca y aguacate.', 78),
+(63, 'Empanadas Colombianas', 1, 40, 3.50, 'Empanadas de maíz rellenas de papa y carne.', 77),
+(64, 'Postre de Natilla', 1, 30, 5.00, 'Postre cremoso tradicional.', 79),
+
+-- Platos para Menú Sin Gluten (idMenu: 17, idSeccion: 81-85)
+(65, 'Salmón al Horno con Vegetales Asados', 1, 25, 21.00, 'Plato principal saludable y sin gluten.', 82),
+(66, 'Pasta de Lentejas con Pesto de Albahaca', 1, 30, 15.00, 'Pasta sin gluten con salsa pesto casera.', 83),
+(67, 'Brownie de Chocolate Sin Gluten', 1, 35, 6.00, 'Delicioso brownie apto para celíacos.', 84),
+(68, 'Ensalada Quinoa y Aguacate', 1, 40, 12.00, 'Ensalada nutritiva con proteína completa.', 81),
+
+-- Platos para Menú Salvadoreño (idMenu: 18, idSeccion: 86-90)
+(69, 'Pupusa de Queso con Loroco', 1, 45, 4.00, 'Pupusa rellena de queso y flor de loroco.', 86),
+(70, 'Pupusa Revuelta', 2, 40, 4.50, 'Pupusa con chicharrón, frijol y queso.', 86),
+(71, 'Yuca con Chicharrón', 1, 30, 10.00, 'Yuca cocida o frita con trozos de cerdo crujientes.', 87),
+(72, 'Sopa de Res Salvadoreña', 1, 20, 14.00, 'Caldo sustancioso con vegetales y carne.', 88),
+
+-- Platos para Menú Griego (idMenu: 19, idSeccion: 91-95)
+(73, 'Gyros de Cerdo', 1, 30, 13.00, 'Carne de cerdo en pan pita con tzatziki.', 92),
+(74, 'Moussaka', 1, 25, 16.50, 'Capas de berenjena, carne picada y bechamel.', 92),
+(75, 'Tzatziki con Pan Pita', 1, 40, 7.50, 'Salsa de yogur, pepino y ajo.', 91),
+(76, 'Baklava', 1, 35, 6.00, 'Postre de hojaldre con nueces y almíbar.', 95),
+
+-- Platos para Menú Turco (idMenu: 20, idSeccion: 96-100)
+(77, 'Adana Kebab', 1, 28, 15.00, 'Brocheta de carne picada sazonada y asada.', 98),
+(78, 'Lahmacun', 1, 35, 9.00, 'Pizza turca con carne picada y vegetales.', 99),
+(79, 'Hummus', 1, 40, 7.00, 'Crema de garbanzos tradicional.', 96),
+(80, 'Künefe', 1, 20, 8.00, 'Postre de queso caliente con cabello de ángel.', 100),
+
+-- Platos para Menú Alemán (idMenu: 21, idSeccion: 101-105)
+(81, 'Bratwurst con Sauerkraut', 1, 30, 14.00, 'Salchicha alemana con col fermentada.', 101),
+(82, 'Wiener Schnitzel', 1, 25, 18.00, 'Escalope de ternera empanado y frito.', 102),
+(83, 'Kartoffelsalat', 1, 40, 6.00, 'Ensalada de papa al estilo alemán.', 104),
+(84, 'Apfelstrudel', 1, 30, 6.50, 'Strudel de manzana con helado o crema.', 105),
+
+-- Platos para Menú Fusión (idMenu: 22, idSeccion: 106-110)
+(85, 'Tacos de Kimchi y Cerdo', 1, 35, 12.00, 'Fusión coreano-mexicana.', 106),
+(86, 'Sushi Burger', 1, 28, 16.00, 'Hamburguesa con pan de arroz y relleno de sushi.', 109),
+(87, 'Pasta al Curry y Leche de Coco', 1, 25, 15.00, 'Combinación de sabores italianos y asiáticos.', 107),
+(88, 'Cheesecake de Matcha', 1, 20, 8.00, 'Postre clásico con toque japonés.', 110),
+
+-- Platos para Menú Orgánico (idMenu: 23, idSeccion: 111-115)
+(89, 'Ensalada de Lentejas y Vegetales Orgánicos', 1, 40, 11.00, 'Opción saludable y nutritiva.', 111),
+(90, 'Pollo Orgánico al Limón con Quinoa', 1, 30, 19.00, 'Plato principal con ingredientes de calidad.', 112),
+(91, 'Sopa de Calabaza Asada Orgánica', 1, 35, 9.00, 'Crema cremosa y natural.', 114),
+(92, 'Smoothie Verde Detox', 1, 50, 7.00, 'Mezcla de frutas y vegetales frescos.', 115),
+
+-- Platos para Menú Casero (idMenu: 24, idSeccion: 116-120)
+(93, 'Pabellón Criollo Completo', 1, 25, 17.00, 'Plato nacional venezolano con todos sus componentes.', 117),
+(94, 'Sopa de Costilla Casera', 1, 30, 12.00, 'Caldo sustancioso con costilla de res.', 116),
+(95, 'Arroz con Leche', 1, 40, 5.00, 'Postre cremoso de arroz y leche.', 119),
+(96, 'Asado Negro', 1, 20, 18.00, 'Versión casera del clásico venezolano.', 117),
+
+-- Platos para Menú Tex-Mex (idMenu: 25, idSeccion: 121-125)
+(97, 'Fajitas de Pollo', 1, 30, 15.00, 'Tiras de pollo a la parrilla con pimientos y cebolla.', 122),
+(98, 'Nachos Supremos', 1, 40, 11.00, 'Tortillas de maíz con queso, frijoles y más.', 121),
+(99, 'Burrito de Carne Asada', 1, 35, 13.00, 'Relleno de carne asada, arroz, frijoles y salsa.', 123),
+(100, 'Chili con Carne', 1, 25, 10.00, 'Estofado de carne picada con frijoles y especias.', 124),
+
+-- Platos para Menú Street Food (idMenu: 26, idSeccion: 126-130)
+(101, 'Taco de Carnitas', 1, 45, 4.00, 'Mini taco con cerdo confitado y cilantro.', 126),
+(102, 'Hamburguesa Clásica con Papas', 1, 35, 12.00, 'Carne, queso, lechuga, tomate y papas fritas.', 127),
+(103, 'Churros con Chocolate', 1, 50, 6.00, 'Masa frita con azúcar y salsa de chocolate.', 129),
+(104, 'Arepa con Queso Telita', 1, 40, 7.50, 'Arepa rellena de queso fresco y suave.', 126),
+
+-- Platos para Menú Saludable (idMenu: 27, idSeccion: 131-135)
+(105, 'Bowl de Salmón y Aguacate', 1, 30, 16.00, 'Salmón a la plancha, aguacate, quinoa y vegetales.', 133),
+(106, 'Ensalada de Pollo a la Parrilla', 1, 35, 13.00, 'Pechuga de pollo, mix de lechugas, aderezo ligero.', 131),
+(107, 'Lentejas Estofadas con Verduras', 1, 28, 10.00, 'Plato vegano y nutritivo.', 132),
+(108, 'Barra Energética Casera', 1, 40, 4.00, 'Avena, frutos secos y miel.', 134),
+
+-- Platos para Menú Comfort Food (idMenu: 28, idSeccion: 136-140)
+(109, 'Mac and Cheese Clásico', 1, 30, 12.00, 'Macarrones con cremosa salsa de queso.', 137),
+(110, 'Albóndigas en Salsa de Tomate', 1, 25, 14.00, 'Albóndigas de carne en salsa casera.', 137),
+(111, 'Puré de Papa Cremoso', 1, 40, 6.00, 'Acompañamiento clásico.', 138),
+(112, 'Brownie con Helado', 1, 35, 7.00, 'Cálido brownie con bola de helado de vainilla.', 139),
+
+-- Platos para Menú Mar y Tierra (idMenu: 29, idSeccion: 141-145)
+(113, 'Surf & Turf', 1, 20, 35.00, 'Filet mignon con cola de langosta.', 143),
+(114, 'Ribeye a la Parrilla', 1, 25, 29.00, 'Corte premium de carne.', 141),
+(115, 'Camarones al Ajillo', 1, 30, 18.00, 'Camarones salteados en aceite de oliva y ajo.', 142),
+(116, 'Espárragos Asados', 1, 40, 7.00, 'Guarnición fresca y saludable.', 144),
+
+-- Platos para Menú Pizza Napolitana (idMenu: 30, idSeccion: 146-150)
+(117, 'Pizza Margherita', 1, 40, 14.00, 'Clásica pizza con tomate, mozzarella y albahaca.', 146),
+(118, 'Pizza Diavola', 2, 35, 16.00, 'Pizza picante con salami y chile.', 147),
+(119, 'Calzone Relleno', 1, 25, 15.00, 'Masa de pizza doblada con ricotta, jamón y mozzarella.', 148),
+(120, 'Ensalada Rúcula y Parmesano', 1, 30, 9.00, 'Ensalada fresca para acompañar.', 149);
