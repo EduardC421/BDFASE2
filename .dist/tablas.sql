@@ -1075,3 +1075,195 @@ INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, i
 (118, 'Pizza Diavola', 2, 35, 16.00, 'Pizza picante con salami y chile.', 147),
 (119, 'Calzone Relleno', 1, 25, 15.00, 'Masa de pizza doblada con ricotta, jamón y mozzarella.', 148),
 (120, 'Ensalada Rúcula y Parmesano', 1, 30, 9.00, 'Ensalada fresca para acompañar.', 149);
+
+INSERT INTO Opcion (id, nombre, descripcion) VALUES
+(1, 'Tamaño', 'Permite seleccionar entre diferentes tamaños del plato.'),
+(2, 'Nivel de picante', 'Selecciona el nivel de picante deseado para el plato.'),
+(3, 'Tipo de pan', 'Elige el tipo de pan para hamburguesas o sándwiches.'),
+(4, 'Tipo de pasta', 'Selecciona el tipo de pasta en platos italianos.'),
+(5, 'Salsas adicionales', 'Agrega salsas adicionales al plato.'),
+(6, 'Toppings', 'Agrega toppings como queso, tocineta o cebolla crujiente.'),
+(7, 'Extras', 'Permite añadir ingredientes extra al plato.'),
+(8, 'Exclusiones', 'Permite quitar ingredientes del plato.'),
+(9, 'Contornos', 'Selecciona acompañantes como arroz, ensalada o papas.'),
+(10, 'Método de cocción', 'Selecciona cómo debe cocinarse el plato o carne.'),
+(11, 'Tipo de queso', 'Permite seleccionar entre varios tipos de queso.'),
+(12, 'Tipo de carne', 'Permite elegir entre carne de res, pollo o vegetariana.'),
+(13, 'Tamaño de bebida', 'Permite seleccionar el tamaño de la bebida.'),
+(14, 'Tipo de leche', 'Permite elegir leche entera, descremada o vegetal.'),
+(15, 'Tipo de azúcar', 'Selecciona entre azúcar blanca, morena o edulcorante.'),
+(16, 'Decoración', 'Permite seleccionar decoraciones comestibles en postres.'),
+(17, 'Tipo de arroz', 'Permite elegir entre arroz blanco, integral o jazmín.'),
+(18, 'Grado de cocción', 'Selecciona el término de cocción de carnes.'),
+(19, 'Tipo de tortilla', 'Selecciona el tipo de tortilla para tacos o burritos.'),
+(20, 'Cantidad de cubiertos', 'Indica cuántos juegos de cubiertos se requieren.'),
+(21, 'Incluir servilletas', 'Permite decidir si se incluyen servilletas.'),
+(22, 'Opción sin gluten', 'Permite solicitar platos sin gluten.'),
+(23, 'Opción vegana', 'Indica si se desea una versión vegana del plato.'),
+(24, 'Nivel de azúcar', 'Selecciona el nivel de dulzor en bebidas o postres.'),
+(25, 'Tipo de condimentos', 'Permite seleccionar condimentos como mostaza o ketchup.'),
+(26, 'Fruta adicional', 'Agrega frutas adicionales a un bowl o postre.'),
+(27, 'Sabor de helado', 'Selecciona entre varios sabores de helado.'),
+(28, 'Tipo de topping dulce', 'Selecciona toppings dulces como chips o sirope.'),
+(29, 'Borde relleno', 'Permite agregar borde de queso u otros al pizza.'),
+(30, 'Tamaño de porción', 'Permite elegir porciones normales, grandes o familiares.'),
+(31, 'Temperatura del plato', 'Solicita el plato frío, templado o caliente.'),
+(32, 'Nivel de sal', 'Permite ajustar la cantidad de sal.'),
+(33, 'Tipo de bebida', 'Permite elegir entre soda, jugo o agua.'),
+(34, 'Sabor de bebida', 'Selecciona el sabor de jugos o batidos.'),
+(35, 'Tipo de base', 'Elige la base para ensaladas o bowls.'),
+(36, 'Cobertura', 'Permite elegir coberturas para postres o helados.'),
+(37, 'Estilo de preparación', 'Frito, al horno, a la plancha, etc.'),
+(38, 'Sabor de torta', 'Selecciona el sabor de la torta o pastel.'),
+(39, 'Nivel de tostado', 'Permite elegir el nivel de tostado para panes o ingredientes.'),
+(40, 'Tipo de cobertura de pizza', 'Selecciona entre coberturas como pepperoni, vegetales o jamón.');
+
+INSERT INTO OpcionValor (id, idOpcion, nombre, precio_extra) VALUES
+(1, 1, 'Pequeño', 0.00),
+(2, 1, 'Mediano', 1.00),
+(3, 1, 'Grande', 2.00),
+
+(4, 2, 'Sin picante', 0.00),
+(5, 2, 'Medio', 0.00),
+(6, 2, 'Picante', 0.00),
+(7, 2, 'Muy picante', 0.00),
+
+(8, 3, 'Pan blanco', 0.00),
+(9, 3, 'Pan integral', 0.50),
+(10, 3, 'Pan sin gluten', 1.00),
+
+(11, 4, 'Espagueti', 0.00),
+(12, 4, 'Fettuccine', 0.50),
+(13, 4, 'Penne', 0.50),
+
+(14, 5, 'Barbacoa', 0.50),
+(15, 5, 'Mostaza miel', 0.50),
+(16, 5, 'Picante', 0.50),
+
+(17, 6, 'Queso cheddar', 0.50),
+(18, 6, 'Tocineta', 1.00),
+(19, 6, 'Cebolla crujiente', 0.50),
+
+(20, 7, 'Aguacate', 1.00),
+(21, 7, 'Huevo', 0.75),
+
+(22, 8, 'Sin cebolla', 0.00),
+(23, 8, 'Sin tomate', 0.00),
+
+(24, 9, 'Arroz', 0.00),
+(25, 9, 'Papas fritas', 0.00),
+(26, 9, 'Ensalada', 0.00),
+
+(27, 10, 'Frito', 0.00),
+(28, 10, 'A la plancha', 0.00),
+(29, 10, 'Horno', 0.00),
+
+(30, 11, 'Mozzarella', 0.00),
+(31, 11, 'Cheddar', 0.50),
+(32, 11, 'Azul', 1.00),
+
+(33, 12, 'Carne de res', 1.00),
+(34, 12, 'Pollo', 0.75),
+(35, 12, 'Vegetariana', 0.00),
+
+(36, 13, 'Pequeña', 0.00),
+(37, 13, 'Mediana', 0.50),
+(38, 13, 'Grande', 1.00),
+
+(39, 14, 'Entera', 0.00),
+(40, 14, 'Descremada', 0.00),
+(41, 14, 'Vegetal', 0.50),
+
+(42, 15, 'Blanca', 0.00),
+(43, 15, 'Morena', 0.00),
+(44, 15, 'Edulcorante', 0.00),
+
+(45, 16, 'Confites', 0.50),
+(46, 16, 'Frutas', 0.75),
+
+(47, 17, 'Blanco', 0.00),
+(48, 17, 'Integral', 0.00),
+(49, 17, 'Jazmín', 0.50),
+
+(50, 18, 'Poco hecho', 0.00),
+(51, 18, 'Término medio', 0.00),
+(52, 18, 'Bien cocido', 0.00),
+
+(53, 19, 'Maíz', 0.00),
+(54, 19, 'Harina de trigo', 0.00),
+(55, 19, 'Integral', 0.25),
+
+(56, 20, '1 juego', 0.00),
+(57, 20, '2 juegos', 0.00),
+
+(58, 21, 'Sí', 0.00),
+(59, 21, 'No', 0.00),
+
+(60, 22, 'Solicitar sin gluten', 0.00),
+
+(61, 23, 'Versión vegana', 0.00),
+
+(62, 24, 'Poco dulce', 0.00),
+(63, 24, 'Normal', 0.00),
+(64, 24, 'Muy dulce', 0.00),
+
+(65, 25, 'Mostaza', 0.00),
+(66, 25, 'Mayonesa', 0.00),
+(67, 25, 'Ketchup', 0.00),
+
+(68, 26, 'Fresas', 0.75),
+(69, 26, 'Mango', 0.75),
+
+(70, 27, 'Chocolate', 0.00),
+(71, 27, 'Vainilla', 0.00),
+(72, 27, 'Fresa', 0.00),
+
+(73, 28, 'Chispas de chocolate', 0.50),
+(74, 28, 'Sirope de caramelo', 0.50),
+
+(75, 29, 'Queso mozzarella', 1.00),
+(76, 29, 'Queso crema', 1.25),
+
+(77, 30, 'Normal', 0.00),
+(78, 30, 'Grande', 1.00),
+(79, 30, 'Familiar', 2.00),
+
+(80, 31, 'Frío', 0.00),
+(81, 31, 'Templado', 0.00),
+(82, 31, 'Caliente', 0.00),
+
+(83, 32, 'Normal', 0.00),
+(84, 32, 'Poca sal', 0.00),
+(85, 32, 'Sin sal', 0.00),
+
+(86, 33, 'Soda', 0.00),
+(87, 33, 'Jugo', 0.50),
+(88, 33, 'Agua', 0.00),
+
+(89, 34, 'Naranja', 0.00),
+(90, 34, 'Fresa', 0.00),
+(91, 34, 'Mango', 0.00),
+
+(92, 35, 'Lechuga', 0.00),
+(93, 35, 'Quinoa', 0.75),
+(94, 35, 'Arroz', 0.50),
+
+(95, 36, 'Sirope de chocolate', 0.50),
+(96, 36, 'Nueces', 0.75),
+
+(97, 37, 'Frito', 0.00),
+(98, 37, 'A la plancha', 0.00),
+(99, 37, 'Horneado', 0.00),
+
+(100, 38, 'Chocolate', 0.00),
+(101, 38, 'Vainilla', 0.00),
+(102, 38, 'Zanahoria', 0.00),
+
+(103, 39, 'Tostado ligero', 0.00),
+(104, 39, 'Tostado medio', 0.00),
+(105, 39, 'Tostado fuerte', 0.00),
+
+(106, 40, 'Pepperoni', 1.00),
+(107, 40, 'Vegetales', 0.75),
+(108, 40, 'Jamón', 1.00);
+
