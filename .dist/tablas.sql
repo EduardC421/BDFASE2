@@ -282,105 +282,105 @@ INSERT INTO Cocina (id, nombre, descripcion) VALUES
 ---Clientes
 INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, apellido, fecha_nac, nro_documento) VALUES
 (1, 'clave001', '04128433977', '2025-07-13', 'manuel.herrera1@gmail.com', 'Manuel', 'Herrera', '1985-10-31', 'V17147694'),
-(2, 'clave002', '04144064468', '2025-07-13', 'manuel.torres2@gmail.com', 'Manuel', 'Torres', '1989-05-30', 'V21060916'),
-(3, 'clave003', '04243993464', '2025-07-13', 'miguel.mendoza3@gmail.com', 'Miguel', 'Mendoza', '1988-11-20', 'V13820454'),
-(4, 'clave004', '04123001786', '2025-07-13', 'laura.mendoza4@gmail.com', 'Laura', 'Mendoza', '2001-07-05', 'V23802098'),
+(2, 'clave002', '04144064468', '2025-08-13', 'manuel.torres2@gmail.com', 'Manuel', 'Torres', '1989-05-30', 'V21060916'),
+(3, 'clave003', '04243993464', '2025-09-13', 'miguel.mendoza3@gmail.com', 'Miguel', 'Mendoza', '1988-11-20', 'V13820454'),
+(4, 'clave004', '04123001786', '2025-08-18', 'laura.mendoza4@gmail.com', 'Laura', 'Mendoza', '2001-07-05', 'V23802098'),
 (5, 'clave005', '04246686214', '2025-07-13', 'ana.fernandez5@gmail.com', 'Ana', 'Fernandez', '1963-04-30', 'V11099308'),
-(6, 'clave006', '04120001111', '2025-07-13', 'juan.garcia6@gmail.com', 'Juan', 'Garcia', '1975-12-12', 'V19325561'),
-(7, 'clave007', '04220002222', '2025-07-13', 'maria.lopez7@gmail.com', 'Maria', 'Lopez', '1990-06-15', 'V26997002'),
-(8, 'clave008', '04130003333', '2025-07-13', 'carlos.ramirez8@gmail.com', 'Carlos', 'Ramirez', '1982-03-10', 'V27234433'),
-(9, 'clave009', '04240004444', '2025-07-13', 'sandra.gomez9@gmail.com', 'Sandra', 'Gomez', '1978-09-23', 'V18768944'),
-(10, 'clave010', '04140005555', '2025-07-13', 'pedro.sanchez10@gmail.com', 'Pedro', 'Sanchez', '1987-11-01', 'V19555055'),
-(11, 'clave011', '04160006666', '2025-07-13', 'laura.perez11@gmail.com', 'Laura', 'Perez', '1995-04-04', 'V20000066'),
-(12, 'clave012', '04240007777', '2025-07-13', 'jose.martinez12@gmail.com', 'Jose', 'Martinez', '1980-01-19', 'V21000077'),
-(13, 'clave013', '04160008888', '2025-07-13', 'marta.silva13@gmail.com', 'Marta', 'Silva', '1965-07-07', 'V22088'),
-(14, 'clave014', '04260009999', '2025-07-13', 'luis.rodriguez14@gmail.com', 'Luis', 'Rodriguez', '1973-08-16', 'V23788099'),
-(15, 'clave015', '04160001010', '2025-07-13', 'ana.moreno15@gmail.com', 'Ana', 'Moreno', '1992-12-30', 'V24510127'),
-(16, 'clave016', '04240891511', '2025-07-13', 'francisco.diaz16@gmail.com', 'Francisco', 'Diaz', '1989-10-02', 'V25999111'),
-(17, 'clave017', '04120002222', '2025-07-13', 'paula.torres17@gmail.com', 'Paula', 'Torres', '1997-03-21', 'V26999122'),
-(18, 'clave018', '04240003333', '2025-07-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1979-05-25', 'V27000133'),
+(6, 'clave006', '04120001111', '2025-10-13', 'juan.garcia6@gmail.com', 'Juan', 'Garcia', '1975-12-12', 'V19325561'),
+(7, 'clave007', '04220002222', '2025-05-16', 'maria.lopez7@gmail.com', 'Maria', 'Lopez', '1990-06-15', 'V26997002'),
+(8, 'clave008', '04130003333', '2025-04-13', 'carlos.ramirez8@gmail.com', 'Carlos', 'Ramirez', '1982-03-10', 'V27234433'),
+(9, 'clave009', '04240004444', '2025-03-13', 'sandra.gomez9@gmail.com', 'Sandra', 'Gomez', '1978-09-23', 'V18768944'),
+(10, 'clave010', '04140005555', '2024-07-13', 'pedro.sanchez10@gmail.com', 'Pedro', 'Sanchez', '1987-11-01', 'V19555055'),
+(11, 'clave011', '04160006666', '2025-01-13', 'laura.perez11@gmail.com', 'Laura', 'Perez', '1995-04-04', 'V20000066'),
+(12, 'clave012', '04240007777', '2023-06-15', 'jose.martinez12@gmail.com', 'Jose', 'Martinez', '1980-01-19', 'V21000077'),
+(13, 'clave013', '04160008888', '2025-07-13', 'marta.silva13@gmail.com', 'Marta', 'Silva', '1965-07-07', 'V22088444'),
+(14, 'clave014', '04260009999', '2021-08-13', 'luis.rodriguez14@gmail.com', 'Luis', 'Rodriguez', '1973-08-16', 'V23788099'),
+(15, 'clave015', '04160001010', '2022-07-13', 'ana.moreno15@gmail.com', 'Ana', 'Moreno', '1992-12-30', 'V24510127'),
+(16, 'clave016', '04240891511', '2022-09-13', 'francisco.diaz16@gmail.com', 'Francisco', 'Diaz', '1989-10-02', 'V25999111'),
+(17, 'clave017', '04120002222', '2023-07-13', 'paula.torres17@gmail.com', 'Paula', 'Torres', '1997-03-21', 'V26999122'),
+(18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1979-05-25', 'V27000133'),
 (19, 'clave019', '04160004444', '2025-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '1984-11-11', 'V28000144'),
-(20, 'clave020', '04240005555', '2025-07-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155'),
-(21, 'clave021', '04127896504', '2025-07-13', 'maria.torres21@gmail.com', 'Maria', 'Torres', '1986-07-07', 'V30987066'),
+(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155'),
+(21, 'clave021', '04127896504', '2023-06-13', 'maria.torres21@gmail.com', 'Maria', 'Torres', '1986-07-07', 'V30987066'),
 (22, 'clave022', '04144467230', '2025-07-13', 'carlos.martin22@gmail.com', 'Carlos', 'Martin', '1994-02-14', 'V31999177'),
-(23, 'clave023', '04123458888', '2025-07-13', 'luis.lopez23@gmail.com', 'Luis', 'Lopez', '1971-08-25', 'V32060188'),
-(24, 'clave024', '04245569696', '2025-07-13', 'ana.gomez24@gmail.com', 'Ana', 'Gomez', '1983-09-03', 'V33890199'),
-(25, 'clave025', '04163450330', '2025-07-13', 'miguel.perez25@gmail.com', 'Miguel', 'Perez', '1990-04-18', 'V34000200'),
-(26, 'clave026', '04263751177', '2025-07-13', 'laura.ramirez26@gmail.com', 'Laura', 'Ramirez', '1987-06-06', 'V35000211'),
-(27, 'clave027', '04143452222', '2025-07-13', 'juan.sanchez27@gmail.com', 'Juan', 'Sanchez', '1978-11-12', 'V36000222'),
-(28, 'clave028', '04163453333', '2025-07-13', 'sofia.martinez28@gmail.com', 'Sofia', 'Martinez', '1968-03-20', 'V37000233'),
-(29, 'clave029', '04167764744', '2025-07-13', 'pedro.diaz29@gmail.com', 'Pedro', 'Diaz', '1992-12-08', 'V35070244'),
-(30, 'clave030', '04263457558', '2025-07-13', 'francisco.garcia30@gmail.com', 'Francisco', 'Garcia', '1981-10-30', 'V35030255'),
-(31, 'clave031', '04163426690', '2025-07-13', 'marta.lopez31@gmail.com', 'Marta', 'Lopez', '1995-07-01', 'V30858266'),
-(32, 'clave032', '04243457797', '2025-07-13', 'javier.mendoza32@gmail.com', 'Javier', 'Mendoza', '1970-01-15', 'V31054277'),
-(33, 'clave033', '04141057898', '2025-07-13', 'ana.torres33@gmail.com', 'Ana', 'Torres', '1988-05-09', 'V32000288'),
-(34, 'clave034', '04242559909', '2025-07-13', 'manuel.perez34@gmail.com', 'Manuel', 'Perez', '1999-03-28', 'V33040299'),
-(35, 'clave035', '04167850770', '2025-07-13', 'laura.garcia35@gmail.com', 'Laura', 'Garcia', '1983-07-16', 'V31440300'),
-(36, 'clave036', '04263451121', '2025-07-13', 'carlos.diaz36@gmail.com', 'Carlos', 'Diaz', '1976-06-23', 'V28500311'),
-(37, 'clave037', '04144352572', '2025-07-13', 'paula.martinez37@gmail.com', 'Paula', 'Martinez', '1984-09-17', 'V46000322'),
-(38, 'clave038', '04243453333', '2025-07-13', 'miguel.soto38@gmail.com', 'Miguel', 'Soto', '1991-12-29', 'V47000333'),
-(39, 'clave039', '04123494444', '2025-07-13', 'sofia.lopez39@gmail.com', 'Sofia', 'Lopez', '1969-11-05', 'V48000344'),
-(40, 'clave040', '04263455905', '2025-07-13', 'jose.perez40@gmail.com', 'Jose', 'Perez', '1985-04-13', 'V24900355'),
+(23, 'clave023', '04123458888', '2024-08-13', 'luis.lopez23@gmail.com', 'Luis', 'Lopez', '1971-08-25', 'V32060188'),
+(24, 'clave024', '04245569696', '2023-07-13', 'ana.gomez24@gmail.com', 'Ana', 'Gomez', '1983-09-03', 'V33890199'),
+(25, 'clave025', '04163450330', '2021-02-13', 'miguel.perez25@gmail.com', 'Miguel', 'Perez', '1990-04-18', 'V34000200'),
+(26, 'clave026', '04263751177', '2023-07-13', 'laura.ramirez26@gmail.com', 'Laura', 'Ramirez', '1987-06-06', 'V35000211'),
+(27, 'clave027', '04143452222', '2022-04-11', 'juan.sanchez27@gmail.com', 'Juan', 'Sanchez', '1978-11-12', 'V36000222'),
+(28, 'clave028', '04163453333', '2021-07-13', 'sofia.martinez28@gmail.com', 'Sofia', 'Martinez', '1968-03-20', 'V37000233'),
+(29, 'clave029', '04167764744', '2025-03-13', 'pedro.diaz29@gmail.com', 'Pedro', 'Diaz', '1992-12-08', 'V35070244'),
+(30, 'clave030', '04263457558', '2022-07-13', 'francisco.garcia30@gmail.com', 'Francisco', 'Garcia', '1981-10-30', 'V35030255'),
+(31, 'clave031', '04163426690', '2024-07-29', 'marta.lopez31@gmail.com', 'Marta', 'Lopez', '1995-07-01', 'V30858266'),
+(32, 'clave032', '04243457797', '2024-04-13', 'javier.mendoza32@gmail.com', 'Javier', 'Mendoza', '1970-01-15', 'V31054277'),
+(33, 'clave033', '04141057898', '2023-05-13', 'ana.torres33@gmail.com', 'Ana', 'Torres', '1988-05-09', 'V32000288'),
+(34, 'clave034', '04242559909', '2025-07-28', 'manuel.perez34@gmail.com', 'Manuel', 'Perez', '1999-03-28', 'V33040299'),
+(35, 'clave035', '04167850770', '2025-06-13', 'laura.garcia35@gmail.com', 'Laura', 'Garcia', '1983-07-16', 'V31440300'),
+(36, 'clave036', '04263451121', '2020-07-13', 'carlos.diaz36@gmail.com', 'Carlos', 'Diaz', '1976-06-23', 'V28500311'),
+(37, 'clave037', '04144352572', '2024-02-19', 'paula.martinez37@gmail.com', 'Paula', 'Martinez', '1984-09-17', 'V46000322'),
+(38, 'clave038', '04243453333', '2024-07-13', 'miguel.soto38@gmail.com', 'Miguel', 'Soto', '1991-12-29', 'V47000333'),
+(39, 'clave039', '04123494444', '2019-07-28', 'sofia.lopez39@gmail.com', 'Sofia', 'Lopez', '1969-11-05', 'V48000344'),
+(40, 'clave040', '04263455905', '2022-02-13', 'jose.perez40@gmail.com', 'Jose', 'Perez', '1985-04-13', 'V24900355'),
 (41, 'clave041', '04123456767', '2025-07-13', 'maria.gomez41@gmail.com', 'Maria', 'Gomez', '1993-08-07', 'V25000366'),
-(42, 'clave042', '04263457077', '2025-07-13', 'juan.ramirez42@gmail.com', 'Juan', 'Ramirez', '1987-09-19', 'V25133877'),
-(43, 'clave043', '04163458888', '2025-07-13', 'luis.sanchez43@gmail.com', 'Luis', 'Sanchez', '1974-05-24', 'V22044388'),
-(44, 'clave044', '04263459999', '2025-07-13', 'ana.torres44@gmail.com', 'Ana', 'Torres', '1989-07-02', 'V24500399'),
-(45, 'clave045', '04164598000', '2025-07-13', 'carlos.martinez45@gmail.com', 'Carlos', 'Martinez', '1992-10-11', 'V12504400'),
-(46, 'clave046', '04263453432', '2025-07-13', 'marta.rodriguez46@gmail.com', 'Marta', 'Rodriguez', '1980-02-28', 'V5000411'),
-(47, 'clave047', '04141255672', '2025-07-13', 'pedro.soto47@gmail.com', 'Pedro', 'Soto', '1977-03-15', 'V56000422'),
-(48, 'clave048', '04266378877', '2025-07-13', 'francisco.gomez48@gmail.com', 'Francisco', 'Gomez', '1983-06-27', 'V57000433'),
-(49, 'clave049', '04123454444', '2025-07-13', 'paula.lopez49@gmail.com', 'Paula', 'Lopez', '1966-01-09', 'V5800444'),
-(50, 'clave050', '04243455555', '2025-07-13', 'miguel.perez50@gmail.com', 'Miguel', 'Perez', '1994-12-21', 'V5950455'),
-(51, 'clave051', '04123456666', '2025-07-13', 'sofia.ramirez51@gmail.com', 'Sofia', 'Ramirez', '1981-07-18', 'V6800466'),
+(42, 'clave042', '04263457077', '2021-01-13', 'juan.ramirez42@gmail.com', 'Juan', 'Ramirez', '1987-09-19', 'V25133877'),
+(43, 'clave043', '04163458888', '2025-04-24', 'luis.sanchez43@gmail.com', 'Luis', 'Sanchez', '1974-05-24', 'V22044388'),
+(44, 'clave044', '04263459999', '2022-05-13', 'ana.torres44@gmail.com', 'Ana', 'Torres', '1989-07-02', 'V24500399'),
+(45, 'clave045', '04164598000', '2025-06-13', 'carlos.martinez45@gmail.com', 'Carlos', 'Martinez', '1992-10-11', 'V12504400'),
+(46, 'clave046', '04263453432', '2021-02-15', 'marta.rodriguez46@gmail.com', 'Marta', 'Rodriguez', '1980-02-28', 'V5000411'),
+(47, 'clave047', '04141255672', '2025-07-25', 'pedro.soto47@gmail.com', 'Pedro', 'Soto', '1977-03-15', 'V56000422'),
+(48, 'clave048', '04266378877', '2024-01-13', 'francisco.gomez48@gmail.com', 'Francisco', 'Gomez', '1983-06-27', 'V57000433'),
+(49, 'clave049', '04123454444', '2025-07-21', 'paula.lopez49@gmail.com', 'Paula', 'Lopez', '1966-01-09', 'V5800444'),
+(50, 'clave050', '04243455555', '2024-04-13', 'miguel.perez50@gmail.com', 'Miguel', 'Perez', '1994-12-21', 'V5950455'),
+(51, 'clave051', '04123456666', '2024-06-12', 'sofia.ramirez51@gmail.com', 'Sofia', 'Ramirez', '1981-07-18', 'V6800466'),
 (52, 'clave052', '04243457777', '2025-07-13', 'jose.garcia52@gmail.com', 'Jose', 'Garcia', '1970-08-30', 'V6109477'),
-(53, 'clave053', '04143458888', '2025-07-13', 'laura.sanchez53@gmail.com', 'Laura', 'Sanchez', '1993-05-26', 'V6200908'),
-(54, 'clave054', '04243459999', '2025-07-13', 'miguel.lopez54@gmail.com', 'Miguel', 'Lopez', '1988-04-14', 'V8380499'),
-(55, 'clave055', '04123450000', '2025-07-13', 'ana.martinez55@gmail.com', 'Ana', 'Martinez', '1975-02-01', 'V9479500'),
-(56, 'clave056', '04243451111', '2025-07-13', 'carlos.perez56@gmail.com', 'Carlos', 'Perez', '1986-11-22', 'V10154851'),
+(53, 'clave053', '04143458888', '2023-08-13', 'laura.sanchez53@gmail.com', 'Laura', 'Sanchez', '1993-05-26', 'V6200908'),
+(54, 'clave054', '04243459999', '2022-07-13', 'miguel.lopez54@gmail.com', 'Miguel', 'Lopez', '1988-04-14', 'V8380499'),
+(55, 'clave055', '04123450000', '2025-02-13', 'ana.martinez55@gmail.com', 'Ana', 'Martinez', '1975-02-01', 'V9479500'),
+(56, 'clave056', '04243451111', '2023-04-13', 'carlos.perez56@gmail.com', 'Carlos', 'Perez', '1986-11-22', 'V10154851'),
 (57, 'clave057', '04163452222', '2025-07-13', 'maria.gomez57@gmail.com', 'Maria', 'Gomez', '1973-01-13', 'V6897522'),
-(58, 'clave058', '04263548810', '2025-07-13', 'juan.soto58@gmail.com', 'Juan', 'Soto', '1980-09-19', 'V6750533'),
-(59, 'clave059', '04163454444', '2025-07-13', 'paula.lopez59@gmail.com', 'Paula', 'Lopez', '1991-10-31', 'V68000544'),
-(60, 'clave060', '04240112551', '2025-07-13', 'miguel.perez60@gmail.com', 'Miguel', 'Perez', '1984-06-07', 'V69000555'),
-(61, 'clave061', '04126536271', '2025-07-13', 'sofia.ramirez61@gmail.com', 'Sofia', 'Ramirez', '1976-12-15', 'V70000566'),
-(62, 'clave062', '04249000307', '2025-07-13', 'jose.garcia62@gmail.com', 'Jose', 'Garcia', '1989-03-25', 'V71000577'),
-(63, 'clave063', '04165498685', '2025-07-13', 'laura.sanchez63@gmail.com', 'Laura', 'Sanchez', '1992-07-29', 'V72000588'),
-(64, 'clave064', '04247778799', '2025-07-13', 'miguel.lopez64@gmail.com', 'Miguel', 'Lopez', '1978-01-17', 'V73000599'),
-(65, 'clave065', '04163450000', '2025-07-13', 'ana.martinez65@gmail.com', 'Ana', 'Martinez', '1987-09-02', 'V74000600'),
-(66, 'clave066', '04267755524', '2025-07-13', 'carlos.perez66@gmail.com', 'Carlos', 'Perez', '1990-11-22', 'V75000611'),
-(67, 'clave067', '04149052622', '2025-07-13', 'maria.gomez67@gmail.com', 'Maria', 'Gomez', '1969-05-05', 'V76000622'),
-(68, 'clave068', '04143323033', '2025-07-13', 'juan.soto68@gmail.com', 'Juan', 'Soto', '1974-08-16', 'V77000633'),
-(69, 'clave069', '04143454444', '2025-07-13', 'paula.lopez69@gmail.com', 'Paula', 'Lopez', '1981-02-26', 'V20.555.555'),
-(70, 'clave070', '04265599055', '2025-07-13', 'sofia.martinez70@gmail.com', 'Sofia', 'Martinez', '1985-04-11', 'V78000644'),
-(71, 'clave071', '04163456666', '2025-07-13', 'jose.rodriguez71@gmail.com', 'Jose', 'Rodriguez', '1974-09-05', 'V79000655'),
-(72, 'clave072', '04242305777', '2025-07-13', 'maria.diaz72@gmail.com', 'Maria', 'Diaz', '1988-01-17', 'V28678916'),
-(73, 'clave073', '04120978819', '2025-07-13', 'carlos.soto73@gmail.com', 'Carlos', 'Soto', '1991-10-29', 'V28160677'),
-(74, 'clave074', '04247479099', '2025-07-13', 'ana.lopez74@gmail.com', 'Ana', 'Lopez', '1982-12-23', 'V28234609'),
-(75, 'clave075', '04144450070', '2025-07-13', 'miguel.gomez75@gmail.com', 'Miguel', 'Gomez', '1979-06-15', 'V29611485'),
-(76, 'clave076', '04263451111', '2025-07-13', 'laura.perez76@gmail.com', 'Laura', 'Perez', '1990-08-03', 'V23157889'),
-(77, 'clave077', '04123452222', '2025-07-13', 'juan.torres77@gmail.com', 'Juan', 'Torres', '1983-02-26', 'V2685340'),
-(78, 'clave078', '04264258331', '2025-07-13', 'paula.sanchez78@gmail.com', 'Paula', 'Sanchez', '1975-07-19', 'V26500722'),
-(79, 'clave079', '04149031124', '2025-07-13', 'javier.garcia79@gmail.com', 'Javier', 'Garcia', '1986-11-13', 'V27570733'),
-(80, 'clave080', '04260435756', '2025-07-13', 'sofia.moreno80@gmail.com', 'Sofia', 'Moreno', '1994-09-07', 'V18040744'),
-(81, 'clave081', '04162223756', '2025-07-13', 'jose.lopez81@gmail.com', 'Jose', 'Lopez', '1977-04-30', 'V29680755'),
+(58, 'clave058', '04263548810', '2022-06-13', 'juan.soto58@gmail.com', 'Juan', 'Soto', '1980-09-19', 'V6750533'),
+(59, 'clave059', '04163454444', '2021-07-13', 'paula.lopez59@gmail.com', 'Paula', 'Lopez', '1991-10-31', 'V68000544'),
+(60, 'clave060', '04240112551', '2021-02-13', 'miguel.perez60@gmail.com', 'Miguel', 'Perez', '1984-06-07', 'V69000555'),
+(61, 'clave061', '04126536271', '2019-07-13', 'sofia.ramirez61@gmail.com', 'Sofia', 'Ramirez', '1976-12-15', 'V70000566'),
+(62, 'clave062', '04249000307', '2022-03-13', 'jose.garcia62@gmail.com', 'Jose', 'Garcia', '1989-03-25', 'V71000577'),
+(63, 'clave063', '04165498685', '2023-01-13', 'laura.sanchez63@gmail.com', 'Laura', 'Sanchez', '1992-07-29', 'V72000588'),
+(64, 'clave064', '04247778799', '2024-02-13', 'miguel.lopez64@gmail.com', 'Miguel', 'Lopez', '1978-01-17', 'V73000599'),
+(65, 'clave065', '04163450000', '2022-07-18', 'ana.martinez65@gmail.com', 'Ana', 'Martinez', '1987-09-02', 'V74000600'),
+(66, 'clave066', '04267755524', '2021-03-13', 'carlos.perez66@gmail.com', 'Carlos', 'Perez', '1990-11-22', 'V75000611'),
+(67, 'clave067', '04149052622', '2024-07-14', 'maria.gomez67@gmail.com', 'Maria', 'Gomez', '1969-05-05', 'V76000622'),
+(68, 'clave068', '04143323033', '2022-07-13', 'juan.soto68@gmail.com', 'Juan', 'Soto', '1974-08-16', 'V77000633'),
+(69, 'clave069', '04143454444', '2023-07-13', 'paula.lopez69@gmail.com', 'Paula', 'Lopez', '1981-02-26', 'V20555555'),
+(70, 'clave070', '04265599055', '2019-07-12', 'sofia.martinez70@gmail.com', 'Sofia', 'Martinez', '1985-04-11', 'V78000644'),
+(71, 'clave071', '04163456666', '2025-04-13', 'jose.rodriguez71@gmail.com', 'Jose', 'Rodriguez', '1974-09-05', 'V79000655'),
+(72, 'clave072', '04242305777', '2023-07-13', 'maria.diaz72@gmail.com', 'Maria', 'Diaz', '1988-01-17', 'V28678916'),
+(73, 'clave073', '04120978819', '2022-10-11', 'carlos.soto73@gmail.com', 'Carlos', 'Soto', '1991-10-29', 'V28160677'),
+(74, 'clave074', '04247479099', '2025-12-11', 'ana.lopez74@gmail.com', 'Ana', 'Lopez', '1982-12-23', 'V28234609'),
+(75, 'clave075', '04144450070', '2024-11-13', 'miguel.gomez75@gmail.com', 'Miguel', 'Gomez', '1979-06-15', 'V29611485'),
+(76, 'clave076', '04263451111', '2025-07-12', 'laura.perez76@gmail.com', 'Laura', 'Perez', '1990-08-03', 'V23157889'),
+(77, 'clave077', '04123452222', '2022-11-13', 'juan.torres77@gmail.com', 'Juan', 'Torres', '1983-02-26', 'V2685340'),
+(78, 'clave078', '04264258331', '2021-09-13', 'paula.sanchez78@gmail.com', 'Paula', 'Sanchez', '1975-07-19', 'V26500722'),
+(79, 'clave079', '04149031124', '2024-07-14', 'javier.garcia79@gmail.com', 'Javier', 'Garcia', '1986-11-13', 'V27570733'),
+(80, 'clave080', '04260435756', '2020-07-13', 'sofia.moreno80@gmail.com', 'Sofia', 'Moreno', '1994-09-07', 'V18040744'),
+(81, 'clave081', '04162223756', '2022-02-14', 'jose.lopez81@gmail.com', 'Jose', 'Lopez', '1977-04-30', 'V29680755'),
 (82, 'clave082', '04241235679', '2025-07-13', 'maria.rodriguez82@gmail.com', 'Maria', 'Rodriguez', '1981-08-21', 'V28002766'),
-(83, 'clave083', '04122134509', '2025-07-13', 'carlos.torres83@gmail.com', 'Carlos', 'Torres', '1993-12-25', 'V15603777'),
-(84, 'clave084', '04247272965', '2025-07-13', 'ana.soto84@gmail.com', 'Ana', 'Soto', '1987-06-10', 'V22010788'),
-(85, 'clave085', '04149999999', '2025-07-13', 'miguel.martinez85@gmail.com', 'Miguel', 'Martinez', '1990-05-04', 'V33075729'),
-(86, 'clave086', '04240348592', '2025-07-13', 'laura.gomez86@gmail.com', 'Laura', 'Gomez', '1983-09-14', 'V30456780'),
-(87, 'clave087', '04128764343', '2025-07-13', 'juan.lopez87@gmail.com', 'Juan', 'Lopez', '1976-03-07', 'V31000811'),
-(88, 'clave088', '04247555583', '2025-07-13', 'paula.sanchez88@gmail.com', 'Paula', 'Sanchez', '1989-11-30', 'V26680822'),
+(83, 'clave083', '04122134509', '2025-04-15', 'carlos.torres83@gmail.com', 'Carlos', 'Torres', '1993-12-25', 'V15603777'),
+(84, 'clave084', '04247272965', '2021-07-13', 'ana.soto84@gmail.com', 'Ana', 'Soto', '1987-06-10', 'V22010788'),
+(85, 'clave085', '04149999999', '2025-03-16', 'miguel.martinez85@gmail.com', 'Miguel', 'Martinez', '1990-05-04', 'V33075729'),
+(86, 'clave086', '04240348592', '2023-07-17', 'laura.gomez86@gmail.com', 'Laura', 'Gomez', '1983-09-14', 'V30456780'),
+(87, 'clave087', '04128764343', '2025-07-18', 'juan.lopez87@gmail.com', 'Juan', 'Lopez', '1976-03-07', 'V31000811'),
+(88, 'clave088', '04247555583', '2023-07-24', 'paula.sanchez88@gmail.com', 'Paula', 'Sanchez', '1989-11-30', 'V26680822'),
 (89, 'clave089', '04123454234', '2025-07-13', 'javier.perez89@gmail.com', 'Javier', 'Perez', '1992-07-18', 'V27960833'),
 (90, 'clave090', '04263455555', '2025-07-13', 'sofia.torres90@gmail.com', 'Sofia', 'Torres', '1985-01-27', 'V28506844'),
-(91, 'clave091', '04143456666', '2025-07-13', 'jose.garcia91@gmail.com', 'Jose', 'Garcia', '1974-10-11', 'V29040855'),
-(92, 'clave092', '04240304756', '2025-07-13', 'maria.martinez92@gmail.com', 'Maria', 'Martinez', '1988-03-03', 'V28799066'),
-(93, 'clave093', '04123458688', '2025-07-13', 'carlos.soto93@gmail.com', 'Carlos', 'Soto', '1991-05-15', 'V29056977'),
-(94, 'clave094', '04143459599', '2025-07-13', 'ana.lopez94@gmail.com', 'Ana', 'Lopez', '1982-08-21', 'V6201088'),
-(95, 'clave095', '04122165030', '2025-07-13', 'miguel.gomez95@gmail.com', 'Miguel', 'Gomez', '1979-02-06', 'V273001199'),
-(96, 'clave096', '04263352211', '2025-07-13', 'laura.perez96@gmail.com', 'Laura', 'Perez', '1990-09-29', 'V254001200'),
-(97, 'clave097', '04163332532', '2025-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1983-04-18', 'V22001311'),
-(98, 'clave098', '04240053930', '2025-07-13', 'paula.sanchez98@gmail.com', 'Paula', 'Sanchez', '1975-07-27', 'V8764002'),
-(99, 'clave099', '04149909999', '2025-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '1987-08-25', 'V29000999'),
-(100, 'clave100', '04260010302', '2025-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1993-12-10', 'V9768576');
+(91, 'clave091', '04143456666', '2022-07-27', 'jose.garcia91@gmail.com', 'Jose', 'Garcia', '1974-10-11', 'V29040855'),
+(92, 'clave092', '04240304756', '2025-07-29', 'maria.martinez92@gmail.com', 'Maria', 'Martinez', '1988-03-03', 'V28799066'),
+(93, 'clave093', '04123458688', '2021-07-23', 'carlos.soto93@gmail.com', 'Carlos', 'Soto', '1991-05-15', 'V29056977'),
+(94, 'clave094', '04143459599', '2023-07-13', 'ana.lopez94@gmail.com', 'Ana', 'Lopez', '1982-08-21', 'V6201088'),
+(95, 'clave095', '04122165030', '2025-07-22', 'miguel.gomez95@gmail.com', 'Miguel', 'Gomez', '1979-02-06', 'V273001199'),
+(96, 'clave096', '04263352211', '2025-07-14', 'laura.perez96@gmail.com', 'Laura', 'Perez', '1990-09-29', 'V254001200'),
+(97, 'clave097', '04163332532', '2023-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1983-04-18', 'V22001311'),
+(98, 'clave098', '04240053930', '2020-07-13', 'paula.sanchez98@gmail.com', 'Paula', 'Sanchez', '1975-07-27', 'V8764002'),
+(99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '1987-08-25', 'V29000999'),
+(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1993-12-10', 'V9768576');
 
 --Direcciones Generales de la base de datos
 INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) VALUES
@@ -652,7 +652,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (2, 'Contornos', 'Acompañamientos frescos y sabrosos', 1),
 (3, 'Entradas Parrilleras', 'Picadas y aperitivos para empezar', 1),
 (4, 'Postres Criollos', 'Dulces típicos para cerrar con broche de oro', 1),
-(5, 'Bebidas Tradicionales', 'Jugos naturales y refrescos', 1),
+(5, 'Bebidas', 'Jugos naturales y refrescos', 1),
 
 -- Menú Sushi Experience (idMenu: 2)
 (6, 'Nigiri y Sashimi', 'Selección de pescados frescos y mariscos', 2),
@@ -708,21 +708,21 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (42, 'Bollería Fina', 'Pain au chocolat, Brioches, Danesas', 9),
 (43, 'Tartas y Pasteles', 'Éclairs, Tarte Tatin, Mille-feuille', 9),
 (44, 'Sándwiches Gourmet', 'Bocadillos con pan recién horneado', 9),
-(45, 'Bebidas Calientes', 'Café, Chocolate, Infusiones', 9),
+(45, 'Bebidas', 'Café, Chocolate, Infusiones', 9),
 
 -- Menú Paellero (idMenu: 10)
 (46, 'Paellas de Mariscos', 'La clásica valenciana con frutos del mar', 10),
 (47, 'Paellas Mixtas', 'Mariscos y carnes de pollo y conejo', 10),
 (48, 'Paellas de Carne y Vegetales', 'Opciones robustas sin mariscos', 10),
 (49, 'Tapas y Entremeses', 'Patatas Bravas, Gambas al Ajillo, Chorizo a la Sidra', 10),
-(50, 'Bebidas Españolas', 'Sangría, Cava, Vinos de la región', 10),
+(50, 'Bebidas', 'Sangría, Cava, Vinos de la región', 10),
 
 -- Menú Cevichero (idMenu: 11)
 (51, 'Ceviches Clásicos', 'Pescado blanco, mixtos, con ají amarillo', 11),
 (52, 'Tiraditos y Causas', 'Delicados cortes y purés de papa', 11),
 (53, 'Leche de Tigre', 'La esencia del ceviche para beber', 11),
 (54, 'Platos Calientes Peruanos', 'Lomo Saltado, Ají de Gallina', 11),
-(55, 'Bebidas Peruanas', 'Chicha Morada, Inca Kola', 11),
+(55, 'Bebidas', 'Chicha Morada, Inca Kola', 11),
 
 -- Menú Churrasco (idMenu: 12)
 (56, 'Cortes de Res', 'Picanha, Maminha, Fraldinha', 12),
@@ -757,7 +757,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (77, 'Arepas y Empanadas', 'Variedad de rellenos y acompañamientos', 16),
 (78, 'Sopas y Cremas', 'Ajiaco, Crema de Champiñones', 16),
 (79, 'Postres Típicos', 'Obleas, Natilla, Brevas con Arequipe', 16),
-(80, 'Bebidas Colombianas', 'Aguapanela, Jugos en Leche', 16),
+(80, 'Bebidas', 'Aguapanela, Jugos en Leche', 16),
 
 -- Menú Sin Gluten (idMenu: 17)
 (81, 'Entradas Libres de Gluten', 'Ensaladas, cremas, y aperitivos sin trigo', 17),
@@ -771,11 +771,11 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (87, 'Tamales y Yuca', 'Platos tradicionales con maíz y yuca', 18),
 (88, 'Sopas y Caldos', 'Sopa de Res, Sopa de Pescado', 18),
 (89, 'Platos Fuertes', 'Carne Asada, Pollo Guisado', 18),
-(90, 'Bebidas Tradicionales', 'Horchata de Morro, Tamarindo', 18),
+(90, 'Bebidas', 'Horchata de Morro, Tamarindo', 18),
 
 -- Menú Griego (idMenu: 19)
 (91, 'Mezze (Entradas)', 'Tzatziki, Hummus, Dolmades', 19),
-(92, 'Platos Principales Griegos', 'Moussaka, Gyros, Souvlaki', 19),
+(92, 'Principales', 'Moussaka, Gyros, Souvlaki', 19),
 (93, 'Ensaladas y Guarniciones', 'Ensalada Griega, Arroz Pilaf', 19),
 (94, 'Mariscos y Pescados', 'Pulpo a la Parrilla, Pescado Fresco', 19),
 (95, 'Postres Griegos', 'Baklava, Loukoumades', 19),
@@ -784,7 +784,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (96, 'Mezze Fríos', 'Haydari, Ezme, Patlıcan Salatası', 20),
 (97, 'Mezze Calientes', 'Sigara Böreği, Sucuk Izgara', 20),
 (98, 'Kebabs y Carnes a la Parrilla', 'Adana Kebab, Shish Kebab, Köfte', 20),
-(99, 'Platos Principales', 'Testi Kebab, İskender Kebab', 20),
+(99, 'Principales', 'Testi Kebab, İskender Kebab', 20),
 (100, 'Postres Turcos', 'Baklava, Künefe, Lokum', 20),
 
 -- Menú Alemán (idMenu: 21)
@@ -890,7 +890,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (172, 'Marinados Especiales', 'Recetas tradicionales y picantes', 35),
 (173, 'Guarniciones de BBQ (Banchan)', 'Kimchi fresco, Ensaladas de repollo', 35),
 (174, 'Sopas y Arroces Complementarios', 'Doenjang Jjigae, Gyeran Jjim', 35),
-(175, 'Bebidas Coreanas', 'Soju, Makgeolli, Cervezas locales', 35);
+(175, 'Bebidas', 'Soju, Makgeolli, Cervezas locales', 35);
 
 
 -- 120 Platos
@@ -1193,74 +1193,1203 @@ INSERT INTO OpcionValor (id, idOpcion, nombre, precio_extra) VALUES
 (54, 19, 'Harina de trigo', 0.50),
 (55, 19, 'Integral', 0.75),
 
-(71, 20, 'Sí', 0.00), 
+(56, 20, 'Sí', 0.00), 
 
-(73, 21, 'Sí', 0.00),
-
-(60, 22, 'Solicitar sin gluten', 0.00),
-
-(61, 23, 'Versión vegana', 0.00),
-
-(62, 24, 'Poco dulce', 0.50),
-(63, 24, 'Normal', 1.20),
-(64, 24, 'Muy dulce', 2.04),
-
-(65, 25, 'Mostaza', 0.00),
-(66, 25, 'Mayonesa', 0.00),
-(67, 25, 'Ketchup', 0.00),
-
-(68, 26, 'Fresas', 0.75),
-(69, 26, 'Mango', 0.75),
-
-(70, 27, 'Chocolate', 0.00),
-(71, 27, 'Vainilla', 0.00),
-(72, 27, 'Fresa', 0.00),
-
-(73, 28, 'Chispas de chocolate', 0.50),
-(74, 28, 'Sirope de caramelo', 0.50),
-
-(75, 29, 'Queso mozzarella', 1.00),
-(76, 29, 'Queso crema', 1.25),
-
-(69, 30, 'Sí', 4.00),    
-
-(50, 31, 'Brócoli', 1.50),      
-(51, 31, 'Zanahoria', 1.00),
-(52, 31, 'Pimientos', 1.25),
+(57, 21, 'Sí', 0.00),
 
 
-(83, 32, 'Normal', 0.00),
-(84, 32, 'Poca sal', 0.00),
-(85, 32, 'Sin sal', 0.00),
+(58, 31, 'Brócoli', 1.50),      
+(59, 31, 'Zanahoria', 1.00),
+(60, 31, 'Pimientos', 1.25),
 
-(86, 33, 'Soda', 0.00),
-(87, 33, 'Jugo', 0.50),
-(88, 33, 'Agua', 0.00),
 
-(89, 34, 'Naranja', 0.00),
-(90, 34, 'Fresa', 0.00),
-(91, 34, 'Mango', 0.00),
+(61, 22, 'Solicitar sin gluten', 0.00),
 
-(92, 35, 'Lechuga', 0.50),
-(93, 35, 'Quinoa', 0.75),
-(94, 35, 'Arroz', 0.50),
+(62, 23, 'Versión vegana', 0.00),
 
-(95, 36, 'Sirope de chocolate', 0.50),
-(96, 36, 'Nueces', 0.75),
+(63, 24, 'Poco dulce', 0.50),
+(64, 24, 'Normal', 1.20),
+(65, 24, 'Muy dulce', 2.04),
 
-(97, 37, 'Frito', 0.00),
-(98, 37, 'A la plancha', 0.00),
-(99, 37, 'Horneado', 0.00),
+(66, 25, 'Mostaza', 0.00),
+(67, 25, 'Mayonesa', 0.00),
+(68, 25, 'Ketchup', 0.00),
 
-(100, 38, 'Chocolate', 0.50),
-(101, 38, 'Vainilla', 0.50),
-(102, 38, 'Zanahoria', 0.50),
+(69, 26, 'Fresas', 0.75),
+(70, 26, 'Mango', 0.75),
 
-(103, 39, 'Tostado ligero', 0.00),
-(104, 39, 'Tostado medio', 0.00),
-(105, 39, 'Tostado fuerte', 0.00),
+(71, 27, 'Chocolate', 0.00),
+(72, 27, 'Vainilla', 0.00),
+(73, 27, 'Fresa', 0.00),
 
-(106, 40, 'Pepperoni', 1.00),
-(107, 40, 'Vegetales', 0.75),
-(108, 40, 'Jamón', 1.00);
+(74, 28, 'Chispas de chocolate', 0.50),
+(75, 28, 'Sirope de caramelo', 0.50),
+
+(76, 29, 'Queso mozzarella', 1.00),
+(77, 29, 'Queso crema', 1.25),
+
+(78, 30, 'Sí', 4.00),    
+
+
+(79, 32, 'Normal', 0.00),
+(80, 32, 'Poca sal', 0.00),
+(81, 32, 'Sin sal', 0.00),
+
+(82, 33, 'Soda', 0.00),
+(83, 33, 'Jugo', 0.50),
+(84, 33, 'Agua', 0.00),
+
+(85, 34, 'Naranja', 0.00),
+(86, 34, 'Fresa', 0.00),
+(87, 34, 'Mango', 0.00),
+
+(88, 35, 'Lechuga', 0.50),
+(89, 35, 'Quinoa', 0.75),
+(90, 35, 'Arroz', 0.50),
+
+(91, 36, 'Sirope de chocolate', 0.50),
+(92, 36, 'Nueces', 0.75),
+
+(93, 37, 'Frito', 0.00),
+(94, 37, 'A la plancha', 0.00),
+(95, 37, 'Horneado', 0.00),
+
+(96, 38, 'Chocolate', 0.50),
+(97, 38, 'Vainilla', 0.50),
+(98, 38, 'Zanahoria', 0.50),
+
+(99, 39, 'Tostado ligero', 0.00),
+(100, 39, 'Tostado medio', 0.00),
+(101, 39, 'Tostado fuerte', 0.00),
+
+(102, 40, 'Pepperoni', 1.00),
+(103, 40, 'Vegetales', 0.75),
+(104, 40, 'Jamón', 1.00);
+
+INSERT INTO PlatoOpcion (idPlato, idOpcion) VALUES
+(1, 9),
+(1, 11),
+(2, 9),
+(2, 30),
+(3, 9),
+(3, 23),
+(3, 30),
+(4, 31),
+(4, 35),
+(5, 1),
+(5, 2),
+(5, 6),
+(6, 1),
+(6, 2),
+(6, 7),
+(7, 1),
+(7, 7),
+(7, 22),
+(8, 1),
+(8, 22),
+(9, 1),
+(9, 4),
+(9, 5),
+(10, 5),
+(10, 8),
+(11, 7),
+(11, 31),
+(12, 16),
+(12, 28),
+(12, 36),
+(13, 1),
+(13, 2),
+(13, 18),
+(14, 1),
+(14, 19),
+(14, 23),
+(15, 7),
+(15, 21),
+(15, 22),
+(16, 1),
+(16, 2),
+(16, 5),
+(17, 1),
+(17, 4),
+(17, 31),
+(18, 1),
+(18, 17),
+(18, 31),
+(19, 7),
+(19, 31),
+(19, 28),
+(20, 1),
+(20, 4),
+(20, 32),
+(21, 1),
+(21, 2),
+(21, 5),
+(22, 1),
+(22, 2),
+(22, 5),
+(23, 17),
+(23, 31),
+(23, 35),
+(24, 3),
+(24, 20),
+(24, 21),
+(25, 3),
+(25, 7),
+(25, 20),
+(26, 1),
+(26, 8),
+(26, 32),
+(27, 7),
+(27, 31),
+(27, 20),
+(28, 1),
+(28, 18),
+(28, 30),
+(29, 7),
+(29, 23),
+(30, 7),
+(30, 11),
+(31, 7),
+(31, 20),
+(32, 13),
+(32, 14),
+(32, 15),
+(33, 16),
+(33, 28),
+(33, 36),
+(34, 3),
+(34, 39),
+(35, 16),
+(35, 36),
+(35, 27),
+(36, 14),
+(36, 15),
+(36, 24),
+(37, 9),
+(37, 30),
+(37, 40),
+(38, 6),
+(38, 7),
+(38, 30),
+(39, 9),
+(39, 11),
+(39, 30),
+(40, 33),
+(41, 1),
+(41, 2),
+(41, 6),
+(42, 1),
+(42, 6),
+(42, 18),
+(43, 1),
+(43, 31),
+(43, 35),
+(44, 33),
+(45, 1),
+(45, 18),
+(45, 9),
+(46, 1),
+(46, 18),
+(46, 30),
+(47, 17),
+(47, 31),
+(47, 35),
+(48, 27),
+(48, 36),
+(48, 28),
+(49, 1),
+(49, 31),
+(49, 35),
+(50, 2),
+(50, 6),
+(50, 7),
+(51, 4),
+(51, 7),
+(51, 31),
+(52, 7),
+(52, 22),
+(52, 20),
+(53, 1),
+(53, 2),
+(53, 31),
+(54, 2),
+(54, 7),
+(54, 32),
+(55, 1),
+(55, 2),
+(55, 5),
+(56, 26),
+(56, 24),
+(56, 36),
+(57, 1),
+(57, 17),
+(58, 35),
+(59, 1),
+(60, 14),
+(61, 9),
+(62, 9),
+(63, 7),
+(64, 36),
+(65, 30),
+(66, 4),
+(67, 36),
+(68, 31),
+(69, 19),
+(70, 19),
+(71, 9),
+(72, 9),
+(73, 3),
+(74, 1),
+(75, 7),
+(76, 36),
+(77, 18),
+(78, 1),
+(79, 7),
+(80, 36),
+(81, 9),
+(82, 18),
+(83, 9),
+(84, 36),
+(85, 1),
+(86, 3),
+(87, 4),
+(88, 28),
+(89, 35),
+(90, 30),
+(91, 4),
+(92, 26),
+(93, 9),
+(94, 9),
+(95, 36),
+(96, 9),
+(97, 1),
+(98, 6),
+(99, 19),
+(100, 2),
+(101, 1),
+(102, 1),
+(103, 36),
+(104, 7),
+(105, 31),
+(106, 7),
+(107, 31),
+(108, 28),
+(109, 1),
+(110, 9),
+(111, 9),
+(112, 36),
+(113, 30),
+(114, 18),
+(115, 9),
+(116, 31),
+(117, 29),
+(118, 2),
+(119, 1),
+(120, 35);
+
+-- Platos 1-10 (Ejemplo: Asado Negro, Punta Trasera, Chorizo, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 1: Asado Negro Criollo (Contornos: 9, Tipo de queso: 11)
+(1, 24, 9), (1, 25, 9), (1, 26, 9), (1, 30, 11), (1, 31, 11), (1, 32, 11),
+
+-- Plato 2: Punta Trasera a la Brasa (Contornos: 9, Extra Proteína: 30)
+(2, 24, 9), (2, 25, 9), (2, 26, 9), (2, 78, 30),
+
+-- Plato 3: Chorizo Parrillero (Contornos: 9, Opción vegana: 23, Extra Proteína: 30)
+(3, 24, 9), (3, 25, 9), (3, 26, 9), (3, 62, 23), (3, 78, 30),
+
+-- Plato 4: Ensalada Rallada (Vegetales Extras: 31, Tipo de base: 35)
+(4, 58, 31), (4, 59, 31), (4, 60, 31), (4, 88, 35), (4, 89, 35), (4, 90, 35),
+
+-- Plato 5: Roll California (Tamaño: 1, Nivel de picante: 2, Toppings: 6)
+(5, 1, 1), (5, 2, 1), (5, 3, 1), (5, 4, 2), (5, 5, 2), (5, 6, 2), (5, 7, 2), (5, 17, 6), (5, 18, 6), (5, 19, 6),
+
+-- Plato 6: Nigiri Salmón (Tamaño: 1, Nivel de picante: 2, Extras: 7)
+(6, 1, 1), (6, 2, 1), (6, 3, 1), (6, 4, 2), (6, 5, 2), (6, 6, 2), (6, 7, 2), (6, 20, 7), (6, 21, 7),
+
+-- Plato 7: Sopa Miso (Tamaño: 1, Extras: 7, Opción sin gluten: 22)
+(7, 1, 1), (7, 2, 1), (7, 3, 1), (7, 20, 7), (7, 21, 7), (7, 61, 22),
+
+-- Plato 8: Ebi Tempura (Tamaño: 1, Opción sin gluten: 22)
+(8, 1, 1), (8, 2, 1), (8, 3, 1), (8, 61, 22),
+
+-- Plato 9: Fettuccine Alfredo (Tamaño: 1, Tipo de pasta: 4, Salsas adicionales: 5)
+(9, 1, 1), (9, 2, 1), (9, 3, 1), (9, 11, 4), (9, 12, 4), (9, 13, 4), (9, 14, 5), (9, 15, 5), (9, 16, 5),
+
+-- Plato 10: Lasagna Clásica (Salsas adicionales: 5, Exclusiones: 8)
+(10, 14, 5), (10, 15, 5), (10, 16, 5), (10, 22, 8), (10, 23, 8);
+
+-- Platos 11-20 (Ensalada Caprese, Tiramisú, Tacos al Pastor, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 11: Ensalada Caprese (Extras: 7, Vegetales Extras: 31)
+(11, 20, 7), (11, 21, 7), (11, 58, 31), (11, 59, 31), (11, 60, 31),
+
+-- Plato 12: Tiramisú (Decoración: 16, Tipo de topping dulce: 28, Cobertura: 36)
+(12, 45, 16), (12, 46, 16), (12, 74, 28), (12, 75, 28), (12, 91, 36), (12, 92, 36),
+
+-- Plato 13: Tacos al Pastor (Tamaño: 1, Nivel de picante: 2, Toppings: 18)
+(13, 1, 1), (13, 2, 1), (13, 3, 1), (13, 4, 2), (13, 5, 2), (13, 6, 2), (13, 7, 2), (13, 76, 18), (13, 77, 18),
+
+-- Plato 14: Burrito de Carnitas (Tamaño: 1, Toppings: 19, Opción vegana: 23)
+(14, 1, 1), (14, 2, 1), (14, 3, 1), (14, 76, 19), (14, 77, 19), (14, 62, 23),
+
+-- Plato 15: Guacamole con Totopos (Extras: 7, Sin Nueces: 21, Exclusiones: 22)
+(15, 20, 7), (15, 21, 7), (15, 56, 21), (15, 22, 22), (15, 23, 22),
+
+-- Plato 16: Enchiladas Rojas (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
+(16, 1, 1), (16, 2, 1), (16, 3, 1), (16, 4, 2), (16, 5, 2), (16, 6, 2), (16, 7, 2), (16, 14, 5), (16, 15, 5), (16, 16, 5),
+
+-- Plato 17: Wok de Pollo Teriyaki (Tamaño: 1, Tipo de pasta: 4, Vegetales Extras: 31)
+(17, 1, 1), (17, 2, 1), (17, 3, 1), (17, 11, 4), (17, 12, 4), (17, 13, 4), (17, 58, 31), (17, 59, 31), (17, 60, 31),
+
+-- Plato 18: Arroz Frito Especial (Tamaño: 1, Tipo de arroz: 17, Vegetales Extras: 31)
+(18, 1, 1), (18, 2, 1), (18, 3, 1), (18, 47, 17), (18, 48, 17), (18, 49, 17), (18, 58, 31), (18, 59, 31), (18, 60, 31),
+
+-- Plato 19: Rollitos Primavera (Extras: 7, Vegetales Extras: 31, Tipo de topping dulce: 28)
+(19, 20, 7), (19, 21, 7), (19, 58, 31), (19, 59, 31), (19, 60, 31), (19, 74, 28), (19, 75, 28),
+
+-- Plato 20: Fideos de Arroz con Camarones (Tamaño: 1, Tipo de pasta: 4, Nivel de sal: 32)
+(20, 1, 1), (20, 2, 1), (20, 3, 1), (20, 11, 4), (20, 12, 4), (20, 13, 4), (20, 79, 32), (20, 80, 32), (20, 81, 32);
+
+-- Platos 21-30 (Curry Rojo de Res, Curry Verde de Pollo, Arroz Basmati, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 21: Curry Rojo de Res (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
+(21, 1, 1), (21, 2, 1), (21, 3, 1), (21, 4, 2), (21, 5, 2), (21, 6, 2), (21, 7, 2), (21, 14, 5), (21, 15, 5), (21, 16, 5),
+
+-- Plato 22: Curry Verde de Pollo (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
+(22, 1, 1), (22, 2, 1), (22, 3, 1), (22, 4, 2), (22, 5, 2), (22, 6, 2), (22, 7, 2), (22, 14, 5), (22, 15, 5), (22, 16, 5),
+
+-- Plato 23: Arroz Basmati (Tipo de arroz: 17, Vegetales Extras: 31, Tipo de base: 35)
+(23, 47, 17), (23, 48, 17), (23, 49, 17), (23, 58, 31), (23, 59, 31), (23, 60, 31), (23, 88, 35), (23, 89, 35), (23, 90, 35),
+
+-- Plato 24: Pan Naan (Tipo de pan: 3, Sin Lactosa: 20, Extras: 21)
+(24, 8, 3), (24, 9, 3), (24, 10, 3), (24, 56, 20), (24, 57, 21),
+
+-- Plato 25: Hummus con Pan Pita (Tipo de pan: 3, Extras: 7, Sin Lactosa: 20)
+(25, 8, 3), (25, 9, 3), (25, 10, 3), (25, 20, 7), (25, 21, 7), (25, 56, 20),
+
+-- Plato 26: Moussaka (Tamaño: 1, Exclusiones: 8, Nivel de sal: 32)
+(26, 1, 1), (26, 2, 1), (26, 3, 1), (26, 22, 8), (26, 23, 8), (26, 79, 32), (26, 80, 32), (26, 81, 32),
+
+-- Plato 27: Ensalada Griega (Extras: 7, Vegetales Extras: 31, Sin Lactosa: 20)
+(27, 20, 7), (27, 21, 7), (27, 58, 31), (27, 59, 31), (27, 60, 31), (27, 56, 20),
+
+-- Plato 28: Souvlaki de Pollo (Tamaño: 1, Toppings: 18, Extra Proteína: 30)
+(28, 1, 1), (28, 2, 1), (28, 3, 1), (28, 76, 18), (28, 77, 18), (28, 78, 30),
+
+-- Plato 29: Arepa Reina Pepiada (Extras: 7, Opción vegana: 23)
+(29, 20, 7), (29, 21, 7), (29, 62, 23),
+
+-- Plato 30: Arepa Pelúa (Extras: 7, Tipo de queso: 11)
+(30, 20, 7), (30, 21, 7), (30, 30, 11), (30, 31, 11), (30, 32, 11);
+
+-- Platos 31-40 (Empanada de Carne, Jugo de Parchita, Croissant de Almendras, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 31: Empanada de Carne (Extras: 7, Sin Lactosa: 20)
+(31, 20, 7), (31, 21, 7), (31, 56, 20),
+
+-- Plato 32: Jugo de Parchita (Tamaño de bebida: 13, Tipo de leche: 14, Tipo de azúcar: 15)
+(32, 36, 13), (32, 37, 13), (32, 38, 13), (32, 39, 14), (32, 40, 14), (32, 41, 14), (32, 42, 15), (32, 43, 15), (32, 44, 15),
+
+-- Plato 33: Croissant de Almendras (Decoración: 16, Tipo de topping dulce: 28, Cobertura: 36)
+(33, 45, 16), (33, 46, 16), (33, 74, 28), (33, 75, 28), (33, 91, 36), (33, 92, 36),
+
+-- Plato 34: Baguette Clásica (Tipo de pan: 3, Nivel de tostado: 39)
+(34, 8, 3), (34, 9, 3), (34, 10, 3), (34, 99, 39), (34, 100, 39), (34, 101, 39),
+
+-- Plato 35: Éclair de Chocolate (Decoración: 16, Cobertura: 36, Sabor de helado: 27)
+(35, 45, 16), (35, 46, 16), (35, 91, 36), (35, 92, 36), (35, 71, 27), (35, 72, 27), (35, 73, 27),
+
+-- Plato 36: Café Latte (Tipo de leche: 14, Tipo de azúcar: 15, Nivel de azúcar: 24)
+(36, 39, 14), (36, 40, 14), (36, 41, 14), (36, 42, 15), (36, 43, 15), (36, 44, 15), (36, 63, 24), (36, 64, 24), (36, 65, 24),
+
+-- Plato 37: Paella de Mariscos (Contornos: 9, Extra Proteína: 30, Tipo de cobertura de pizza: 40)
+(37, 24, 9), (37, 25, 9), (37, 26, 9), (37, 78, 30), (37, 102, 40), (37, 103, 40), (37, 104, 40),
+
+-- Plato 38: Tapas de Gambas al Ajillo (Nivel de picante: 2, Extras: 7, Extra Proteína: 30)
+(38, 4, 2), (38, 5, 2), (38, 6, 2), (38, 7, 2), (38, 20, 7), (38, 21, 7), (38, 78, 30),
+
+-- Plato 39: Paella Mixta (Contornos: 9, Tipo de queso: 11, Extra Proteína: 30)
+(39, 24, 9), (39, 25, 9), (39, 26, 9), (39, 30, 11), (39, 31, 11), (39, 32, 11), (39, 78, 30),
+
+-- Plato 40: Sangría Tradicional (Tipo de bebida: 33, Sabor de bebida: 34, Nivel de azúcar: 24)
+(40, 82, 33), (40, 83, 33), (40, 84, 33), (40, 85, 34), (40, 86, 34), (40, 87, 34), (40, 63, 24), (40, 64, 24), (40, 65, 24);
+
+-- Platos 41-50 (Ceviche Clásico, Tiradito de Pulpo, Causa Limeña, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 41: Ceviche Clásico de Pescado (Tamaño: 1, Nivel de picante: 2, Toppings: 6)
+(41, 1, 1), (41, 2, 1), (41, 3, 1), (41, 4, 2), (41, 5, 2), (41, 6, 2), (41, 7, 2), (41, 17, 6), (41, 18, 6), (41, 19, 6),
+
+-- Plato 42: Tiradito de Pulpo (Tamaño: 1, Nivel de picante: 2, Toppings: 18)
+(42, 1, 1), (42, 2, 1), (42, 3, 1), (42, 4, 2), (42, 5, 2), (42, 6, 2), (42, 7, 2), (42, 76, 18), (42, 77, 18),
+
+-- Plato 43: Causa Limeña (Tamaño: 1, Vegetales Extras: 31, Tipo de base: 35)
+(43, 1, 1), (43, 2, 1), (43, 3, 1), (43, 58, 31), (43, 59, 31), (43, 60, 31), (43, 88, 35), (43, 89, 35), (43, 90, 35),
+
+-- Plato 44: Chicha Morada (Tipo de bebida: 33, Sabor de bebida: 34, Nivel de azúcar: 24)
+(44, 82, 33), (44, 83, 33), (44, 84, 33), (44, 85, 34), (44, 86, 34), (44, 87, 34), (44, 63, 24), (44, 64, 24), (44, 65, 24),
+
+-- Plato 45: Picanha a la Espada (Tamaño: 1, Toppings: 18, Contornos: 9)
+(45, 1, 1), (45, 2, 1), (45, 3, 1), (45, 76, 18), (45, 77, 18), (45, 24, 9), (45, 25, 9), (45, 26, 9),
+
+-- Plato 46: Fraldinha (Tamaño: 1, Toppings: 18, Extra Proteína: 30)
+(46, 1, 1), (46, 2, 1), (46, 3, 1), (46, 76, 18), (46, 77, 18), (46, 78, 30),
+
+-- Plato 47: Arroz Blanco (Tipo de arroz: 17, Vegetales Extras: 31, Tipo de base: 35)
+(47, 47, 17), (47, 48, 17), (47, 49, 17), (47, 58, 31), (47, 59, 31), (47, 60, 31), (47, 88, 35), (47, 89, 35), (47, 90, 35),
+
+-- Plato 48: Brigadeiro (Decoración: 16, Cobertura: 36, Sabor de helado: 27)
+(48, 45, 16), (48, 46, 16), (48, 91, 36), (48, 92, 36), (48, 71, 27), (48, 72, 27), (48, 73, 27),
+
+-- Plato 49: Bibimbap (Tamaño: 1, Vegetales Extras: 31, Tipo de base: 35)
+(49, 1, 1), (49, 2, 1), (49, 3, 1), (49, 58, 31), (49, 59, 31), (49, 60, 31), (49, 88, 35), (49, 89, 35), (49, 90, 35),
+
+-- Plato 50: Kimchi Jjigae (Nivel de picante: 2, Extras: 7, Nivel de sal: 32)
+(50, 4, 2), (50, 5, 2), (50, 6, 2), (50, 7, 2), (50, 20, 7), (50, 21, 7), (50, 79, 32), (50, 80, 32), (50, 81, 32);
+
+-- Platos 51-60 (Japchae, Kimchi, Pad Thai, Tom Yum Goong, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 51: Japchae (Tipo de pasta: 4, Extras: 7, Vegetales Extras: 31)
+(51, 11, 4), (51, 12, 4), (51, 13, 4), (51, 20, 7), (51, 21, 7), (51, 58, 31), (51, 59, 31), (51, 60, 31),
+
+-- Plato 52: Kimchi (Extras: 7, Opción sin gluten: 22, Sin Lactosa: 20)
+(52, 20, 7), (52, 21, 7), (52, 61, 22), (52, 56, 20),
+
+-- Plato 53: Pad Thai con Pollo (Tamaño: 1, Nivel de picante: 2, Vegetales Extras: 31)
+(53, 1, 1), (53, 2, 1), (53, 3, 1), (53, 4, 2), (53, 5, 2), (53, 6, 2), (53, 7, 2), (53, 58, 31), (53, 59, 31), (53, 60, 31),
+
+-- Plato 54: Tom Yum Goong (Nivel de picante: 2, Extras: 7, Nivel de sal: 32)
+(54, 4, 2), (54, 5, 2), (54, 6, 2), (54, 7, 2), (54, 20, 7), (54, 21, 7), (54, 79, 32), (54, 80, 32), (54, 81, 32),
+
+-- Plato 55: Curry Massaman con Res (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
+(55, 1, 1), (55, 2, 1), (55, 3, 1), (55, 4, 2), (55, 5, 2), (55, 6, 2), (55, 7, 2), (55, 14, 5), (55, 15, 5), (55, 16, 5),
+
+-- Plato 56: Mango Sticky Rice (Fruta adicional: 26, Nivel de azúcar: 24, Cobertura: 36)
+(56, 69, 26), (56, 70, 26), (56, 63, 24), (56, 64, 24), (56, 65, 24), (56, 91, 36), (56, 92, 36),
+
+-- Plato 57: Pho Bo (Sopa de Res) (Tamaño: 1, Tipo de arroz: 17)
+(57, 1, 1), (57, 2, 1), (57, 3, 1), (57, 47, 17), (57, 48, 17), (57, 49, 17),
+
+-- Plato 58: Gỏi Cuốn (Rollos de Verano) (Tipo de base: 35)
+(58, 88, 35), (58, 89, 35), (58, 90, 35),
+
+-- Plato 59: Bún Chả (Tamaño: 1)
+(59, 1, 1), (59, 2, 1), (59, 3, 1),
+
+-- Plato 60: Café Vietnamita con Leche Condensada (Tipo de leche: 14, Tipo de azúcar: 15)
+(60, 39, 14), (60, 40, 14), (60, 41, 14), (60, 42, 15), (60, 43, 15), (60, 44, 15);
+
+-- Platos 61-70 (Bandeja Paisa, Ajiaco Santafereño, Empanadas Colombianas, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 61: Bandeja Paisa (Contornos: 9)
+(61, 24, 9), (61, 25, 9), (61, 26, 9),
+
+-- Plato 62: Ajiaco Santafereño (Contornos: 9)
+(62, 24, 9), (62, 25, 9), (62, 26, 9),
+
+-- Plato 63: Empanadas Colombianas (Extras: 7, Sin Lactosa: 20)
+(63, 20, 7), (63, 21, 7), (63, 56, 20),
+
+-- Plato 64: Postre de Natilla (Cobertura: 36)
+(64, 91, 36), (64, 92, 36),
+
+-- Plato 65: Salmón al Horno con Vegetales Asados (Extra Proteína: 30)
+(65, 78, 30),
+
+-- Plato 66: Pasta de Lentejas con Pesto (Tipo de pasta: 4)
+(66, 11, 4), (66, 12, 4), (66, 13, 4),
+
+-- Plato 67: Brownie de Chocolate Sin Gluten (Cobertura: 36)
+(67, 91, 36), (67, 92, 36),
+
+-- Plato 68: Ensalada Quinoa y Aguacate (Vegetales Extras: 31)
+(68, 58, 31), (68, 59, 31), (68, 60, 31),
+
+-- Plato 69: Pupusa de Queso con Loroco (Toppings: 19)
+(69, 76, 19), (69, 77, 19),
+
+-- Plato 70: Pupusa Revuelta (Toppings: 19)
+(70, 76, 19), (70, 77, 19);
+
+-- Platos 71-80 (Yuca con Chicharrón, Sopa de Res Salvadoreña, Gyros de Cerdo, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 71: Yuca con Chicharrón (Contornos: 9)
+(71, 24, 9), (71, 25, 9), (71, 26, 9),
+
+-- Plato 72: Sopa de Res Salvadoreña (Contornos: 9)
+(72, 24, 9), (72, 25, 9), (72, 26, 9),
+
+-- Plato 73: Gyros de Cerdo (Tipo de pan: 3)
+(73, 8, 3), (73, 9, 3), (73, 10, 3),
+
+-- Plato 74: Moussaka (Tamaño: 1)
+(74, 1, 1), (74, 2, 1), (74, 3, 1),
+
+-- Plato 75: Tzatziki con Pan Pita (Extras: 7)
+(75, 20, 7), (75, 21, 7),
+
+-- Plato 76: Baklava (Cobertura: 36)
+(76, 91, 36), (76, 92, 36),
+
+-- Plato 77: Adana Kebab (Toppings: 18)
+(77, 76, 18), (77, 77, 18),
+
+-- Plato 78: Lahmacun (Tamaño: 1)
+(78, 1, 1), (78, 2, 1), (78, 3, 1),
+
+-- Plato 79: Hummus (Extras: 7)
+(79, 20, 7), (79, 21, 7),
+
+-- Plato 80: Künefe (Cobertura: 36)
+(80, 91, 36), (80, 92, 36);
+
+-- Platos 81-90 (Bratwurst con Sauerkraut, Wiener Schnitzel, Kartoffelsalat, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 81: Bratwurst con Sauerkraut (Contornos: 9)
+(81, 24, 9), (81, 25, 9), (81, 26, 9),
+
+-- Plato 82: Wiener Schnitzel (Toppings: 18)
+(82, 76, 18), (82, 77, 18),
+
+-- Plato 83: Kartoffelsalat (Vegetales Extras: 31)
+(83, 58, 31), (83, 59, 31), (83, 60, 31),
+
+-- Plato 84: Apfelstrudel (Cobertura: 36)
+(84, 91, 36), (84, 92, 36),
+
+-- Plato 85: Tacos de Kimchi y Cerdo (Tamaño: 1)
+(85, 1, 1), (85, 2, 1), (85, 3, 1),
+
+-- Plato 86: Sushi Burger (Tipo de pan: 3)
+(86, 8, 3), (86, 9, 3), (86, 10, 3),
+
+-- Plato 87: Pasta al Curry y Leche de Coco (Tipo de pasta: 4)
+(87, 11, 4), (87, 12, 4), (87, 13, 4),
+
+-- Plato 88: Cheesecake de Matcha (Cobertura: 36)
+(88, 91, 36), (88, 92, 36),
+
+-- Plato 89: Ensalada de Lentejas y Vegetales Orgánicos (Vegetales Extras: 31)
+(89, 58, 31), (89, 59, 31), (89, 60, 31),
+
+-- Plato 90: Pollo Orgánico al Limón con Quinoa (Extra Proteína: 30)
+(90, 78, 30);
+
+-- Platos 91-100 (Sopa de Calabaza Asada, Smoothie Verde, Pabellón Criollo, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 91: Sopa de Calabaza Asada (Tipo de pasta: 4)
+(91, 11, 4), (91, 12, 4), (91, 13, 4),
+
+-- Plato 92: Smoothie Verde Detox (Fruta adicional: 26)
+(92, 69, 26), (92, 70, 26),
+
+-- Plato 93: Pabellón Criollo Completo (Contornos: 9)
+(93, 24, 9), (93, 25, 9), (93, 26, 9),
+
+-- Plato 94: Sopa de Costilla Casera (Contornos: 9)
+(94, 24, 9), (94, 25, 9), (94, 26, 9),
+
+-- Plato 95: Arroz con Leche (Cobertura: 36)
+(95, 91, 36), (95, 92, 36),
+
+-- Plato 96: Asado Negro (Contornos: 9)
+(96, 24, 9), (96, 25, 9), (96, 26, 9),
+
+-- Plato 97: Fajitas de Pollo (Tamaño: 1)
+(97, 1, 1), (97, 2, 1), (97, 3, 1),
+
+-- Plato 98: Nachos Supremos (Toppings: 6)
+(98, 17, 6), (98, 18, 6), (98, 19, 6),
+
+-- Plato 99: Burrito de Carne Asada (Toppings: 19)
+(99, 76, 19), (99, 77, 19),
+
+-- Plato 100: Chili con Carne (Nivel de picante: 2)
+(100, 4, 2), (100, 5, 2), (100, 6, 2), (100, 7, 2);
+
+-- Platos 101-110 (Taco de Carnitas, Hamburguesa Clásica, Churros, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 101: Taco de Carnitas (Tamaño: 1)
+(101, 1, 1), (101, 2, 1), (101, 3, 1),
+
+-- Plato 102: Hamburguesa Clásica con Papas (Tamaño: 1)
+(102, 1, 1), (102, 2, 1), (102, 3, 1),
+
+-- Plato 103: Churros con Chocolate (Cobertura: 36)
+(103, 91, 36), (103, 92, 36),
+
+-- Plato 104: Arepa con Queso Telita (Extras: 7)
+(104, 20, 7), (104, 21, 7),
+
+-- Plato 105: Bowl de Salmón y Aguacate (Vegetales Extras: 31)
+(105, 58, 31), (105, 59, 31), (105, 60, 31),
+
+-- Plato 106: Ensalada de Pollo a la Parrilla (Extras: 7)
+(106, 20, 7), (106, 21, 7),
+
+-- Plato 107: Lentejas Estofadas con Verduras (Vegetales Extras: 31)
+(107, 58, 31), (107, 59, 31), (107, 60, 31),
+
+-- Plato 108: Barra Energética Casera (Cobertura: 36)
+(108, 91, 36), (108, 92, 36),
+
+-- Plato 109: Mac and Cheese Clásico (Tamaño: 1)
+(109, 1, 1), (109, 2, 1), (109, 3, 1),
+
+-- Plato 110: Albóndigas en Salsa de Tomate (Contornos: 9)
+(110, 24, 9), (110, 25, 9), (110, 26, 9);
+
+-- Platos 111-120 (Puré de Papa, Brownie con Helado, Surf & Turf, etc.)
+INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
+-- Plato 111: Puré de Papa (Contornos: 9)
+(111, 24, 9), (111, 25, 9), (111, 26, 9),
+
+-- Plato 112: Brownie con Helado (Cobertura: 36)
+(112, 91, 36), (112, 92, 36),
+
+-- Plato 113: Surf & Turf (Extra Proteína: 30)
+(113, 78, 30),
+
+-- Plato 114: Ribeye a la Parrilla (Toppings: 18)
+(114, 76, 18), (114, 77, 18),
+
+-- Plato 115: Camarones al Ajillo (Contornos: 9)
+(115, 24, 9), (115, 25, 9), (115, 26, 9),
+
+-- Plato 116: Espárragos Asados (Vegetales Extras: 31)
+(116, 58, 31), (116, 59, 31), (116, 60, 31),
+
+-- Plato 117: Pizza Margherita (Borde relleno: 29)
+(117, 76, 29), (117, 77, 29),
+
+-- Plato 118: Pizza Diavola (Nivel de picante: 2)
+(118, 4, 2), (118, 5, 2), (118, 6, 2), (118, 7, 2),
+
+-- Plato 119: Calzone Relleno (Tamaño: 1)
+(119, 1, 1), (119, 2, 1), (119, 3, 1),
+
+-- Plato 120: Ensalada Rúcula y Parmesano (Tipo de base: 35)
+(120, 88, 35), (120, 89, 35), (120, 90, 35);
+
+INSERT INTO Repartidor (id, password, telefono, fecha_registro, correo, nombre, apellido, fecha_nac, nro_documento, detalle_vehiculo, estado) VALUES
+(1, 'repartidor001', '04121234567', '2024-01-20', 'david.romero1@gmail.com', 'David', 'Romero', '1990-01-15', 'E10111222', 'Moto Kawasaki Ninja 400 placa A123', 'Activo'),
+(2, 'repartidor002', '04147654321', '2023-03-10', 'elena.gomez2@gmail.com', 'Elena', 'Gomez', '1985-03-20', 'V11333444', 'Bicicleta Montañera Trek', 'Inactivo'),
+(3, 'repartidor003', '04248765432', '2025-02-05', 'fernando.diaz3@gmail.com', 'Fernando', 'Diaz', '1992-07-01', 'E12555666', 'Carro Chevrolet Spark placa B123', 'Activo'),
+(4, 'repartidor004', '04169876543', '2024-06-18', 'gabriel.rojas4@gmail.com', 'Gabriel', 'Rojas', '1988-11-10', 'V13777888', 'Moto Empire Horse placa C123', 'Activo'),
+(5, 'repartidor005', '04121112233', '2023-09-22', 'hilda.peres5@gmail.com', 'Hilda', 'Peres', '1995-02-28', 'E14999000', 'Bicicleta de Paseo', 'Inactivo'),
+(6, 'repartidor006', '04143334455', '2025-01-01', 'ivan.soto6@gmail.com', 'Ivan', 'Soto', '1980-06-05', 'V15111222', 'Carro Ford Fiesta placa A456', 'Activo'),
+(7, 'repartidor007', '04245556677', '2024-04-14', 'juana.flores7@gmail.com', 'Juana', 'Flores', '1993-09-12', 'E16333444', 'Moto Bera Socialista B456', 'Activo'),
+(8, 'repartidor008', '04167778899', '2023-11-08', 'kenneth.muñoz8@gmail.com', 'Kenneth', 'Muñoz', '1987-04-25', 'V17555666', 'Bicicleta Urbana', 'Inactivo'),
+(9, 'repartidor009', '04120001111', '2025-03-27', 'luisa.vargas9@gmail.com', 'Luisa', 'Vargas', '1991-08-03', 'E18777888', 'Carro Toyota Corolla placa C456', 'Activo'),
+(10, 'repartidor010', '04142223344', '2024-07-01', 'marcos.ruiz10@gmail.com', 'Marcos', 'Ruiz', '1983-12-18', 'V19999000', 'Moto Suzuky GN 125 placa A789', 'Activo'),
+(11, 'repartidor011', '04244445566', '2023-10-15', 'natalia.castro11@gmail.com', 'Natalia', 'Castro', '1996-01-09', 'E20111222', 'Bicicleta Eléctrica', 'Inactivo'),
+(12, 'repartidor012', '04166667788', '2025-04-01', 'oscar.hernandez12@gmail.com', 'Oscar', 'Hernandez', '1979-05-30', 'V21333444', 'Carro Hyundai Accent placa B789', 'Activo'),
+(13, 'repartidor013', '04128889900', '2024-08-09', 'paola.jimenez13@gmail.com', 'Paola', 'Jimenez', '1994-10-07', 'E22555666', 'Moto Yamaha R1 placa C789', 'Activo'),
+(14, 'repartidor014', '04140001122', '2023-12-01', 'raul.morales14@gmail.com', 'Raul', 'Morales', '1986-07-22', 'V23777888', 'Bicicleta Plegable', 'Inactivo'),
+(15, 'repartidor015', '04241112233', '2025-05-11', 'sofia.perez15@gmail.com', 'Sofia', 'Perez', '1997-03-04', 'E24999000', 'Carro Renault Twingo placa A475', 'Activo'),
+(16, 'repartidor016', '04163334455', '2024-09-25', 'tomas.rodriguez16@gmail.com', 'Tomas', 'Rodriguez', '1981-09-19', 'V25111222', 'Moto Haojue hj150 placa B475', 'Activo'),
+(17, 'repartidor017', '04125556677', '2023-02-14', 'ursula.gonzalez17@gmail.com', 'Ursula', 'Gonzalez', '1990-11-25', 'E26333444', 'Bicicleta de Carga placa C6523', 'Inactivo'),
+(18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1979-05-25', 'V27000133', 'Automóvil Fiat Palio placa A3840', 'Activo'),
+(19, 'clave019', '04160004444', '2021-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '2025-07-13', 'V28000144', 'Bicicleta de Ruta Specialized', 'Inactivo'),
+(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155', 'Moto Honda placa C6430202', 'Activo');
+
+INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total) VALUES
+(1, 8, 7.62, 'Con opciones adicionales', 45, 107.62),
+(2, 5, 5.17, NULL, 33, 65.17),
+(3, 7, 8.95, 'Con opciones adicionales', 58, 98.95),
+(4, 2, 4.31, NULL, 28, 24.31),
+(5, 9, 9.88, 'Con opciones adicionales', 51, 129.88),
+(6, 6, 6.04, NULL, 39, 78.04),
+(7, 4, 3.29, NULL, 30, 43.29),
+(8, 10, 8.11, 'Con opciones adicionales', 55, 138.11),
+(9, 3, 2.76, NULL, 25, 32.76),
+(10, 7, 7.01, 'Con opciones adicionales', 48, 97.01),
+(11, 5, 5.50, NULL, 35, 65.50),
+(12, 8, 9.12, 'Con opciones adicionales', 52, 109.12),
+(13, 2, 3.80, NULL, 27, 23.80),
+(14, 6, 6.75, NULL, 41, 78.75),
+(15, 9, 9.20, 'Con opciones adicionales', 59, 129.20),
+(16, 4, 4.00, NULL, 32, 44.00),
+(17, 7, 8.05, 'Con opciones adicionales', 49, 98.05),
+(18, 3, 2.99, NULL, 26, 32.99),
+(19, 10, 7.80, 'Con opciones adicionales', 56, 137.80),
+(20, 5, 5.65, NULL, 34, 65.65),
+(21, 8, 8.70, 'Con opciones adicionales', 53, 108.70),
+(22, 2, 4.10, NULL, 29, 24.10),
+(23, 6, 6.25, NULL, 40, 78.25),
+(24, 9, 9.55, 'Con opciones adicionales', 57, 129.55),
+(25, 4, 3.70, NULL, 31, 43.70),
+(26, 7, 7.45, 'Con opciones adicionales', 46, 97.45),
+(27, 3, 2.50, NULL, 24, 32.50),
+(28, 10, 9.00, 'Con opciones adicionales', 60, 139.00),
+(29, 5, 5.90, NULL, 36, 65.90),
+(30, 8, 8.40, 'Con opciones adicionales', 50, 108.40),
+(31, 2, 3.50, NULL, 22, 23.50),
+(32, 6, 6.80, NULL, 42, 78.80),
+(33, 9, 9.99, 'Con opciones adicionales', 54, 129.99),
+(34, 4, 3.15, NULL, 23, 43.15),
+(35, 7, 7.90, 'Con opciones adicionales', 47, 97.90),
+(36, 3, 2.80, NULL, 21, 32.80),
+(37, 10, 8.50, 'Con opciones adicionales', 58, 138.50),
+(38, 5, 5.00, NULL, 38, 65.00),
+(39, 8, 9.30, 'Con opciones adicionales', 55, 109.30),
+(40, 2, 4.40, NULL, 30, 24.40),
+(41, 6, 6.50, NULL, 44, 78.50),
+(42, 9, 9.75, 'Con opciones adicionales', 59, 129.75),
+(43, 4, 3.90, NULL, 25, 43.90),
+(44, 7, 7.20, 'Con opciones adicionales', 50, 97.20),
+(45, 3, 2.60, NULL, 26, 32.60),
+(46, 10, 8.80, 'Con opciones adicionales', 57, 138.80),
+(47, 5, 5.25, NULL, 37, 65.25),
+(48, 8, 8.10, 'Con opciones adicionales', 52, 108.10),
+(49, 2, 4.00, NULL, 29, 24.00),
+(50, 6, 6.10, NULL, 41, 78.10),
+(51, 9, 9.40, 'Con opciones adicionales', 56, 129.40),
+(52, 4, 3.60, NULL, 33, 43.60),
+(53, 7, 7.70, 'Con opciones adicionales', 48, 97.70),
+(54, 3, 2.40, NULL, 20, 32.40),
+(55, 10, 8.90, 'Con opciones adicionales', 59, 138.90),
+(56, 5, 5.80, NULL, 39, 65.80),
+(57, 8, 8.30, 'Con opciones adicionales', 54, 108.30),
+(58, 2, 3.40, NULL, 23, 23.40),
+(59, 6, 6.90, NULL, 40, 78.90),
+(60, 9, 9.10, 'Con opciones adicionales', 51, 129.10),
+(61, 4, 3.00, NULL, 21, 43.00),
+(62, 7, 7.10, 'Con opciones adicionales', 45, 97.10),
+(63, 3, 2.30, NULL, 22, 32.30),
+(64, 10, 8.60, 'Con opciones adicionales', 58, 138.60),
+(65, 5, 5.40, NULL, 35, 65.40),
+(66, 8, 9.60, 'Con opciones adicionales', 53, 109.60),
+(67, 2, 4.20, NULL, 28, 24.20),
+(68, 6, 6.30, NULL, 42, 78.30),
+(69, 9, 9.35, 'Con opciones adicionales', 57, 129.35),
+(70, 4, 3.85, NULL, 31, 43.85),
+(71, 7, 7.55, 'Con opciones adicionales', 49, 97.55),
+(72, 3, 2.75, NULL, 24, 32.75),
+(73, 10, 8.20, 'Con opciones adicionales', 56, 138.20),
+(74, 5, 5.75, NULL, 36, 65.75),
+(75, 8, 8.65, 'Con opciones adicionales', 50, 108.65),
+(76, 2, 3.95, NULL, 27, 23.95),
+(77, 6, 6.45, NULL, 43, 78.45),
+(78, 9, 9.05, 'Con opciones adicionales', 55, 129.05),
+(79, 4, 3.20, NULL, 20, 43.20),
+(80, 7, 7.30, 'Con opciones adicionales', 47, 97.30),
+(81, 3, 2.90, NULL, 25, 32.90),
+(82, 10, 8.75, 'Con opciones adicionales', 60, 138.75),
+(83, 5, 5.10, NULL, 34, 65.10),
+(84, 8, 9.45, 'Con opciones adicionales', 52, 109.45),
+(85, 2, 4.05, NULL, 29, 24.05),
+(86, 6, 6.00, NULL, 38, 78.00),
+(87, 9, 9.65, 'Con opciones adicionales', 59, 129.65),
+(88, 4, 3.30, NULL, 26, 43.30),
+(89, 7, 7.85, 'Con opciones adicionales', 51, 97.85),
+(90, 3, 2.65, NULL, 21, 32.65),
+(91, 10, 8.95, 'Con opciones adicionales', 53, 138.95),
+(92, 5, 5.35, NULL, 32, 65.35),
+(93, 8, 8.00, 'Con opciones adicionales', 56, 108.00),
+(94, 2, 4.15, NULL, 30, 24.15),
+(95, 6, 6.20, NULL, 40, 78.20),
+(96, 9, 9.25, 'Con opciones adicionales', 58, 129.25),
+(97, 4, 3.45, NULL, 24, 43.45),
+(98, 7, 7.00, 'Con opciones adicionales', 46, 97.00),
+(99, 3, 2.55, NULL, 22, 32.55),
+(100, 10, 9.00, 'Con opciones adicionales', 60, 139.00),
+(101, 8, 7.50, 'Con opciones adicionales', 44, 107.50),
+(102, 5, 5.05, NULL, 31, 65.05),
+(103, 7, 8.80, 'Con opciones adicionales', 57, 98.80),
+(104, 2, 4.25, NULL, 27, 24.25),
+(105, 9, 9.70, 'Con opciones adicionales', 50, 129.70),
+(106, 6, 6.15, NULL, 39, 78.15),
+(107, 4, 3.35, NULL, 25, 43.35),
+(108, 10, 8.45, 'Con opciones adicionales', 55, 138.45),
+(109, 3, 2.85, NULL, 23, 32.85),
+(110, 7, 7.95, 'Con opciones adicionales', 48, 97.95),
+(111, 5, 5.60, NULL, 36, 65.60),
+(112, 8, 9.15, 'Con opciones adicionales', 52, 109.15),
+(113, 2, 3.75, NULL, 26, 23.75),
+(114, 6, 6.85, NULL, 41, 78.85),
+(115, 9, 9.90, 'Con opciones adicionales', 59, 129.90),
+(116, 4, 3.99, NULL, 32, 43.99),
+(117, 7, 7.15, 'Con opciones adicionales', 49, 97.15),
+(118, 3, 2.00, NULL, 20, 32.00),
+(119, 10, 8.35, 'Con opciones adicionales', 54, 138.35),
+(120, 5, 5.95, NULL, 35, 65.95),
+(121, 8, 8.25, 'Con opciones adicionales', 51, 108.25),
+(122, 2, 3.05, NULL, 22, 23.05),
+(123, 6, 6.70, NULL, 40, 78.70),
+(124, 9, 9.50, 'Con opciones adicionales', 56, 129.50),
+(125, 4, 3.10, NULL, 28, 43.10),
+(126, 7, 7.40, 'Con opciones adicionales', 45, 97.40),
+(127, 3, 2.20, NULL, 21, 32.20),
+(128, 10, 8.05, 'Con opciones adicionales', 58, 138.05),
+(129, 5, 5.55, NULL, 33, 65.55),
+(130, 8, 9.20, 'Con opciones adicionales', 55, 109.20),
+(131, 2, 4.30, NULL, 29, 24.30),
+(132, 6, 6.00, NULL, 42, 78.00),
+(133, 9, 9.30, 'Con opciones adicionales', 57, 129.30),
+(134, 4, 3.50, NULL, 30, 43.50),
+(135, 7, 7.60, 'Con opciones adicionales', 47, 97.60),
+(136, 3, 2.90, NULL, 24, 32.90),
+(137, 10, 8.80, 'Con opciones adicionales', 59, 138.80),
+(138, 5, 5.20, NULL, 37, 65.20),
+(139, 8, 8.50, 'Con opciones adicionales', 53, 108.50),
+(140, 2, 3.60, NULL, 25, 23.60),
+(141, 6, 6.95, NULL, 44, 78.95),
+(142, 9, 9.75, 'Con opciones adicionales', 60, 129.75),
+(143, 4, 3.00, NULL, 26, 43.00),
+(144, 7, 7.30, 'Con opciones adicionales', 48, 97.30),
+(145, 3, 2.10, NULL, 21, 32.10),
+(146, 10, 8.40, 'Con opciones adicionales', 52, 138.40),
+(147, 5, 5.70, NULL, 38, 65.70),
+(148, 8, 8.15, 'Con opciones adicionales', 50, 108.15),
+(149, 2, 4.00, NULL, 23, 24.00),
+(150, 6, 6.50, NULL, 39, 78.50);
+
+INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
+(14, 1, '2024-11-20'),
+(28, 2, '2024-03-23'),
+(72, 3, '2024-08-10'),
+(95, 4, '2025-01-05'),
+(26, 5, '2023-09-01'),
+(13, 6, '2024-06-18'),
+(86, 7, '2025-02-14'),
+(97, 8, '2023-11-11'),
+(100, 9, '2024-05-07'),
+(92, 10, '2025-04-29'),
+(23, 11, '2023-08-20'),
+(24, 12, '2024-01-15'),
+(30, 13, '2025-03-01'),
+(98, 14, '2023-10-05'),
+(94, 15, '2024-07-22'),
+(49, 16, '2025-06-10'),
+(79, 17, '2023-12-03'),
+(69, 18, '2024-04-28'),
+(17, 19, '2025-07-01'),
+(88, 20, '2023-07-15'),
+(45, 21, '2024-02-09'),
+(67, 22, '2025-05-18'),
+(54, 23, '2023-09-29'),
+(61, 24, '2024-09-06'),
+(12, 25, '2025-01-27'),
+(11, 26, '2023-10-18'),
+(74, 27, '2024-03-02'),
+(82, 28, '2025-07-15'),
+(99, 29, '2023-07-28'),
+(48, 30, '2024-12-01'),
+(6, 31, '2025-04-10'),
+(89, 32, '2023-11-25'),
+(83, 33, '2024-08-19'),
+(80, 34, '2025-02-28'),
+(77, 35, '2023-09-14'),
+(47, 36, '2024-01-01'),
+(87, 37, '2025-06-20'),
+(75, 38, '2023-12-10'),
+(34, 39, '2024-05-15'),
+(90, 40, '2025-03-09'),
+(76, 41, '2023-08-05'),
+(57, 42, '2024-02-22'),
+(96, 43, '2025-01-01'),
+(91, 44, '2023-10-25'),
+(15, 45, '2024-07-03'),
+(1, 46, '2025-05-01'),
+(59, 47, '2023-11-08'),
+(52, 48, '2024-04-17'),
+(66, 49, '2025-02-05'),
+(27, 50, '2023-07-20'),
+(56, 51, '2024-10-09'),
+(44, 52, '2025-01-19'),
+(8, 53, '2023-09-07'),
+(60, 54, '2024-06-25'),
+(38, 55, '2025-04-20'),
+(4, 56, '2023-12-19'),
+(32, 57, '2024-08-01'),
+(2, 58, '2025-03-15'),
+(51, 59, '2023-10-10'),
+(78, 60, '2024-05-29'),
+(37, 61, '2025-07-10'),
+(65, 62, '2023-08-12'),
+(5, 63, '2024-03-10'),
+(9, 64, '2025-01-22'),
+(20, 65, '2023-09-20'),
+(35, 66, '2024-11-05'),
+(31, 67, '2025-06-01'),
+(55, 68, '2023-11-30'),
+(63, 69, '2024-04-05'),
+(46, 70, '2025-02-12'),
+(16, 71, '2023-07-05'),
+(43, 72, '2024-09-12'),
+(10, 73, '2025-03-25'),
+(68, 74, '2023-10-30'),
+(39, 75, '2024-07-14'),
+(21, 76, '2025-05-09'),
+(19, 77, '2023-12-25'),
+(84, 78, '2024-01-29'),
+(70, 79, '2025-06-28'),
+(50, 80, '2023-09-03'),
+(7, 81, '2024-10-22'),
+(42, 82, '2025-04-01'),
+(36, 83, '2023-08-27'),
+(62, 84, '2024-03-05'),
+(33, 85, '2025-01-10'),
+(25, 86, '2023-11-18'),
+(29, 87, '2024-07-08'),
+(71, 88, '2025-05-20'),
+(40, 89, '2023-12-08'),
+(85, 90, '2024-02-19'),
+(18, 91, '2025-07-05'),
+(53, 92, '2023-07-18'),
+(93, 93, '2024-11-13'),
+(22, 94, '2025-04-25'),
+(3, 95, '2023-09-10'),
+(41, 96, '2024-06-03'),
+(73, 97, '2025-01-08'),
+(64, 98, '2023-10-01'),
+(58, 99, '2024-05-20'),
+(4, 100, '2025-03-01'),
+(14, 101, '2024-11-20'),
+(28, 102, '2024-03-23'),
+(72, 103, '2024-08-10'),
+(95, 104, '2025-01-05'),
+(26, 105, '2023-09-01'),
+(13, 106, '2024-06-18'),
+(86, 107, '2025-02-14'),
+(97, 108, '2023-11-11'),
+(100, 109, '2024-05-07'),
+(92, 110, '2025-04-29'),
+(23, 111, '2023-08-20'),
+(24, 112, '2024-01-15'),
+(30, 113, '2025-03-01'),
+(98, 114, '2023-10-05'),
+(94, 115, '2024-07-22'),
+(49, 116, '2025-06-10'),
+(79, 117, '2023-12-03'),
+(69, 118, '2024-04-28'),
+(17, 119, '2025-07-01'),
+(88, 120, '2023-07-15'),
+(45, 121, '2024-02-09'),
+(67, 122, '2025-05-18'),
+(54, 123, '2023-09-29'),
+(61, 124, '2024-09-06'),
+(12, 125, '2025-01-27'),
+(11, 126, '2023-10-18'),
+(74, 127, '2024-03-02'),
+(82, 128, '2025-07-15'),
+(99, 129, '2023-07-28'),
+(48, 130, '2024-12-01'),
+(6, 131, '2025-04-10'),
+(89, 132, '2023-11-25'),
+(83, 133, '2024-08-19'),
+(80, 134, '2025-02-28'),
+(77, 135, '2023-09-14'),
+(47, 136, '2024-01-01'),
+(87, 137, '2025-06-20'),
+(75, 138, '2023-12-10'),
+(34, 139, '2024-05-15'),
+(90, 140, '2025-03-09'),
+(76, 141, '2023-08-05'),
+(57, 142, '2024-02-22'),
+(96, 143, '2025-01-01'),
+(91, 144, '2023-10-25'),
+(15, 145, '2024-07-03'),
+(1, 146, '2025-05-01'),
+(59, 147, '2023-11-08'),
+(52, 148, '2024-04-17'),
+(66, 149, '2025-02-05'),
+(27, 150, '2023-07-20');
+
+INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, monto_total, idPedido) VALUES
+(1, '2023-07-16', 85.50, 16.00, 13.68, 99.18, 1),
+(2, '2023-07-17', 120.00, 16.00, 19.20, 139.20, 2),
+(3, '2023-07-18', 45.75, 16.00, 7.32, 53.07, 3),
+(4, '2023-07-19', 200.25, 16.00, 32.04, 232.29, 4),
+(5, '2023-07-20', 70.00, 16.00, 11.20, 81.20, 5),
+(6, '2023-07-21', 95.00, 16.00, 15.20, 110.20, 6),
+(7, '2023-07-22', 150.00, 16.00, 24.00, 174.00, 7),
+(8, '2023-07-23', 30.00, 16.00, 4.80, 34.80, 8),
+(9, '2023-07-24', 180.50, 16.00, 28.88, 209.38, 9),
+(10, '2023-07-25', 62.50, 16.00, 10.00, 72.50, 10),
+(11, '2023-07-26', 110.00, 16.00, 17.60, 127.60, 11),
+(12, '2023-07-27', 75.00, 16.00, 12.00, 87.00, 12),
+(13, '2023-07-28', 130.00, 16.00, 20.80, 150.80, 13),
+(14, '2023-07-29', 55.00, 16.00, 8.80, 63.80, 14),
+(15, '2023-07-30', 90.00, 16.00, 14.40, 104.40, 15),
+(16, '2023-07-31', 170.00, 16.00, 27.20, 197.20, 16),
+(17, '2023-08-01', 40.00, 16.00, 6.40, 46.40, 17),
+(18, '2023-08-02', 105.00, 16.00, 16.80, 121.80, 18),
+(19, '2023-08-03', 80.00, 16.00, 12.80, 92.80, 19),
+(20, '2023-08-04', 140.00, 16.00, 22.40, 162.40, 20),
+(21, '2023-08-05', 60.00, 16.00, 9.60, 69.60, 21),
+(22, '2023-08-06', 115.00, 16.00, 18.40, 133.40, 22),
+(23, '2023-08-07', 88.00, 16.00, 14.08, 102.08, 23),
+(24, '2023-08-08', 190.00, 16.00, 30.40, 220.40, 24),
+(25, '2023-08-09', 72.00, 16.00, 11.52, 83.52, 25),
+(26, '2023-08-10', 125.00, 16.00, 20.00, 145.00, 26),
+(27, '2023-08-11', 50.00, 16.00, 8.00, 58.00, 27),
+(28, '2023-08-12', 160.00, 16.00, 25.60, 185.60, 28),
+(29, '2023-08-13', 65.00, 16.00, 10.40, 75.40, 29),
+(30, '2023-08-14', 100.00, 16.00, 16.00, 116.00, 30),
+(31, '2023-08-15', 82.00, 16.00, 13.12, 95.12, 31),
+(32, '2023-08-16', 175.00, 16.00, 28.00, 203.00, 32),
+(33, '2023-08-17', 48.00, 16.00, 7.68, 55.68, 33),
+(34, '2023-08-18', 135.00, 16.00, 21.60, 156.60, 34),
+(35, '2023-08-19', 93.00, 16.00, 14.88, 107.88, 35),
+(36, '2023-08-20', 210.00, 16.00, 33.60, 243.60, 36),
+(37, '2023-08-21', 78.00, 16.00, 12.48, 90.48, 37),
+(38, '2023-08-22', 118.00, 16.00, 18.88, 136.88, 38),
+(39, '2023-08-23', 85.00, 16.00, 13.60, 98.60, 39),
+(40, '2023-08-24', 155.00, 16.00, 24.80, 179.80, 40),
+(41, '2023-08-25', 52.00, 16.00, 8.32, 60.32, 41),
+(42, '2023-08-26', 165.00, 16.00, 26.40, 191.40, 42),
+(43, '2023-08-27', 70.00, 16.00, 11.20, 81.20, 43),
+(44, '2023-08-28', 122.00, 16.00, 19.52, 141.52, 44),
+(45, '2023-08-29', 90.00, 16.00, 14.40, 104.40, 45),
+(46, '2023-08-30', 185.00, 16.00, 29.60, 214.60, 46),
+(47, '2023-08-31', 42.00, 16.00, 6.72, 48.72, 47),
+(48, '2023-09-01', 108.00, 16.00, 17.28, 125.28, 48),
+(49, '2023-09-02', 83.00, 16.00, 13.28, 96.28, 49),
+(50, '2023-09-03', 145.00, 16.00, 23.20, 168.20, 50),
+(51, '2023-09-04', 68.00, 16.00, 10.88, 78.88, 51),
+(52, '2023-09-05', 112.00, 16.00, 17.92, 129.92, 52),
+(53, '2023-09-06', 95.00, 16.00, 15.20, 110.20, 53),
+(54, '2023-09-07', 205.00, 16.00, 32.80, 237.80, 54),
+(55, '2023-09-08', 75.00, 16.00, 12.00, 87.00, 55),
+(56, '2023-09-09', 130.00, 16.00, 20.80, 150.80, 56),
+(57, '2023-09-10', 58.00, 16.00, 9.28, 67.28, 57),
+(58, '2023-09-11', 170.00, 16.00, 27.20, 197.20, 58),
+(59, '2023-09-12', 62.00, 16.00, 9.92, 71.92, 59),
+(60, '2023-09-13', 105.00, 16.00, 16.80, 121.80, 60),
+(61, '2023-09-14', 88.00, 16.00, 14.08, 102.08, 61),
+(62, '2023-09-15', 180.00, 16.00, 28.80, 208.80, 62),
+(63, '2023-09-16', 45.00, 16.00, 7.20, 52.20, 63),
+(64, '2023-09-17', 115.00, 16.00, 18.40, 133.40, 64),
+(65, '2023-09-18', 79.00, 16.00, 12.64, 91.64, 65),
+(66, '2023-09-19', 150.00, 16.00, 24.00, 174.00, 66),
+(67, '2023-09-20', 60.00, 16.00, 9.60, 69.60, 67),
+(68, '2023-09-21', 140.00, 16.00, 22.40, 162.40, 68),
+(69, '2023-09-22', 92.00, 16.00, 14.72, 106.72, 69),
+(70, '2023-09-23', 220.00, 16.00, 35.20, 255.20, 70),
+(71, '2023-09-24', 70.00, 16.00, 11.20, 81.20, 71),
+(72, '2023-09-25', 128.00, 16.00, 20.48, 148.48, 72),
+(73, '2023-09-26', 85.00, 16.00, 13.60, 98.60, 73),
+(74, '2023-09-27', 195.00, 16.00, 31.20, 226.20, 74),
+(75, '2023-09-28', 55.00, 16.00, 8.80, 63.80, 75),
+(76, '2023-09-29', 160.00, 16.00, 25.60, 185.60, 76),
+(77, '2023-09-30', 65.00, 16.00, 10.40, 75.40, 77),
+(78, '2023-10-01', 110.00, 16.00, 17.60, 127.60, 78),
+(79, '2023-10-02', 80.00, 16.00, 12.80, 92.80, 79),
+(80, '2023-10-03', 175.00, 16.00, 28.00, 203.00, 80),
+(81, '2023-10-04', 40.00, 16.00, 6.40, 46.40, 81),
+(82, '2023-10-05', 135.00, 16.00, 21.60, 156.60, 82),
+(83, '2023-10-06', 98.00, 16.00, 15.68, 113.68, 83),
+(84, '2023-10-07', 200.00, 16.00, 32.00, 232.00, 84),
+(85, '2023-10-08', 72.00, 16.00, 11.52, 83.52, 85),
+(86, '2023-10-09', 120.00, 16.00, 19.20, 139.20, 86),
+(87, '2023-10-10', 50.00, 16.00, 8.00, 58.00, 87),
+(88, '2023-10-11', 140.00, 16.00, 22.40, 162.40, 88),
+(89, '2023-10-12', 60.00, 16.00, 9.60, 69.60, 89),
+(90, '2023-10-13', 100.00, 16.00, 16.00, 116.00, 90),
+(91, '2023-10-14', 85.00, 16.00, 13.60, 98.60, 91),
+(92, '2023-10-15', 150.00, 16.00, 24.00, 174.00, 92),
+(93, '2023-10-16', 45.00, 16.00, 7.20, 52.20, 93),
+(94, '2023-10-17', 115.00, 16.00, 18.40, 133.40, 94),
+(95, '2023-10-18', 78.00, 16.00, 12.48, 90.48, 95),
+(96, '2023-10-19', 190.00, 16.00, 30.40, 220.40, 96),
+(97, '2023-10-20', 68.00, 16.00, 10.88, 78.88, 97),
+(98, '2023-10-21', 125.00, 16.00, 20.00, 145.00, 98),
+(99, '2023-10-22', 93.00, 16.00, 14.88, 107.88, 99),
+(100, '2023-10-23', 210.00, 16.00, 33.60, 243.60, 100),
+(101, '2024-01-01', 50.00, 16.00, 8.00, 58.00, 101),
+(102, '2024-01-05', 120.00, 16.00, 19.20, 139.20, 102),
+(103, '2024-01-10', 75.00, 16.00, 12.00, 87.00, 103),
+(104, '2024-01-15', 180.00, 16.00, 28.80, 208.80, 104),
+(105, '2024-01-20', 60.00, 16.00, 9.60, 69.60, 105),
+(106, '2024-01-25', 140.00, 16.00, 22.40, 162.40, 106),
+(107, '2024-01-30', 90.00, 16.00, 14.40, 104.40, 107),
+(108, '2024-02-04', 200.00, 16.00, 32.00, 232.00, 108),
+(109, '2024-02-09', 65.00, 16.00, 10.40, 75.40, 109),
+(110, '2024-02-14', 110.00, 16.00, 17.60, 127.60, 110),
+(111, '2024-02-19', 85.00, 16.00, 13.60, 98.60, 111),
+(112, '2024-02-24', 160.00, 16.00, 25.60, 185.60, 112),
+(113, '2024-02-29', 48.00, 16.00, 7.68, 55.68, 113),
+(114, '2024-03-05', 130.00, 16.00, 20.80, 150.80, 114),
+(115, '2024-03-10', 95.00, 16.00, 15.20, 110.20, 115),
+(116, '2024-03-15', 215.00, 16.00, 34.40, 249.40, 116),
+(117, '2024-03-20', 70.00, 16.00, 11.20, 81.20, 117),
+(118, '2024-03-25', 125.00, 16.00, 20.00, 145.00, 118),
+(119, '2024-03-30', 80.00, 16.00, 12.80, 92.80, 119),
+(120, '2024-04-04', 170.00, 16.00, 27.20, 197.20, 120),
+(121, '2024-04-09', 55.00, 16.00, 8.80, 63.80, 121),
+(122, '2024-04-14', 150.00, 16.00, 24.00, 174.00, 122),
+(123, '2024-04-19', 62.00, 16.00, 9.92, 71.92, 123),
+(124, '2024-04-24', 105.00, 16.00, 16.80, 121.80, 124),
+(125, '2024-04-29', 98.00, 16.00, 15.68, 113.68, 125),
+(126, '2024-05-04', 190.00, 16.00, 30.40, 220.40, 126),
+(127, '2024-05-09', 75.00, 16.00, 12.00, 87.00, 127),
+(128, '2024-05-14', 135.00, 16.00, 21.60, 156.60, 128),
+(129, '2024-05-19', 88.00, 16.00, 14.08, 102.08, 129),
+(130, '2024-05-24', 200.00, 16.00, 32.00, 232.00, 130),
+(131, '2024-05-29', 42.00, 16.00, 6.72, 48.72, 131),
+(132, '2024-06-03', 112.00, 16.00, 17.92, 129.92, 132),
+(133, '2024-06-08', 70.00, 16.00, 11.20, 81.20, 133),
+(134, '2024-06-13', 145.00, 16.00, 23.20, 168.20, 134),
+(135, '2024-06-18', 60.00, 16.00, 9.60, 69.60, 135),
+(136, '2024-06-23', 100.00, 16.00, 16.00, 116.00, 136),
+(137, '2024-06-28', 85.00, 16.00, 13.60, 98.60, 137),
+(138, '2024-07-03', 150.00, 16.00, 24.00, 174.00, 138),
+(139, '2024-07-08', 45.00, 16.00, 7.20, 52.20, 139),
+(140, '2024-07-13', 115.00, 16.00, 18.40, 133.40, 140),
+(141, '2024-07-18', 78.00, 16.00, 12.48, 90.48, 141),
+(142, '2024-07-23', 190.00, 16.00, 30.40, 220.40, 142),
+(143, '2024-07-28', 68.00, 16.00, 10.88, 78.88, 143),
+(144, '2024-08-02', 125.00, 16.00, 20.00, 145.00, 144),
+(145, '2024-08-07', 93.00, 16.00, 14.88, 107.88, 145),
+(146, '2024-08-12', 210.00, 16.00, 33.60, 243.60, 146),
+(147, '2024-08-17', 50.00, 16.00, 8.00, 58.00, 147),
+(148, '2024-08-22', 120.00, 16.00, 19.20, 139.20, 148),
+(149, '2024-08-27', 75.00, 16.00, 12.00, 87.00, 149),
+(150, '2024-09-01', 180.00, 16.00, 28.80, 208.80, 150);
+
+
+INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentario) VALUES
+(1, 1, '2025-07-10', 5, 'Excelente servicio, muy rápido y amable.'),
+(2, 3, '2024-06-25', 4, 'Entrega puntual, todo en orden.'),
+(3, 4, '2025-01-15', 5, 'Muy profesional, la comida llegó perfecta.'),
+(4, 6, '2024-03-01', 3, 'La entrega fue un poco tardía, pero llegó bien.'),
+(5, 7, '2025-05-20', 5, 'Siempre eficiente y con buena disposición.'),
+(6, 9, '2024-08-05', 4, 'Buen repartidor, sin problemas.'),
+(7, 10, '2025-02-28', 5, 'Rapidez y amabilidad, un 10.'),
+(8, 12, '2024-11-12', 4, 'Todo correcto, buena comunicación.'),
+(9, 13, '2025-04-03', 5, 'Servicio impecable, muy atento.'),
+(10, 15, '2024-02-09', 3, 'Demoró un poco más de lo esperado.'),
+(11, 16, '2025-06-01', 5, 'Increíble, superó mis expectativas.'),
+(12, 18, '2024-09-17', 4, 'La entrega fue como se esperaba.'),
+(13, 20, '2025-03-10', 5, 'Repartidor muy educado y rápido.'),
+(14, 1, '2024-12-01', 4, 'Buena experiencia, repetiría.'),
+(15, 3, '2025-07-05', 5, 'Simplemente perfecto.'),
+(16, 4, '2023-05-19', 3, 'Algunos problemas con la dirección, pero se solucionó.'),
+(17, 6, '2025-01-22', 5, 'Entrega muy profesional, packaging intacto.'),
+(18, 7, '2024-07-30', 4, 'Llegó en el tiempo estimado.'),
+(19, 9, '2025-06-10', 5, 'Siempre confío en este repartidor, excelente.'),
+(20, 10, '2023-08-14', 4, 'Cumplió con todo lo acordado.'),
+(21, 12, '2025-02-01', 5, 'Muy buena actitud y servicio.'),
+(22, 13, '2024-04-20', 3, 'La ruta fue un poco confusa.'),
+(23, 15, '2025-07-14', 5, 'No puedo pedir más, fue genial.'),
+(24, 16, '2023-10-05', 4, 'Repartidor eficiente y cuidadoso.'),
+(25, 18, '2025-03-25', 5, 'Una entrega impecable.'),
+(26, 20, '2024-01-01', 4, 'Todo bien, llegó sin problemas.'),
+(27, 1, '2025-05-08', 5, 'El mejor repartidor que me ha tocado.'),
+(28, 3, '2023-07-07', 3, 'Se equivocó de piso, pero lo corrigió.'),
+(29, 4, '2025-07-01', 5, 'Super rápido y muy atento.'),
+(30, 6, '2024-05-11', 4, 'Entrega correcta y a tiempo.'),
+(31, 7, '2025-01-30', 5, 'Un servicio de primera, lo recomiendo.'),
+(32, 9, '2023-09-02', 4, 'Amable y la entrega fue rápida.'),
+(33, 10, '2025-04-18', 5, 'Increíble, mi pedido en minutos.'),
+(34, 12, '2024-02-29', 3, 'Hubo un pequeño retraso, pero avisó.'),
+(35, 13, '2025-07-08', 5, 'Siempre confiable y profesional.'),
+(36, 15, '2023-11-11', 4, 'La entrega fue fluida y sin contratiempos.'),
+(37, 16, '2025-06-15', 5, 'Absolutamente satisfecho con el servicio.'),
+(38, 18, '2024-03-07', 4, 'Buen trabajo, ninguna queja.'),
+(39, 20, '2025-07-02', 5, 'Simplemente excelente, volvería a pedir.'),
+(40, 1, '2023-01-28', 4, 'Cumplió con las expectativas.');
+
 
