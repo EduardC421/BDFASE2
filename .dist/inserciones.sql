@@ -1670,155 +1670,155 @@ INSERT INTO Repartidor (id, password, telefono, fecha_registro, correo, nombre, 
 
 INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total) VALUES
 (1, 8, 7.62, 'Con opciones adicionales', 45, 107.62),
-(2, 5, 5.17, NULL, 33, 65.17),
+(2, 5, 5.17, 'Sin Nota', 33, 65.17),
 (3, 7, 8.95, 'Con opciones adicionales', 58, 98.95),
-(4, 2, 4.31, NULL, 28, 24.31),
+(4, 2, 4.31, 'Sin Nota', 28, 24.31),
 (5, 9, 9.88, 'Con opciones adicionales', 51, 129.88),
-(6, 6, 6.04, NULL, 39, 78.04),
-(7, 4, 3.29, NULL, 30, 43.29),
+(6, 6, 6.04, 'Sin Nota', 39, 78.04),
+(7, 4, 3.29, 'Sin Nota', 30, 43.29),
 (8, 10, 8.11, 'Con opciones adicionales', 55, 138.11),
-(9, 3, 2.76, NULL, 25, 32.76),
+(9, 3, 2.76, 'Sin Nota', 25, 32.76),
 (10, 7, 7.01, 'Con opciones adicionales', 48, 97.01),
-(11, 5, 5.50, NULL, 35, 65.50),
+(11, 5, 5.50, 'Sin Nota', 35, 65.50),
 (12, 8, 9.12, 'Con opciones adicionales', 52, 109.12),
-(13, 2, 3.80, NULL, 27, 23.80),
-(14, 6, 6.75, NULL, 41, 78.75),
+(13, 2, 3.80, 'Sin Nota', 27, 23.80),
+(14, 6, 6.75, 'Sin Nota', 41, 78.75),
 (15, 9, 9.20, 'Con opciones adicionales', 59, 129.20),
-(16, 4, 4.00, NULL, 32, 44.00),
+(16, 4, 4.00, 'Sin Nota', 32, 44.00),
 (17, 7, 8.05, 'Con opciones adicionales', 49, 98.05),
-(18, 3, 2.99, NULL, 26, 32.99),
+(18, 3, 2.99, 'Sin Nota', 26, 32.99),
 (19, 10, 7.80, 'Con opciones adicionales', 56, 137.80),
-(20, 5, 5.65, NULL, 34, 65.65),
+(20, 5, 5.65, 'Sin Nota', 34, 65.65),
 (21, 8, 8.70, 'Con opciones adicionales', 53, 108.70),
-(22, 2, 4.10, NULL, 29, 24.10),
-(23, 6, 6.25, NULL, 40, 78.25),
+(22, 2, 4.10, 'Sin Nota', 29, 24.10),
+(23, 6, 6.25, 'Sin Nota', 40, 78.25),
 (24, 9, 9.55, 'Con opciones adicionales', 57, 129.55),
-(25, 4, 3.70, NULL, 31, 43.70),
+(25, 4, 3.70, 'Sin Nota', 31, 43.70),
 (26, 7, 7.45, 'Con opciones adicionales', 46, 97.45),
-(27, 3, 2.50, NULL, 24, 32.50),
+(27, 3, 2.50, 'Sin Nota', 24, 32.50),
 (28, 10, 9.00, 'Con opciones adicionales', 60, 139.00),
-(29, 5, 5.90, NULL, 36, 65.90),
+(29, 5, 5.90, 'Sin Nota', 36, 65.90),
 (30, 8, 8.40, 'Con opciones adicionales', 50, 108.40),
-(31, 2, 3.50, NULL, 22, 23.50),
-(32, 6, 6.80, NULL, 42, 78.80),
+(31, 2, 3.50, 'Sin Nota', 22, 23.50),
+(32, 6, 6.80, 'Sin Nota', 42, 78.80),
 (33, 9, 9.99, 'Con opciones adicionales', 54, 129.99),
-(34, 4, 3.15, NULL, 23, 43.15),
+(34, 4, 3.15, 'Sin Nota', 23, 43.15),
 (35, 7, 7.90, 'Con opciones adicionales', 47, 97.90),
-(36, 3, 2.80, NULL, 21, 32.80),
+(36, 3, 2.80, 'Sin Nota', 21, 32.80),
 (37, 10, 8.50, 'Con opciones adicionales', 58, 138.50),
-(38, 5, 5.00, NULL, 38, 65.00),
+(38, 5, 5.00, 'Sin Nota', 38, 65.00),
 (39, 8, 9.30, 'Con opciones adicionales', 55, 109.30),
-(40, 2, 4.40, NULL, 30, 24.40),
-(41, 6, 6.50, NULL, 44, 78.50),
+(40, 2, 4.40, 'Sin Nota', 30, 24.40),
+(41, 6, 6.50, 'Sin Nota', 44, 78.50),
 (42, 9, 9.75, 'Con opciones adicionales', 59, 129.75),
-(43, 4, 3.90, NULL, 25, 43.90),
+(43, 4, 3.90, 'Sin Nota', 25, 43.90),
 (44, 7, 7.20, 'Con opciones adicionales', 50, 97.20),
-(45, 3, 2.60, NULL, 26, 32.60),
+(45, 3, 2.60, 'Sin Nota', 26, 32.60),
 (46, 10, 8.80, 'Con opciones adicionales', 57, 138.80),
-(47, 5, 5.25, NULL, 37, 65.25),
+(47, 5, 5.25, , 37, 65.25),
 (48, 8, 8.10, 'Con opciones adicionales', 52, 108.10),
-(49, 2, 4.00, NULL, 29, 24.00),
-(50, 6, 6.10, NULL, 41, 78.10),
+(49, 2, 4.00, 'Sin Nota', 29, 24.00),
+(50, 6, 6.10, 'Sin Nota', 41, 78.10),
 (51, 9, 9.40, 'Con opciones adicionales', 56, 129.40),
-(52, 4, 3.60, NULL, 33, 43.60),
+(52, 4, 3.60, 'Sin Nota', 33, 43.60),
 (53, 7, 7.70, 'Con opciones adicionales', 48, 97.70),
-(54, 3, 2.40, NULL, 20, 32.40),
+(54, 3, 2.40, 'Sin Nota', 20, 32.40),
 (55, 10, 8.90, 'Con opciones adicionales', 59, 138.90),
-(56, 5, 5.80, NULL, 39, 65.80),
+(56, 5, 5.80, 'Sin Nota', 39, 65.80),
 (57, 8, 8.30, 'Con opciones adicionales', 54, 108.30),
-(58, 2, 3.40, NULL, 23, 23.40),
-(59, 6, 6.90, NULL, 40, 78.90),
+(58, 2, 3.40, 'Sin Nota', 23, 23.40),
+(59, 6, 6.90, 'Sin Nota', 40, 78.90),
 (60, 9, 9.10, 'Con opciones adicionales', 51, 129.10),
-(61, 4, 3.00, NULL, 21, 43.00),
+(61, 4, 3.00, 'Sin Nota', 21, 43.00),
 (62, 7, 7.10, 'Con opciones adicionales', 45, 97.10),
-(63, 3, 2.30, NULL, 22, 32.30),
+(63, 3, 2.30, 'Sin Nota', 22, 32.30),
 (64, 10, 8.60, 'Con opciones adicionales', 58, 138.60),
-(65, 5, 5.40, NULL, 35, 65.40),
+(65, 5, 5.40, 'Sin Nota', 35, 65.40),
 (66, 8, 9.60, 'Con opciones adicionales', 53, 109.60),
-(67, 2, 4.20, NULL, 28, 24.20),
-(68, 6, 6.30, NULL, 42, 78.30),
+(67, 2, 4.20, 'Sin Nota', 28, 24.20),
+(68, 6, 6.30, 'Sin Nota', 42, 78.30),
 (69, 9, 9.35, 'Con opciones adicionales', 57, 129.35),
-(70, 4, 3.85, NULL, 31, 43.85),
+(70, 4, 3.85, 'Sin Nota', 31, 43.85),
 (71, 7, 7.55, 'Con opciones adicionales', 49, 97.55),
-(72, 3, 2.75, NULL, 24, 32.75),
+(72, 3, 2.75, 'Sin Nota', 24, 32.75),
 (73, 10, 8.20, 'Con opciones adicionales', 56, 138.20),
-(74, 5, 5.75, NULL, 36, 65.75),
+(74, 5, 5.75, 'Sin Nota', 36, 65.75),
 (75, 8, 8.65, 'Con opciones adicionales', 50, 108.65),
-(76, 2, 3.95, NULL, 27, 23.95),
-(77, 6, 6.45, NULL, 43, 78.45),
+(76, 2, 3.95, 'Sin Nota', 27, 23.95),
+(77, 6, 6.45, 'Sin Nota', 43, 78.45),
 (78, 9, 9.05, 'Con opciones adicionales', 55, 129.05),
-(79, 4, 3.20, NULL, 20, 43.20),
+(79, 4, 3.20, 'Sin Nota', 20, 43.20),
 (80, 7, 7.30, 'Con opciones adicionales', 47, 97.30),
-(81, 3, 2.90, NULL, 25, 32.90),
+(81, 3, 2.90, 'Sin Nota', 25, 32.90),
 (82, 10, 8.75, 'Con opciones adicionales', 60, 138.75),
-(83, 5, 5.10, NULL, 34, 65.10),
+(83, 5, 5.10, 'Sin Nota', 34, 65.10),
 (84, 8, 9.45, 'Con opciones adicionales', 52, 109.45),
-(85, 2, 4.05, NULL, 29, 24.05),
-(86, 6, 6.00, NULL, 38, 78.00),
+(85, 2, 4.05, 'Sin Nota', 29, 24.05),
+(86, 6, 6.00, 'Sin Nota', 38, 78.00),
 (87, 9, 9.65, 'Con opciones adicionales', 59, 129.65),
-(88, 4, 3.30, NULL, 26, 43.30),
+(88, 4, 3.30, 'Sin Nota', 26, 43.30),
 (89, 7, 7.85, 'Con opciones adicionales', 51, 97.85),
-(90, 3, 2.65, NULL, 21, 32.65),
+(90, 3, 2.65, 'Sin Nota', 21, 32.65),
 (91, 10, 8.95, 'Con opciones adicionales', 53, 138.95),
-(92, 5, 5.35, NULL, 32, 65.35),
+(92, 5, 5.35, 'Sin Nota', 32, 65.35),
 (93, 8, 8.00, 'Con opciones adicionales', 56, 108.00),
-(94, 2, 4.15, NULL, 30, 24.15),
-(95, 6, 6.20, NULL, 40, 78.20),
+(94, 2, 4.15, 'Sin Nota', 30, 24.15),
+(95, 6, 6.20, 'Sin Nota', 40, 78.20),
 (96, 9, 9.25, 'Con opciones adicionales', 58, 129.25),
-(97, 4, 3.45, NULL, 24, 43.45),
+(97, 4, 3.45, 'Sin Nota', 24, 43.45),
 (98, 7, 7.00, 'Con opciones adicionales', 46, 97.00),
-(99, 3, 2.55, NULL, 22, 32.55),
+(99, 3, 2.55, 'Sin Nota', 22, 32.55),
 (100, 10, 9.00, 'Con opciones adicionales', 60, 139.00),
 (101, 8, 7.50, 'Con opciones adicionales', 44, 107.50),
-(102, 5, 5.05, NULL, 31, 65.05),
+(102, 5, 5.05, 'Sin Nota', 31, 65.05),
 (103, 7, 8.80, 'Con opciones adicionales', 57, 98.80),
-(104, 2, 4.25, NULL, 27, 24.25),
+(104, 2, 4.25, 'Sin Nota', 27, 24.25),
 (105, 9, 9.70, 'Con opciones adicionales', 50, 129.70),
-(106, 6, 6.15, NULL, 39, 78.15),
-(107, 4, 3.35, NULL, 25, 43.35),
+(106, 6, 6.15, 'Sin Nota', 39, 78.15),
+(107, 4, 3.35, 'Sin Nota', 25, 43.35),
 (108, 10, 8.45, 'Con opciones adicionales', 55, 138.45),
-(109, 3, 2.85, NULL, 23, 32.85),
+(109, 3, 2.85, 'Sin Nota', 23, 32.85),
 (110, 7, 7.95, 'Con opciones adicionales', 48, 97.95),
-(111, 5, 5.60, NULL, 36, 65.60),
+(111, 5, 5.60, 'Sin Nota', 36, 65.60),
 (112, 8, 9.15, 'Con opciones adicionales', 52, 109.15),
-(113, 2, 3.75, NULL, 26, 23.75),
-(114, 6, 6.85, NULL, 41, 78.85),
+(113, 2, 3.75, 'Sin Nota', 26, 23.75),
+(114, 6, 6.85, 'Sin Nota', 41, 78.85),
 (115, 9, 9.90, 'Con opciones adicionales', 59, 129.90),
-(116, 4, 3.99, NULL, 32, 43.99),
+(116, 4, 3.99, 'Sin Nota', 32, 43.99),
 (117, 7, 7.15, 'Con opciones adicionales', 49, 97.15),
-(118, 3, 2.00, NULL, 20, 32.00),
+(118, 3, 2.00, 'Sin Nota', 20, 32.00),
 (119, 10, 8.35, 'Con opciones adicionales', 54, 138.35),
-(120, 5, 5.95, NULL, 35, 65.95),
+(120, 5, 5.95, 'Sin Nota', 35, 65.95),
 (121, 8, 8.25, 'Con opciones adicionales', 51, 108.25),
-(122, 2, 3.05, NULL, 22, 23.05),
-(123, 6, 6.70, NULL, 40, 78.70),
+(122, 2, 3.05, 'Sin Nota', 22, 23.05),
+(123, 6, 6.70, 'Sin Nota', 40, 78.70),
 (124, 9, 9.50, 'Con opciones adicionales', 56, 129.50),
-(125, 4, 3.10, NULL, 28, 43.10),
+(125, 4, 3.10, 'Sin Nota', 28, 43.10),
 (126, 7, 7.40, 'Con opciones adicionales', 45, 97.40),
-(127, 3, 2.20, NULL, 21, 32.20),
+(127, 3, 2.20, 'Sin Nota', 21, 32.20),
 (128, 10, 8.05, 'Con opciones adicionales', 58, 138.05),
-(129, 5, 5.55, NULL, 33, 65.55),
+(129, 5, 5.55, 'Sin Nota', 33, 65.55),
 (130, 8, 9.20, 'Con opciones adicionales', 55, 109.20),
-(131, 2, 4.30, NULL, 29, 24.30),
-(132, 6, 6.00, NULL, 42, 78.00),
+(131, 2, 4.30, 'Sin Nota', 29, 24.30),
+(132, 6, 6.00, 'Sin Nota', 42, 78.00),
 (133, 9, 9.30, 'Con opciones adicionales', 57, 129.30),
-(134, 4, 3.50, NULL, 30, 43.50),
+(134, 4, 3.50, 'Sin Nota', 30, 43.50),
 (135, 7, 7.60, 'Con opciones adicionales', 47, 97.60),
-(136, 3, 2.90, NULL, 24, 32.90),
+(136, 3, 2.90, 'Sin Nota', 24, 32.90),
 (137, 10, 8.80, 'Con opciones adicionales', 59, 138.80),
-(138, 5, 5.20, NULL, 37, 65.20),
+(138, 5, 5.20, 'Sin Nota', 37, 65.20),
 (139, 8, 8.50, 'Con opciones adicionales', 53, 108.50),
-(140, 2, 3.60, NULL, 25, 23.60),
-(141, 6, 6.95, NULL, 44, 78.95),
+(140, 2, 3.60, 'Sin Nota', 25, 23.60),
+(141, 6, 6.95, 'Sin Nota', 44, 78.95),
 (142, 9, 9.75, 'Con opciones adicionales', 60, 129.75),
-(143, 4, 3.00, NULL, 26, 43.00),
+(143, 4, 3.00, 'Sin Nota', 26, 43.00),
 (144, 7, 7.30, 'Con opciones adicionales', 48, 97.30),
-(145, 3, 2.10, NULL, 21, 32.10),
+(145, 3, 2.10, 'Sin Nota', 21, 32.10),
 (146, 10, 8.40, 'Con opciones adicionales', 52, 138.40),
-(147, 5, 5.70, NULL, 38, 65.70),
+(147, 5, 5.70, 'Sin Nota', 38, 65.70),
 (148, 8, 8.15, 'Con opciones adicionales', 50, 108.15),
-(149, 2, 4.00, NULL, 23, 24.00),
-(150, 6, 6.50, NULL, 39, 78.50);
+(149, 2, 4.00, 'Sin Nota', 23, 24.00),
+(150, 6, 6.50, 'Sin Nota', 39, 78.50);
 
 INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 (14, 1, '2024-11-20'),
@@ -2294,11 +2294,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (85, 1, 'Sin Nota', 6.00, 20, 75),
 (86, 1, 'Sin Nota', 7.50, 20, 76),
 (87, 1, 'Sin Nota', 15.00, 20, 77);
--- Pedido 21 (ID 21 en tabla Pedido: nota NULL)
+-- Pedido 21 (ID 21 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (68, 1, 'Sin Nota', 6.00, 21, 75);
 
--- Pedido 22 (ID 22 en tabla Pedido: nota NULL)
+-- Pedido 22 (ID 22 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (69, 1, 'Sin Nota', 15.00, 22, 77);
 
@@ -2306,11 +2306,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (70, 1, 'Sin ajo (Opcion 8), Extra pimentón (Opcion 7)', 7.50, 23, 79);
 
--- Pedido 24 (ID 24 en tabla Pedido: nota NULL)
+-- Pedido 24 (ID 24 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (71, 1, 'Sin Nota', 14.00, 24, 81);
 
--- Pedido 25 (ID 25 en tabla Pedido: nota NULL)
+-- Pedido 25 (ID 25 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (72, 1, 'Sin Nota', 6.00, 25, 83);
 
@@ -2318,11 +2318,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (73, 1, 'Penne (Opcion 4), Picante medio (Opcion 2)', 13.50, 26, 85);
 
--- Pedido 27 (ID 27 en tabla Pedido: nota NULL)
+-- Pedido 27 (ID 27 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (74, 1, 'Sin Nota', 15.00, 27, 87);
 
--- Pedido 28 (ID 28 en tabla Pedido: nota NULL)
+-- Pedido 28 (ID 28 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (75, 1, 'Sin Nota', 11.00, 28, 89);
 
@@ -2330,11 +2330,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (76, 1, 'Extra crema (Opcion 7), Pan tostado medio (Opcion 39)', 10.25, 29, 91);
 
--- Pedido 30 (ID 30 en tabla Pedido: nota NULL)
+-- Pedido 30 (ID 30 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (77, 1, 'Sin Nota', 17.00, 30, 93);
 
--- Pedido 31 (ID 31 en tabla Pedido: nota NULL)
+-- Pedido 31 (ID 31 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (78, 1, 'Sin Nota', 5.00, 31, 95);
 
@@ -2342,11 +2342,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (79, 1, 'Extra vegetales (Opcion 31), Término medio (Opcion 18)', 16.00, 32, 97);
 
--- Pedido 33 (ID 33 en tabla Pedido: nota NULL)
+-- Pedido 33 (ID 33 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (80, 1, 'Sin Nota', 13.00, 33, 99);
 
--- Pedido 34 (ID 34 en tabla Pedido: nota NULL)
+-- Pedido 34 (ID 34 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (81, 1, 'Sin Nota', 4.00, 34, 101);
 
@@ -2354,11 +2354,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (82, 1, 'Extra chocolate (Opcion 36), Muy dulce (Opcion 24)', 7.04, 35, 103);
 
--- Pedido 36 (ID 36 en tabla Pedido: nota NULL)
+-- Pedido 36 (ID 36 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (83, 1, 'Sin Nota', 16.00, 36, 105);
 
--- Pedido 37 (ID 37 en tabla Pedido: nota NULL)
+-- Pedido 37 (ID 37 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (84, 1, 'Sin Nota', 10.00, 37, 107);
 
@@ -2366,11 +2366,11 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (85, 1, 'Extra queso (Opcion 11), Queso cheddar (Opcion 11)', 13.50, 38, 109);
 
--- Pedido 39 (ID 39 en tabla Pedido: nota NULL)
+-- Pedido 39 (ID 39 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (86, 1, 'Sin Nota', 6.00, 39, 111);
 
--- Pedido 40 (ID 40 en tabla Pedido: nota NULL)
+-- Pedido 40 (ID 40 en tabla Pedido: nota 'Sin Nota')
 INSERT INTO PedidoDetalle (id, cantidad, nota, precio, idPedido, idPlato) VALUES
 (87, 1, 'Sin Nota', 35.00, 40, 113);
 -- Pedidos 41-60
