@@ -56,30 +56,30 @@ INSERT INTO Cocina (id, nombre, descripcion) VALUES
 
 ---Clientes
 INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, apellido, fecha_nac, nro_documento) VALUES
-(1, 'clave001', '04128433977', '2025-07-13', 'manuel.herrera1@gmail.com', 'Manuel', 'Herrera', '1985-10-31', 'V17147694'),
-(2, 'clave002', '04144064468', '2025-08-13', 'manuel.torres2@gmail.com', 'Manuel', 'Torres', '1989-05-30', 'V21060916'),
-(3, 'clave003', '04243993464', '2025-09-13', 'miguel.mendoza3@gmail.com', 'Miguel', 'Mendoza', '1988-11-20', 'V13820454'),
+(1, 'clave001', '04128433977', '2025-07-13', 'manuel.herrera1@gmail.com', 'Manuel', 'Herrera', '1990-10-31', 'V17147694'),
+(2, 'clave002', '04144064468', '2025-08-13', 'manuel.torres2@gmail.com', 'Manuel', 'Torres', '1994-05-30', 'V21060916'),
+(3, 'clave003', '04243993464', '2025-09-13', 'miguel.mendoza3@gmail.com', 'Miguel', 'Mendoza', '1977-11-20', 'V13820454'),
 (4, 'clave004', '04123001786', '2025-08-18', 'laura.mendoza4@gmail.com', 'Laura', 'Mendoza', '2001-07-05', 'V23802098'),
-(5, 'clave005', '04246686214', '2025-07-13', 'ana.fernandez5@gmail.com', 'Ana', 'Fernandez', '1963-04-30', 'V11099308'),
-(6, 'clave006', '04120001111', '2025-10-13', 'juan.garcia6@gmail.com', 'Juan', 'Garcia', '1975-12-12', 'V19325561'),
-(7, 'clave007', '04220002222', '2025-05-16', 'maria.lopez7@gmail.com', 'Maria', 'Lopez', '1990-06-15', 'V26997002'),
-(8, 'clave008', '04130003333', '2025-04-13', 'carlos.ramirez8@gmail.com', 'Carlos', 'Ramirez', '1982-03-10', 'V27234433'),
-(9, 'clave009', '04240004444', '2025-03-13', 'sandra.gomez9@gmail.com', 'Sandra', 'Gomez', '1978-09-23', 'V18768944'),
-(10, 'clave010', '04140005555', '2024-07-13', 'pedro.sanchez10@gmail.com', 'Pedro', 'Sanchez', '1987-11-01', 'V19555055'),
-(11, 'clave011', '04160006666', '2025-01-13', 'laura.perez11@gmail.com', 'Laura', 'Perez', '1995-04-04', 'V20000066'),
-(12, 'clave012', '04240007777', '2023-06-15', 'jose.martinez12@gmail.com', 'Jose', 'Martinez', '1980-01-19', 'V21000077'),
-(13, 'clave013', '04160008888', '2025-07-13', 'marta.silva13@gmail.com', 'Marta', 'Silva', '1965-07-07', 'V22088444'),
-(14, 'clave014', '04260009999', '2021-08-13', 'luis.rodriguez14@gmail.com', 'Luis', 'Rodriguez', '1973-08-16', 'V23788099'),
-(15, 'clave015', '04160001010', '2022-07-13', 'ana.moreno15@gmail.com', 'Ana', 'Moreno', '1992-12-30', 'V24510127'),
-(16, 'clave016', '04240891511', '2022-09-13', 'francisco.diaz16@gmail.com', 'Francisco', 'Diaz', '1989-10-02', 'V25999111'),
-(17, 'clave017', '04120002222', '2023-07-13', 'paula.torres17@gmail.com', 'Paula', 'Torres', '1997-03-21', 'V26999122'),
-(18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1979-05-25', 'V27000133'),
-(19, 'clave019', '04160004444', '2025-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '1984-11-11', 'V28000144'),
-(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155'),
-(21, 'clave021', '04127896504', '2023-06-13', 'maria.torres21@gmail.com', 'Maria', 'Torres', '1986-07-07', 'V30987066'),
-(22, 'clave022', '04144467230', '2025-07-13', 'carlos.martin22@gmail.com', 'Carlos', 'Martin', '1994-02-14', 'V31999177'),
-(23, 'clave023', '04123458888', '2024-08-13', 'luis.lopez23@gmail.com', 'Luis', 'Lopez', '1971-08-25', 'V32060188'),
-(24, 'clave024', '04245569696', '2023-07-13', 'ana.gomez24@gmail.com', 'Ana', 'Gomez', '1983-09-03', 'V33890199'),
+(5, 'clave005', '04246686214', '2025-07-13', 'ana.fernandez5@gmail.com', 'Ana', 'Fernandez', '1975-04-30', 'V11099308'),
+(6, 'clave006', '04120001111', '2025-10-13', 'juan.garcia6@gmail.com', 'Juan', 'Garcia', '1998-12-12', 'V19325561'),
+(7, 'clave007', '04220002222', '2025-05-16', 'maria.lopez7@gmail.com', 'Maria', 'Lopez', '1999-06-15', 'V26997002'),
+(8, 'clave008', '04130003333', '2025-04-13', 'carlos.ramirez8@gmail.com', 'Carlos', 'Ramirez', '2000-03-10', 'V27234433'),
+(9, 'clave009', '04240004444', '2025-03-13', 'sandra.gomez9@gmail.com', 'Sandra', 'Gomez', '1991-09-23', 'V18768944'),
+(10, 'clave010', '04140005555', '2024-07-13', 'pedro.sanchez10@gmail.com', 'Pedro', 'Sanchez', '1992-11-01', 'V19555055'),
+(11, 'clave011', '04160006666', '2025-01-13', 'laura.perez11@gmail.com', 'Laura', 'Perez', '1993-04-04', 'V20000066'),
+(12, 'clave012', '04240007777', '2023-06-15', 'jose.martinez12@gmail.com', 'Jose', 'Martinez', '1994-01-19', 'V21000077'),
+(13, 'clave013', '04160008888', '2025-07-13', 'marta.silva13@gmail.com', 'Marta', 'Silva', '1995-07-07', 'V22088444'),
+(14, 'clave014', '04260009999', '2021-08-13', 'luis.rodriguez14@gmail.com', 'Luis', 'Rodriguez', '1996-08-16', 'V23788099'),
+(15, 'clave015', '04160001010', '2022-07-13', 'ana.moreno15@gmail.com', 'Ana', 'Moreno', '1997-12-30', 'V24510127'),
+(16, 'clave016', '04240891511', '2022-09-13', 'francisco.diaz16@gmail.com', 'Francisco', 'Diaz', '1998-10-02', 'V25999111'),
+(17, 'clave017', '04120002222', '2023-07-13', 'paula.torres17@gmail.com', 'Paula', 'Torres', '1999-03-21', 'V26999122'),
+(18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1999-05-25', 'V27000133'),
+(19, 'clave019', '04160004444', '2025-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '2001-11-11', 'V28000144'),
+(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '2003-01-09', 'V29090155'),
+(21, 'clave021', '04127896504', '2023-06-13', 'maria.torres21@gmail.com', 'Maria', 'Torres', '2004-07-07', 'V30987066'),
+(22, 'clave022', '04144467230', '2025-07-13', 'carlos.martin22@gmail.com', 'Carlos', 'Martin', '2006-02-14', 'V31999177'),
+(23, 'clave023', '04123458888', '2024-08-13', 'luis.lopez23@gmail.com', 'Luis', 'Lopez', '2006-08-25', 'V32060188'),
+(24, 'clave024', '04245569696', '2023-07-13', 'ana.gomez24@gmail.com', 'Ana', 'Gomez', '2008-09-03', 'V33890199'),
 (25, 'clave025', '04163450330', '2021-02-13', 'miguel.perez25@gmail.com', 'Miguel', 'Perez', '1990-04-18', 'V34000200'),
 (26, 'clave026', '04263751177', '2023-07-13', 'laura.ramirez26@gmail.com', 'Laura', 'Ramirez', '1987-06-06', 'V35000211'),
 (27, 'clave027', '04143452222', '2022-04-11', 'juan.sanchez27@gmail.com', 'Juan', 'Sanchez', '1978-11-12', 'V36000222'),
@@ -115,18 +115,18 @@ INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, ape
 (57, 'clave057', '04163452222', '2025-07-13', 'maria.gomez57@gmail.com', 'Maria', 'Gomez', '1973-01-13', 'V6897522'),
 (58, 'clave058', '04263548810', '2022-06-13', 'juan.soto58@gmail.com', 'Juan', 'Soto', '1980-09-19', 'V6750533'),
 (59, 'clave059', '04163454444', '2021-07-13', 'paula.lopez59@gmail.com', 'Paula', 'Lopez', '1991-10-31', 'V68000544'),
-(60, 'clave060', '04240112551', '2021-02-13', 'miguel.perez60@gmail.com', 'Miguel', 'Perez', '1984-06-07', 'V69000555'),
-(61, 'clave061', '04126536271', '2019-07-13', 'sofia.ramirez61@gmail.com', 'Sofia', 'Ramirez', '1976-12-15', 'V70000566'),
-(62, 'clave062', '04249000307', '2022-03-13', 'jose.garcia62@gmail.com', 'Jose', 'Garcia', '1989-03-25', 'V71000577'),
-(63, 'clave063', '04165498685', '2023-01-13', 'laura.sanchez63@gmail.com', 'Laura', 'Sanchez', '1992-07-29', 'V72000588'),
-(64, 'clave064', '04247778799', '2024-02-13', 'miguel.lopez64@gmail.com', 'Miguel', 'Lopez', '1978-01-17', 'V73000599'),
+(60, 'clave060', '04240112551', '2021-02-13', 'miguel.perez60@gmail.com', 'Miguel', 'Perez', '1965-06-07', 'V61142559'),
+(61, 'clave061', '04126536271', '2019-07-13', 'sofia.ramirez61@gmail.com', 'Sofia', 'Ramirez', '2002-12-15', 'V29200566'),
+(62, 'clave062', '04249000307', '2022-03-13', 'jose.garcia62@gmail.com', 'Jose', 'Garcia', '2004-03-25', 'V30675977'),
+(63, 'clave063', '04165498685', '2023-01-13', 'laura.sanchez63@gmail.com', 'Laura', 'Sanchez', '2003-07-29', 'V29711954'),
+(64, 'clave064', '04247778799', '2024-02-13', 'miguel.lopez64@gmail.com', 'Miguel', 'Lopez', '1978-01-17', 'V63089599'),
 (65, 'clave065', '04163450000', '2022-07-18', 'ana.martinez65@gmail.com', 'Ana', 'Martinez', '1987-09-02', 'V74000600'),
-(66, 'clave066', '04267755524', '2021-03-13', 'carlos.perez66@gmail.com', 'Carlos', 'Perez', '1990-11-22', 'V75000611'),
-(67, 'clave067', '04149052622', '2024-07-14', 'maria.gomez67@gmail.com', 'Maria', 'Gomez', '1969-05-05', 'V76000622'),
-(68, 'clave068', '04143323033', '2022-07-13', 'juan.soto68@gmail.com', 'Juan', 'Soto', '1974-08-16', 'V77000633'),
-(69, 'clave069', '04143454444', '2023-07-13', 'paula.lopez69@gmail.com', 'Paula', 'Lopez', '1981-02-26', 'V20555555'),
-(70, 'clave070', '04265599055', '2019-07-12', 'sofia.martinez70@gmail.com', 'Sofia', 'Martinez', '1985-04-11', 'V78000644'),
-(71, 'clave071', '04163456666', '2025-04-13', 'jose.rodriguez71@gmail.com', 'Jose', 'Rodriguez', '1974-09-05', 'V79000655'),
+(66, 'clave066', '04267755524', '2021-03-13', 'carlos.perez66@gmail.com', 'Carlos', 'Perez', '1960-11-22', 'V75000611'),
+(67, 'clave067', '04149052622', '2024-07-14', 'maria.gomez67@gmail.com', 'Maria', 'Gomez', '2003-11-22', 'V2988622'),
+(68, 'clave068', '04143323033', '2022-07-13', 'juan.soto68@gmail.com', 'Juan', 'Soto', '2002-08-16', 'V29111000'),
+(69, 'clave069', '04143454444', '2023-07-13', 'paula.lopez69@gmail.com', 'Paula', 'Lopez', '1995-02-26', 'V20555555'),
+(70, 'clave070', '04265599055', '2019-07-12', 'sofia.martinez70@gmail.com', 'Sofia', 'Martinez', '2003-04-11', 'V29774666'),
+(71, 'clave071', '04163456666', '2025-04-13', 'jose.rodriguez71@gmail.com', 'Jose', 'Rodriguez', '2004-09-05', 'V30427987'),
 (72, 'clave072', '04242305777', '2023-07-13', 'maria.diaz72@gmail.com', 'Maria', 'Diaz', '1988-01-17', 'V28678916'),
 (73, 'clave073', '04120978819', '2022-10-11', 'carlos.soto73@gmail.com', 'Carlos', 'Soto', '1991-10-29', 'V28160677'),
 (74, 'clave074', '04247479099', '2025-12-11', 'ana.lopez74@gmail.com', 'Ana', 'Lopez', '1982-12-23', 'V28234609'),
@@ -143,19 +143,19 @@ INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, ape
 (85, 'clave085', '04149999999', '2025-03-16', 'miguel.martinez85@gmail.com', 'Miguel', 'Martinez', '1990-05-04', 'V33075729'),
 (86, 'clave086', '04240348592', '2023-07-17', 'laura.gomez86@gmail.com', 'Laura', 'Gomez', '1983-09-14', 'V30456780'),
 (87, 'clave087', '04128764343', '2025-07-18', 'juan.lopez87@gmail.com', 'Juan', 'Lopez', '1976-03-07', 'V31000811'),
-(88, 'clave088', '04247555583', '2023-07-24', 'paula.sanchez88@gmail.com', 'Paula', 'Sanchez', '1989-11-30', 'V26680822'),
-(89, 'clave089', '04123454234', '2025-07-13', 'javier.perez89@gmail.com', 'Javier', 'Perez', '1992-07-18', 'V27960833'),
-(90, 'clave090', '04263455555', '2025-07-13', 'sofia.torres90@gmail.com', 'Sofia', 'Torres', '1985-01-27', 'V28506844'),
-(91, 'clave091', '04143456666', '2022-07-27', 'jose.garcia91@gmail.com', 'Jose', 'Garcia', '1974-10-11', 'V29040855'),
-(92, 'clave092', '04240304756', '2025-07-29', 'maria.martinez92@gmail.com', 'Maria', 'Martinez', '1988-03-03', 'V28799066'),
-(93, 'clave093', '04123458688', '2021-07-23', 'carlos.soto93@gmail.com', 'Carlos', 'Soto', '1991-05-15', 'V29056977'),
-(94, 'clave094', '04143459599', '2023-07-13', 'ana.lopez94@gmail.com', 'Ana', 'Lopez', '1982-08-21', 'V6201088'),
-(95, 'clave095', '04122165030', '2025-07-22', 'miguel.gomez95@gmail.com', 'Miguel', 'Gomez', '1979-02-06', 'V273001199'),
-(96, 'clave096', '04263352211', '2025-07-14', 'laura.perez96@gmail.com', 'Laura', 'Perez', '1990-09-29', 'V254001200'),
-(97, 'clave097', '04163332532', '2023-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1983-04-18', 'V22001311'),
+(88, 'clave088', '04247555583', '2023-07-24', 'paula.sanchez88@gmail.com', 'Paula', 'Sanchez', '2003-11-30', 'V29980822'),
+(89, 'clave089', '04123454234', '2025-07-13', 'javier.perez89@gmail.com', 'Javier', 'Perez', '2003-07-18', 'V29860833'),
+(90, 'clave090', '04263455555', '2025-07-13', 'sofia.torres90@gmail.com', 'Sofia', 'Torres', '2002-01-27', 'V28506844'),
+(91, 'clave091', '04143456666', '2022-07-27', 'jose.garcia91@gmail.com', 'Jose', 'Garcia', '2002-10-11', 'V29040855'),
+(92, 'clave092', '04240304756', '2025-07-29', 'maria.martinez92@gmail.com', 'Maria', 'Martinez', '2002-03-03', 'V28799066'),
+(93, 'clave093', '04123458688', '2021-07-23', 'carlos.soto93@gmail.com', 'Carlos', 'Soto', '2003-01-15', 'V29056977'),
+(94, 'clave094', '04143459599', '2023-07-13', 'ana.lopez94@gmail.com', 'Ana', 'Lopez', '1964-08-21', 'V6201088'),
+(95, 'clave095', '04122165030', '2025-07-22', 'miguel.gomez95@gmail.com', 'Miguel', 'Gomez', '2000-02-06', 'V273001199'),
+(96, 'clave096', '04263352211', '2025-07-14', 'laura.perez96@gmail.com', 'Laura', 'Perez', '1997-09-29', 'V254001200'),
+(97, 'clave097', '04163332532', '2023-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1996-04-18', 'V22001311'),
 (98, 'clave098', '04240053930', '2020-07-13', 'paula.sanchez98@gmail.com', 'Paula', 'Sanchez', '1975-07-27', 'V8764002'),
-(99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '1987-08-25', 'V29000999'),
-(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1993-12-10', 'V9768576');
+(99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '2003-08-25', 'V30235888'),
+(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1970-12-10', 'V9768576');
 
 --Direcciones Generales de la base de datos
 INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) VALUES
@@ -329,17 +329,17 @@ INSERT INTO Comercio (id, password, telefono, fecha_registro, correo, nombre, ub
 (22, 'passdef', '04241305252', '2025-10-15', 'fusiongourmet@gmail.com', 'Fusión Gourmet', 'Calle Marino, Porlamar', 18, 23, 1),
 (23, 'passghi', '04149354643', '2025-11-10', 'organicbistro@outlook.com', 'Organic Bistro', 'Av. Bolívar, Maturín', 10, 20, 1),
 (24, 'passjkl', '04129120103', '2025-12-05', 'caserakitchen@hotmail.com', 'Casera Kitchen', 'Calle Principal, La Guaira', 9, 18, 1),
-(25, 'passmno', '04242294644', '2026-01-20', 'texmexgrill@gmail.com', 'Tex-Mex Grill', 'Av. Intercomunal, Cabimas', 11, 22, 1),
-(26, 'passpqr', '04161208669', '2026-02-15', 'streetfood@yahoo.com', 'Street Food Market', 'Calle Zamora, Coro', 12, 23, 1),
-(27, 'passtuv', '04120646803', '2026-03-10', 'healthyfit@gmail.com', 'Healthy & Fit', 'Av. Sucre, San Fernando', 7, 19, 1),
-(28, 'passwxy', '04242109539', '2026-04-05', 'comfortfood@outlook.com', 'Comfort Food', 'Calle 5, Acarigua', 8, 20, 1),
-(29, 'passz12', '04120108961', '2026-05-01', 'marytierra@hotmail.com', 'Mar y Tierra', 'Av. Principal, Guarenas', 12, 22, 1),
-(30, 'pass345', '04248980302', '2026-06-15', 'pizzanapoli@gmail.com', 'Pizza Napoli', 'Calle Italia, El Tigre', 10, 23, 1),
-(31, 'pass678', '04123700998', '2024-10-10', 'orientexpress@yahoo.com', 'Orient Express', 'Av. Este, Valencia', 11, 22, 0),
-(32, 'pass901', '04249870123', '2024-09-05', 'argentinagrill@gmail.com', 'Argentina Grill', 'Calle Páez, Barinas', 12, 23, 0),
+(25, 'passmno', '04242294644', '2025-01-20', 'texmexgrill@gmail.com', 'Tex-Mex Grill', 'Av. Intercomunal, Cabimas', 11, 22, 1),
+(26, 'passpqr', '04161208669', '2025-02-15', 'streetfood@yahoo.com', 'Street Food Market', 'Calle Zamora, Coro', 12, 23, 1),
+(27, 'passtuv', '04120646803', '2025-03-10', 'healthyfit@gmail.com', 'Healthy & Fit', 'Av. Sucre, San Fernando', 7, 19, 1),
+(28, 'passwxy', '04242109539', '2025-04-05', 'comfortfood@outlook.com', 'Comfort Food', 'Calle 5, Acarigua', 8, 20, 1),
+(29, 'passz12', '04120108961', '2025-05-01', 'marytierra@hotmail.com', 'Mar y Tierra', 'Av. Principal, Guarenas', 12, 22, 1),
+(30, 'pass345', '04248980302', '2025-06-15', 'pizzanapoli@gmail.com', 'Pizza Napoli', 'Calle Italia, El Tigre', 10, 23, 1),
+(31, 'pass678', '04123700998', '2025-10-10', 'orientexpress@yahoo.com', 'Orient Express', 'Av. Este, Valencia', 11, 22, 0),
+(32, 'pass901', '04249870123', '2025-09-05', 'argentinagrill@gmail.com', 'Argentina Grill', 'Calle Páez, Barinas', 12, 23, 0),
 (33, 'pass234', '04127115643', '2024-08-12', 'frenchbakery@outlook.com', 'French Bakery', 'Av. 15, Maracaibo', 9, 18, 0),
-(34, 'pass567', '04269020888', '2024-07-20', 'tapesbar@hotmail.com', 'Tapas Bar', 'Calle España, Caracas', 13, 22, 0),
-(35, 'pass890', '04142137207', '2024-06-15', 'koreabbq@gmail.com', 'Korea BBQ', 'Av. Fuerzas Armadas, Puerto Ordaz', 11, 21, 0);
+(34, 'pass567', '04269020888', '2025-07-20', 'tapesbar@hotmail.com', 'Tapas Bar', 'Calle España, Caracas', 13, 22, 0),
+(35, 'pass890', '04142137207', '2024-04-24', 'koreabbq@gmail.com', 'Korea BBQ', 'Av. Fuerzas Armadas, Puerto Ordaz', 11, 21, 0);
 
 -- Asignación aleatoria de cocinas (30% con 2+ cocinas)
 INSERT INTO ComercioCocina (idComercio, idCocina) VALUES
@@ -2194,7 +2194,7 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 -- Pedido 29 (ID 29 en tabla Pedido: nota "Con opciones adicionales")
 (95, 1, 'Extra crema, Pan tostado medio', 10.25, 29, 91),
 
-(96, 1, 'Sin Nota', 67, 65)
+(96, 1, 'Sin Nota', 24.20, 67, 65),
 
 -- Pedido 30 (ID 30 en tabla Pedido: nota 'Sin Nota')
 (97, 1, 'Sin Nota', 17.00, 30, 93),
@@ -2691,8 +2691,10 @@ INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) 
 (93, 11, 3),
 (94, 19, 6),
 (95, 17, 5),
-(96, 28, 10),
-(96, 7, 2),
+(96, 2, 1),
+(96, 8, 7),
+(96, 9, 3),
+(96, 14, 5),
 (97, 14, 4),
 (97, 30, 10),
 (97, 7, 2),
@@ -2929,314 +2931,226 @@ INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) 
 (217, 6, 2),
 (217, 29, 10),
 (217, 17, 5);
+
 INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
--- Pedido 1: Ruta feliz
-(1, 1, '2025-07-10 16:53:35'), -- Pendiente
-(1, 2, '2025-07-10 17:05:35'), -- Confirmado
-(1, 3, '2025-07-10 17:28:35'), -- En Preparación
-(1, 4, '2025-07-10 17:35:35'), -- Listo para Entrega
-(1, 5, '2025-07-10 17:42:35'), -- En Camino
-(1, 6, '2025-07-10 18:24:35'), -- Entregado
-
--- Pedido 2: Cancelado por el cliente
-(2, 1, '2025-07-11 05:27:14'), -- Pendiente
-(2, 2, '2025-07-11 05:32:14'), -- Confirmado
-(2, 7, '2025-07-11 05:45:14'), -- Cancelado
-
--- Pedido 3: Retrasado y luego entregado
-(3, 1, '2025-07-10 19:48:42'), -- Pendiente
-(3, 2, '2025-07-10 19:54:42'), -- Confirmado
-(3, 3, '2025-07-10 20:17:42'), -- En Preparación
-(3, 8, '2025-07-10 20:25:42'), -- Retrasado
-(3, 4, '2025-07-10 20:40:42'), -- Listo para Entrega (después de retraso)
-(3, 5, '2025-07-10 20:50:42'), -- En Camino
-(3, 6, '2025-07-10 21:20:42'), -- Entregado
-
--- Pedido 4: Rechazado por comercio (MODIFICADO)
-(4, 1, '2025-07-11 11:22:20'), -- Pendiente
-(4, 11, '2025-07-11 11:30:20'), -- Rechazado por Comercio
-(4, 7, '2025-07-11 11:40:20'), -- Cancelado
-
--- Pedido 5: Error en pago y cancelado
-(5, 1, '2025-07-10 19:04:36'), -- Pendiente
-(5, 15, '2025-07-10 19:10:36'), -- Error en Pago
-(5, 7, '2025-07-10 19:20:36'), -- Cancelado
-
--- Pedido 6: Esperando repartidor, luego entregado
-(6, 1, '2025-07-11 12:35:53'), -- Pendiente
-(6, 2, '2025-07-11 12:47:53'), -- Confirmado
-(6, 3, '2025-07-11 13:00:53'), -- En Preparación
-(6, 4, '2025-07-11 13:07:53'), -- Listo para Entrega
-(6, 12, '2025-07-11 13:15:53'), -- Esperando Repartidor
-(6, 5, '2025-07-11 13:25:53'), -- En Camino
-(6, 6, '2025-07-11 13:51:53'), -- Entregado
-
--- Pedido 7: Programado y entregado
-(7, 1, '2025-07-10 18:28:16'), -- Pendiente
-(7, 14, '2025-07-10 18:35:16'), -- Programado
-(7, 4, '2025-07-10 19:10:16'), -- Listo para Entrega (a la hora programada)
-(7, 5, '2025-07-10 19:24:16'), -- En Camino
-(7, 6, '2025-07-10 19:59:16'), -- Entregado
-
--- Pedido 8: Devolución en proceso (después de una entrega simulada)
-(8, 1, '2025-07-11 15:46:27'), -- Pendiente
-(8, 2, '2025-07-11 15:52:27'), -- Confirmado
-(8, 3, '2025-07-11 16:16:27'), -- En Preparación
-(8, 4, '2025-07-11 16:26:27'), -- Listo para Entrega
-(8, 5, '2025-07-11 16:34:27'), -- En Camino
-(8, 6, '2025-07-11 17:09:27'), -- Entregado
-(8, 9, '2025-07-11 17:30:27'), -- Devolución en Proceso
-(8, 10, '2025-07-11 17:45:27'), -- Reembolsado
-
--- Pedido 9: Reintento de entrega
-(9, 1, '2025-07-11 02:49:50'), -- Pendiente
-(9, 2, '2025-07-11 03:00:50'), -- Confirmado
-(9, 3, '2025-07-11 03:22:50'), -- En Preparación
-(9, 4, '2025-07-11 03:30:50'), -- Listo para Entrega
-(9, 5, '2025-07-11 03:41:50'), -- En Camino
-(9, 13, '2025-07-11 04:00:50'), -- Reintento de Entrega (fallido)
-(9, 5, '2025-07-11 04:10:50'), -- En Camino (segundo intento)
-(9, 6, '2025-07-11 04:30:50'), -- Entregado
-
--- Pedido 10-150: Variaciones de los escenarios anteriores
-
--- Ruta Feliz (varias instancias)
-(10, 1, '2025-07-11 10:18:20'), (10, 2, '2025-07-11 10:28:20'), (10, 3, '2025-07-11 10:48:20'), (10, 4, '2025-07-11 10:57:20'), (10, 5, '2025-07-11 11:10:20'), (10, 6, '2025-07-11 11:42:20'),
-(11, 1, '2025-07-11 01:23:49'), (11, 2, '2025-07-11 01:31:49'), (11, 3, '2025-07-11 01:46:49'), (11, 4, '2025-07-11 01:54:49'), (11, 5, '2025-07-11 02:08:49'), (11, 6, '2025-07-11 02:37:49'),
-(12, 1, '2025-07-11 10:04:13'), (12, 2, '2025-07-11 10:12:13'), (12, 3, '2025-07-11 10:39:13'), (12, 4, '2025-07-11 10:47:13'), (12, 5, '2025-07-11 10:55:13'), (12, 6, '2025-07-11 11:32:13'),
-(13, 1, '2025-07-11 05:44:03'), (13, 2, '2025-07-11 05:51:03'), (13, 3, '2025-07-11 06:16:03'), (13, 4, '2025-07-11 06:21:03'), (13, 5, '2025-07-11 06:28:03'), (13, 6, '2025-07-11 07:07:03'),
-(14, 1, '2025-07-10 16:54:02'), (14, 2, '2025-07-10 17:01:02'), (14, 3, '2025-07-10 17:15:02'), (14, 4, '2025-07-10 17:23:02'), (14, 5, '2025-07-10 17:37:02'), (14, 6, '2025-07-10 18:04:02'),
-(15, 1, '2025-07-11 09:37:03'), (15, 2, '2025-07-11 09:47:03'), (15, 3, '2025-07-11 10:11:03'), (15, 4, '2025-07-11 10:20:03'), (15, 5, '2025-07-11 10:25:03'), (15, 6, '2025-07-11 10:57:03'),
-(16, 1, '2025-07-11 00:09:05'), (16, 2, '2025-07-11 00:15:05'), (16, 3, '2025-07-11 00:39:05'), (16, 4, '2025-07-11 00:46:05'), (16, 5, '2025-07-11 00:56:05'), (16, 6, '2025-07-11 01:21:05'),
+-- Pedido 1: Ruta feliz (ejemplo original)
+(1, 1, CONVERT(DATETIME, '2025-05-18 16:53:35')), (1, 2, CONVERT(DATETIME, '2025-05-18 17:05:35')), -- Confirmado
+(1, 3, CONVERT(DATETIME, '2025-05-18 17:28:35')), -- En Preparación
+(1, 4, CONVERT(DATETIME, '2025-05-18 17:35:35')), -- Listo para Entrega
+(1, 5, CONVERT(DATETIME, '2025-05-18 17:42:35')), -- En Camino
+(1, 6, CONVERT(DATETIME, '2025-05-18 18:24:35')), -- Entregado
+-- Generación de pedidos aleatorios hasta un mes en el futuro (18 de agosto de 2025)
+-- Ruta Feliz
+(2, 1, CONVERT(DATETIME, '2025-06-20 09:10:00')), (2, 2, CONVERT(DATETIME, '2025-06-20 09:18:00')), (2, 3, CONVERT(DATETIME, '2025-06-20 09:40:00')), (2, 4, CONVERT(DATETIME, '2025-06-20 09:48:00')), (2, 5, CONVERT(DATETIME, '2025-06-20 09:55:00')), (2, 6, CONVERT(DATETIME, '2025-06-20 10:25:00')),
+(3, 1, CONVERT(DATETIME, '2025-07-01 14:05:00')), (3, 2, CONVERT(DATETIME, '2025-07-01 14:15:00')), (3, 3, CONVERT(DATETIME, '2025-07-01 14:38:00')), (3, 4, CONVERT(DATETIME, '2025-07-01 14:46:00')), (3, 5, CONVERT(DATETIME, '2025-07-01 14:58:00')), (3, 6, CONVERT(DATETIME, '2025-07-01 15:30:00')),
+(4, 1, CONVERT(DATETIME, '2025-05-22 18:30:00')), (4, 2, CONVERT(DATETIME, '2025-05-22 18:37:00')), (4, 3, CONVERT(DATETIME, '2025-05-22 19:00:00')), (4, 4, CONVERT(DATETIME, '2025-05-22 19:08:00')), (4, 5, CONVERT(DATETIME, '2025-05-22 19:20:00')), (4, 6, CONVERT(DATETIME, '2025-05-22 19:55:00')),
+(5, 1, CONVERT(DATETIME, '2025-06-03 07:45:00')), (5, 2, CONVERT(DATETIME, '2025-06-03 07:52:00')), (5, 3, CONVERT(DATETIME, '2025-06-03 08:15:00')), (5, 4, CONVERT(DATETIME, '2025-06-03 08:23:00')), (5, 5, CONVERT(DATETIME, '2025-06-03 08:30:00')), (5, 6, CONVERT(DATETIME, '2025-06-03 09:00:00')),
+(6, 1, CONVERT(DATETIME, '2025-07-04 11:20:00')), (6, 2, CONVERT(DATETIME, '2025-07-04 11:28:00')), (6, 3, CONVERT(DATETIME, '2025-07-04 11:50:00')), (6, 4, CONVERT(DATETIME, '2025-07-04 11:58:00')), (6, 5, CONVERT(DATETIME, '2025-07-04 12:05:00')), (6, 6, CONVERT(DATETIME, '2025-07-04 12:35:00')),
+(7, 1, CONVERT(DATETIME, '2025-05-25 21:00:00')), (7, 2, CONVERT(DATETIME, '2025-05-25 21:08:00')), (7, 3, CONVERT(DATETIME, '2025-05-25 21:30:00')), (7, 4, CONVERT(DATETIME, '2025-05-25 21:38:00')), (7, 5, CONVERT(DATETIME, '2025-05-25 21:45:00')), (7, 6, CONVERT(DATETIME, '2025-05-25 22:15:00')),
+(8, 1, CONVERT(DATETIME, '2025-06-26 06:30:00')), (8, 2, CONVERT(DATETIME, '2025-06-26 06:37:00')), (8, 3, CONVERT(DATETIME, '2025-06-26 07:00:00')), (8, 4, CONVERT(DATETIME, '2025-06-26 07:08:00')), (8, 5, CONVERT(DATETIME, '2025-06-26 07:15:00')), (8, 6, CONVERT(DATETIME, '2025-06-26 07:45:00')),
+(9, 1, CONVERT(DATETIME, '2025-07-07 10:15:00')), (9, 2, CONVERT(DATETIME, '2025-07-07 10:23:00')), (9, 3, CONVERT(DATETIME, '2025-07-07 10:45:00')), (9, 4, CONVERT(DATETIME, '2025-07-07 10:53:00')), (9, 5, CONVERT(DATETIME, '2025-07-07 11:00:00')), (9, 6, CONVERT(DATETIME, '2025-07-07 11:30:00')),
+(10, 1, CONVERT(DATETIME, '2025-05-28 15:50:00')), (10, 2, CONVERT(DATETIME, '2025-05-28 16:00:00')), (10, 3, CONVERT(DATETIME, '2025-05-28 16:20:00')), (10, 4, CONVERT(DATETIME, '2025-05-28 16:28:00')), (10, 5, CONVERT(DATETIME, '2025-05-28 16:35:00')), (10, 6, CONVERT(DATETIME, '2025-05-28 17:05:00')),
+(11, 1, CONVERT(DATETIME, '2025-06-09 08:00:00')), (11, 2, CONVERT(DATETIME, '2025-06-09 08:08:00')), (11, 3, CONVERT(DATETIME, '2025-06-09 08:30:00')), (11, 4, CONVERT(DATETIME, '2025-06-09 08:38:00')), (11, 5, CONVERT(DATETIME, '2025-06-09 08:45:00')), (11, 6, CONVERT(DATETIME, '2025-06-09 09:15:00')),
+(12, 1, CONVERT(DATETIME, '2025-07-10 13:00:00')), (12, 2, CONVERT(DATETIME, '2025-07-10 13:07:00')), (12, 3, CONVERT(DATETIME, '2025-07-10 13:28:00')), (12, 4, CONVERT(DATETIME, '2025-07-10 13:35:00')), (12, 5, CONVERT(DATETIME, '2025-07-10 13:42:00')), (12, 6, CONVERT(DATETIME, '2025-07-10 14:12:00')),
+(13, 1, CONVERT(DATETIME, '2025-05-31 19:10:00')), (13, 2, CONVERT(DATETIME, '2025-05-31 19:18:00')), (13, 3, CONVERT(DATETIME, '2025-05-31 19:40:00')), (13, 4, CONVERT(DATETIME, '2025-05-31 19:48:00')), (13, 5, CONVERT(DATETIME, '2025-05-31 19:55:00')), (13, 6, CONVERT(DATETIME, '2025-05-31 20:25:00')),
+(14, 1, CONVERT(DATETIME, '2025-06-01 09:30:00')), (14, 2, CONVERT(DATETIME, '2025-06-01 09:38:00')), (14, 3, CONVERT(DATETIME, '2025-06-01 10:00:00')), (14, 4, CONVERT(DATETIME, '2025-06-01 10:08:00')), (14, 5, CONVERT(DATETIME, '2025-06-01 10:15:00')), (14, 6, CONVERT(DATETIME, '2025-06-01 10:45:00')),
+(15, 1, CONVERT(DATETIME, '2025-07-02 14:40:00')), (15, 2, CONVERT(DATETIME, '2025-07-02 14:48:00')), (15, 3, CONVERT(DATETIME, '2025-07-02 15:10:00')), (15, 4, CONVERT(DATETIME, '2025-07-02 15:18:00')), (15, 5, CONVERT(DATETIME, '2025-07-02 15:25:00')), (15, 6, CONVERT(DATETIME, '2025-07-02 15:55:00')),
 
 -- Cancelaciones tempranas (después de Pendiente o Confirmado)
-(17, 1, '2025-07-11 06:58:19'), -- Pendiente
-(17, 2, '2025-07-11 07:05:19'), -- Confirmado (ADDED)
-(17, 7, '2025-07-11 07:10:19'), -- Cancelado
-(18, 1, '2025-07-11 00:23:14'), (18, 2, '2025-07-11 00:33:14'), (18, 7, '2025-07-11 00:45:14'), -- Cancelado
+(16, 1, CONVERT(DATETIME, '2025-05-20 10:00:00')), -- Pendiente
+(16, 2, CONVERT(DATETIME, '2025-05-20 10:07:00')), -- Confirmado
+(16, 7, CONVERT(DATETIME, '2025-05-20 10:15:00')), -- Cancelado
+(17, 1, CONVERT(DATETIME, '2025-06-22 05:30:00')), (17, 2, CONVERT(DATETIME, '2025-06-22 05:38:00')), (17, 7, CONVERT(DATETIME, '2025-06-22 05:45:00')),
+(18, 1, CONVERT(DATETIME, '2025-07-01 16:00:00')), (18, 2, CONVERT(DATETIME, '2025-07-01 16:08:00')), (18, 7, CONVERT(DATETIME, '2025-07-01 16:15:00')),
 
 -- Rechazado por Comercio
-(19, 1, '2025-07-11 09:20:31'), -- Pendiente
-(19, 11, '2025-07-11 09:28:31'), -- Rechazado por Comercio
-(19, 7, '2025-07-11 09:38:31'), -- Cancelado (ADDED)
-(20, 1, '2025-07-11 02:40:19'), (20, 2, '2025-07-11 02:48:19'), (20, 11, '2025-07-11 03:00:19'), -- Rechazado por Comercio
+(19, 1, CONVERT(DATETIME, '2025-05-21 11:00:00')), -- Pendiente
+(19, 11, CONVERT(DATETIME, '2025-05-21 11:08:00')), -- Rechazado por Comercio
+(19, 7, CONVERT(DATETIME, '2025-05-21 11:15:00')), -- Cancelado
+(20, 1, CONVERT(DATETIME, '2025-06-25 09:20:00')), (20, 2, CONVERT(DATETIME, '2025-06-25 09:28:00')), (20, 11, CONVERT(DATETIME, '2025-06-25 09:35:00')),
+(21, 1, CONVERT(DATETIME, '2025-07-03 14:00:00')), (21, 11, CONVERT(DATETIME, '2025-07-03 14:08:00')), (21, 7, CONVERT(DATETIME, '2025-07-03 14:15:00')),
 
 -- Retrasados
-(21, 1, '2025-07-11 12:44:48'), (21, 2, '2025-07-11 12:54:48'), (21, 3, '2025-07-11 13:16:48'), (21, 8, '2025-07-11 13:25:48'), (21, 5, '2025-07-11 13:40:48'), (21, 6, '2025-07-11 14:10:48'),
-(22, 1, '2025-07-10 14:13:58'), (22, 2, '2025-07-10 14:24:58'), (22, 3, '2025-07-10 14:48:58'), (22, 8, '2025-07-10 14:58:58'), (22, 4, '2025-07-10 15:15:58'), (22, 5, '2025-07-10 15:25:58'), (22, 6, '2025-07-10 15:55:58'),
+(22, 1, CONVERT(DATETIME, '2025-05-22 13:00:00')), (22, 2, CONVERT(DATETIME, '2025-05-22 13:08:00')), (22, 3, CONVERT(DATETIME, '2025-05-22 13:30:00')), (22, 8, CONVERT(DATETIME, '2025-05-22 13:38:00')), (22, 5, CONVERT(DATETIME, '2025-05-22 13:50:00')), (22, 6, CONVERT(DATETIME, '2025-05-22 14:20:00')),
+(23, 1, CONVERT(DATETIME, '2025-06-26 18:00:00')), (23, 2, CONVERT(DATETIME, '2025-06-26 18:08:00')), (23, 3, CONVERT(DATETIME, '2025-06-26 18:30:00')), (23, 8, CONVERT(DATETIME, '2025-06-26 18:38:00')), (23, 4, CONVERT(DATETIME, '2025-06-26 18:50:00')), (23, 5, CONVERT(DATETIME, '2025-06-26 19:00:00')), (23, 6, CONVERT(DATETIME, '2025-06-26 19:30:00')),
+(24, 1, CONVERT(DATETIME, '2025-07-05 20:00:00')), (24, 2, CONVERT(DATETIME, '2025-07-05 20:08:00')), (24, 3, CONVERT(DATETIME, '2025-07-05 20:30:00')), (24, 8, CONVERT(DATETIME, '2025-07-05 20:38:00')), (24, 5, CONVERT(DATETIME, '2025-07-05 20:50:00')), (24, 6, CONVERT(DATETIME, '2025-07-05 21:20:00')),
 
--- Esperando Repartidor (varias instancias)
-(23, 1, '2025-07-10 18:27:00'), (23, 2, '2025-07-10 18:37:00'), (23, 3, '2025-07-10 18:59:00'), (23, 4, '2025-07-10 19:07:00'), (23, 12, '2025-07-10 19:15:00'), (23, 5, '2025-07-10 19:25:00'), (23, 6, '2025-07-10 19:58:00'),
-(24, 1, '2025-07-11 07:11:03'), (24, 2, '2025-07-11 07:22:03'), (24, 3, '2025-07-11 07:44:03'), (24, 4, '2025-07-11 07:53:03'), (24, 12, '2025-07-11 08:00:03'), (24, 5, '2025-07-11 08:10:03'), (24, 6, '2025-07-11 08:40:03'),
+-- Esperando Repartidor
+(25, 1, CONVERT(DATETIME, '2025-05-23 09:00:00')), (25, 2, CONVERT(DATETIME, '2025-05-23 09:08:00')), (25, 3, CONVERT(DATETIME, '2025-05-23 09:30:00')), (25, 4, CONVERT(DATETIME, '2025-05-23 09:38:00')), (25, 12, CONVERT(DATETIME, '2025-05-23 09:45:00')), (25, 5, CONVERT(DATETIME, '2025-05-23 09:55:00')), (25, 6, CONVERT(DATETIME, '2025-05-23 10:25:00')),
+(26, 1, CONVERT(DATETIME, '2025-06-28 12:00:00')), (26, 2, CONVERT(DATETIME, '2025-06-28 12:08:00')), (26, 3, CONVERT(DATETIME, '2025-06-28 12:30:00')), (26, 4, CONVERT(DATETIME, '2025-06-28 12:38:00')), (26, 12, CONVERT(DATETIME, '2025-06-28 12:45:00')), (26, 5, CONVERT(DATETIME, '2025-06-28 12:55:00')), (26, 6, CONVERT(DATETIME, '2025-06-28 13:25:00')),
+(27, 1, CONVERT(DATETIME, '2025-07-07 10:00:00')), (27, 2, CONVERT(DATETIME, '2025-07-07 10:08:00')), (27, 3, CONVERT(DATETIME, '2025-07-07 10:30:00')), (27, 4, CONVERT(DATETIME, '2025-07-07 10:38:00')), (27, 12, CONVERT(DATETIME, '2025-07-07 10:45:00')), (27, 5, CONVERT(DATETIME, '2025-07-07 10:55:00')), (27, 6, CONVERT(DATETIME, '2025-07-07 11:25:00')),
 
 -- Reintento de Entrega
-(25, 1, '2025-07-10 17:09:52'), (25, 2, '2025-07-10 17:16:52'), (25, 3, '2025-07-10 17:39:52'), (25, 4, '2025-07-10 17:49:52'), (25, 5, '2025-07-10 18:04:52'), (25, 13, '2025-07-10 18:15:52'), (25, 5, '2025-07-10 18:25:52'), (25, 6, '2025-07-10 18:50:52'),
+(28, 1, CONVERT(DATETIME, '2025-05-24 07:00:00')), (28, 2, CONVERT(DATETIME, '2025-05-24 07:08:00')), (28, 3, CONVERT(DATETIME, '2025-05-24 07:30:00')), (28, 4, CONVERT(DATETIME, '2025-05-24 07:38:00')), (28, 5, CONVERT(DATETIME, '2025-05-24 07:45:00')), (28, 13, CONVERT(DATETIME, '2025-05-24 07:55:00')), (28, 5, CONVERT(DATETIME, '2025-05-24 08:05:00')), (28, 6, CONVERT(DATETIME, '2025-05-24 08:30:00')),
+(29, 1, CONVERT(DATETIME, '2025-07-08 15:00:00')), (29, 2, CONVERT(DATETIME, '2025-07-08 15:08:00')), (29, 3, CONVERT(DATETIME, '2025-07-08 15:30:00')), (29, 4, CONVERT(DATETIME, '2025-07-08 15:38:00')), (29, 5, CONVERT(DATETIME, '2025-07-08 15:45:00')), (29, 13, CONVERT(DATETIME, '2025-07-08 15:55:00')), (29, 6, CONVERT(DATETIME, '2025-07-08 16:20:00')),
 
 -- Error en Pago y Cancelado
-(26, 1, '2025-07-11 08:32:00'), (26, 15, '2025-07-11 08:40:00'), (26, 7, '2025-07-11 08:50:00'),
-(27, 1, '2025-07-11 04:09:46'), (27, 2, '2025-07-11 04:19:46'), (27, 15, '2025-07-11 04:30:46'), (27, 7, '2025-07-11 04:40:46'),
+(30, 1, CONVERT(DATETIME, '2025-05-25 10:00:00')), (30, 15, CONVERT(DATETIME, '2025-05-25 10:08:00')), (30, 7, CONVERT(DATETIME, '2025-05-25 10:15:00')),
+(31, 1, CONVERT(DATETIME, '2025-06-04 11:30:00')), (31, 2, CONVERT(DATETIME, '2025-06-04 11:38:00')), (31, 15, CONVERT(DATETIME, '2025-06-04 11:45:00')), (31, 7, CONVERT(DATETIME, '2025-06-04 11:55:00')),
 
--- Programado (varias instancias)
-(28, 1, '2025-07-11 00:03:00'), (28, 14, '2025-07-11 00:10:00'), (28, 4, '2025-07-11 00:40:00'), (28, 5, '2025-07-11 00:50:00'), (28, 6, '2025-07-11 01:25:00'),
-(29, 1, '2025-07-11 01:43:40'), (29, 14, '2025-07-11 01:50:40'), (29, 4, '2025-07-11 02:20:40'), (29, 5, '2025-07-11 02:30:40'), (29, 6, '2025-07-11 03:05:40'),
+-- Programado
+(32, 1, CONVERT(DATETIME, '2025-05-26 14:00:00')), (32, 14, CONVERT(DATETIME, '2025-05-26 14:08:00')), (32, 4, CONVERT(DATETIME, '2025-05-26 14:30:00')), (32, 5, CONVERT(DATETIME, '2025-05-26 14:40:00')), (32, 6, CONVERT(DATETIME, '2025-05-26 15:10:00')),
+(33, 1, CONVERT(DATETIME, '2025-07-09 09:00:00')), (33, 14, CONVERT(DATETIME, '2025-07-09 09:08:00')), (33, 4, CONVERT(DATETIME, '2025-07-09 09:30:00')), (33, 5, CONVERT(DATETIME, '2025-07-09 09:40:00')), (33, 6, CONVERT(DATETIME, '2025-07-09 10:10:00')),
+
+-- Devolución en proceso (después de una entrega simulada)
+(34, 1, CONVERT(DATETIME, '2025-05-27 16:00:00')), (34, 2, CONVERT(DATETIME, '2025-05-27 16:08:00')), (34, 3, CONVERT(DATETIME, '2025-05-27 16:30:00')), (34, 4, CONVERT(DATETIME, '2025-05-27 16:38:00')), (34, 5, CONVERT(DATETIME, '2025-05-27 16:45:00')), (34, 6, CONVERT(DATETIME, '2025-05-27 17:15:00')), (34, 9, CONVERT(DATETIME, '2025-05-27 17:30:00')), (34, 10, CONVERT(DATETIME, '2025-05-27 17:45:00')),
+(35, 1, CONVERT(DATETIME, '2025-07-10 11:00:00')), (35, 2, CONVERT(DATETIME, '2025-07-10 11:08:00')), (35, 3, CONVERT(DATETIME, '2025-07-10 11:30:00')), (35, 4, CONVERT(DATETIME, '2025-07-10 11:38:00')), (35, 5, CONVERT(DATETIME, '2025-07-10 11:45:00')), (35, 6, CONVERT(DATETIME, '2025-07-10 12:15:00')), (35, 9, CONVERT(DATETIME, '2025-07-10 12:30:00')), (35, 10, CONVERT(DATETIME, '2025-07-10 12:45:00')),
 
 -- Mezcla de estados: Retrasado -> Cancelado
-(30, 1, '2025-07-10 13:00:33'), (30, 2, '2025-07-10 13:08:33'), (30, 3, '2025-07-10 13:31:33'), (30, 8, '2025-07-10 13:38:33'), (30, 7, '2025-07-10 13:50:33'),
+(36, 1, CONVERT(DATETIME, '2025-05-28 13:00:00')), (36, 2, CONVERT(DATETIME, '2025-05-28 13:08:00')), (36, 3, CONVERT(DATETIME, '2025-05-28 13:30:00')), (36, 8, CONVERT(DATETIME, '2025-05-28 13:38:00')), (36, 7, CONVERT(DATETIME, '2025-05-28 13:50:00')),
+(37, 1, CONVERT(DATETIME, '2025-07-11 17:00:00')), (37, 2, CONVERT(DATETIME, '2025-07-11 17:08:00')), (37, 3, CONVERT(DATETIME, '2025-07-11 17:30:00')), (37, 8, CONVERT(DATETIME, '2025-07-11 17:38:00')), (37, 7, CONVERT(DATETIME, '2025-07-11 17:50:00')),
 
 -- Mezcla de estados: Esperando Repartidor -> Retrasado -> Entregado
-(31, 1, '2025-07-10 17:09:47'), (31, 2, '2025-07-10 17:20:47'), (31, 3, '2025-07-10 17:39:47'), (31, 4, '2025-07-10 17:45:47'), (31, 12, '2025-07-10 17:59:47'), (31, 8, '2025-07-10 18:15:47'), (31, 5, '2025-07-10 18:25:47'), (31, 6, '2025-07-10 18:55:47'),
-
--- Más rutas felices
-(32, 1, '2025-07-11 09:21:28'), (32, 2, '2025-07-11 09:27:28'), (32, 3, '2025-07-11 09:47:28'), (32, 4, '2025-07-11 09:54:28'), (32, 5, '2025-07-11 10:01:28'), (32, 6, '2025-07-11 10:33:28'),
-(33, 1, '2025-07-10 20:25:01'), (33, 2, '2025-07-10 20:30:01'), (33, 3, '2025-07-10 20:57:01'), (33, 4, '2025-07-10 21:05:01'), (33, 5, '2025-07-10 21:13:01'), (33, 6, '2025-07-10 21:50:01'),
-(34, 1, '2025-07-11 05:43:16'), (34, 2, '2025-07-11 05:51:16'), (34, 3, '2025-07-11 06:14:16'), (34, 4, '2025-07-11 06:21:16'), (34, 5, '2025-07-11 06:26:16'), (34, 6, '2025-07-11 06:51:16'),
-(35, 1, '2025-07-11 03:00:26'), (35, 2, '2025-07-11 03:06:26'), (35, 3, '2025-07-11 03:22:26'), (35, 4, '2025-07-11 03:31:26'), (35, 5, '2025-07-11 03:36:26'), (35, 6, '2025-07-11 04:08:26'),
-(36, 1, '2025-07-11 07:44:59'), (36, 2, '2025-07-11 07:53:59'), (36, 3, '2025-07-11 08:14:59'), (36, 4, '2025-07-11 08:23:59'), (36, 5, '2025-07-11 08:35:59'), (36, 6, '2025-07-11 09:18:59'),
-(37, 1, '2025-07-10 13:08:18'), (37, 2, '2025-07-10 13:16:18'), (37, 3, '2025-07-10 13:41:18'), (37, 4, '2025-07-10 13:46:18'), (37, 5, '2025-07-10 13:58:18'), (37, 6, '2025-07-10 14:38:18'),
-(38, 1, '2025-07-11 07:07:07'), (38, 2, '2025-07-11 07:12:07'), (38, 3, '2025-07-11 07:33:07'), (38, 4, '2025-07-11 07:42:07'), (38, 5, '2025-07-11 07:54:07'), (38, 6, '2025-07-11 08:23:07'),
-(39, 1, '2025-07-11 00:03:52'), (39, 2, '2025-07-11 00:13:52'), (39, 3, '2025-07-11 00:36:52'), (39, 4, '2025-07-11 00:46:52'), (39, 5, '2025-07-11 00:59:52'), (39, 6, '2025-07-11 01:29:52'),
-(40, 1, '2025-07-11 11:27:26'), (40, 2, '2025-07-11 11:34:26'), (40, 3, '2025-07-11 11:51:26'), (40, 4, '2025-07-11 12:00:26'), (40, 5, '2025-07-11 12:12:26'), (40, 6, '2025-07-11 12:47:26'),
-
--- Más cancelaciones (después de Confirmado)
-(41, 1, '2025-07-10 13:47:49'), (41, 2, '2025-07-10 13:58:49'), (41, 7, '2025-07-10 14:10:49'),
-(42, 1, '2025-07-10 20:39:27'), (42, 2, '2025-07-10 20:47:27'), (42, 7, '2025-07-10 20:55:27'),
-
--- Más rechazos por comercio
-(43, 1, '2025-07-11 00:45:00'), -- Pendiente
-(43, 11, '2025-07-11 00:55:00'), -- Rechazado por Comercio
-(43, 7, '2025-07-11 01:05:00'), -- Cancelado (ADDED)
-(44, 1, '2025-07-11 07:18:03'), (44, 2, '2025-07-11 07:23:03'), (44, 11, '2025-07-11 07:35:03'),
-
--- Más errores de pago
-(45, 1, '2025-07-11 04:30:05'), (45, 15, '2025-07-11 04:37:05'), (45, 7, '2025-07-11 04:45:05'),
-
--- Más retrasos
-(46, 1, '2025-07-11 00:03:36'), (46, 2, '2025-07-11 00:10:36'), (46, 3, '2025-07-11 00:30:36'), (46, 8, '2025-07-11 00:36:36'), (46, 5, '2025-07-11 00:45:36'), (46, 6, '2025-07-11 01:15:36'),
-
--- Más esperando repartidor
-(47, 1, '2025-07-11 06:17:16'), (47, 2, '2025-07-11 06:27:16'), (47, 3, '2025-07-11 06:48:16'), (47, 4, '2025-07-11 06:55:16'), (47, 12, '2025-07-11 07:07:16'), (47, 5, '2025-07-11 07:17:16'), (47, 6, '2025-07-11 07:45:16'),
-
--- Más reintentos de entrega
-(48, 1, '2025-07-11 03:03:42'), (48, 2, '2025-07-11 03:08:42'), (48, 3, '2025-07-11 03:38:42'), (48, 4, '2025-07-11 03:45:42'), (48, 5, '2025-07-11 03:52:42'), (48, 13, '2025-07-11 04:05:42'), (48, 6, '2025-07-11 04:25:42'),
-
--- Devoluciones (después de entrega)
-(49, 1, '2025-07-10 13:58:39'), (49, 2, '2025-07-10 14:04:39'), (49, 3, '2025-07-10 14:25:39'), (49, 4, '2025-07-10 14:30:39'), (49, 5, '2025-07-10 14:41:39'), (49, 6, '2025-07-10 15:15:39'), (49, 9, '2025-07-10 15:30:39'), (49, 10, '2025-07-10 15:45:39'),
+(38, 1, CONVERT(DATETIME, '2025-05-29 08:30:00')), (38, 2, CONVERT(DATETIME, '2025-05-29 08:38:00')), (38, 3, CONVERT(DATETIME, '2025-05-29 09:00:00')), (38, 4, CONVERT(DATETIME, '2025-05-29 09:08:00')), (38, 12, CONVERT(DATETIME, '2025-05-29 09:15:00')), (38, 8, CONVERT(DATETIME, '2025-05-29 09:25:00')), (38, 5, CONVERT(DATETIME, '2025-05-29 09:35:00')), (38, 6, CONVERT(DATETIME, '2025-05-29 10:05:00')),
+(39, 1, CONVERT(DATETIME, '2025-07-12 12:00:00')), (39, 2, CONVERT(DATETIME, '2025-07-12 12:08:00')), (39, 3, CONVERT(DATETIME, '2025-07-12 12:30:00')), (39, 4, CONVERT(DATETIME, '2025-07-12 12:38:00')), (39, 12, CONVERT(DATETIME, '2025-07-12 12:45:00')), (39, 8, CONVERT(DATETIME, '2025-07-12 12:55:00')), (39, 5, CONVERT(DATETIME, '2025-07-12 13:05:00')), (39, 6, CONVERT(DATETIME, '2025-07-12 13:35:00')),
 
 -- Combinación: Pendiente -> Programado -> Cancelado (antes de entrega)
-(50, 1, '2025-07-11 09:27:36'), (50, 14, '2025-07-11 09:37:36'), (50, 7, '2025-07-11 10:00:36'),
+(40, 1, CONVERT(DATETIME, '2025-05-30 10:00:00')), (40, 14, CONVERT(DATETIME, '2025-05-30 10:08:00')), (40, 7, CONVERT(DATETIME, '2025-05-30 10:15:00')),
+(41, 1, CONVERT(DATETIME, '2025-07-13 14:00:00')), (41, 14, CONVERT(DATETIME, '2025-07-13 14:08:00')), (41, 7, CONVERT(DATETIME, '2025-07-13 14:15:00')),
+
+-- Más rutas felices (para completar los 150)
+(42, 1, CONVERT(DATETIME, '2025-05-19 10:18:20')), (42, 2, CONVERT(DATETIME, '2025-05-19 10:28:20')), (42, 3, CONVERT(DATETIME, '2025-05-19 10:48:20')), (42, 4, CONVERT(DATETIME, '2025-05-19 10:57:20')), (42, 5, CONVERT(DATETIME, '2025-05-19 11:10:20')), (42, 6, CONVERT(DATETIME, '2025-05-19 11:42:20')),
+(43, 1, CONVERT(DATETIME, '2025-06-20 01:23:49')), (43, 2, CONVERT(DATETIME, '2025-06-20 01:31:49')), (43, 3, CONVERT(DATETIME, '2025-06-20 01:46:49')), (43, 4, CONVERT(DATETIME, '2025-06-20 01:54:49')), (43, 5, CONVERT(DATETIME, '2025-06-20 02:08:49')), (43, 6, CONVERT(DATETIME, '2025-06-20 02:37:49')),
+(44, 1, CONVERT(DATETIME, '2025-07-01 10:04:13')), (44, 2, CONVERT(DATETIME, '2025-07-01 10:12:13')), (44, 3, CONVERT(DATETIME, '2025-07-01 10:39:13')), (44, 4, CONVERT(DATETIME, '2025-07-01 10:47:13')), (44, 5, CONVERT(DATETIME, '2025-07-01 10:55:13')), (44, 6, CONVERT(DATETIME, '2025-07-01 11:32:13')),
+(45, 1, CONVERT(DATETIME, '2025-05-22 05:44:03')), (45, 2, CONVERT(DATETIME, '2025-05-22 05:51:03')), (45, 3, CONVERT(DATETIME, '2025-05-22 06:16:03')), (45, 4, CONVERT(DATETIME, '2025-05-22 06:21:03')), (45, 5, CONVERT(DATETIME, '2025-05-22 06:28:03')), (45, 6, CONVERT(DATETIME, '2025-05-22 07:07:03')),
+(46, 1, CONVERT(DATETIME, '2025-06-23 16:54:02')), (46, 2, CONVERT(DATETIME, '2025-06-23 17:01:02')), (46, 3, CONVERT(DATETIME, '2025-06-23 17:15:02')), (46, 4, CONVERT(DATETIME, '2025-06-23 17:23:02')), (46, 5, CONVERT(DATETIME, '2025-06-23 17:37:02')), (46, 6, CONVERT(DATETIME, '2025-06-23 18:04:02')),
+(47, 1, CONVERT(DATETIME, '2025-07-04 09:37:03')), (47, 2, CONVERT(DATETIME, '2025-07-04 09:47:03')), (47, 3, CONVERT(DATETIME, '2025-07-04 10:11:03')), (47, 4, CONVERT(DATETIME, '2025-07-04 10:20:03')), (47, 5, CONVERT(DATETIME, '2025-07-04 10:25:03')), (47, 6, CONVERT(DATETIME, '2025-07-04 10:57:03')),
+(48, 1, CONVERT(DATETIME, '2025-05-25 00:09:05')), (48, 2, CONVERT(DATETIME, '2025-05-25 00:15:05')), (48, 3, CONVERT(DATETIME, '2025-05-25 00:39:05')), (48, 4, CONVERT(DATETIME, '2025-05-25 00:46:05')), (48, 5, CONVERT(DATETIME, '2025-05-25 00:56:05')), (48, 6, CONVERT(DATETIME, '2025-05-25 01:21:05')),
+(49, 1, CONVERT(DATETIME, '2025-06-26 06:58:19')), (49, 2, CONVERT(DATETIME, '2025-06-26 07:05:19')), (49, 7, CONVERT(DATETIME, '2025-06-26 07:10:19')),
+(50, 1, CONVERT(DATETIME, '2025-07-07 00:23:14')), (50, 2, CONVERT(DATETIME, '2025-07-07 00:33:14')), (50, 7, CONVERT(DATETIME, '2025-07-07 00:45:14')),
+(51, 1, CONVERT(DATETIME, '2025-05-28 09:20:31')), (51, 11, CONVERT(DATETIME, '2025-05-28 09:28:31')), (51, 7, CONVERT(DATETIME, '2025-05-28 09:38:31')),
+(52, 1, CONVERT(DATETIME, '2025-06-29 02:40:19')), (52, 2, CONVERT(DATETIME, '2025-06-29 02:48:19')), (52, 11, CONVERT(DATETIME, '2025-06-29 03:00:19')),
+(53, 1, CONVERT(DATETIME, '2025-07-10 12:44:48')), (53, 2, CONVERT(DATETIME, '2025-07-10 12:54:48')), (53, 3, CONVERT(DATETIME, '2025-07-10 13:16:48')), (53, 8, CONVERT(DATETIME, '2025-07-10 13:25:48')), (53, 5, CONVERT(DATETIME, '2025-07-10 13:40:48')), (53, 6, CONVERT(DATETIME, '2025-07-10 14:10:48')),
+(54, 1, CONVERT(DATETIME, '2025-05-31 14:13:58')), (54, 2, CONVERT(DATETIME, '2025-05-31 14:24:58')), (54, 3, CONVERT(DATETIME, '2025-05-31 14:48:58')), (54, 8, CONVERT(DATETIME, '2025-05-31 14:58:58')), (54, 4, CONVERT(DATETIME, '2025-05-31 15:15:58')), (54, 5, CONVERT(DATETIME, '2025-05-31 15:25:58')), (54, 6, CONVERT(DATETIME, '2025-05-31 15:55:58')),
+(55, 1, CONVERT(DATETIME, '2025-06-01 18:27:00')), (55, 2, CONVERT(DATETIME, '2025-06-01 18:37:00')), (55, 3, CONVERT(DATETIME, '2025-06-01 18:59:00')), (55, 4, CONVERT(DATETIME, '2025-06-01 19:07:00')), (55, 12, CONVERT(DATETIME, '2025-06-01 19:15:00')), (55, 5, CONVERT(DATETIME, '2025-06-01 19:25:00')), (55, 6, CONVERT(DATETIME, '2025-06-01 19:58:00')),
+(56, 1, CONVERT(DATETIME, '2025-07-02 07:11:03')), (56, 2, CONVERT(DATETIME, '2025-07-02 07:22:03')), (56, 3, CONVERT(DATETIME, '2025-07-02 07:44:03')), (56, 4, CONVERT(DATETIME, '2025-07-02 07:53:03')), (56, 12, CONVERT(DATETIME, '2025-07-02 08:00:03')), (56, 5, CONVERT(DATETIME, '2025-07-02 08:10:03')), (56, 6, CONVERT(DATETIME, '2025-07-02 08:40:03')),
+(57, 1, CONVERT(DATETIME, '2025-05-03 17:09:52')), (57, 2, CONVERT(DATETIME, '2025-05-03 17:16:52')), (57, 3, CONVERT(DATETIME, '2025-05-03 17:39:52')), (57, 4, CONVERT(DATETIME, '2025-05-03 17:49:52')), (57, 5, CONVERT(DATETIME, '2025-05-03 18:04:52')), (57, 13, CONVERT(DATETIME, '2025-05-03 18:15:52')), (57, 5, CONVERT(DATETIME, '2025-05-03 18:25:52')), (57, 6, CONVERT(DATETIME, '2025-05-03 18:50:52')),
+(58, 1, CONVERT(DATETIME, '2025-06-04 08:32:00')), (58, 15, CONVERT(DATETIME, '2025-06-04 08:40:00')), (58, 7, CONVERT(DATETIME, '2025-06-04 08:50:00')),
+(59, 1, CONVERT(DATETIME, '2025-07-05 04:09:46')), (59, 2, CONVERT(DATETIME, '2025-07-05 04:19:46')), (59, 15, CONVERT(DATETIME, '2025-07-05 04:30:46')), (59, 7, CONVERT(DATETIME, '2025-07-05 04:40:46')),
+(60, 1, CONVERT(DATETIME, '2025-05-06 00:03:00')), (60, 14, CONVERT(DATETIME, '2025-05-06 00:10:00')), (60, 4, CONVERT(DATETIME, '2025-05-06 00:40:00')), (60, 5, CONVERT(DATETIME, '2025-05-06 00:50:00')), (60, 6, CONVERT(DATETIME, '2025-05-06 01:25:00')),
+(61, 1, CONVERT(DATETIME, '2025-06-07 01:43:40')), (61, 14, CONVERT(DATETIME, '2025-06-07 01:50:40')), (61, 4, CONVERT(DATETIME, '2025-06-07 02:20:40')), (61, 5, CONVERT(DATETIME, '2025-06-07 02:30:40')), (61, 6, CONVERT(DATETIME, '2025-06-07 03:05:40')),
+(62, 1, CONVERT(DATETIME, '2025-07-08 13:00:33')), (62, 2, CONVERT(DATETIME, '2025-07-08 13:08:33')), (62, 3, CONVERT(DATETIME, '2025-07-08 13:31:33')), (62, 8, CONVERT(DATETIME, '2025-07-08 13:38:33')), (62, 7, CONVERT(DATETIME, '2025-07-08 13:50:33')),
+(63, 1, CONVERT(DATETIME, '2025-05-09 17:09:47')), (63, 2, CONVERT(DATETIME, '2025-05-09 17:20:47')), (63, 3, CONVERT(DATETIME, '2025-05-09 17:39:47')), (63, 4, CONVERT(DATETIME, '2025-05-09 17:45:47')), (63, 12, CONVERT(DATETIME, '2025-05-09 17:59:47')), (63, 8, CONVERT(DATETIME, '2025-05-09 18:15:47')), (63, 5, CONVERT(DATETIME, '2025-05-09 18:25:47')), (63, 6, CONVERT(DATETIME, '2025-05-09 18:55:47')),
+(64, 1, CONVERT(DATETIME, '2025-06-10 09:21:28')), (64, 2, CONVERT(DATETIME, '2025-06-10 09:27:28')), (64, 3, CONVERT(DATETIME, '2025-06-10 09:47:28')), (64, 4, CONVERT(DATETIME, '2025-06-10 09:54:28')), (64, 5, CONVERT(DATETIME, '2025-06-10 10:01:28')), (64, 6, CONVERT(DATETIME, '2025-06-10 10:33:28')),
+(65, 1, CONVERT(DATETIME, '2025-07-11 20:25:01')), (65, 2, CONVERT(DATETIME, '2025-07-11 20:30:01')), (65, 3, CONVERT(DATETIME, '2025-07-11 20:57:01')), (65, 4, CONVERT(DATETIME, '2025-07-11 21:05:01')), (65, 5, CONVERT(DATETIME, '2025-07-11 21:13:01')), (65, 6, CONVERT(DATETIME, '2025-07-11 21:50:01')),
+(66, 1, CONVERT(DATETIME, '2025-05-12 05:43:16')), (66, 2, CONVERT(DATETIME, '2025-05-12 05:51:16')), (66, 3, CONVERT(DATETIME, '2025-05-12 06:14:16')), (66, 4, CONVERT(DATETIME, '2025-05-12 06:21:16')), (66, 5, CONVERT(DATETIME, '2025-05-12 06:26:16')), (66, 6, CONVERT(DATETIME, '2025-05-12 06:51:16')),
+(67, 1, CONVERT(DATETIME, '2025-06-13 03:00:26')), (67, 2, CONVERT(DATETIME, '2025-06-13 03:06:26')), (67, 3, CONVERT(DATETIME, '2025-06-13 03:22:26')), (67, 4, CONVERT(DATETIME, '2025-06-13 03:31:26')), (67, 5, CONVERT(DATETIME, '2025-06-13 03:36:26')), (67, 6, CONVERT(DATETIME, '2025-06-13 04:08:26')),
+(68, 1, CONVERT(DATETIME, '2025-07-14 07:44:59')), (68, 2, CONVERT(DATETIME, '2025-07-14 07:53:59')), (68, 3, CONVERT(DATETIME, '2025-07-14 08:14:59')), (68, 4, CONVERT(DATETIME, '2025-07-14 08:23:59')), (68, 5, CONVERT(DATETIME, '2025-07-14 08:35:59')), (68, 6, CONVERT(DATETIME, '2025-07-14 09:18:59')),
+(69, 1, CONVERT(DATETIME, '2025-05-15 13:08:18')), (69, 2, CONVERT(DATETIME, '2025-05-15 13:16:18')), (69, 3, CONVERT(DATETIME, '2025-05-15 13:41:18')), (69, 4, CONVERT(DATETIME, '2025-05-15 13:46:18')), (69, 5, CONVERT(DATETIME, '2025-05-15 13:58:18')), (69, 6, CONVERT(DATETIME, '2025-05-15 14:38:18')),
+(70, 1, CONVERT(DATETIME, '2025-06-16 07:07:07')), (70, 2, CONVERT(DATETIME, '2025-06-16 07:12:07')), (70, 3, CONVERT(DATETIME, '2025-06-16 07:33:07')), (70, 4, CONVERT(DATETIME, '2025-06-16 07:42:07')), (70, 5, CONVERT(DATETIME, '2025-06-16 07:54:07')), (70, 6, CONVERT(DATETIME, '2025-06-16 08:23:07')),
+(71, 1, CONVERT(DATETIME, '2025-07-17 00:03:52')), (71, 2, CONVERT(DATETIME, '2025-07-17 00:13:52')), (71, 3, CONVERT(DATETIME, '2025-07-17 00:36:52')), (71, 4, CONVERT(DATETIME, '2025-07-17 00:46:52')), (71, 5, CONVERT(DATETIME, '2025-07-17 00:59:52')), (71, 6, CONVERT(DATETIME, '2025-07-17 01:29:52')),
+(72, 1, CONVERT(DATETIME, '2025-07-18 11:27:26')), (72, 2, CONVERT(DATETIME, '2025-07-18 11:34:26')), (72, 3, CONVERT(DATETIME, '2025-07-18 11:51:26')), (72, 4, CONVERT(DATETIME, '2025-07-18 12:00:26')), (72, 5, CONVERT(DATETIME, '2025-07-18 12:12:26')), (72, 6, CONVERT(DATETIME, '2025-07-18 12:47:26')),
+
+-- Más cancelaciones (después de Confirmado)
+(73, 1, CONVERT(DATETIME, '2025-05-20 13:47:49')), (73, 2, CONVERT(DATETIME, '2025-05-20 13:58:49')), (73, 7, CONVERT(DATETIME, '2025-05-20 14:10:49')),
+(74, 1, CONVERT(DATETIME, '2025-06-24 20:39:27')), (74, 2, CONVERT(DATETIME, '2025-06-24 20:47:27')), (74, 7, CONVERT(DATETIME, '2025-06-24 20:55:27')),
+(75, 1, CONVERT(DATETIME, '2025-07-01 00:45:00')), (75, 11, CONVERT(DATETIME, '2025-07-01 00:55:00')), (75, 7, CONVERT(DATETIME, '2025-07-01 01:05:00')),
+(76, 1, CONVERT(DATETIME, '2025-05-05 07:18:03')), (76, 2, CONVERT(DATETIME, '2025-05-05 07:23:03')), (76, 11, CONVERT(DATETIME, '2025-05-05 07:35:03')),
+(77, 1, CONVERT(DATETIME, '2025-06-09 04:30:05')), (77, 15, CONVERT(DATETIME, '2025-06-09 04:37:05')), (77, 7, CONVERT(DATETIME, '2025-06-09 04:45:05')),
+(78, 1, CONVERT(DATETIME, '2025-07-13 00:03:36')), (78, 2, CONVERT(DATETIME, '2025-07-13 00:10:36')), (78, 3, CONVERT(DATETIME, '2025-07-13 00:30:36')), (78, 8, CONVERT(DATETIME, '2025-07-13 00:36:36')), (78, 5, CONVERT(DATETIME, '2025-07-13 00:45:36')), (78, 6, CONVERT(DATETIME, '2025-07-13 01:15:36')),
+(79, 1, CONVERT(DATETIME, '2025-05-17 06:17:16')), (79, 2, CONVERT(DATETIME, '2025-05-17 06:27:16')), (79, 3, CONVERT(DATETIME, '2025-05-17 06:48:16')), (79, 4, CONVERT(DATETIME, '2025-05-17 06:55:16')), (79, 12, CONVERT(DATETIME, '2025-05-17 07:07:16')), (79, 5, CONVERT(DATETIME, '2025-05-17 07:17:16')), (79, 6, CONVERT(DATETIME, '2025-05-17 07:45:16')),
+(80, 1, CONVERT(DATETIME, '2025-06-19 03:03:42')), (80, 2, CONVERT(DATETIME, '2025-06-19 03:08:42')), (80, 3, CONVERT(DATETIME, '2025-06-19 03:38:42')), (80, 4, CONVERT(DATETIME, '2025-06-19 03:45:42')), (80, 5, CONVERT(DATETIME, '2025-06-19 03:52:42')), (80, 13, CONVERT(DATETIME, '2025-06-19 04:05:42')), (80, 6, CONVERT(DATETIME, '2025-06-19 04:25:42')),
+(81, 1, CONVERT(DATETIME, '2025-07-03 13:58:39')), (81, 2, CONVERT(DATETIME, '2025-07-03 14:04:39')), (81, 3, CONVERT(DATETIME, '2025-07-03 14:25:39')), (81, 4, CONVERT(DATETIME, '2025-07-03 14:30:39')), (81, 5, CONVERT(DATETIME, '2025-07-03 14:41:39')), (81, 6, CONVERT(DATETIME, '2025-07-03 15:15:39')), (81, 9, CONVERT(DATETIME, '2025-07-03 15:30:39')), (81, 10, CONVERT(DATETIME, '2025-07-03 15:45:39')),
+(82, 1, CONVERT(DATETIME, '2025-05-27 09:27:36')), (82, 14, CONVERT(DATETIME, '2025-05-27 09:37:36')), (82, 7, CONVERT(DATETIME, '2025-05-27 10:00:36')),
 
 -- Repetimos y mezclamos para llegar a 150 pedidos con variaciones
 -- Ruta Feliz
-(51, 1, '2025-07-10 18:31:21'), (51, 2, '2025-07-10 18:37:21'), (51, 3, '2025-07-10 19:04:21'), (51, 4, '2025-07-10 19:10:21'), (51, 5, '2025-07-10 19:19:21'), (51, 6, '2025-07-10 19:57:21'),
-(52, 1, '2025-07-11 09:34:36'), (52, 2, '2025-07-11 09:41:36'), (52, 3, '2025-07-11 10:00:36'), (52, 4, '2025-07-11 10:05:36'), (52, 5, '2025-07-11 10:19:36'), (52, 6, '2025-07-11 10:56:36'),
-(53, 1, '2025-07-11 03:00:15'), (53, 2, '2025-07-11 03:06:15'), (53, 3, '2025-07-11 03:34:15'), (53, 4, '2025-07-11 03:40:15'), (53, 5, '2025-07-11 03:52:15'), (53, 6, '2025-07-11 04:26:15'),
-(54, 1, '2025-07-10 17:09:49'), (54, 2, '2025-07-10 17:16:49'), (54, 3, '2025-07-10 17:42:49'), (54, 4, '2025-07-10 17:48:49'), (54, 5, '2025-07-10 17:58:49'), (54, 6, '2025-07-10 18:27:49'),
-(55, 1, '2025-07-10 13:57:20'), (55, 2, '2025-07-10 14:02:20'), (55, 3, '2025-07-10 14:22:20'), (55, 4, '2025-07-10 14:31:20'), (55, 5, '2025-07-10 14:41:20'), (55, 6, '2025-07-10 15:15:20'),
-(56, 1, '2025-07-11 00:54:19'), (56, 2, '2025-07-11 01:04:19'), (56, 3, '2025-07-11 01:21:19'), (56, 4, '2025-07-11 01:27:19'), (56, 5, '2025-07-11 01:40:19'), (56, 6, '2025-07-11 02:05:19'),
-(57, 1, '2025-07-11 08:35:10'), (57, 2, '2025-07-11 08:44:10'), (57, 3, '2025-07-11 09:07:10'), (57, 4, '2025-07-11 09:12:10'), (57, 5, '2025-07-11 09:23:10'), (57, 6, '2025-07-11 10:05:10'),
-(58, 1, '2025-07-10 18:59:16'), (58, 2, '2025-07-10 19:07:16'), (58, 3, '2025-07-10 19:20:16'), (58, 4, '2025-07-10 19:29:16'), (58, 5, '2025-07-10 19:35:16'), (58, 6, '2025-07-10 20:01:16'),
-(59, 1, '2025-07-11 07:05:15'), (59, 2, '2025-07-11 07:14:15'), (59, 3, '2025-07-11 07:38:15'), (59, 4, '2025-07-11 07:44:15'), (59, 5, '2025-07-11 07:54:15'), (59, 6, '2025-07-11 08:31:15'),
-(60, 1, '2025-07-10 18:37:11'), (60, 2, '2025-07-10 18:47:11'), (60, 3, '2025-07-10 19:15:11'), (60, 4, '2025-07-10 19:22:11'), (60, 5, '2025-07-10 19:30:11'), (60, 6, '2025-07-10 20:00:11'),
+(83, 1, CONVERT(DATETIME, '2025-06-20 18:31:21')), (83, 2, CONVERT(DATETIME, '2025-06-20 18:37:21')), (83, 3, CONVERT(DATETIME, '2025-06-20 19:04:21')), (83, 4, CONVERT(DATETIME, '2025-06-20 19:10:21')), (83, 5, CONVERT(DATETIME, '2025-06-20 19:19:21')), (83, 6, CONVERT(DATETIME, '2025-06-20 19:57:21')),
+(84, 1, CONVERT(DATETIME, '2025-07-01 09:34:36')), (84, 2, CONVERT(DATETIME, '2025-07-01 09:41:36')), (84, 3, CONVERT(DATETIME, '2025-07-01 10:00:36')), (84, 4, CONVERT(DATETIME, '2025-07-01 10:05:36')), (84, 5, CONVERT(DATETIME, '2025-07-01 10:19:36')), (84, 6, CONVERT(DATETIME, '2025-07-01 10:56:36')),
+(85, 1, CONVERT(DATETIME, '2025-05-22 03:00:15')), (85, 2, CONVERT(DATETIME, '2025-05-22 03:06:15')), (85, 3, CONVERT(DATETIME, '2025-05-22 03:34:15')), (85, 4, CONVERT(DATETIME, '2025-05-22 03:40:15')), (85, 5, CONVERT(DATETIME, '2025-05-22 03:52:15')), (85, 6, CONVERT(DATETIME, '2025-05-22 04:26:15')),
+(86, 1, CONVERT(DATETIME, '2025-06-23 17:09:49')), (86, 2, CONVERT(DATETIME, '2025-06-23 17:16:49')), (86, 3, CONVERT(DATETIME, '2025-06-23 17:42:49')), (86, 4, CONVERT(DATETIME, '2025-06-23 17:48:49')), (86, 5, CONVERT(DATETIME, '2025-06-23 17:58:49')), (86, 6, CONVERT(DATETIME, '2025-06-23 18:27:49')),
+(87, 1, CONVERT(DATETIME, '2025-07-04 13:57:20')), (87, 2, CONVERT(DATETIME, '2025-07-04 14:02:20')), (87, 3, CONVERT(DATETIME, '2025-07-04 14:22:20')), (87, 4, CONVERT(DATETIME, '2025-07-04 14:31:20')), (87, 5, CONVERT(DATETIME, '2025-07-04 14:41:20')), (87, 6, CONVERT(DATETIME, '2025-07-04 15:15:20')),
+(88, 1, CONVERT(DATETIME, '2025-05-25 00:54:19')), (88, 2, CONVERT(DATETIME, '2025-05-25 01:04:19')), (88, 3, CONVERT(DATETIME, '2025-05-25 01:21:19')), (88, 4, CONVERT(DATETIME, '2025-05-25 01:27:19')), (88, 5, CONVERT(DATETIME, '2025-05-25 01:40:19')), (88, 6, CONVERT(DATETIME, '2025-05-25 02:05:19')),
+(89, 1, CONVERT(DATETIME, '2025-06-26 08:35:10')), (89, 2, CONVERT(DATETIME, '2025-06-26 08:44:10')), (89, 3, CONVERT(DATETIME, '2025-06-26 09:07:10')), (89, 4, CONVERT(DATETIME, '2025-06-26 09:12:10')), (89, 5, CONVERT(DATETIME, '2025-06-26 09:23:10')), (89, 6, CONVERT(DATETIME, '2025-06-26 10:05:10')),
+(90, 1, CONVERT(DATETIME, '2025-07-07 18:59:16')), (90, 2, CONVERT(DATETIME, '2025-07-07 19:07:16')), (90, 3, CONVERT(DATETIME, '2025-07-07 19:20:16')), (90, 4, CONVERT(DATETIME, '2025-07-07 19:29:16')), (90, 5, CONVERT(DATETIME, '2025-07-07 19:35:16')), (90, 6, CONVERT(DATETIME, '2025-07-07 20:01:16')),
+(91, 1, CONVERT(DATETIME, '2025-05-28 07:05:15')), (91, 2, CONVERT(DATETIME, '2025-05-28 07:14:15')), (91, 3, CONVERT(DATETIME, '2025-05-28 07:38:15')), (91, 4, CONVERT(DATETIME, '2025-05-28 07:44:15')), (91, 5, CONVERT(DATETIME, '2025-05-28 07:54:15')), (91, 6, CONVERT(DATETIME, '2025-05-28 08:31:15')),
+(92, 1, CONVERT(DATETIME, '2025-06-29 18:37:11')), (92, 2, CONVERT(DATETIME, '2025-06-29 18:47:11')), (92, 3, CONVERT(DATETIME, '2025-06-29 19:15:11')), (92, 4, CONVERT(DATETIME, '2025-06-29 19:22:11')), (92, 5, CONVERT(DATETIME, '2025-06-29 19:30:11')), (92, 6, CONVERT(DATETIME, '2025-06-29 20:00:11')),
 
 -- Más Cancelaciones
-(61, 1, '2025-07-11 00:19:16'), -- Pendiente
-(61, 2, '2025-07-11 00:25:16'), -- Confirmado (ADDED)
-(61, 7, '2025-07-11 00:30:16'), -- Cancelado
-(62, 1, '2025-07-11 06:14:00'), (62, 2, '2025-07-11 06:21:00'), (62, 7, '2025-07-11 06:35:00'),
+(93, 1, CONVERT(DATETIME, '2025-07-01 00:19:16')), (93, 2, CONVERT(DATETIME, '2025-07-01 00:25:16')), (93, 7, CONVERT(DATETIME, '2025-07-01 00:30:16')),
+(94, 1, CONVERT(DATETIME, '2025-05-31 06:14:00')), (94, 2, CONVERT(DATETIME, '2025-05-31 06:21:00')), (94, 7, CONVERT(DATETIME, '2025-05-31 06:35:00')),
 
 -- Más Rechazos por Comercio
-(63, 1, '2025-07-11 02:44:23'), -- Pendiente
-(63, 11, '2025-07-11 02:55:23'), -- Rechazado por Comercio
-(63, 7, '2025-07-11 03:05:23'), -- Cancelado (ADDED)
-(64, 1, '2025-07-10 14:52:33'), (64, 2, '2025-07-10 15:01:33'), (64, 11, '2025-07-10 15:10:33'),
+(95, 1, CONVERT(DATETIME, '2025-06-01 02:44:23')), (95, 11, CONVERT(DATETIME, '2025-06-01 02:55:23')), (95, 7, CONVERT(DATETIME, '2025-06-01 03:05:23')),
+(96, 1, CONVERT(DATETIME, '2025-07-02 14:52:33')), (96, 2, CONVERT(DATETIME, '2025-07-02 15:01:33')), (96, 11, CONVERT(DATETIME, '2025-07-02 15:10:33')),
 
 -- Más Errores en Pago
-(65, 1, '2025-07-11 03:41:25'), (65, 15, '2025-07-11 03:46:25'), (65, 7, '2025-07-11 03:55:25'),
+(97, 1, CONVERT(DATETIME, '2025-05-03 03:41:25')), (97, 15, CONVERT(DATETIME, '2025-05-03 03:46:25')), (97, 7, CONVERT(DATETIME, '2025-05-03 03:55:25')),
 
 -- Más Retrasados
-(66, 1, '2025-07-10 14:18:49'), (66, 2, '2025-07-10 14:26:49'), (66, 3, '2025-07-prueba10 14:48:49'), (66, 8, '2025-07-10 14:57:49'), (66, 5, '2025-07-10 15:10:49'), (66, 6, '2025-07-10 15:40:49'),
+(98, 1, CONVERT(DATETIME, '2025-06-04 14:18:49')), (98, 2, CONVERT(DATETIME, '2025-06-04 14:26:49')), (98, 3, CONVERT(DATETIME, '2025-06-04 14:48:49')), (98, 8, CONVERT(DATETIME, '2025-06-04 14:57:49')), (98, 5, CONVERT(DATETIME, '2025-06-04 15:10:49')), (98, 6, CONVERT(DATETIME, '2025-06-04 15:40:49')),
 
 -- Más Esperando Repartidor
-(67, 1, '2025-07-11 02:44:03'), (67, 2, '2025-07-11 02:51:03'), (67, 3, '2025-07-11 03:13:03'), (67, 4, '2025-07-11 03:22:03'), (67, 12, '2025-07-11 03:30:03'), (67, 5, '2025-07-11 03:40:03'), (67, 6, '2025-07-11 04:05:03'),
+(99, 1, CONVERT(DATETIME, '2025-07-05 02:44:03')), (99, 2, CONVERT(DATETIME, '2025-07-05 02:51:03')), (99, 3, CONVERT(DATETIME, '2025-07-05 03:13:03')), (99, 4, CONVERT(DATETIME, '2025-07-05 03:22:03')), (99, 12, CONVERT(DATETIME, '2025-07-05 03:30:03')), (99, 5, CONVERT(DATETIME, '2025-07-05 03:40:03')), (99, 6, CONVERT(DATETIME, '2025-07-05 04:05:03')),
 
 -- Más Reintentos de Entrega
-(68, 1, '2025-07-10 15:10:04'), (68, 2, '2025-07-10 15:21:04'), (68, 3, '2025-07-10 15:43:04'), (68, 4, '2025-07-10 15:52:04'), (68, 5, '2025-07-10 16:03:04'), (68, 13, '2025-07-10 16:15:04'), (68, 6, '2025-07-10 16:40:04'),
+(100, 1, CONVERT(DATETIME, '2025-05-06 15:10:04')), (100, 2, CONVERT(DATETIME, '2025-05-06 15:21:04')), (100, 3, CONVERT(DATETIME, '2025-05-06 15:43:04')), (100, 4, CONVERT(DATETIME, '2025-05-06 15:52:04')), (100, 5, CONVERT(DATETIME, '2025-05-06 16:03:04')), (100, 13, CONVERT(DATETIME, '2025-05-06 16:15:04')), (100, 6, CONVERT(DATETIME, '2025-05-06 16:40:04')),
 
 -- Más Devoluciones
-(69, 1, '2025-07-10 17:34:25'), (69, 2, '2025-07-10 17:44:25'), (69, 3, '2025-07-10 18:02:25'), (69, 4, '2025-07-10 18:11:25'), (69, 5, '2025-07-10 18:24:25'), (69, 6, '2025-07-10 18:50:25'), (69, 9, '2025-07-10 19:05:25'), (69, 10, '2025-07-10 19:20:25'),
+(101, 1, CONVERT(DATETIME, '2025-06-07 17:34:25')), (101, 2, CONVERT(DATETIME, '2025-06-07 17:44:25')), (101, 3, CONVERT(DATETIME, '2025-06-07 18:02:25')), (101, 4, CONVERT(DATETIME, '2025-06-07 18:11:25')), (101, 5, CONVERT(DATETIME, '2025-06-07 18:24:25')), (101, 6, CONVERT(DATETIME, '2025-06-07 18:50:25')), (101, 9, CONVERT(DATETIME, '2025-06-07 19:05:25')), (101, 10, CONVERT(DATETIME, '2025-06-07 19:20:25')),
 
 -- Más Programados
-(70, 1, '2025-07-11 07:11:42'), (70, 14, '2025-07-11 07:22:42'), (70, 4, '2025-07-11 07:50:42'), (70, 5, '2025-07-11 08:00:42'), (70, 6, '2025-07-11 08:35:42'),
+(102, 1, CONVERT(DATETIME, '2025-07-08 07:11:42')), (102, 14, CONVERT(DATETIME, '2025-07-08 07:22:42')), (102, 4, CONVERT(DATETIME, '2025-07-08 07:50:42')), (102, 5, CONVERT(DATETIME, '2025-07-08 08:00:42')), (102, 6, CONVERT(DATETIME, '2025-07-08 08:35:42')),
 
 -- Mezclas Adicionales
-(71, 1, '2025-07-10 18:35:50'), (71, 2, '2025-07-10 18:41:50'), (71, 8, '2025-07-10 19:00:50'), (71, 7, '2025-07-10 19:15:50'), -- Retrasado y Cancelado
-(72, 1, '2025-07-11 00:36:28'), (72, 15, '2025-07-11 00:43:28'), (72, 11, '2025-07-11 00:55:28'), -- Error en Pago y Rechazado
-(73, 1, '2025-07-11 00:46:58'), (73, 2, '2025-07-11 00:54:58'), (73, 3, '2025-07-11 01:13:58'), (73, 12, '2025-07-11 01:19:58'), (73, 8, '2025-07-11 01:35:58'), (73, 5, '2025-07-11 01:45:58'), (73, 6, '2025-07-11 02:15:58'), -- Esperando Repartidor, Retrasado, Entregado
-(74, 1, '2025-07-10 17:51:49'), (74, 14, '2025-07-10 18:02:49'), (74, 7, '2025-07-10 18:20:49'), -- Programado y Cancelado
-
--- Continuación de estados variados para los pedidos restantes (75-150)
--- Mezclando los patrones ya definidos: Ruta Feliz, Cancelado, Retrasado, Rechazado, Esperando Repartidor, Programado, Devolución/Reembolso, Reintento.
-
--- Pedidos 75-80: Ruta Feliz
-(75, 1, '2025-07-10 19:57:42'), (75, 2, '2025-07-10 20:07:42'), (75, 3, '2025-07-10 20:25:42'), (75, 4, '2025-07-10 20:34:42'), (75, 5, '2025-07-10 20:49:42'), (75, 6, '2025-07-10 21:19:42'),
-(76, 1, '2025-07-10 20:03:00'), (76, 2, '2025-07-10 20:13:00'), (76, 3, '2025-07-10 20:36:00'), (76, 4, '2025-07-10 20:46:00'), (76, 5, '2025-07-10 20:53:00'), (76, 6, '2025-07-10 21:28:00'),
-(77, 1, '2025-07-11 00:09:44'), (77, 2, '2025-07-11 00:15:44'), (77, 3, '2025-07-11 00:36:44'), (77, 4, '2025-07-11 00:43:44'), (77, 5, '2025-07-11 00:54:44'), (77, 6, '2025-07-11 01:25:44'),
-(78, 1, '2025-07-11 02:49:50'), (78, 2, '2025-07-11 02:59:50'), (78, 3, '2025-07-11 03:22:50'), (78, 4, '2025-07-11 03:28:50'), (78, 5, '2025-07-11 03:41:50'), (78, 6, '2025-07-11 04:14:50'),
-(79, 1, '2025-07-11 00:13:16'), (79, 2, '2025-07-11 00:18:16'), (79, 3, '2025-07-11 00:33:16'), (79, 4, '2025-07-11 00:40:16'), (79, 5, '2025-07-11 00:53:16'), (79, 6, '2025-07-11 01:21:16'),
-(80, 1, '2025-07-11 03:09:59'), (80, 2, '2025-07-11 03:19:59'), (80, 3, '2025-07-11 03:39:59'), (80, 4, '2025-07-11 03:49:59'), (80, 5, '2025-07-11 03:57:59'), (80, 6, '2025-07-11 04:22:59'),
-
--- Pedidos 81-85: Cancelados o Rechazados
-(81, 1, '2025-07-11 01:54:57'), (81, 2, '2025-07-11 02:04:57'), (81, 7, '2025-07-11 02:15:57'),
-(82, 1, '2025-07-10 22:54:25'), -- Pendiente
-(82, 11, '2025-07-10 23:05:25'), -- Rechazado por Comercio
-(82, 7, '2025-07-10 23:15:25'), -- Cancelado (ADDED)
-(83, 1, '2025-07-11 04:36:19'), (83, 2, '2025-07-11 04:47:19'), (83, 15, '2025-07-11 04:55:19'), (83, 7, '2025-07-11 05:05:19'),
-(84, 1, '2025-07-11 00:17:59'), (84, 14, '2025-07-11 00:25:59'), (84, 7, '2025-07-11 00:40:59'),
-(85, 1, '2025-07-11 05:51:57'), (85, 2, '2025-07-11 06:01:57'), (85, 3, '2025-07-11 06:21:57'), (85, 8, '2025-07-11 06:30:57'), (85, 7, '2025-07-11 06:45:57'),
-
--- Pedidos 86-90: Rutas con retraso o esperando repartidor
-(86, 1, '2025-07-11 04:54:02'), (86, 2, '2025-07-11 05:03:02'), (86, 3, '2025-07-11 05:22:02'), (86, 8, '2025-07-11 05:31:02'), (86, 5, '2025-07-11 05:43:02'), (86, 6, '2025-07-11 06:17:02'),
-(87, 1, '2025-07-10 18:29:40'), (87, 2, '2025-07-10 18:36:40'), (87, 3, '2025-07-10 19:00:40'), (87, 4, '2025-07-10 19:07:40'), (87, 12, '2025-07-10 19:15:40'), (87, 5, '2025-07-10 19:25:40'), (87, 6, '2025-07-10 19:54:40'),
-(88, 1, '2025-07-11 08:31:47'), (88, 2, '2025-07-11 08:42:47'), (88, 3, '2025-07-11 09:07:47'), (88, 4, '2025-07-11 09:12:47'), (88, 13, '2025-07-11 09:25:47'), (88, 6, '2025-07-11 09:59:47'),
-(89, 1, '2025-07-11 01:21:58'), (89, 2, '2025-07-11 01:29:58'), (89, 3, '2025-07-11 01:59:58'), (89, 4, '2025-07-11 02:07:58'), (89, 12, '2025-07-11 02:18:58'), (89, 8, '2025-07-11 02:30:58'), (89, 5, '2025-07-11 02:40:58'), (89, 6, '2025-07-11 03:10:58'),
-(90, 1, '2025-07-11 03:00:36'), (90, 2, '2025-07-11 03:05:36'), (90, 3, '2025-07-11 03:22:36'), (90, 8, '2025-07-11 03:28:36'), (90, 5, '2025-07-11 03:42:36'), (90, 6, '2025-07-11 04:17:36'),
-
--- Pedidos 91-100: Más variaciones
-(91, 1, '2025-07-11 03:09:31'), (91, 2, '2025-07-11 03:19:31'), (91, 3, '2025-07-11 03:41:31'), (91, 4, '2025-07-11 03:46:31'), (91, 5, '2025-07-11 03:52:31'), (91, 6, '2025-07-11 04:22:31'),
-(92, 1, '2025-07-11 05:27:00'), (92, 2, '2025-07-11 05:33:00'), (92, 3, '2025-07-11 05:51:00'), (92, 4, '2025-07-11 06:00:00'), (92, 5, '2025-07-11 06:05:00'), (92, 6, '2025-07-11 06:40:00'),
-(93, 1, '2025-07-10 16:35:10'), (93, 2, '2025-07-10 16:44:10'), (93, 3, '2025-07-10 17:09:10'), (93, 4, '2025-07-10 17:15:10'), (93, 5, '2025-07-10 17:21:10'), (93, 6, '2025-07-10 17:58:10'),
-(94, 1, '2025-07-11 02:49:15'), (94, 2, '2025-07-11 02:59:15'), (94, 3, '2025-07-11 03:19:15'), (94, 4, '2025-07-11 03:25:15'), (94, 5, '2025-07-11 03:30:15'), (94, 6, '2025-07-11 03:58:15'),
-(95, 1, '2025-07-10 19:35:01'), (95, 2, '2025-07-10 19:40:01'), (95, 3, '2025-07-10 20:00:01'), (95, 4, '2025-07-10 20:06:01'), (95, 5, '2025-07-10 20:13:01'), (95, 6, '2025-07-10 20:44:01'),
-(96, 1, '2025-07-10 18:22:18'), (96, 2, '2025-07-10 18:28:18'), (96, 3, '2025-07-10 18:57:18'), (96, 4, '2025-07-10 19:04:18'), (96, 5, '2025-07-10 19:11:18'), (96, 6, '2025-07-10 19:43:18'),
-(97, 1, '2025-07-11 08:38:08'), (97, 2, '2025-07-11 08:44:08'), (97, 3, '2025-07-11 09:07:08'), (97, 4, '2025-07-11 09:16:08'), (97, 5, '2025-07-11 09:21:08'), (97, 6, '2025-07-11 09:59:08'),
-(98, 1, '2025-07-11 02:49:15'), (98, 2, '2025-07-11 02:59:15'), (98, 3, '2025-07-11 03:22:15'), (98, 4, '2025-07-11 03:31:15'), (98, 5, '2025-07-11 03:43:15'), (98, 6, '2025-07-11 04:18:15'),
-(99, 1, '2025-07-11 06:14:13'), (99, 2, '2025-07-11 06:24:13'), (99, 3, '2025-07-11 06:40:13'), (99, 4, '2025-07-11 06:49:13'), (99, 5, '2025-07-11 06:58:13'), (99, 6, '2025-07-11 07:33:13'),
-(100, 1, '2025-07-11 02:18:04'), (100, 2, '2025-07-11 02:26:04'), (100, 3, '2025-07-11 02:49:04'), (100, 4, '2025-07-11 02:59:04'), (100, 5, '2025-07-11 03:06:04'), (100, 6, '2025-07-11 03:44:04'),
-
--- Pedidos 101-110: Variaciones de cancelación, retraso, etc.
-(101, 1, '2025-07-11 04:30:10'), (101, 2, '2025-07-11 04:36:10'), (101, 7, '2025-07-11 04:50:10'),
-(102, 1, '2025-07-11 00:23:08'), -- Pendiente
-(102, 11, '2025-07-11 00:35:08'), -- Rechazado por Comercio
-(102, 7, '2025-07-11 00:45:08'), -- Cancelado (ADDED)
-(103, 1, '2025-07-11 06:17:51'), (103, 2, '2025-07-11 06:27:51'), (103, 3, '2025-07-11 06:47:51'), (103, 8, '2025-07-11 06:53:51'), (103, 5, '2025-07-11 07:05:51'), (103, 6, '2025-07-11 07:34:51'),
-(104, 1, '2025-07-10 18:28:16'), (104, 2, '2025-07-10 18:35:16'), (104, 3, '2025-07-10 18:59:16'), (104, 4, '2025-07-10 19:08:16'), (104, 12, '2025-07-10 19:15:16'), (104, 5, '2025-07-10 19:25:16'), (104, 6, '2025-07-10 19:50:16'),
-(105, 1, '2025-07-11 03:41:25'), (105, 14, '2025-07-11 03:51:25'), (105, 7, '2025-07-11 04:10:25'),
-(106, 1, '2025-07-10 17:27:26'), (106, 2, '2025-07-10 17:34:26'), (106, 3, '2025-07-10 17:51:26'), (106, 4, '2025-07-10 17:59:26'), (106, 13, '2025-07-10 18:12:26'), (106, 6, '2025-07-10 18:45:26'),
-(107, 1, '2025-07-11 07:11:42'), (107, 15, '2025-07-11 07:16:42'), (107, 11, '2025-07-11 07:25:42'),
-(108, 1, '2025-07-11 03:00:15'), (108, 2, '2025-07-11 03:05:15'), (108, 3, '2025-07-11 03:26:15'), (108, 4, '2025-07-11 03:34:15'), (108, 5, '2025-07-11 03:44:15'), (108, 6, '2025-07-11 04:15:15'),
-(109, 1, '2025-07-11 00:09:44'), (109, 2, '2025-07-11 00:14:44'), (109, 3, '2025-07-11 00:30:44'), (109, 4, '2025-07-11 00:39:44'), (109, 5, '2025-07-11 00:44:44'), (109, 6, '2025-07-11 01:21:44'),
-(110, 1, '2025-07-10 16:35:10'), (110, 2, '2025-07-10 16:40:10'), (110, 3, '2025-07-10 17:03:10'), (110, 4, '2025-07-10 17:08:10'), (110, 5, '2025-07-10 17:15:10'), (110, 6, '2025-07-10 17:51:10'),
+(103, 1, CONVERT(DATETIME, '2025-05-09 18:35:50')), (103, 2, CONVERT(DATETIME, '2025-05-09 18:41:50')), (103, 8, CONVERT(DATETIME, '2025-05-09 19:00:50')), (103, 7, CONVERT(DATETIME, '2025-05-09 19:15:50')), -- Retrasado y Cancelado
+(104, 1, CONVERT(DATETIME, '2025-06-10 00:36:28')), (104, 15, CONVERT(DATETIME, '2025-06-10 00:43:28')), (104, 11, CONVERT(DATETIME, '2025-06-10 00:55:28')), -- Error en Pago y Rechazado
+(105, 1, CONVERT(DATETIME, '2025-07-11 00:46:58')), (105, 2, CONVERT(DATETIME, '2025-07-11 00:54:58')), (105, 3, CONVERT(DATETIME, '2025-07-11 01:13:58')), (105, 12, CONVERT(DATETIME, '2025-07-11 01:19:58')), (105, 8, CONVERT(DATETIME, '2025-07-11 01:35:58')), (105, 5, CONVERT(DATETIME, '2025-07-11 01:45:58')), (105, 6, CONVERT(DATETIME, '2025-07-11 02:15:58')), -- Esperando Repartidor, Retrasado, Entregado
+(106, 1, CONVERT(DATETIME, '2025-05-12 17:51:49')), (106, 14, CONVERT(DATETIME, '2025-05-12 18:02:49')), (106, 7, CONVERT(DATETIME, '2025-05-12 18:20:49')), -- Programado y Cancelado
+(107, 1, CONVERT(DATETIME, '2025-07-11 07:11:42')), (107, 15, CONVERT(DATETIME, '2025-07-11 07:16:42')), (107, 11, CONVERT(DATETIME, '2025-07-11 07:25:42')),
+(108, 1, CONVERT(DATETIME, '2025-07-11 03:00:15')), (108, 2, CONVERT(DATETIME, '2025-07-11 03:05:15')), (108, 3, CONVERT(DATETIME, '2025-07-11 03:26:15')), (108, 4, CONVERT(DATETIME, '2025-07-11 03:34:15')), (108, 5, CONVERT(DATETIME, '2025-07-11 03:44:15')), (108, 6, CONVERT(DATETIME, '2025-07-11 04:15:15')),
+(109, 1, CONVERT(DATETIME, '2025-07-11 00:09:44')), (109, 2, CONVERT(DATETIME, '2025-07-11 00:14:44')), (109, 3, CONVERT(DATETIME, '2025-07-11 00:30:44')), (109, 4, CONVERT(DATETIME, '2025-07-11 00:39:44')), (109, 5, CONVERT(DATETIME, '2025-07-11 00:44:44')), (109, 6, CONVERT(DATETIME, '2025-07-11 01:21:44')),
+(110, 1, CONVERT(DATETIME, '2025-07-10 16:35:10')), (110, 2, CONVERT(DATETIME, '2025-07-10 16:40:10')), (110, 3, CONVERT(DATETIME, '2025-07-10 17:03:10')), (110, 4, CONVERT(DATETIME, '2025-07-10 17:08:10')), (110, 5, CONVERT(DATETIME, '2025-07-10 17:15:10')), (110, 6, CONVERT(DATETIME, '2025-07-10 17:51:10')),
 
 -- Pedidos 111-120: Más variaciones
-(111, 1, '2025-07-11 00:13:16'), (111, 2, '2025-07-11 00:21:16'), (111, 3, '2025-07-11 00:39:16'), (111, 8, '2025-07-11 00:44:16'), (111, 5, '2025-07-11 00:54:16'), (111, 6, '2025-07-11 01:32:16'),
-(112, 1, '2025-07-10 22:54:25'), (112, 2, '2025-07-10 23:02:25'), (112, 3, '2025-07-10 23:23:25'), (112, 4, '2025-07-10 23:28:25'), (112, 12, '2025-07-10 23:36:25'), (112, 5, '2025-07-10 23:45:25'), (112, 6, '2025-07-11 00:15:25'),
-(113, 1, '2025-07-11 05:43:16'), (113, 2, '2025-07-11 05:48:16'), (113, 7, '2025-07-11 06:00:16'),
-(114, 1, '2025-07-11 02:40:19'), -- Pendiente
-(114, 11, '2025-07-11 02:50:19'), -- Rechazado por Comercio
-(114, 7, '2025-07-11 03:00:19'), -- Cancelado (ADDED)
-(115, 1, '2025-07-10 19:35:01'), (115, 15, '2025-07-10 19:40:01'), (115, 7, '2025-07-10 19:50:01'),
-(116, 1, '2025-07-11 04:54:02'), (116, 2, '2025-07-11 05:03:02'), (116, 3, '2025-07-11 05:22:02'), (116, 4, '2025-07-11 05:31:02'), (116, 5, '2025-07-11 05:44:02'), (116, 6, '2025-07-11 06:18:02'),
-(117, 1, '2025-07-11 07:18:03'), (117, 2, '2025-07-11 07:28:03'), (117, 3, '2025-07-11 07:46:03'), (117, 4, '2025-07-11 07:53:03'), (117, 5, '2025-07-11 08:00:03'), (117, 6, '2025-07-11 08:34:03'),
-(118, 1, '2025-07-11 00:45:00'), (118, 2, '2025-07-11 00:50:00'), (118, 3, '2025-07-11 01:08:00'), (118, 4, '2025-07-11 01:17:00'), (118, 5, '2025-07-11 01:25:00'), (118, 6, '2025-07-11 01:53:00'),
-(119, 1, '2025-07-11 07:05:15'), (119, 2, '2025-07-11 07:10:15'), (119, 3, '2025-07-11 07:29:15'), (119, 4, '2025-07-11 07:37:15'), (119, 5, '2025-07-11 07:42:15'), (119, 6, '2025-07-11 08:14:15'),
-(120, 1, '2025-07-10 18:31:21'), (120, 2, '2025-07-10 18:36:21'), (120, 3, '2025-07-10 18:57:21'), (120, 4, '2025-07-10 19:03:21'), (120, 5, '2025-07-10 19:16:21'), (120, 6, '2025-07-10 19:43:21'),
+(111, 1, CONVERT(DATETIME, '2025-07-11 00:13:16')), (111, 2, CONVERT(DATETIME, '2025-07-11 00:21:16')), (111, 3, CONVERT(DATETIME, '2025-07-11 00:39:16')), (111, 8, CONVERT(DATETIME, '2025-07-11 00:44:16')), (111, 5, CONVERT(DATETIME, '2025-07-11 00:54:16')), (111, 6, CONVERT(DATETIME, '2025-07-11 01:32:16')),
+(112, 1, CONVERT(DATETIME, '2025-07-10 22:54:25')), (112, 2, CONVERT(DATETIME, '2025-07-10 23:02:25')), (112, 3, CONVERT(DATETIME, '2025-07-10 23:23:25')), (112, 4, CONVERT(DATETIME, '2025-07-10 23:28:25')), (112, 12, CONVERT(DATETIME, '2025-07-10 23:36:25')), (112, 5, CONVERT(DATETIME, '2025-07-10 23:45:25')), (112, 6, CONVERT(DATETIME, '2025-07-11 00:15:25')),
+(113, 1, CONVERT(DATETIME, '2025-07-11 05:43:16')), (113, 2, CONVERT(DATETIME, '2025-07-11 05:48:16')), (113, 7, CONVERT(DATETIME, '2025-07-11 06:00:16')),
+(114, 1, CONVERT(DATETIME, '2025-07-11 02:40:19')), -- Pendiente
+(114, 11, CONVERT(DATETIME, '2025-07-11 02:50:19')), -- Rechazado por Comercio
+(114, 7, CONVERT(DATETIME, '2025-07-11 03:00:19')), -- Cancelado (ADDED)
+(115, 1, CONVERT(DATETIME, '2025-07-10 19:35:01')), (115, 15, CONVERT(DATETIME, '2025-07-10 19:40:01')), (115, 7, CONVERT(DATETIME, '2025-07-10 19:50:01')),
+(116, 1, CONVERT(DATETIME, '2025-07-11 04:54:02')), (116, 2, CONVERT(DATETIME, '2025-07-11 05:03:02')), (116, 3, CONVERT(DATETIME, '2025-07-11 05:22:02')), (116, 4, CONVERT(DATETIME, '2025-07-11 05:31:02')), (116, 5, CONVERT(DATETIME, '2025-07-11 05:44:02')), (116, 6, CONVERT(DATETIME, '2025-07-11 06:18:02')),
+(117, 1, CONVERT(DATETIME, '2025-07-11 07:18:03')), (117, 2, CONVERT(DATETIME, '2025-07-11 07:28:03')), (117, 3, CONVERT(DATETIME, '2025-07-11 07:46:03')), (117, 4, CONVERT(DATETIME, '2025-07-11 07:53:03')), (117, 5, CONVERT(DATETIME, '2025-07-11 08:00:03')), (117, 6, CONVERT(DATETIME, '2025-07-11 08:34:03')),
+(118, 1, CONVERT(DATETIME, '2025-07-11 00:45:00')), (118, 2, CONVERT(DATETIME, '2025-07-11 00:50:00')), (118, 3, CONVERT(DATETIME, '2025-07-11 01:08:00')), (118, 4, CONVERT(DATETIME, '2025-07-11 01:17:00')), (118, 5, CONVERT(DATETIME, '2025-07-11 01:25:00')), (118, 6, CONVERT(DATETIME, '2025-07-11 01:53:00')),
+(119, 1, CONVERT(DATETIME, '2025-07-11 07:05:15')), (119, 2, CONVERT(DATETIME, '2025-07-11 07:10:15')), (119, 3, CONVERT(DATETIME, '2025-07-11 07:29:15')), (119, 4, CONVERT(DATETIME, '2025-07-11 07:37:15')), (119, 5, CONVERT(DATETIME, '2025-07-11 07:42:15')), (119, 6, CONVERT(DATETIME, '2025-07-11 08:14:15')),
+(120, 1, CONVERT(DATETIME, '2025-07-10 18:31:21')), (120, 2, CONVERT(DATETIME, '2025-07-10 18:36:21')), (120, 3, CONVERT(DATETIME, '2025-07-10 18:57:21')), (120, 4, CONVERT(DATETIME, '2025-07-10 19:03:21')), (120, 5, CONVERT(DATETIME, '2025-07-10 19:16:21')), (120, 6, CONVERT(DATETIME, '2025-07-10 19:43:21')),
 
 -- Pedidos 121-130: Nuevas combinaciones
-(121, 1, '2025-07-11 00:54:19'), (121, 2, '2025-07-11 01:04:19'), (121, 3, '2025-07-11 01:26:19'), (121, 8, '2025-07-11 01:31:19'), (121, 7, '2025-07-11 01:45:19'), -- Retrasado y Cancelado
-(122, 1, '2025-07-11 06:17:16'), (122, 14, '2025-07-11 06:27:16'), (122, 4, '2025-07-11 06:50:16'), (122, 5, '2025-07-11 06:59:16'), (122, 6, '2025-07-11 07:31:16'), -- Programado y Entregado
-(123, 1, '2025-07-10 13:58:39'), (123, 2, '2025-07-10 14:03:39'), (123, 12, '2025-07-10 14:15:39'), (123, 8, '2025-07-10 14:25:39'), (123, 7, '2025-07-10 14:40:39'), -- Esperando Repartidor, Retrasado, Cancelado
-(124, 1, '2025-07-11 09:27:36'), (124, 15, '2025-07-11 09:37:36'), (124, 11, '2025-07-11 09:45:36'), -- Error en Pago y Rechazado
-(125, 1, '2025-07-10 18:31:21'), (125, 2, '2025-07-10 18:37:21'), (125, 3, '2025-07-10 19:04:21'), (125, 4, '2025-07-10 19:10:21'), (125, 5, '2025-07-10 19:22:21'), (125, 6, '2025-07-10 19:54:21'), (125, 9, '2025-07-10 20:10:21'), (125, 10, '2025-07-10 20:25:21'), -- Devolución y Reembolso
-(126, 1, '2025-07-11 09:34:36'), (126, 2, '2025-07-11 09:41:36'), (126, 3, '2025-07-11 10:00:36'), (126, 4, '2025-07-11 10:08:36'), (126, 5, '2025-07-11 10:15:36'), (126, 6, '2025-07-11 10:52:36'),
-(127, 1, '2025-07-11 03:00:15'), (127, 2, '2025-07-11 03:11:15'), (127, 3, '2025-07-11 03:29:15'), (127, 4, '2025-07-11 03:38:15'), (127, 5, '2025-07-11 03:43:15'), (127, 6, '2025-07-11 04:18:15'),
-(128, 1, '2025-07-10 17:09:49'), (128, 2, '2025-07-10 17:16:49'), (128, 3, '2025-07-10 17:42:49'), (128, 4, '2025-07-10 17:51:49'), (128, 5, '2025-07-10 17:58:49'), (128, 6, '2025-07-10 18:31:49'),
-(129, 1, '2025-07-10 13:57:20'), (129, 2, '2025-07-10 14:07:20'), (129, 3, '2025-07-10 14:26:20'), (129, 4, '2025-07-10 14:35:20'), (129, 5, '2025-07-10 14:48:20'), (129, 6, '2025-07-10 15:15:20'),
-(130, 1, '2025-07-11 00:54:19'), (130, 2, '2025-07-11 01:04:19'), (130, 3, '2025-07-11 01:21:19'), (130, 4, '2025-07-11 01:27:19'), (130, 5, '2025-07-11 01:34:19'), (130, 6, '2025-07-11 02:08:19'),
+(121, 1, CONVERT(DATETIME, '2025-07-11 00:54:19')), (121, 2, CONVERT(DATETIME, '2025-07-11 01:04:19')), (121, 3, CONVERT(DATETIME, '2025-07-11 01:26:19')), (121, 8, CONVERT(DATETIME, '2025-07-11 01:31:19')), (121, 7, CONVERT(DATETIME, '2025-07-11 01:45:19')), -- Retrasado y Cancelado
+(122, 1, CONVERT(DATETIME, '2025-07-11 06:17:16')), (122, 14, CONVERT(DATETIME, '2025-07-11 06:27:16')), (122, 4, CONVERT(DATETIME, '2025-07-11 06:50:16')), (122, 5, CONVERT(DATETIME, '2025-07-11 06:59:16')), (122, 6, CONVERT(DATETIME, '2025-07-11 07:31:16')), -- Programado y Entregado
+(123, 1, CONVERT(DATETIME, '2025-07-10 13:58:39')), (123, 2, CONVERT(DATETIME, '2025-07-10 14:03:39')), (123, 12, CONVERT(DATETIME, '2025-07-10 14:15:39')), (123, 8, CONVERT(DATETIME, '2025-07-10 14:25:39')), (123, 7, CONVERT(DATETIME, '2025-07-10 14:40:39')), -- Esperando Repartidor, Retrasado, Cancelado
+(124, 1, CONVERT(DATETIME, '2025-07-11 09:27:36')), (124, 15, CONVERT(DATETIME, '2025-07-11 09:37:36')), (124, 11, CONVERT(DATETIME, '2025-07-11 09:45:36')), -- Error en Pago y Rechazado
+(125, 1, CONVERT(DATETIME, '2025-07-10 18:31:21')), (125, 2, CONVERT(DATETIME, '2025-07-10 18:37:21')), (125, 3, CONVERT(DATETIME, '2025-07-10 19:04:21')), (125, 4, CONVERT(DATETIME, '2025-07-10 19:10:21')), (125, 5, CONVERT(DATETIME, '2025-07-10 19:22:21')), (125, 6, CONVERT(DATETIME, '2025-07-10 19:54:21')), (125, 9, CONVERT(DATETIME, '2025-07-10 20:10:21')), (125, 10, CONVERT(DATETIME, '2025-07-10 20:25:21')), -- Devolución y Reembolso
+(126, 1, CONVERT(DATETIME, '2025-07-11 09:34:36')), (126, 2, CONVERT(DATETIME, '2025-07-11 09:41:36')), (126, 3, CONVERT(DATETIME, '2025-07-11 10:00:36')), (126, 4, CONVERT(DATETIME, '2025-07-11 10:08:36')), (126, 5, CONVERT(DATETIME, '2025-07-11 10:15:36')), (126, 6, CONVERT(DATETIME, '2025-07-11 10:52:36')),
+(127, 1, CONVERT(DATETIME, '2025-07-11 03:00:15')), (127, 2, CONVERT(DATETIME, '2025-07-11 03:11:15')), (127, 3, CONVERT(DATETIME, '2025-07-11 03:29:15')), (127, 4, CONVERT(DATETIME, '2025-07-11 03:38:15')), (127, 5, CONVERT(DATETIME, '2025-07-11 03:43:15')), (127, 6, CONVERT(DATETIME, '2025-07-11 04:18:15')),
+(128, 1, CONVERT(DATETIME, '2025-07-10 17:09:49')), (128, 2, CONVERT(DATETIME, '2025-07-10 17:16:49')), (128, 3, CONVERT(DATETIME, '2025-07-10 17:42:49')), (128, 4, CONVERT(DATETIME, '2025-07-10 17:51:49')), (128, 5, CONVERT(DATETIME, '2025-07-10 17:58:49')), (128, 6, CONVERT(DATETIME, '2025-07-10 18:31:49')),
+(129, 1, CONVERT(DATETIME, '2025-07-10 13:57:20')), (129, 2, CONVERT(DATETIME, '2025-07-10 14:07:20')), (129, 3, CONVERT(DATETIME, '2025-07-10 14:26:20')), (129, 4, CONVERT(DATETIME, '2025-07-10 14:35:20')), (129, 5, CONVERT(DATETIME, '2025-07-10 14:48:20')), (129, 6, CONVERT(DATETIME, '2025-07-10 15:15:20')),
+(130, 1, CONVERT(DATETIME, '2025-07-11 00:54:19')), (130, 2, CONVERT(DATETIME, '2025-07-11 01:04:19')), (130, 3, CONVERT(DATETIME, '2025-07-11 01:21:19')), (130, 4, CONVERT(DATETIME, '2025-07-11 01:27:19')), (130, 5, CONVERT(DATETIME, '2025-07-11 01:34:19')), (130, 6, CONVERT(DATETIME, '2025-07-11 02:08:19')),
 
 -- Pedidos 131-140: Más variaciones y repeticiones
-(131, 1, '2025-07-11 08:35:10'), (131, 2, '2025-07-11 08:44:10'), (131, 3, '2025-07-11 09:07:10'), (131, 4, '2025-07-11 09:12:10'), (131, 5, '2025-07-11 09:23:10'), (131, 6, '2025-07-11 09:59:10'),
-(132, 1, '2025-07-10 18:59:16'), (132, 2, '2025-07-10 19:07:16'), (132, 3, '2025-07-10 19:20:16'), (132, 4, '2025-07-10 19:26:16'), (132, 5, '2025-07-10 19:35:16'), (132, 6, '2025-07-10 20:12:16'),
-(133, 1, '2025-07-11 07:05:15'), (133, 2, '2025-07-11 07:14:15'), (133, 3, '2025-07-11 07:38:15'), (133, 4, '2025-07-11 07:43:15'), (133, 5, '2025-07-11 07:56:15'), (133, 6, '2025-07-11 08:31:15'),
-(134, 1, '2025-07-10 18:37:11'), (134, 2, '2025-07-10 18:47:11'), (134, 3, '2025-07-10 19:15:11'), (134, 4, '2025-07-10 19:20:11'), (134, 5, '2025-07-10 19:33:11'), (134, 6, '2025-07-10 20:06:11'),
-(135, 1, '2025-07-11 00:19:16'), (135, 2, '2025-07-11 00:27:16'), (135, 3, '2025-07-11 00:46:16'), (135, 4, '2025-07-11 00:54:16'), (135, 5, '2025-07-11 01:03:16'), (135, 6, '2025-07-11 01:36:16'),
-(136, 1, '2025-07-11 06:14:00'), (136, 2, '2025-07-11 06:21:00'), (136, 3, '2025-07-11 06:40:00'), (136, 4, '2025-07-11 06:46:00'), (136, 5, '2025-07-11 06:54:00'), (136, 6, '2025-07-11 07:29:00'),
-(137, 1, '2025-07-11 02:44:23'), (137, 2, '2025-07-11 02:51:23'), (137, 3, '2025-07-11 03:13:23'), (137, 4, '2025-07-11 03:22:23'), (137, 5, '2025-07-11 03:37:23'), (137, 6, '2025-07-11 04:08:23'),
-(138, 1, '2025-07-10 14:52:33'), (138, 2, '2025-07-10 15:01:33'), (138, 3, '2025-07-10 15:21:33'), (138, 4, '2025-07-10 15:29:33'), (138, 5, '2025-07-10 15:37:33'), (138, 6, '2025-07-10 16:15:33'),
-(139, 1, '2025-07-11 03:41:25'), (139, 2, '2025-07-11 03:46:25'), (139, 3, '2025-07-11 04:02:25'), (139, 4, '2025-07-11 04:10:25'), (139, 5, '2025-07-11 04:19:25'), (139, 6, '2025-07-11 04:54:25'),
-(140, 1, '2025-07-10 14:18:49'), (140, 2, '2025-07-10 14:26:49'), (140, 3, '2025-07-10 14:48:49'), (140, 4, '2025-07-10 14:57:49'), (140, 5, '2025-07-10 15:07:49'), (140, 6, '2025-07-10 15:43:49'),
+(131, 1, CONVERT(DATETIME, '2025-07-13 08:35:10')), (131, 2, CONVERT(DATETIME, '2025-07-13 08:44:10')), (131, 3, CONVERT(DATETIME, '2025-07-13 09:07:10')), (131, 4, CONVERT(DATETIME, '2025-07-13 09:12:10')), (131, 5, CONVERT(DATETIME, '2025-07-13 09:23:10')), (131, 6, CONVERT(DATETIME, '2025-07-13 09:59:10')),
+(132, 1, CONVERT(DATETIME, '2025-07-18 18:59:16')), (132, 2, CONVERT(DATETIME, '2025-07-18 19:07:16')), (132, 3, CONVERT(DATETIME, '2025-07-18 19:20:16')), (132, 4, CONVERT(DATETIME, '2025-07-18 19:26:16')), (132, 5, CONVERT(DATETIME, '2025-07-18 19:35:16')), (132, 6, CONVERT(DATETIME, '2025-07-18 20:12:16')),
+(133, 1, CONVERT(DATETIME, '2025-07-20 07:05:15')), (133, 2, CONVERT(DATETIME, '2025-07-20 07:14:15')), (133, 3, CONVERT(DATETIME, '2025-07-20 07:38:15')), (133, 4, CONVERT(DATETIME, '2025-07-20 07:43:15')), (133, 5, CONVERT(DATETIME, '2025-07-20 07:56:15')), (133, 6, CONVERT(DATETIME, '2025-07-20 08:31:15')),
+(134, 1, CONVERT(DATETIME, '2025-07-10 18:37:11')), (134, 2, CONVERT(DATETIME, '2025-07-10 18:47:11')), (134, 3, CONVERT(DATETIME, '2025-07-10 19:15:11')), (134, 4, CONVERT(DATETIME, '2025-07-10 19:20:11')), (134, 5, CONVERT(DATETIME, '2025-07-10 19:33:11')), (134, 6, CONVERT(DATETIME, '2025-07-10 20:06:11')),
+(135, 1, CONVERT(DATETIME, '2025-07-11 00:19:16')), (135, 2, CONVERT(DATETIME, '2025-07-11 00:27:16')), (135, 3, CONVERT(DATETIME, '2025-07-11 00:46:16')), (135, 4, CONVERT(DATETIME, '2025-07-11 00:54:16')), (135, 5, CONVERT(DATETIME, '2025-07-11 01:03:16')), (135, 6, CONVERT(DATETIME, '2025-07-11 01:36:16')),
+(136, 1, CONVERT(DATETIME, '2025-07-11 06:14:00')), (136, 2, CONVERT(DATETIME, '2025-07-11 06:21:00')), (136, 3, CONVERT(DATETIME, '2025-07-11 06:40:00')), (136, 4, CONVERT(DATETIME, '2025-07-11 06:46:00')), (136, 5, CONVERT(DATETIME, '2025-07-11 06:54:00')), (136, 6, CONVERT(DATETIME, '2025-07-11 07:29:00')),
+(137, 1, CONVERT(DATETIME, '2025-07-11 02:44:23')), (137, 2, CONVERT(DATETIME, '2025-07-11 02:51:23')), (137, 3, CONVERT(DATETIME, '2025-07-11 03:13:23')), (137, 4, CONVERT(DATETIME, '2025-07-11 03:22:23')), (137, 5, CONVERT(DATETIME, '2025-07-11 03:37:23')), (137, 6, CONVERT(DATETIME, '2025-07-11 04:08:23')),
+(138, 1, CONVERT(DATETIME, '2025-07-19 06:00:00')), (138, 2, CONVERT(DATETIME, '2025-07-19 06:05:00')), (138, 3, CONVERT(DATETIME, '2025-07-19 06:20:00')), (138, 4, CONVERT(DATETIME, '2025-07-19 06:28:00')), (138, 5, CONVERT(DATETIME, '2025-07-19 06:35:00')), (138, 6, CONVERT(DATETIME, '2025-07-19 07:00:00')),
+(139, 1, CONVERT(DATETIME, '2025-07-19 09:00:00')), (139, 2, CONVERT(DATETIME, '2025-07-19 09:05:00')), (139, 3, CONVERT(DATETIME, '2025-07-19 09:20:00')), (139, 4, CONVERT(DATETIME, '2025-07-19 09:28:00')), (139, 5, CONVERT(DATETIME, '2025-07-19 09:35:00')), (139, 6, CONVERT(DATETIME, '2025-07-19 10:00:00')),
+(140, 1, CONVERT(DATETIME, '2025-07-18 23:00:00')), (140, 2, CONVERT(DATETIME, '2025-07-18 23:05:00')), (140, 3, CONVERT(DATETIME, '2025-07-18 23:20:00')), (140, 4, CONVERT(DATETIME, '2025-07-18 23:28:00')), (140, 5, CONVERT(DATETIME, '2025-07-18 23:35:00')), (140, 6, CONVERT(DATETIME, '2025-07-19 00:00:00')),
 
 -- Pedidos 141-150: Más variaciones
-(141, 1, '2025-07-11 02:44:03'), (141, 2, '2025-07-11 02:51:03'), (141, 3, '2025-07-11 03:13:03'), (141, 4, '2025-07-11 03:22:03'), (141, 5, '2025-07-11 03:34:03'), (141, 6, '2025-07-11 04:03:03'),
-(142, 1, '2025-07-10 15:10:04'), (142, 2, '2025-07-10 15:21:04'), (142, 3, '2025-07-10 15:43:04'), (142, 4, '2025-07-10 15:52:04'), (142, 5, '2025-07-10 16:03:04'), (142, 6, '2025-07-10 16:36:04'),
-(143, 1, '2025-07-10 17:34:25'), (143, 2, '2025-07-10 17:44:25'), (143, 3, '2025-07-10 18:02:25'), (143, 4, '2025-07-10 18:11:25'), (143, 5, '2025-07-10 18:24:25'), (143, 6, '2025-07-10 19:00:25'),
-(144, 1, '2025-07-11 07:11:42'), (144, 2, '2025-07-11 07:22:42'), (144, 3, '2025-07-11 07:42:42'), (144, 4, '2025-07-11 07:51:42'), (144, 5, '2025-07-11 08:00:42'), (144, 6, '2025-07-11 08:35:42'),
-(145, 1, '2025-07-10 18:35:50'), (145, 2, '2025-07-10 18:41:50'), (145, 3, '2025-07-10 19:04:50'), (145, 4, '2025-07-10 19:10:50'), (145, 5, '2025-07-10 19:22:50'), (145, 6, '2025-07-10 19:54:50'),
-(146, 1, '2025-07-11 00:36:28'), (146, 2, '2025-07-11 00:43:28'), (146, 3, '2025-07-11 00:58:28'), (146, 4, '2025-07-11 01:05:28'), (146, 5, '2025-07-11 01:13:28'), (146, 6, '2025-07-11 01:43:28'),
-(147, 1, '2025-07-11 00:46:58'), (147, 2, '2025-07-11 00:54:58'), (147, 3, '2025-07-11 01:13:58'), (147, 4, '2025-07-11 01:19:58'), (147, 5, '2025-07-11 01:31:58'), (147, 6, '2025-07-11 02:08:58'),
-(148, 1, '2025-07-10 17:51:49'), (148, 2, '2025-07-10 18:02:49'), (148, 3, '2025-07-10 18:24:49'), (148, 4, '2025-07-10 18:31:49'), (148, 5, '2025-07-10 18:37:49'), (148, 6, '2025-07-10 19:11:49'),
-(149, 1, '2025-07-10 19:57:42'), (149, 2, '2025-07-10 20:07:42'), (149, 3, '2025-07-10 20:25:42'), (149, 4, '2025-07-10 20:34:42'), (149, 5, '2025-07-10 20:49:42'), (149, 6, '2025-07-10 21:19:42'),
-(150, 1, '2025-07-10 20:03:00'), (150, 2, '2025-07-10 20:13:00'), (150, 3, '2025-07-10 20:36:00'), (150, 4, '2025-07-10 20:46:00'), (150, 5, '2025-07-10 20:53:00'), (150, 6, '2025-07-10 21:28:00');
-
+(141, 1, CONVERT(DATETIME, '2025-07-12 02:44:03')), (141, 2, CONVERT(DATETIME, '2025-07-12 02:51:03')), (141, 3, CONVERT(DATETIME, '2025-07-12 03:13:03')), (141, 4, CONVERT(DATETIME, '2025-07-12 03:22:03')), (141, 5, CONVERT(DATETIME, '2025-07-12 03:34:03')), (141, 6, CONVERT(DATETIME, '2025-07-12 04:03:03')),
+(142, 1, CONVERT(DATETIME, '2025-07-10 15:10:04')), (142, 2, CONVERT(DATETIME, '2025-07-10 15:21:04')), (142, 3, CONVERT(DATETIME, '2025-07-10 15:43:04')), (142, 4, CONVERT(DATETIME, '2025-07-10 15:52:04')), (142, 5, CONVERT(DATETIME, '2025-07-10 16:03:04')), (142, 6, CONVERT(DATETIME, '2025-07-10 16:36:04')),
+(143, 1, CONVERT(DATETIME, '2025-07-10 17:34:25')), (143, 2, CONVERT(DATETIME, '2025-07-10 17:44:25')), (143, 3, CONVERT(DATETIME, '2025-07-10 18:02:25')), (143, 4, CONVERT(DATETIME, '2025-07-10 18:11:25')), (143, 5, CONVERT(DATETIME, '2025-07-10 18:24:25')), (143, 6, CONVERT(DATETIME, '2025-07-10 19:00:25')),
+(144, 1, CONVERT(DATETIME, '2025-07-15 07:11:42')), (144, 2, CONVERT(DATETIME, '2025-07-15 07:22:42')), (144, 3, CONVERT(DATETIME, '2025-07-15 07:42:42')), (144, 4, CONVERT(DATETIME, '2025-07-15 07:51:42')), (144, 5, CONVERT(DATETIME, '2025-07-15 08:00:42')), (144, 6, CONVERT(DATETIME, '2025-07-15 08:35:42')),
+(145, 1, CONVERT(DATETIME, '2025-07-16 18:35:50')), (145, 2, CONVERT(DATETIME, '2025-07-16 18:41:50')), (145, 3, CONVERT(DATETIME, '2025-07-16 19:04:50')), (145, 4, CONVERT(DATETIME, '2025-07-16 19:10:50')), (145, 5, CONVERT(DATETIME, '2025-07-16 19:22:50')), (145, 6, CONVERT(DATETIME, '2025-07-16 19:54:50')),
+(146, 1, CONVERT(DATETIME, '2025-07-11 00:36:28')), (146, 2, CONVERT(DATETIME, '2025-07-11 00:43:28')), (146, 3, CONVERT(DATETIME, '2025-07-11 00:58:28')), (146, 4, CONVERT(DATETIME, '2025-07-11 01:05:28')), (146, 5, CONVERT(DATETIME, '2025-07-11 01:13:28')), (146, 6, CONVERT(DATETIME, '2025-07-11 01:43:28')),
+(147, 1, CONVERT(DATETIME, '2025-07-11 00:46:58')), (147, 2, CONVERT(DATETIME, '2025-07-11 00:54:58')), (147, 3, CONVERT(DATETIME, '2025-07-11 01:13:58')), (147, 4, CONVERT(DATETIME, '2025-07-11 01:19:58')), (147, 5, CONVERT(DATETIME, '2025-07-11 01:31:58')), (147, 6, CONVERT(DATETIME, '2025-07-11 02:08:58')),
+(148, 1, CONVERT(DATETIME, '2025-07-10 17:51:49')), (148, 2, CONVERT(DATETIME, '2025-07-10 18:02:49')), (148, 3, CONVERT(DATETIME, '2025-07-10 18:24:49')), (148, 4, CONVERT(DATETIME, '2025-07-10 18:31:49')), (148, 5, CONVERT(DATETIME, '2025-07-10 18:37:49')), (148, 6, CONVERT(DATETIME, '2025-07-10 19:11:49')),
+(149, 1, CONVERT(DATETIME, '2025-07-10 19:57:42')), (149, 2, CONVERT(DATETIME, '2025-07-10 20:07:42')), (149, 3, CONVERT(DATETIME, '2025-07-10 20:25:42')), (149, 4, CONVERT(DATETIME, '2025-07-10 20:34:42')), (149, 5, CONVERT(DATETIME, '2025-07-10 20:49:42')), (149, 6, CONVERT(DATETIME, '2025-07-10 21:19:42')),
+(150, 1, CONVERT(DATETIME, '2025-07-10 20:03:00')), (150, 2, CONVERT(DATETIME, '2025-07-10 20:13:00')), (150, 3, CONVERT(DATETIME, '2025-07-10 20:36:00')), (150, 4, CONVERT(DATETIME, '2025-07-10 20:46:00')), (150, 5, CONVERT(DATETIME, '2025-07-10 20:53:00')), (150, 6, CONVERT(DATETIME, '2025-07-10 21:28:00'));
 
 -- 21 inserts a mano de ClienteConClienteReferido(idCliente, idClienteReferido, fecha_referido) 
 INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido) VALUES
