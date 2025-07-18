@@ -1111,7 +1111,7 @@ INSERT INTO PlatoOpcion (idPlato, idOpcion) VALUES
 (26, 1),
 (26, 8),
 (26, 32),
-(27, 7),
+(27, 7), 
 (27, 31),
 (27, 20),
 (28, 1),
@@ -1408,10 +1408,10 @@ INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
 (67, 91, 36), (67, 92, 36),
 -- Plato 68: Ensalada Quinoa y Aguacate (Vegetales Extras: 31)
 (68, 58, 31), (68, 59, 31), (68, 60, 31),
--- Plato 69: Pupusa de Queso con Loroco (Toppings: 19)
-(69, 76, 19), (69, 77, 19),
--- Plato 70: Pupusa Revuelta (Toppings: 19)
-(70, 76, 19), (70, 77, 19),
+-- Plato 69: Pupusa de Queso con Loroco (Tipo de Tortilla: 19)
+(69, 54, 19), (69, 55, 19),
+-- Plato 70: Pupusa Revuelta (Tipo de Tortilla: 19)
+(70, 54, 19), (70, 55, 19),
 
 -- Platos 71-80 (Yuca con Chicharrón, Sopa de Res Salvadoreña, Gyros de Cerdo, etc.)
 -- Plato 71: Yuca con Chicharrón (Contornos: 9)
@@ -1433,7 +1433,7 @@ INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
 -- Plato 79: Hummus (Extras: 7)
 (79, 20, 7), (79, 21, 7),
 -- Plato 80: Künefe (Cobertura: 36)
-(80, 91, 36), (80, 92, 36)
+(80, 91, 36), (80, 92, 36),
 -- Platos 81-90 (Bratwurst con Sauerkraut, Wiener Schnitzel, Kartoffelsalat, etc.)
 -- Plato 81: Bratwurst con Sauerkraut (Contornos: 9)
 (81, 24, 9), (81, 25, 9), (81, 26, 9),
@@ -2168,184 +2168,184 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (86, 1, 'Sin Nota', 7.50, 20, 76),
 (87, 1, 'Sin Nota', 15.00, 20, 77),
 -- Pedido 21 (ID 21 en tabla Pedido: nota 'Sin Nota')
-(68, 1, 'Sin Nota', 6.00, 21, 75),
+
 
 -- Pedido 22 (ID 22 en tabla Pedido: nota 'Sin Nota')
-(69, 1, 'Sin Nota', 15.00, 22, 77),
+(88, 1, 'Sin Nota', 15.00, 22, 77),
 
 -- Pedido 23 (ID 23 en tabla Pedido: nota "Con opciones adicionales")
-(70, 1, 'Sin ajo, Extra pimentón', 7.50, 23, 79),
+(89, 1, 'Sin ajo, Extra pimentón', 7.50, 23, 79),
 
 -- Pedido 24 (ID 24 en tabla Pedido: nota 'Sin Nota')
-(71, 1, 'Sin Nota', 14.00, 24, 81),
+(90, 1, 'Sin Nota', 14.00, 24, 81),
 
 -- Pedido 25 (ID 25 en tabla Pedido: nota 'Sin Nota')
-(72, 1, 'Sin Nota', 6.00, 25, 83),
+(91, 1, 'Sin Nota', 6.00, 25, 83),
 
 -- Pedido 26 (ID 26 en tabla Pedido: nota "Con opciones adicionales")
-(73, 1, 'Penne, Picante medio', 13.50, 26, 85),
+(92, 1, 'Penne, Picante medio', 13.50, 26, 85),
 
 -- Pedido 27 (ID 27 en tabla Pedido: nota 'Sin Nota')
-(74, 1, 'Sin Nota', 15.00, 27, 87),
+(93, 1, 'Sin Nota', 15.00, 27, 87),
 
 -- Pedido 28 (ID 28 en tabla Pedido: nota 'Sin Nota')
-(75, 1, 'Sin Nota', 11.00, 28, 89),
+(94, 1, 'Sin Nota', 11.00, 28, 89),
 
 -- Pedido 29 (ID 29 en tabla Pedido: nota "Con opciones adicionales")
-(76, 1, 'Extra crema, Pan tostado medio', 10.25, 29, 91),
+(95, 1, 'Extra crema, Pan tostado medio', 10.25, 29, 91),
+
+(96, 1, 'Sin Nota', 67, 65)
 
 -- Pedido 30 (ID 30 en tabla Pedido: nota 'Sin Nota')
-(77, 1, 'Sin Nota', 17.00, 30, 93),
+(97, 1, 'Sin Nota', 17.00, 30, 93),
 
 -- Pedido 31 (ID 31 en tabla Pedido: nota 'Sin Nota')
-(78, 1, 'Sin Nota', 5.00, 31, 95),
+(98, 1, 'Sin Nota', 5.00, 31, 95),
 
 -- Pedido 32 (ID 32 en tabla Pedido: nota "Con opciones adicionales")
-(79, 1, 'Extra vegetales, Término medio', 16.00, 32, 97),
+(99, 1, 'Extra vegetales, Término medio', 16.00, 32, 97),
 
 -- Pedido 33 (ID 33 en tabla Pedido: nota 'Sin Nota')
-(80, 1, 'Sin Nota', 13.00, 33, 99),
+(100, 1, 'Sin Nota', 13.00, 33, 99),
 
 -- Pedido 34 (ID 34 en tabla Pedido: nota 'Sin Nota')
-(81, 1, 'Sin Nota', 4.00, 34, 101),
+(101, 1, 'Sin Nota', 4.00, 34, 101),
 
 -- Pedido 35 (ID 35 en tabla Pedido: nota "Con opciones adicionales")
-(82, 1, 'Extra chocolate, Muy dulce', 7.04, 35, 103),
+(102, 1, 'Extra chocolate, Muy dulce', 7.04, 35, 103),
 
 -- Pedido 36 (ID 36 en tabla Pedido: nota 'Sin Nota')
-(83, 1, 'Sin Nota', 16.00, 36, 105),
+(103, 1, 'Sin Nota', 16.00, 36, 105),
 
 -- Pedido 37 (ID 37 en tabla Pedido: nota 'Sin Nota')
-(84, 1, 'Sin Nota', 10.00, 37, 107),
+(104, 1, 'Sin Nota', 10.00, 37, 107),
 
 -- Pedido 38 (ID 38 en tabla Pedido: nota "Con opciones adicionales")
-(85, 1, 'Extra queso, Queso cheddar', 13.50, 38, 109),
+(105, 1, 'Extra queso, Queso cheddar', 13.50, 38, 109),
 
 -- Pedido 39 (ID 39 en tabla Pedido: nota 'Sin Nota')
-(86, 1, 'Sin Nota', 6.00, 39, 111),
+(106, 1, 'Sin Nota', 6.00, 39, 111),
 
 -- Pedido 40 (ID 40 en tabla Pedido: nota 'Sin Nota')
-(87, 1, 'Sin Nota', 35.00, 40, 113);
+(107, 1, 'Sin Nota', 35.00, 40, 113),
 
 -- Pedidos 41-60
-(88, 1, 'Sin Nota', 18.00, 41, 114),
-(89, 1, 'Sin Nota', 7.00, 42, 116),
-(90, 1, 'Vegetales extra, Sin sal', 7.00, 43, 116),
-(91, 1, 'Sin Nota', 14.00, 44, 117),
-(92, 1, 'Sin Nota', 16.00, 45, 118),
-(93, 1, 'Borde de queso, Extra picante', 17.50, 46, 118),
-(94, 1, 'Sin Nota', 15.00, 47, 119),
-(95, 1, 'Sin Nota', 9.00, 48, 120),
-(96, 1, 'Base quinoa, Aderezo aparte', 10.25, 49, 120),
-(97, 1, 'Sin Nota', 28.00, 50, 45),
-(98, 1, 'Sin Nota', 26.00, 51, 46),
-(99, 1, 'Arroz integral, Bien cocido', 27.50, 52, 46),
-(100, 1, 'Sin Nota', 4.00, 53, 47),
-(101, 1, 'Sin Nota', 3.00, 54, 48),
-(102, 1, 'Extra chocolate', 3.75, 55, 48),
-(103, 1, 'Sin Nota', 16.00, 56, 49),
-(104, 1, 'Sin Nota', 14.00, 57, 50),
-(105, 1, 'Extra picante, Tofu extra', 15.50, 58, 50),
-(106, 1, 'Sin Nota', 13.50, 59, 51),
-(107, 1, 'Sin Nota', 5.00, 60, 52);
+(108, 1, 'Sin Nota', 18.00, 41, 114),
+(109, 1, 'Sin Nota', 7.00, 42, 116),
+(110, 1, 'Vegetales extra, Sin sal', 7.00, 43, 116),
+(111, 1, 'Sin Nota', 14.00, 44, 117),
+(112, 1, 'Sin Nota', 16.00, 45, 118),
+(113, 1, 'Borde de queso, Extra picante', 17.50, 46, 118),
+(114, 1, 'Sin Nota', 15.00, 47, 119),
+(115, 1, 'Sin Nota', 9.00, 48, 120),
+(116, 1, 'Base quinoa, Aderezo aparte', 10.25, 49, 120),
+(117, 1, 'Sin Nota', 28.00, 50, 45),
+(118, 1, 'Sin Nota', 26.00, 51, 46),
+(119, 1, 'Arroz integral, Bien cocido', 27.50, 52, 46),
+(120, 1, 'Sin Nota', 4.00, 53, 47),
+(121, 1, 'Sin Nota', 3.00, 54, 48),
+(122, 1, 'Extra chocolate', 3.75, 55, 48),
+(123, 1, 'Sin Nota', 16.00, 56, 49),
+(124, 1, 'Sin Nota', 14.00, 57, 50),
+(125, 1, 'Extra picante, Tofu extra', 15.50, 58, 50),
+(126, 1, 'Sin Nota', 13.50, 59, 51),
+(127, 1, 'Sin Nota', 5.00, 60, 52),
 
 -- Pedidos 61-80
-(108, 1, 'Sin Nota', 14.00, 61, 53),
-(109, 1, 'Sin Nota', 12.00, 62, 54),
-(110, 1, 'Sin camarones, Extra vegetales', 12.00, 63, 54),
-(111, 1, 'Sin Nota', 17.50, 64, 55),
-(112, 1, 'Sin Nota', 7.00, 65, 56),
-(113, 1, 'Leche de coco extra', 8.00, 66, 56),
-(114, 1, 'Sin Nota', 15.00, 67, 57),
-(115, 1, 'Sin Nota', 9.00, 68, 58),
-(116, 1, 'Sin cerdo, Tofu', 10.00, 69, 58),
-(117, 1, 'Sin Nota', 16.00, 70, 59),
-(118, 1, 'Sin Nota', 5.00, 71, 60),
-(119, 1, 'Leche condensada extra', 6.00, 72, 60),
-(120, 1, 'Sin Nota', 20.00, 73, 61),
-(121, 1, 'Sin Nota', 15.00, 74, 62),
-(122, 1, 'Sin aguacate', 15.00, 75, 62),
-(123, 1, 'Sin Nota', 3.50, 76, 63),
-(124, 1, 'Sin Nota', 5.00, 77, 64),
-(125, 1, 'Extra canela', 5.50, 78, 64),
-(126, 1, 'Sin Nota', 21.00, 79, 65),
-(127, 1, 'Sin Nota', 15.00, 80, 66);
+(128, 1, 'Sin Nota', 14.00, 61, 53),
+(129, 1, 'Sin Nota', 12.00, 62, 54),
+(130, 1, 'Sin camarones, Extra vegetales', 12.00, 63, 54),
+(131, 1, 'Sin Nota', 17.50, 64, 55),
+(132, 1, 'Sin Nota', 7.00, 65, 56),
+(133, 1, 'Leche de coco extra', 8.00, 66, 56),
+(134, 1, 'Sin Nota', 15.00, 67, 57),
+(135, 1, 'Sin Nota', 9.00, 68, 58),
+(136, 1, 'Sin cerdo, Tofu', 10.00, 69, 58),
+(137, 1, 'Sin Nota', 16.00, 70, 59),
+(138, 1, 'Sin Nota', 5.00, 71, 60),
+(139, 1, 'Leche condensada extra', 6.00, 72, 60),
+(140, 1, 'Sin Nota', 20.00, 73, 61),
+(141, 1, 'Sin Nota', 15.00, 74, 62),
+(142, 1, 'Sin aguacate', 15.00, 75, 62),
+(143, 1, 'Sin Nota', 3.50, 76, 63),
+(144, 1, 'Sin Nota', 5.00, 77, 64),
+(145, 1, 'Extra canela', 5.50, 78, 64),
+(146, 1, 'Sin Nota', 21.00, 79, 65),
+(147, 1, 'Sin Nota', 15.00, 80, 66),
 
 -- Pedidos 81-100
-(128, 1, 'Sin Nota', 6.00, 81, 67),
-(129, 1, 'Sin Nota', 12.00, 82, 68),
-(130, 1, 'Quinoa extra, Aguacate extra', 14.00, 83, 68),
-(131, 1, 'Sin Nota', 4.00, 84, 69),
-(132, 1, 'Sin Nota', 4.50, 85, 70),
-(133, 1, 'Extra chicharrón', 5.50, 86, 70),
-(134, 1, 'Sin Nota', 10.00, 87, 71),
-(135, 1, 'Sin Nota', 14.00, 88, 72),
-(136, 1, 'Extra carne', 16.00, 89, 72),
-(137, 1, 'Sin Nota', 13.00, 90, 73),
-(138, 1, 'Sin Nota', 16.50, 91, 74),
-(139, 1, 'Sin berenjena', 16.50, 92, 74),
-(140, 1, 'Sin Nota', 7.50, 93, 75),
-(141, 1, 'Sin Nota', 6.00, 94, 76),
-(142, 1, 'Extra miel', 6.75, 95, 76),
-(143, 1, 'Sin Nota', 15.00, 96, 77),
-(144, 1, 'Sin Nota', 9.00, 97, 78),
-(145, 1, 'Extra ajo', 10.00, 98, 78),
-(146, 1, 'Sin Nota', 7.00, 99, 79),
-(147, 1, 'Sin Nota', 8.00, 100, 80);
-
--- Pedidos 101-120
-(148, 1, 'Sin Nota', 14.00, 101, 81),
-(149, 1, 'Sin Nota', 18.00, 102, 82),
-(150, 1, 'Término medio, Papas extra', 19.50, 103, 82),
-(151, 1, 'Sin Nota', 6.00, 104, 83),
-(152, 1, 'Sin Nota', 6.50, 105, 84),
-(153, 1, 'Extra helado', 7.50, 106, 84),
-(154, 1, 'Sin Nota', 12.00, 107, 85),
-(155, 1, 'Sin Nota', 16.00, 108, 86),
-(156, 1, 'Pan de arroz integral', 17.00, 109, 86),
-(157, 1, 'Sin Nota', 15.00, 110, 87),
-(158, 1, 'Sin Nota', 8.00, 111, 88),
-(159, 1, 'Extra matcha', 9.00, 112, 88),
-(160, 1, 'Sin Nota', 11.00, 113, 89),
-(161, 1, 'Sin Nota', 19.00, 114, 90),
-(162, 1, 'Sin lácteos', 19.00, 115, 90),
-(163, 1, 'Sin Nota', 9.00, 116, 91),
-(164, 1, 'Sin Nota', 7.00, 117, 92),
-(165, 1, 'Extra jengibre', 8.00, 118, 92),
-(166, 1, 'Sin Nota', 17.00, 119, 93),
-(167, 1, 'Sin Nota', 12.00, 120, 94);
+(148, 1, 'Sin Nota', 6.00, 81, 67),
+(149, 1, 'Sin Nota', 12.00, 82, 68),
+(150, 1, 'Quinoa extra, Aguacate extra', 14.00, 83, 68),
+(151, 1, 'Sin Nota', 4.00, 84, 69),
+(152, 1, 'Sin Nota', 4.50, 85, 70),
+(153, 1, 'Extra chicharrón', 5.50, 86, 70),
+(154, 1, 'Sin Nota', 10.00, 87, 71),
+(155, 1, 'Sin Nota', 14.00, 88, 72),
+(156, 1, 'Extra carne', 16.00, 89, 72),
+(157, 1, 'Sin Nota', 13.00, 90, 73),
+(158, 1, 'Sin Nota', 16.50, 91, 74),
+(159, 1, 'Sin berenjena', 16.50, 92, 74),
+(160, 1, 'Sin Nota', 7.50, 93, 75),
+(161, 1, 'Sin Nota', 6.00, 94, 76),
+(162, 1, 'Extra miel', 6.75, 95, 76),
+(163, 1, 'Sin Nota', 15.00, 96, 77),
+(164, 1, 'Sin Nota', 9.00, 97, 78),
+(165, 1, 'Extra ajo', 10.00, 98, 78),
+(166, 1, 'Sin Nota', 7.00, 99, 79),
+(167, 1, 'Sin Nota', 8.00, 100, 80),
+(168, 1, 'Sin Nota', 14.00, 101, 81),
+(169, 1, 'Sin Nota', 18.00, 102, 82),
+(170, 1, 'Término medio, Papas extra', 19.50, 103, 82),
+(171, 1, 'Sin Nota', 6.00, 104, 83),
+(172, 1, 'Sin Nota', 6.50, 105, 84),
+(173, 1, 'Extra helado', 7.50, 106, 84),
+(174, 1, 'Sin Nota', 12.00, 107, 85),
+(175, 1, 'Sin Nota', 16.00, 108, 86),
+(176, 1, 'Pan de arroz integral', 17.00, 109, 86),
+(177, 1, 'Sin Nota', 15.00, 110, 87),
+(178, 1, 'Sin Nota', 8.00, 111, 88),
+(179, 1, 'Extra matcha', 9.00, 112, 88),
+(180, 1, 'Sin Nota', 11.00, 113, 89),
+(181, 1, 'Sin Nota', 19.00, 114, 90),
+(182, 1, 'Sin lácteos', 19.00, 115, 90),
+(183, 1, 'Sin Nota', 9.00, 116, 91),
+(184, 1, 'Sin Nota', 7.00, 117, 92),
+(185, 1, 'Extra jengibre', 8.00, 118, 92),
+(186, 1, 'Sin Nota', 17.00, 119, 93),
+(187, 1, 'Sin Nota', 12.00, 120, 94),
 
 -- Pedidos 121-150
-(168, 1, 'Sin Nota', 5.00, 121, 95),
-(169, 1, 'Sin Nota', 18.00, 122, 96),
-(170, 1, 'Sin cebolla', 18.00, 123, 96),
-(171, 1, 'Sin Nota', 15.00, 124, 97),
-(172, 1, 'Sin Nota', 11.00, 125, 98),
-(173, 1, 'Extra queso', 12.50, 126, 98),
-(174, 1, 'Sin Nota', 13.00, 127, 99),
-(175, 1, 'Sin Nota', 10.00, 128, 100),
-(176, 1, 'Extra frijoles', 11.50, 129, 100),
-(177, 1, 'Sin Nota', 4.00, 130, 101),
-(178, 1, 'Sin Nota', 12.00, 131, 102),
-(179, 1, 'Queso azul', 13.00, 132, 102),
-(180, 1, 'Sin Nota', 6.00, 133, 103),
-(181, 1, 'Sin Nota', 7.50, 134, 104),
-(182, 1, 'Extra queso', 8.75, 135, 104),
-(183, 1, 'Sin Nota', 16.00, 136, 105),
-(184, 1, 'Sin Nota', 13.00, 137, 106),
-(185, 1, 'Aderezo aparte', 13.00, 138, 106),
-(186, 1, 'Sin Nota', 10.00, 139, 107),
-(187, 1, 'Sin Nota', 4.00, 140, 108),
-(188, 1, 'Sin Nota', 12.00, 141, 109),
-(189, 1, 'Sin Nota', 14.00, 142, 110),
-(190, 1, 'Puré extra', 15.00, 143, 111),
-(191, 1, 'Sin Nota', 7.00, 144, 112),
-(192, 1, 'Sin Nota', 35.00, 145, 113),
-(193, 1, 'Sin Nota', 29.00, 146, 114),
-(194, 1, 'Término medio', 29.00, 147, 114),
-(195, 1, 'Sin Nota', 18.00, 148, 115),
-(196, 1, 'Sin Nota', 7.00, 149, 116),
-(197, 1, 'Sin Nota', 14.00, 150, 117);
+(188, 1, 'Sin Nota', 5.00, 121, 95),
+(189, 1, 'Sin Nota', 18.00, 122, 96),
+(190, 1, 'Sin cebolla', 18.00, 123, 96),
+(191, 1, 'Sin Nota', 15.00, 124, 97),
+(192, 1, 'Sin Nota', 11.00, 125, 98),
+(193, 1, 'Extra queso', 12.50, 126, 98),
+(194, 1, 'Sin Nota', 13.00, 127, 99),
+(195, 1, 'Sin Nota', 10.00, 128, 100),
+(196, 1, 'Extra frijoles', 11.50, 129, 100),
+(197, 1, 'Sin Nota', 4.00, 130, 101),
+(198, 1, 'Sin Nota', 12.00, 131, 102),
+(199, 1, 'Queso azul', 13.00, 132, 102),
+(200, 1, 'Sin Nota', 6.00, 133, 103),
+(201, 1, 'Sin Nota', 7.50, 134, 104),
+(202, 1, 'Extra queso', 8.75, 135, 104),
+(203, 1, 'Sin Nota', 16.00, 136, 105),
+(204, 1, 'Sin Nota', 13.00, 137, 106),
+(205, 1, 'Aderezo aparte', 13.00, 138, 106),
+(206, 1, 'Sin Nota', 10.00, 139, 107),
+(207, 1, 'Sin Nota', 4.00, 140, 108),
+(208, 1, 'Sin Nota', 12.00, 141, 109),
+(209, 1, 'Sin Nota', 14.00, 142, 110),
+(210, 1, 'Puré extra', 15.00, 143, 111),
+(211, 1, 'Sin Nota', 7.00, 144, 112),
+(212, 1, 'Sin Nota', 35.00, 145, 113),
+(213, 1, 'Sin Nota', 29.00, 146, 114),
+(214, 1, 'Término medio', 29.00, 147, 114),
+(215, 1, 'Sin Nota', 18.00, 148, 115),
+(216, 1, 'Sin Nota', 7.00, 149, 116),
+(217, 1, 'Sin Nota', 14.00, 150, 117);
 
 INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (1, 1, 45),
@@ -2500,477 +2500,435 @@ INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (10, 150, 39);
 
 INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) VALUES
--- Opciones para el pedido detalle 1 (ejemplos iniciales)
-(1, 3, 1),    -- Tamaño (OpcionValor 3 de Opcion 1)
-(1, 5, 2),    -- Nivel de picante (OpcionValor 5 de Opcion 2)
-(1, 8, 3),    -- Tipo de pan (OpcionValor 8 de Opcion 3),
--- Opciones para el pedido detalle 2
-(2, 10, 4),   -- Tipo de pasta (OpcionValor 10 de Opcion 4)
-(2, 12, 5),   -- Salsas adicionales (OpcionValor 12 de Opcion 5)
-(2, 14, 6),   -- Ingredientes extra (OpcionValor 14 de Opcion 6)
--- Opciones para el pedido detalle 3
-(3, 17, 7),   -- Extras (OpcionValor 17 de Opcion 7)
-(3, 22, 22),  -- Exclusiones (OpcionValor 22 de Opcion 22)
-(3, 58, 31),  -- Vegetales Extras (OpcionValor 58 de Opcion 31)
--- Opciones para el pedido detalle 4
-(4, 91, 36),  -- Cobertura (OpcionValor 91 de Opcion 36)
-(4, 24, 9),   -- Contornos (OpcionValor 24 de Opcion 9)
-(4, 78, 30),  -- Extra Proteína (OpcionValor 78 de Opcion 30)
--- Opciones para el pedido detalle 5
-(5, 76, 18),  -- Toppings (OpcionValor 76 de Opcion 18)
-(5, 76, 29),  -- Borde relleno (OpcionValor 76 de Opcion 29)
-(5, 88, 35),  -- Tipo de base (OpcionValor 88 de Opcion 35)
--- Opciones para el pedido detalle 6
-(6, 1, 1),    -- Tamaño (OpcionValor 1 de Opcion 1)
-(6, 4, 2),    -- Nivel de picante (OpcionValor 4 de Opcion 2)
-(6, 9, 3),    -- Tipo de pan (OpcionValor 9 de Opcion 3)
--- Opciones para el pedido detalle 7
-(7, 11, 4),   -- Tipo de pasta (OpcionValor 11 de Opcion 4)
-(7, 13, 5),   -- Salsas adicionales (OpcionValor 13 de Opcion 5)
-(7, 15, 6),   -- Ingredientes extra (OpcionValor 15 de Opcion 6)
--- Opciones para el pedido detalle 8
-(8, 18, 7),   -- Extras (OpcionValor 18 de Opcion 7)
-(8, 23, 22),  -- Exclusiones (OpcionValor 23 de Opcion 22)
-(8, 59, 31),  -- Vegetales Extras (OpcionValor 59 de Opcion 31)
--- Opciones para el pedido detalle 9
-(9, 92, 36),  -- Cobertura (OpcionValor 92 de Opcion 36)
-(9, 25, 9),   -- Contornos (OpcionValor 25 de Opcion 9)
-(9, 77, 18),  -- Toppings (OpcionValor 77 de Opcion 18)
--- Opciones para el pedido detalle 10
-(10, 77, 29), -- Borde relleno (OpcionValor 77 de Opcion 29)
-(10, 89, 35), -- Tipo de base (OpcionValor 89 de Opcion 35)
-(10, 2, 1),   -- Tamaño (OpcionValor 2 de Opcion 1)
--- Opciones para el pedido detalle 11
-(11, 6, 2),   -- Nivel de picante (OpcionValor 6 de Opcion 2)
-(11, 16, 6),  -- Ingredientes extra (OpcionValor 16 de Opcion 6)
-(11, 19, 7),  -- Extras (OpcionValor 19 de Opcion 7)
--- Opciones para el pedido detalle 12
-(12, 60, 31), -- Vegetales Extras (OpcionValor 60 de Opcion 31)
-(12, 26, 9),  -- Contornos (OpcionValor 26 de Opcion 9)
-(12, 90, 35), -- Tipo de base (OpcionValor 90 de Opcion 35)
--- Opciones para el pedido detalle 13
-(13, 7, 2),   -- Nivel de picante (OpcionValor 7 de Opcion 2)
-(13, 20, 7),  -- Extras (OpcionValor 20 de Opcion 7)
-(13, 21, 7),  -- Extras (OpcionValor 21 de Opcion 7)
--- Opciones para el pedido detalle 14
-(14, 3, 1),   -- Tamaño (OpcionValor 3 de Opcion 1)
-(14, 5, 2),   -- Nivel de picante (OpcionValor 5 de Opcion 2)
-(14, 8, 3),   -- Tipo de pan (OpcionValor 8 de Opcion 3)
--- Opciones para el pedido detalle 15
-(15, 10, 4),  -- Tipo de pasta (OpcionValor 10 de Opcion 4)
-(15, 12, 5),  -- Salsas adicionales (OpcionValor 12 de Opcion 5)
-(15, 14, 6);  -- Ingredientes extra (OpcionValor 14 de Opcion 6)
--- Pedido Detalle 15: Variedad de opciones
-(15, 10, 4),  -- Tipo de pasta: Espagueti
-(15, 12, 5),  -- Salsas adicionales: Tomate
-(15, 14, 6),  -- Ingredientes extra: Champiñones
-(15, 17, 7),  -- Extras: Queso
--- Pedido Detalle 16: Opciones de picante y exclusiones
-(16, 6, 2),   -- Nivel de picante: Alto
-(16, 23, 22), -- Exclusiones: Lactosa
--- Pedido Detalle 17: Personalización de ingredientes
-(17, 58, 31), -- Vegetales Extras: Tomate
-(17, 91, 36), -- Cobertura: Chocolate
--- Pedido Detalle 18: Contornos y toppings
-(18, 24, 9),  -- Contornos: Papas fritas
-(18, 76, 18), -- Toppings: Crema
--- Pedido Detalle 19: Proteínas y base
-(19, 78, 30), -- Extra Proteína: Pollo
-(19, 88, 35), -- Tipo de base: Delgada
--- Pedido Detalle 20: Más personalización
-(20, 3, 1),   -- Tamaño: Grande
-(20, 7, 2),   -- Nivel de picante: Muy Alto
--- Pedido Detalle 21: Combinaciones variadas
-(21, 9, 3),   -- Tipo de pan: Integral
-(21, 11, 4),  -- Tipo de pasta: Fetuccini
--- Pedido Detalle 22: Salsas e ingredientes
-(22, 13, 5),  -- Salsas adicionales: Blanca
-(22, 15, 6),  -- Ingredientes extra: Pepinillos
--- Pedido Detalle 23: Extras y exclusiones
-(23, 19, 7),  -- Extras: Jengibre
-(23, 22, 22), -- Exclusiones: Frijoles
--- Pedido Detalle 24: Vegetales y coberturas
-(24, 59, 31), -- Vegetales Extras: Lechuga
-(24, 92, 36), -- Cobertura: Caramelo
--- Pedido Detalle 25: Contornos y toppings
-(25, 25, 9),  -- Contornos: Arroz
-(25, 77, 18), -- Toppings: Chocolate
--- Pedido Detalle 26: Proteínas y bordes
-(26, 78, 30), -- Extra Proteína: Pollo
-(26, 76, 29), -- Borde relleno: Queso
--- Pedido Detalle 27: Tipos de base y tamaño
-(27, 89, 35), -- Tipo de base: Gruesa
-(27, 1, 1),   -- Tamaño: Pequeño
--- Pedido Detalle 28: Nivel de picante y pan
-(28, 5, 2),   -- Nivel de picante: Medio
-(28, 8, 3),   -- Tipo de pan: Blanco
--- Pedido Detalle 29: Pasta y salsas
-(29, 10, 4),  -- Tipo de pasta: Espagueti
-(29, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 30: Ingredientes y extras
-(30, 14, 6),  -- Ingredientes extra: Champiñones
-(30, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 31: Exclusiones y vegetales
-(31, 23, 22), -- Exclusiones: Lactosa
-(31, 60, 31), -- Vegetales Extras: Cebolla
--- Pedido Detalle 32: Coberturas y contornos
-(32, 91, 36), -- Cobertura: Chocolate
-(32, 26, 9),  -- Contornos: Ensalada
--- Pedido Detalle 33: Toppings y bordes
-(33, 77, 18), -- Toppings: Chocolate
-(33, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 34: Bases y tamaños
-(34, 90, 35), -- Tipo de base: Sin gluten
-(34, 2, 1),   -- Tamaño: Mediano
--- Pedido Detalle 35: Nivel de picante y pan
-(35, 4, 2),   -- Nivel de picante: Bajo
-(35, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 36: Pasta y salsas
-(36, 11, 4),  -- Tipo de pasta: Fetuccini
-(36, 13, 5),  -- Salsas adicionales: Blanca
--- Pedido Detalle 37: Ingredientes y extras
-(37, 16, 6),  -- Ingredientes extra: Cebolla
-(37, 20, 7),  -- Extras: Piña
--- Pedido Detalle 38: Exclusiones y vegetales
-(38, 22, 22), -- Exclusiones: Frijoles
-(38, 58, 31), -- Vegetales Extras: Tomate
--- Pedido Detalle 39: Coberturas y contornos
-(39, 92, 36), -- Cobertura: Caramelo
-(39, 24, 9),  -- Contornos: Papas fritas
--- Pedido Detalle 40: Toppings y proteínas
-(40, 76, 18), -- Toppings: Crema
-(40, 78, 30); -- Extra Proteína: Pollo
--- Pedido Detalle 41: Tamaño y nivel de picante
-(41, 1, 1),   -- Tamaño: Pequeño
-(41, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 42: Tipo de pan y pasta
-(42, 8, 3),   -- Tipo de pan: Blanco
-(42, 10, 4),  -- Tipo de pasta: Espagueti
--- Pedido Detalle 43: Salsas e ingredientes extra
-(43, 12, 5),  -- Salsas adicionales: Tomate
-(43, 14, 6),  -- Ingredientes extra: Champiñones
--- Pedido Detalle 44: Extras y exclusiones
-(44, 17, 7),  -- Extras: Queso
-(44, 22, 22), -- Exclusiones: Frijoles
--- Pedido Detalle 45: Vegetales extra y cobertura
-(45, 58, 31), -- Vegetales Extras: Tomate
-(45, 91, 36), -- Cobertura: Chocolate
--- Pedido Detalle 46: Contornos y toppings
-(46, 24, 9),  -- Contornos: Papas fritas
-(46, 76, 18), -- Toppings: Crema
--- Pedido Detalle 47: Extra proteína y borde relleno
-(47, 78, 30), -- Extra Proteína: Pollo
-(47, 76, 29), -- Borde relleno: Queso
--- Pedido Detalle 48: Tipo de base y tamaño
-(48, 88, 35), -- Tipo de base: Delgada
-(48, 2, 1),   -- Tamaño: Mediano
--- Pedido Detalle 49: Nivel de picante y tipo de pan
-(49, 5, 2),   -- Nivel de picante: Medio
-(49, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 50: Tipo de pasta y salsas adicionales
-(50, 11, 4),  -- Tipo de pasta: Fetuccini
-(50, 13, 5),  -- Salsas adicionales: Blanca
--- Pedido Detalle 51: Ingredientes extra y extras
-(51, 15, 6),  -- Ingredientes extra: Pepinillos
-(51, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 52: Exclusiones y vegetales extra
-(52, 23, 22), -- Exclusiones: Lactosa
-(52, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 53: Cobertura y contornos
-(53, 92, 36), -- Cobertura: Caramelo
-(53, 25, 9),  -- Contornos: Arroz
--- Pedido Detalle 54: Toppings y borde relleno
-(54, 77, 18), -- Toppings: Chocolate
-(54, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 55: Tipo de base y tamaño
-(55, 89, 35), -- Tipo de base: Gruesa
-(55, 3, 1),   -- Tamaño: Grande
--- Pedido Detalle 56: Nivel de picante y tipo de pan
-(56, 6, 2),   -- Nivel de picante: Alto
-(56, 8, 3),   -- Tipo de pan: Blanco
--- Pedido Detalle 57: Tipo de pasta y salsas adicionales
-(57, 10, 4),  -- Tipo de pasta: Espagueti
-(57, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 58: Ingredientes extra y extras
-(58, 16, 6),  -- Ingredientes extra: Cebolla
-(58, 19, 7),  -- Extras: Jengibre
--- Pedido Detalle 59: Exclusiones y vegetales extra
-(59, 22, 22), -- Exclusiones: Frijoles
-(59, 60, 31), -- Vegetales Extras: Cebolla
--- Pedido Detalle 60: Cobertura y contornos
-(60, 91, 36), -- Cobertura: Chocolate
-(60, 26, 9),  -- Contornos: Ensalada
--- Pedido Detalle 61: Toppings y extra proteína
-(61, 76, 18), -- Toppings: Crema
-(61, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 62: Borde relleno y tipo de base
-(62, 76, 29), -- Borde relleno: Queso
-(62, 90, 35), -- Tipo de base: Sin gluten
--- Pedido Detalle 63: Tamaño y nivel de picante
-(63, 1, 1),   -- Tamaño: Pequeño
-(63, 7, 2),   -- Nivel de picante: Muy Alto
--- Pedido Detalle 64: Tipo de pan y pasta
-(64, 8, 3),   -- Tipo de pan: Blanco
-(64, 11, 4),  -- Tipo de pasta: Fetuccini
--- Pedido Detalle 65: Salsas e ingredientes extra
-(65, 13, 5),  -- Salsas adicionales: Blanca
-(65, 14, 6),  -- Ingredientes extra: Champiñones
--- Pedido Detalle 66: Extras y exclusiones
-(66, 20, 7),  -- Extras: Piña
-(66, 23, 22), -- Exclusiones: Lactosa
--- Pedido Detalle 67: Vegetales extra y cobertura
-(67, 58, 31), -- Vegetales Extras: Tomate
-(67, 92, 36), -- Cobertura: Caramelo
--- Pedido Detalle 68: Contornos y toppings
-(68, 24, 9),  -- Contornos: Papas fritas
-(68, 77, 18), -- Toppings: Chocolate
--- Pedido Detalle 69: Extra proteína y borde relleno
-(69, 78, 30), -- Extra Proteína: Pollo
-(69, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 70: Tipo de base y tamaño
-(70, 88, 35), -- Tipo de base: Delgada
-(70, 3, 1),   -- Tamaño: Grande
--- Pedido Detalle 71: Nivel de picante y tipo de pan
-(71, 4, 2),   -- Nivel de picante: Bajo
-(71, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 72: Tipo de pasta y salsas adicionales
-(72, 10, 4),  -- Tipo de pasta: Espagueti
-(72, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 73: Ingredientes extra y extras
-(73, 15, 6),  -- Ingredientes extra: Pepinillos
-(73, 21, 7),  -- Extras: Crema batida
--- Pedido Detalle 74: Exclusiones y vegetales extra
-(74, 22, 22), -- Exclusiones: Frijoles
-(74, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 75: Cobertura y contornos
-(75, 91, 36), -- Cobertura: Chocolate
-(75, 25, 9),  -- Contornos: Arroz
--- Pedido Detalle 76: Toppings y extra proteína
-(76, 76, 18), -- Toppings: Crema
-(76, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 77: Borde relleno y tipo de base
-(77, 76, 29), -- Borde relleno: Queso
-(77, 89, 35), -- Tipo de base: Gruesa
--- Pedido Detalle 78: Tamaño y nivel de picante
-(78, 1, 1),   -- Tamaño: Pequeño
-(78, 5, 2),   -- Nivel de picante: Medio
--- Pedido Detalle 79: Tipo de pan y pasta
-(79, 8, 3),   -- Tipo de pan: Blanco
-(79, 11, 4),  -- Tipo de pasta: Fetuccini
--- Pedido Detalle 80: Salsas e ingredientes extra
-(80, 13, 5),  -- Salsas adicionales: Blanca
-(80, 16, 6);  -- Ingredientes extra: Cebolla
--- Pedido Detalle 81 (idPlato: 41): Extra queso
-(81, 76, 29), -- Borde relleno: Queso (consistent with Plato 41 options, as closest for 'queso')
-(81, 17, 7),  -- Extras: Queso (general option for 'extra queso')
--- Pedido Detalle 82 (idPlato: 42): Sin Nota
-(82, 88, 35), -- Tipo de base: Delgada (consistent with Plato 42 options)
-(82, 1, 1),   -- Tamaño: Pequeño (general option)
--- Pedido Detalle 83 (idPlato: 43): Sin Nota (idPlato > 42, using general options)
-(83, 1, 1),   -- Tamaño: Pequeño
-(83, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 84 (idPlato: 44): Extra picante (idPlato > 42, using general options)
-(84, 7, 2),   -- Nivel de picante: Muy Alto
-(84, 8, 3),   -- Tipo de pan: Blanco
--- Pedido Detalle 85 (idPlato: 45): Sin cebolla (idPlato > 42, using general options)
-(85, 16, 6),  -- Ingredientes extra: Cebolla (as exclusion)
-(85, 10, 4),  -- Tipo de pasta: Espagueti (general option)
--- Pedido Detalle 86 (idPlato: 46): Tamaño grande (idPlato > 42, using general options)
-(86, 3, 1),   -- Tamaño: Grande
-(86, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 87 (idPlato: 47): Sin Nota (idPlato > 42, using general options)
-(87, 14, 6),  -- Ingredientes extra: Champiñones
-(87, 17, 7),  -- Extras: Queso
--- Pedido Detalle 88 (idPlato: 48): Con extra de salsa (idPlato > 42, using general options)
-(88, 12, 5),  -- Salsas adicionales: Tomate
-(88, 22, 22), -- Exclusiones: Frijoles (general option)
--- Pedido Detalle 89 (idPlato: 49): Vegetales extra (idPlato > 42, using general options)
-(89, 58, 31), -- Vegetales Extras: Tomate
-(89, 91, 36), -- Cobertura: Chocolate
--- Pedido Detalle 90 (idPlato: 50): Sin lactosa (idPlato > 42, using general options)
-(90, 23, 22), -- Exclusiones: Lactosa
-(90, 24, 9),  -- Contornos: Papas fritas (general option)
--- Pedido Detalle 91 (idPlato: 51): Con crema batida (idPlato > 42, using general options)
-(91, 21, 7),  -- Extras: Crema batida
-(91, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 92 (idPlato: 52): Sin Nota (idPlato > 42, using general options)
-(92, 76, 18), -- Toppings: Crema
-(92, 76, 29), -- Borde relleno: Queso
--- Pedido Detalle 93 (idPlato: 53): Tipo de pan integral (idPlato > 42, using general options)
-(93, 9, 3),   -- Tipo de pan: Integral
-(93, 88, 35), -- Tipo de base: Delgada
--- Pedido Detalle 94 (idPlato: 54): Borde grueso (idPlato > 42, using general options)
-(94, 89, 35), -- Tipo de base: Gruesa
-(94, 1, 1),   -- Tamaño: Pequeño
--- Pedido Detalle 95 (idPlato: 55): Extra proteína de pollo (idPlato > 42, using general options)
-(95, 78, 30), -- Extra Proteína: Pollo
-(95, 4, 2),   -- Nivel de picante: Bajo (general option)
--- Pedido Detalle 96 (idPlato: 56): Sin azúcar (idPlato > 42, using general options)
-(96, 22, 22), -- Exclusiones: Frijoles (as general exclusion)
-(96, 8, 3),   -- Tipo de pan: Blanco (general option)
--- Pedido Detalle 97 (idPlato: 57): Con champiñones (idPlato > 42, using general options)
-(97, 14, 6),  -- Ingredientes extra: Champiñones
-(97, 10, 4),  -- Tipo de pasta: Espagueti (general option)
--- Pedido Detalle 98 (idPlato: 58): Sin Nota (idPlato > 42, using general options)
-(98, 12, 5),  -- Salsas adicionales: Tomate
-(98, 15, 6),  -- Ingredientes extra: Pepinillos
--- Pedido Detalle 99 (idPlato: 59): Extra jengibre (idPlato > 42, using general options)
-(99, 19, 7),  -- Extras: Jengibre
-(99, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 100 (idPlato: 60): Sin pepinillos (idPlato > 42, using general options)
-(100, 15, 6), -- Ingredientes extra: Pepinillos (as exclusion)
-(100, 22, 22),-- Exclusiones: Frijoles
--- Pedido Detalle 101 (idPlato: 61): Con extra de piña (idPlato > 42, using general options)
-(101, 20, 7), -- Extras: Piña
-(101, 58, 31),-- Vegetales Extras: Tomate
--- Pedido Detalle 102 (idPlato: 62): Sin Nota (idPlato > 42, using general options)
-(102, 91, 36),-- Cobertura: Chocolate
-(102, 24, 9), -- Contornos: Papas fritas
--- Pedido Detalle 103 (idPlato: 63): Sin gluten (idPlato > 42, using general options)
-(103, 90, 35),-- Tipo de base: Sin gluten
-(103, 76, 18),-- Toppings: Crema
--- Pedido Detalle 104 (idPlato: 64): Bajo en calorías (idPlato > 42, using general options)
-(104, 2, 1),  -- Tamaño: Mediano (general option)
-(104, 78, 30),-- Extra Proteína: Pollo (general option)
--- Pedido Detalle 105 (idPlato: 65): Picante suave (idPlato > 42, using general options)
-(105, 4, 2),  -- Nivel de picante: Bajo
-(105, 76, 29),-- Borde relleno: Queso
--- Pedido Detalle 106 (idPlato: 66): Sin Nota (idPlato > 42, using general options)
-(106, 88, 35),-- Tipo de base: Delgada
-(106, 8, 3),  -- Tipo de pan: Blanco
--- Pedido Detalle 107 (idPlato: 67): Sin frijoles (idPlato > 42, using general options)
-(107, 22, 22),-- Exclusiones: Frijoles
-(107, 10, 4), -- Tipo de pasta: Espagueti
--- Pedido Detalle 108 (idPlato: 68): Con aderezo aparte (idPlato > 42, using general options)
-(108, 13, 5), -- Salsas adicionales: Blanca
-(108, 16, 6), -- Ingredientes extra: Cebolla
--- Pedido Detalle 109 (idPlato: 69): Sin Nota (idPlato > 42, using general options)
-(109, 17, 7), -- Extras: Queso
-(109, 19, 7), -- Extras: Jengibre
--- Pedido Detalle 110 (idPlato: 70): Extra queso (idPlato > 42, using general options)
-(110, 17, 7), -- Extras: Queso
-(110, 23, 22),-- Exclusiones: Lactosa
--- Pedido Detalle 111 (idPlato: 71): Sin cebolla (idPlato > 42, using general options)
-(111, 16, 6), -- Ingredientes extra: Cebolla (as exclusion)
-(111, 58, 31),-- Vegetales Extras: Tomate
--- Pedido Detalle 112 (idPlato: 72): Tamaño grande (idPlato > 42, using general options)
-(112, 3, 1),  -- Tamaño: Grande
-(112, 91, 36),-- Cobertura: Chocolate
--- Pedido Detalle 113 (idPlato: 73): Sin Nota (idPlato > 42, using general options)
-(113, 24, 9), -- Contornos: Papas fritas
-(113, 76, 18),-- Toppings: Crema
--- Pedido Detalle 114 (idPlato: 74): Con extra de salsa (idPlato > 42, using general options)
-(114, 12, 5), -- Salsas adicionales: Tomate
-(114, 78, 30),-- Extra Proteína: Pollo
--- Pedido Detalle 115 (idPlato: 75): Vegetales extra (idPlato > 42, using general options)
-(115, 58, 31),-- Vegetales Extras: Tomate
-(115, 76, 29),-- Borde relleno: Queso
--- Pedido Detalle 116 (idPlato: 76): Sin lactosa (idPlato > 42, using general options)
-(116, 23, 22),-- Exclusiones: Lactosa
-(116, 88, 35),-- Tipo de base: Delgada
--- Pedido Detalle 117 (idPlato: 77): Sin Nota (idPlato > 42, using general options)
-(117, 1, 1),  -- Tamaño: Pequeño
-(117, 4, 2),  -- Nivel de picante: Bajo
--- Pedido Detalle 118 (idPlato: 78): Sin picante (idPlato > 42, using general options)
-(118, 4, 2),  -- Nivel de picante: Bajo
-(118, 8, 3),  -- Tipo de pan: Blanco
--- Pedido Detalle 119 (idPlato: 79): Sin Nota (idPlato > 42, using general options)
-(119, 10, 4), -- Tipo de pasta: Espagueti
-(119, 12, 5), -- Salsas adicionales: Tomate
--- Pedido Detalle 120 (idPlato: 80): Sin Nota (idPlato > 42, using general options)
-(120, 14, 6), -- Ingredientes extra: Champiñones
-(120, 17, 7), -- Extras: Queso
--- Pedido Detalle 121 (idPlato: 95): Sin Nota (idPlato > 42, using general options)
-(121, 1, 1),   -- Tamaño: Pequeño
-(121, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 122 (idPlato: 96): Sin Nota (idPlato > 42, using general options)
-(122, 8, 3),   -- Tipo de pan: Blanco
-(122, 10, 4),  -- Tipo de pasta: Espagueti
--- Pedido Detalle 123 (idPlato: 96): Sin cebolla (idPlato > 42, using general options)
-(123, 16, 6),  -- Ingredientes extra: Cebolla (as exclusion)
-(123, 12, 5),  -- Salsas adicionales: Tomate (general option)
--- Pedido Detalle 124 (idPlato: 97): Sin Nota (idPlato > 42, using general options)
-(124, 14, 6),  -- Ingredientes extra: Champiñones
-(124, 17, 7),  -- Extras: Queso
--- Pedido Detalle 125 (idPlato: 98): Sin Nota (idPlato > 42, using general options)
-(125, 22, 22), -- Exclusiones: Frijoles
-(125, 58, 31), -- Vegetales Extras: Tomate
--- Pedido Detalle 126 (idPlato: 99): Sin Nota (idPlato > 42, using general options)
-(126, 91, 36), -- Cobertura: Chocolate
-(126, 24, 9),  -- Contornos: Papas fritas
--- Pedido Detalle 127 (idPlato: 100): Sin Nota (idPlato > 42, using general options)
-(127, 76, 18), -- Toppings: Crema
-(127, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 128 (idPlato: 101): Sin Nota (idPlato > 42, using general options)
-(128, 76, 29), -- Borde relleno: Queso
-(128, 88, 35), -- Tipo de base: Delgada
--- Pedido Detalle 129 (idPlato: 102): Extra queso (idPlato > 42, using general options)
-(129, 17, 7),  -- Extras: Queso
-(129, 2, 1),   -- Tamaño: Mediano (general option)
--- Pedido Detalle 130 (idPlato: 103): Bien cocido (idPlato > 42, general options, no direct option)
-(130, 5, 2),   -- Nivel de picante: Medio
-(130, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 131 (idPlato: 104): Poco cocido (idPlato > 42, general options, no direct option)
-(131, 11, 4),  -- Tipo de pasta: Fetuccini
-(131, 13, 5),  -- Salsas adicionales: Blanca
--- Pedido Detalle 132 (idPlato: 105): Sin lactosa (idPlato > 42, using general options)
-(132, 23, 22), -- Exclusiones: Lactosa
-(132, 15, 6),  -- Ingredientes extra: Pepinillos (general option)
--- Pedido Detalle 133 (idPlato: 106): Con extra de salsa (idPlato > 42, using general options)
-(133, 12, 5),  -- Salsas adicionales: Tomate
-(133, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 134 (idPlato: 107): Extra picante (idPlato > 42, using general options)
-(134, 7, 2),   -- Nivel de picante: Muy Alto
-(134, 20, 7),  -- Extras: Piña (general option)
--- Pedido Detalle 135 (idPlato: 108): Sin gluten (idPlato > 42, using general options)
-(135, 90, 35), -- Tipo de base: Sin gluten (closest match for exclusion)
-(135, 22, 22), -- Exclusiones: Frijoles
--- Pedido Detalle 136 (idPlato: 109): Bajo en sal (idPlato > 42, general options, no direct option)
-(136, 58, 31), -- Vegetales Extras: Tomate
-(136, 92, 36), -- Cobertura: Caramelo
--- Pedido Detalle 137 (idPlato: 110): Vegetales extra (idPlato > 42, using general options)
-(137, 58, 31), -- Vegetales Extras: Tomate
-(137, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 138 (idPlato: 111): Sin azúcar (idPlato > 42, using general options)
-(138, 22, 22), -- Exclusiones: Frijoles (as general exclusion)
-(138, 26, 9),  -- Contornos: Ensalada (general option)
--- Pedido Detalle 139 (idPlato: 112): Tamaño grande (idPlato > 42, using general options)
-(139, 3, 1),   -- Tamaño: Grande
-(139, 77, 18), -- Toppings: Chocolate
--- Pedido Detalle 140 (idPlato: 113): Tipo de pan integral (idPlato > 42, using general options)
-(140, 9, 3),   -- Tipo de pan: Integral
-(140, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 141 (idPlato: 114): Con cebolla (idPlato > 42, using general options)
-(141, 16, 6),  -- Ingredientes extra: Cebolla
-(141, 89, 35), -- Tipo de base: Gruesa (general option)
--- Pedido Detalle 142 (idPlato: 115): Extra jengibre (idPlato > 42, using general options)
-(142, 19, 7),  -- Extras: Jengibre
-(142, 17, 7),  -- Extras: Queso
--- Pedido Detalle 143 (idPlato: 116): Bajo en calorías (idPlato > 42, general options, no direct option)
-(143, 1, 1),   -- Tamaño: Pequeño
-(143, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 144 (idPlato: 117): Con crema batida (idPlato > 42, using general options)
-(144, 21, 7),  -- Extras: Crema batida
-(144, 76, 18), -- Toppings: Crema
--- Pedido Detalle 145 (idPlato: 118): Sin pepinillos (idPlato > 42, using general options)
-(145, 15, 6),  -- Ingredientes extra: Pepinillos (as exclusion)
-(145, 23, 22), -- Exclusiones: Lactosa
--- Pedido Detalle 146 (idPlato: 119): Con extra de piña (idPlato > 42, using general options)
-(146, 20, 7),  -- Extras: Piña
-(146, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 147 (idPlato: 120): Borde grueso (idPlato > 42, using general options)
-(147, 89, 35), -- Tipo de base: Gruesa
-(147, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 148 (idPlato: 121): Extra proteína de pollo (idPlato > 42, using general options)
-(148, 78, 30), -- Extra Proteína: Pollo
-(148, 25, 9),  -- Contornos: Arroz (general option)
--- Pedido Detalle 149 (idPlato: 122): Con aderezo aparte (idPlato > 42, using general options)
-(149, 13, 5),  -- Salsas adicionales: Blanca
-(149, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 150 (idPlato: 123): Sin frijoles (idPlato > 42, using general options)
-(150, 22, 22), -- Exclusiones: Frijoles
-(150, 90, 35); -- Tipo de base: Sin gluten (closest for general exclusion)
-
+(1, 18, 6),
+(2, 27, 9),
+(2, 12, 3),
+(2, 13, 4),
+(3, 16, 5),
+(3, 5, 2),
+(3, 26, 9),
+(4, 13, 4),
+(4, 19, 6),
+(5, 12, 3),
+(5, 16, 5),
+(6, 18, 6),
+(6, 27, 9),
+(6, 7, 2),
+(7, 6, 2),
+(7, 16, 5),
+(8, 29, 10),
+(8, 26, 9),
+(8, 3, 1),
+(9, 1, 1),
+(9, 19, 6),
+(10, 7, 2),
+(10, 26, 9),
+(11, 16, 5),
+(12, 29, 10),
+(13, 12, 3),
+(13, 18, 6),
+(13, 28, 10),
+(14, 6, 2),
+(14, 24, 8),
+(14, 16, 5),
+(15, 26, 9),
+(16, 19, 6),
+(16, 3, 1),
+(16, 28, 10),
+(17, 25, 8),
+(17, 22, 7),
+(18, 20, 6),
+(18, 22, 7),
+(18, 28, 10),
+(19, 18, 6),
+(20, 24, 8),
+(21, 15, 4),
+(21, 21, 7),
+(22, 18, 6),
+(22, 3, 1),
+(23, 11, 3),
+(24, 23, 8),
+(25, 13, 4),
+(25, 1, 1),
+(26, 27, 9),
+(26, 11, 3),
+(26, 18, 6),
+(27, 21, 7),
+(28, 24, 8),
+(29, 22, 7),
+(29, 20, 6),
+(30, 21, 7),
+(31, 19, 6),
+(31, 27, 9),
+(32, 16, 5),
+(32, 2, 1),
+(32, 27, 9),
+(33, 28, 10),
+(33, 17, 5),
+(34, 22, 7),
+(34, 26, 9),
+(35, 19, 6),
+(36, 6, 2),
+(37, 27, 9),
+(38, 7, 2),
+(38, 11, 3),
+(38, 30, 10),
+(39, 1, 1),
+(39, 19, 6),
+(40, 1, 1),
+(40, 7, 2),
+(40, 27, 9),
+(41, 25, 8),
+(41, 2, 1),
+(42, 15, 4),
+(43, 28, 10),
+(43, 17, 5),
+(43, 20, 6),
+(44, 7, 2),
+(44, 14, 4),
+(45, 17, 5),
+(45, 9, 3),
+(46, 18, 6),
+(47, 13, 4),
+(48, 26, 9),
+(48, 20, 6),
+(49, 17, 5),
+(49, 22, 7),
+(49, 7, 2),
+(50, 8, 2),
+(50, 21, 7),
+(50, 28, 10),
+(51, 20, 6),
+(51, 4, 1),
+(52, 23, 8),
+(52, 20, 6),
+(53, 25, 8),
+(53, 22, 7),
+(54, 29, 10),
+(55, 4, 1),
+(55, 18, 6),
+(55, 14, 4),
+(56, 26, 9),
+(57, 24, 8),
+(57, 27, 9),
+(58, 14, 4),
+(59, 21, 7),
+(59, 29, 10),
+(59, 20, 6),
+(60, 30, 10),
+(60, 9, 3),
+(61, 7, 2),
+(62, 16, 5),
+(62, 11, 3),
+(63, 17, 5),
+(63, 12, 3),
+(63, 26, 9),
+(64, 28, 10),
+(64, 17, 5),
+(64, 21, 7),
+(65, 26, 9),
+(66, 2, 1),
+(66, 21, 7),
+(66, 29, 10),
+(67, 17, 5),
+(67, 4, 1),
+(68, 23, 8),
+(68, 17, 5),
+(68, 15, 4),
+(69, 22, 7),
+(69, 19, 6),
+(69, 24, 8),
+(70, 17, 5),
+(70, 23, 8),
+(70, 26, 9),
+(71, 24, 8),
+(72, 4, 1),
+(72, 21, 7),
+(72, 20, 6),
+(73, 17, 5),
+(73, 26, 9),
+(73, 6, 2),
+(74, 13, 4),
+(74, 4, 1),
+(75, 19, 6),
+(75, 26, 9),
+(76, 5, 2),
+(77, 12, 3),
+(77, 26, 9),
+(78, 25, 8),
+(79, 3, 1),
+(79, 27, 9),
+(80, 28, 10),
+(80, 9, 3),
+(80, 14, 4),
+(81, 13, 4),
+(82, 5, 2),
+(82, 16, 5),
+(83, 22, 7),
+(83, 20, 6),
+(84, 18, 6),
+(84, 6, 2),
+(84, 22, 7),
+(85, 11, 3),
+(86, 11, 3),
+(87, 20, 6),
+(87, 30, 10),
+(88, 28, 10),
+(88, 22, 7),
+(88, 16, 5),
+(89, 26, 9),
+(89, 14, 4),
+(89, 22, 7),
+(90, 25, 8),
+(90, 16, 5),
+(90, 28, 10),
+(91, 27, 9),
+(91, 22, 7),
+(91, 17, 5),
+(92, 19, 6),
+(93, 8, 2),
+(93, 22, 7),
+(93, 11, 3),
+(94, 19, 6),
+(95, 17, 5),
+(96, 28, 10),
+(96, 7, 2),
+(97, 14, 4),
+(97, 30, 10),
+(97, 7, 2),
+(98, 22, 7),
+(98, 19, 6),
+(98, 24, 8),
+(99, 18, 6),
+(100, 5, 2),
+(100, 15, 4),
+(101, 6, 2),
+(101, 24, 8),
+(102, 17, 5),
+(102, 4, 1),
+(103, 15, 4),
+(103, 7, 2),
+(103, 11, 3),
+(104, 18, 6),
+(105, 1, 1),
+(105, 24, 8),
+(106, 13, 4),
+(106, 11, 3),
+(106, 3, 1),
+(107, 16, 5),
+(107, 25, 8),
+(108, 18, 6),
+(108, 27, 9),
+(109, 13, 4),
+(109, 30, 10),
+(109, 11, 3),
+(110, 1, 1),
+(110, 27, 9),
+(110, 8, 2),
+(111, 16, 5),
+(111, 19, 6),
+(111, 8, 2),
+(112, 5, 2),
+(113, 22, 7),
+(113, 14, 4),
+(113, 6, 2),
+(114, 22, 7),
+(115, 16, 5),
+(116, 26, 9),
+(117, 4, 1),
+(117, 15, 4),
+(117, 24, 8),
+(118, 19, 6),
+(119, 2, 1),
+(120, 3, 1),
+(121, 19, 6),
+(122, 8, 2),
+(122, 15, 4),
+(123, 14, 4),
+(124, 16, 5),
+(124, 14, 4),
+(125, 21, 7),
+(125, 10, 3),
+(125, 27, 9),
+(126, 23, 8),
+(126, 19, 6),
+(126, 21, 7),
+(127, 8, 2),
+(127, 26, 9),
+(128, 8, 2),
+(128, 22, 7),
+(128, 25, 8),
+(129, 17, 5),
+(129, 4, 1),
+(129, 12, 3),
+(130, 9, 3),
+(130, 27, 9),
+(131, 9, 3),
+(131, 22, 7),
+(131, 14, 4),
+(132, 21, 7),
+(133, 22, 7),
+(133, 15, 4),
+(133, 26, 9),
+(134, 20, 6),
+(135, 14, 4),
+(135, 8, 2),
+(135, 30, 10),
+(136, 22, 7),
+(136, 26, 9),
+(137, 10, 3),
+(137, 14, 4),
+(138, 19, 6),
+(138, 26, 9),
+(139, 17, 5),
+(140, 30, 10),
+(140, 2, 1),
+(141, 24, 8),
+(142, 27, 9),
+(143, 10, 3),
+(143, 26, 9),
+(144, 7, 2),
+(144, 26, 9),
+(144, 24, 8),
+(145, 4, 1),
+(145, 27, 9),
+(146, 27, 9),
+(146, 18, 6),
+(146, 22, 7),
+(147, 1, 1),
+(147, 17, 5),
+(148, 30, 10),
+(148, 3, 1),
+(149, 21, 7),
+(150, 19, 6),
+(150, 10, 3),
+(150, 24, 8),
+(151, 27, 9),
+(152, 1, 1),
+(152, 16, 5),
+(152, 27, 9),
+(153, 3, 1),
+(154, 4, 1),
+(154, 17, 5),
+(155, 21, 7),
+(156, 9, 3),
+(156, 8, 2),
+(157, 13, 4),
+(158, 14, 4),
+(158, 22, 7),
+(159, 23, 8),
+(160, 22, 7),
+(161, 1, 1),
+(161, 8, 2),
+(162, 8, 2),
+(163, 3, 1),
+(164, 17, 5),
+(164, 9, 3),
+(165, 4, 1),
+(166, 17, 5),
+(166, 29, 10),
+(166, 21, 7),
+(167, 28, 10),
+(167, 27, 9),
+(167, 5, 2),
+(168, 13, 4),
+(168, 18, 6),
+(168, 24, 8),
+(169, 3, 1),
+(170, 24, 8),
+(171, 1, 1),
+(172, 22, 7),
+(172, 19, 6),
+(172, 16, 5),
+(173, 4, 1),
+(173, 22, 7),
+(174, 10, 3),
+(174, 20, 6),
+(174, 28, 10),
+(175, 13, 4),
+(175, 25, 8),
+(175, 8, 2),
+(176, 12, 3),
+(176, 8, 2),
+(177, 18, 6),
+(178, 2, 1),
+(179, 7, 2),
+(180, 4, 1),
+(181, 27, 9),
+(182, 27, 9),
+(182, 23, 8),
+(182, 20, 6),
+(183, 17, 5),
+(183, 5, 2),
+(183, 29, 10),
+(184, 13, 4),
+(184, 20, 6),
+(185, 29, 10),
+(186, 19, 6),
+(186, 27, 9),
+(186, 4, 1),
+(187, 13, 4),
+(187, 8, 2),
+(187, 2, 1),
+(188, 19, 6),
+(189, 20, 6),
+(189, 6, 2),
+(190, 26, 9),
+(190, 8, 2),
+(190, 29, 10),
+(191, 29, 10),
+(191, 22, 7),
+(192, 14, 4),
+(193, 1, 1),
+(194, 25, 8),
+(195, 17, 5),
+(195, 19, 6),
+(196, 20, 6),
+(196, 7, 2),
+(197, 13, 4),
+(198, 21, 7),
+(198, 17, 5),
+(198, 7, 2),
+(199, 17, 5),
+(199, 22, 7),
+(200, 14, 4),
+(200, 23, 8),
+(200, 20, 6),
+(201, 16, 5),
+(201, 26, 9),
+(202, 27, 9),
+(202, 9, 3),
+(202, 18, 6),
+(203, 27, 9),
+(204, 9, 3),
+(204, 16, 5),
+(205, 16, 5),
+(205, 15, 4),
+(206, 27, 9),
+(206, 15, 4),
+(207, 20, 6),
+(207, 29, 10),
+(208, 12, 3),
+(208, 29, 10),
+(208, 19, 6),
+(209, 30, 10),
+(210, 23, 8),
+(210, 15, 4),
+(211, 3, 1),
+(212, 10, 3),
+(212, 29, 10),
+(213, 13, 4),
+(213, 26, 9),
+(213, 28, 10),
+(214, 25, 8),
+(214, 27, 9),
+(215, 25, 8),
+(215, 16, 5),
+(215, 5, 2),
+(216, 17, 5),
+(217, 6, 2),
+(217, 29, 10),
+(217, 17, 5);
 INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
 -- Pedido 1: Ruta feliz
 (1, 1, '2025-07-10 16:53:35'), -- Pendiente
@@ -3156,7 +3114,7 @@ INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
 (65, 1, '2025-07-11 03:41:25'), (65, 15, '2025-07-11 03:46:25'), (65, 7, '2025-07-11 03:55:25'),
 
 -- Más Retrasados
-(66, 1, '2025-07-10 14:18:49'), (66, 2, '2025-07-10 14:26:49'), (66, 3, '2025-07-10 14:48:49'), (66, 8, '2025-07-10 14:57:49'), (66, 5, '2025-07-10 15:10:49'), (66, 6, '2025-07-10 15:40:49'),
+(66, 1, '2025-07-10 14:18:49'), (66, 2, '2025-07-10 14:26:49'), (66, 3, '2025-07-prueba10 14:48:49'), (66, 8, '2025-07-10 14:57:49'), (66, 5, '2025-07-10 15:10:49'), (66, 6, '2025-07-10 15:40:49'),
 
 -- Más Esperando Repartidor
 (67, 1, '2025-07-11 02:44:03'), (67, 2, '2025-07-11 02:51:03'), (67, 3, '2025-07-11 03:13:03'), (67, 4, '2025-07-11 03:22:03'), (67, 12, '2025-07-11 03:30:03'), (67, 5, '2025-07-11 03:40:03'), (67, 6, '2025-07-11 04:05:03'),
@@ -3279,3 +3237,57 @@ INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
 (149, 1, '2025-07-10 19:57:42'), (149, 2, '2025-07-10 20:07:42'), (149, 3, '2025-07-10 20:25:42'), (149, 4, '2025-07-10 20:34:42'), (149, 5, '2025-07-10 20:49:42'), (149, 6, '2025-07-10 21:19:42'),
 (150, 1, '2025-07-10 20:03:00'), (150, 2, '2025-07-10 20:13:00'), (150, 3, '2025-07-10 20:36:00'), (150, 4, '2025-07-10 20:46:00'), (150, 5, '2025-07-10 20:53:00'), (150, 6, '2025-07-10 21:28:00');
 
+
+-- 21 inserts a mano de ClienteConClienteReferido(idCliente, idClienteReferido, fecha_referido) 
+INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido) VALUES
+(2, 1, '2025-08-13'),
+(3, 1, '2025-09-13'),
+(4, 2, '2025-08-18'),
+(6, 5, '2025-10-13'),
+(7, 6, '2025-05-16'),
+(8, 7, '2025-04-13'),
+(9, 8, '2025-03-13'),
+(11, 10, '2025-01-13'),
+(13, 12, '2025-07-13'),
+(17, 15, '2023-07-13'),
+(19, 18, '2025-07-13'),
+(21, 20, '2023-06-13'),
+(22, 19, '2025-07-13'),
+(23, 21, '2024-08-13'),
+(24, 22, '2023-07-13'),
+(26, 25, '2023-07-13'),
+(29, 28, '2025-03-13'),
+(31, 30, '2024-07-29'),
+(33, 32, '2023-05-13'),
+(34, 31, '2025-07-28'),
+(35, 33, '2025-06-13');
+-- los otros 9 registros con el trigger (y demas clientes que se inserten)
+CREATE TRIGGER trg_Cliente_AfterInsert
+ON Cliente
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    -- Asumiendo que el cliente referido es el último cliente insertado antes del actual
+    
+    DECLARE @NuevoClienteID INT;
+    DECLARE @ClienteReferidoID INT;
+    
+    -- Obtener el ID del cliente recién insertado
+    SELECT @NuevoClienteID = id FROM inserted;
+    
+    -- Buscar el último cliente insertado antes del actual para usarlo como referido
+    -- (esto es un ejemplo, ajusta según tu lógica de negocio)
+    SELECT TOP 1 @ClienteReferidoID = id 
+    FROM Cliente 
+    WHERE id < @NuevoClienteID 
+    ORDER BY id DESC;
+    
+    -- Solo insertar si encontramos un cliente referido válido (no para el primer cliente)
+    IF @ClienteReferidoID IS NOT NULL AND @NuevoClienteID > 1
+    BEGIN
+        INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido)
+        VALUES (@NuevoClienteID, @ClienteReferidoID, GETDATE());
+    END
+END;
