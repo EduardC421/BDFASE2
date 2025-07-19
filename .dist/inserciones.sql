@@ -585,24 +585,24 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Casero (idMenu: 24)
 (116, 'Sopas y Cremas Caseras', 'Recetas de la abuela, con sabor a hogar', 24),
-(117, 'Platos Principales Caseros', 'Guisos, Asados y Estofados tradicionales', 24),
+(117, 'Principales', 'Guisos, Asados y Estofados tradicionales', 24),
 (118, 'Contornos Venezolanos', 'Arroz, Tajadas, Ensalada rallada', 24),
 (119, 'Postres de la Abuela', 'Arroz con leche, Dulce de lechosa', 24),
-(120, 'Bebidas Refrescantes', 'Papelón con limón, Chicha', 24),
+(120, 'Bebidas', 'Papelón con limón, Chicha', 24),
 
 -- Menú Tex-Mex (idMenu: 25)
 (121, 'Nachos y Entradas Tex-Mex', 'Queso, jalapeños, guacamole', 25),
 (122, 'Fajitas y Chimichangas', 'Con carnes, pollo o vegetales', 25),
 (123, 'Burritos y Enchiladas', 'Rellenos abundantes y salsas picantes', 25),
 (124, 'Chili y Soups', 'Chili con carne, Sopa de tortilla', 25),
-(125, 'Bebidas Americanas', 'Refrescos, Cervezas artesanales', 25),
+(125, 'Bebidas', 'Refrescos, Cervezas artesanales', 25),
 
 -- Menú Street Food (idMenu: 26)
 (126, 'Tacos y Arepas Callejeras', 'Variedad de rellenos rápidos', 26),
 (127, 'Burgers y Hot Dogs Gourmet', 'Versiones elevadas de clásicos urbanos', 26),
 (128, 'Brochetas y Pinchos', 'Carnes, vegetales y mariscos a la brasa', 26),
 (129, 'Fritos Internacionales', 'Papas fritas con aderezos, Churros', 26),
-(130, 'Bebidas Refrescantes', 'Limonadas, Tes fríos, Smoothies', 26),
+(130, 'Bebidas', 'Limonadas, Tes fríos, Smoothies', 26),
 
 -- Menú Saludable (idMenu: 27)
 (131, 'Ensaladas de Autor', 'Frescas y nutritivas con ingredientes de calidad', 27),
@@ -616,7 +616,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (137, 'Platos Clásicos Americanos', 'Mac and Cheese, Albóndigas, Pastel de carne', 28),
 (138, 'Acompañamientos Abundantes', 'Puré de papa, Patatas asadas', 28),
 (139, 'Postres Caseros', 'Brownies, Crumble de manzana, Cookies', 28),
-(140, 'Bebidas Clásicas', 'Malteadas, Chocolates Calientes', 28),
+(140, 'Bebidas', 'Malteadas, Chocolates Calientes', 28),
 
 -- Menú Mar y Tierra (idMenu: 29)
 (141, 'Cortes Premium de Carne', 'Filet Mignon, Ribeye, Lomo de Cerdo', 29),
@@ -648,7 +648,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Francés (idMenu: 33)
 (161, 'Entradas Francesas', 'Sopa de cebolla, Paté, Tartare de bœuf', 33),
-(162, 'Platos Principales Clásicos', 'Coq au Vin, Boeuf Bourguignon, Confit de Canard', 33),
+(162, 'Principales', 'Coq au Vin, Boeuf Bourguignon, Confit de Canard', 33),
 (163, 'Pescados y Mariscos', 'Meunière, Bouillabaisse', 33),
 (164, 'Guarniciones y Verduras', 'Gratin Dauphinois, Haricots Verts', 33),
 (165, 'Postres y Quesos', 'Crème brûlée, Tarta de manzana, Selección de quesos', 33),
@@ -657,7 +657,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (166, 'Tapas Frías', 'Jamón Serrano, Queso Manchego, Tortilla Española', 34),
 (167, 'Tapas Calientes', 'Gambas al ajillo, Croquetas, Patatas Bravas', 34),
 (168, 'Paellas y Arroces', 'Paella de marisco, Arroz negro, Fideuá', 34),
-(169, 'Platos Principales', 'Cochinillo Asado, Rabo de Toro', 34),
+(169, 'Principales', 'Cochinillo Asado, Rabo de Toro', 34),
 (170, 'Postres Españoles', 'Churros con chocolate, Crema catalana', 34),
 
 -- Menú Coreano BBQ (idMenu: 35)
@@ -1853,7 +1853,7 @@ INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, 
 (5, '2025-07-05', 70.00, 16.00, 11.20, 81.20, 5), 
 (6, '2023-07-21', 95.00, 16.00, 15.20, 110.20, 6),
 (7, '2025-07-10', 150.00, 16.00, 24.00, 174.00, 7),
-(8, '2025-07-23', 30.00, 16.00, 4.80, 34.80, 8),
+(8, '2024-07-25', 30.00, 16.00, 4.80, 34.80, 8),
 (9, '2025-07-15', 180.50, 16.00, 28.88, 209.38, 9),
 (10, '2024-07-20', 62.50, 16.00, 10.00, 72.50, 10),
 (11, '2023-07-26', 110.00, 16.00, 17.60, 127.60, 11),
@@ -3177,6 +3177,7 @@ INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_refer
 (33, 32, '2023-05-13'),
 (34, 31, '2025-07-28'),
 (35, 33, '2025-06-13');
+
 -- los otros 9 registros con el trigger (y demas clientes que se inserten)
 CREATE TRIGGER trg_Cliente_AfterInsert
 ON Cliente

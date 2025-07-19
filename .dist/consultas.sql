@@ -25,6 +25,14 @@ BEGIN
 END;
 
 
+
+
+
+-- A. Reporte de estados de pedido con: nombre del estado, cantidad de veces usado, tiempo promedio real vs estimado, y porcentaje de cumplimiento. 
+
+
+
+
 --CONSULTA B
 -- Total facturado por comercio en el último mes
 
@@ -112,12 +120,10 @@ SELECT
   ISNULL(cp.nombre, 'Sin cocina registrada') AS cocina_principal,
   ISNULL(pm.nombre_plato, 'Sin pedidos recientes') AS plato_mas_pedido,
   CASE
-    WHEN cf.total_facturado > pg.promedio THEN 'Por encima del promedio'
+    WHEN cf.total_facturado > pg.promedio THEN 'Por encima del promedio'       
     WHEN cf.total_facturado < pg.promedio THEN 'Por debajo del promedio'
     ELSE 'Promedio exacto'
-  END AS comparacion,
-  @FechaInicio AS periodo_desde,
-  GETDATE() AS periodo_hasta
+  END AS comparacion
 FROM comercios_facturados cf
 CROSS JOIN promedio_general pg
 LEFT JOIN cocina_principal cp ON cp.idComercio = cf.id_comercio
@@ -208,6 +214,100 @@ ORDER BY
     qco.MontoTotalGastado DESC;
 
 
+
+
+
+
+
+
+-- D. Consultar el historial de un cliente referido, mostrando si ha realizado pedidos, el total gastado y si ha generado otros referidos. 
+
+SELECT 
+    CCR.idClienteReferido AS IdReferido,
+    C.nombre + ' ' + C.apellido AS NombreCompleto,
+    COUNT(DISTINCT CP.idPedido) AS TotalPedidos,
+    ISNULL(SUM(F.monto_total), 0) AS TotalGastado,
+    CASE 
+        WHEN COUNT(DISTINCT CCR2.idClienteReferido) > 0 THEN 'SI'
+        ELSE 'NO'
+    END AS HaGeneradoReferidos
+FROM ClienteConClienteReferido CCR
+JOIN Cliente C ON CCR.idClienteReferido = C.id
+LEFT JOIN ClientePedido CP ON CP.idCliente = C.id
+LEFT JOIN Factura F ON F.idPedido = CP.idPedido
+LEFT JOIN ClienteConClienteReferido CCR2 ON CCR2.idCliente = C.id
+GROUP BY CCR.idClienteReferido, C.nombre, C.apellido
+ORDER BY TotalGastado DESC;
+
+
+
+
+
+--Consulta F
+
+WITH PedidosUltimos3Meses AS (
+    SELECT cp.idCliente, cp.idPedido, cp.fecha, p.total
+    FROM ClientePedido cp
+    JOIN Pedido p ON cp.idPedido = p.id
+    WHERE cp.fecha >= DATEADD(MONTH, -3, CAST(GETDATE() AS DATE))
+),
+PedidosConAmbasSecciones AS (
+    SELECT pd.idPedido, cp.idCliente
+    FROM PedidoDetalle pd
+    JOIN Plato pl ON pd.idPlato = pl.id
+    JOIN Seccion s ON pl.idSeccion = s.id
+    JOIN ClientePedido cp ON cp.idPedido = pd.idPedido
+    WHERE s.nombre IN ('Principales', 'Bebidas')
+    GROUP BY pd.idPedido, cp.idCliente
+    HAVING
+        COUNT(DISTINCT CASE WHEN s.nombre = 'Principales' THEN s.id END) > 0 AND
+        COUNT(DISTINCT CASE WHEN s.nombre = 'Bebidas' THEN s.id END) > 0
+),
+PedidosConRepartidorMoto AS (
+    SELECT DISTINCT rp.idPedido
+    FROM RepartidorPedido rp
+    JOIN Repartidor r ON rp.idRepartidor = r.id
+    WHERE r.detalle_vehiculo LIKE '%Moto%'
+),
+-- Nueva CTE para pre-calcular si un pedido tuvo moto
+PedidosMotoFlag AS (
+    SELECT
+        pum.idCliente,
+        pum.idPedido,
+        CASE WHEN pcr.idPedido IS NOT NULL THEN 1 ELSE 0 END AS tiene_moto
+    FROM PedidosUltimos3Meses pum
+    LEFT JOIN PedidosConRepartidorMoto pcr ON pum.idPedido = pcr.idPedido
+),
+ClientesValidos AS (
+    SELECT
+        p.idCliente,
+        COUNT(DISTINCT p.idPedido) AS cantidad_pedidos,
+        SUM(p.total) AS total_gastado,
+        SUM(pmf.tiene_moto) AS pedidos_con_moto_count -- Sumamos el flag para contar
+    FROM PedidosUltimos3Meses p
+    JOIN PedidosConAmbasSecciones s ON p.idPedido = s.idPedido AND p.idCliente = s.idCliente
+    JOIN PedidosMotoFlag pmf ON p.idPedido = pmf.idPedido AND p.idCliente = pmf.idCliente
+    GROUP BY p.idCliente
+    HAVING
+        COUNT(DISTINCT p.idPedido) >= 3 AND
+        SUM(pmf.tiene_moto) >= 1 -- Usamos el conteo del flag aquí
+),
+PromedioGastoGlobal AS (
+    SELECT AVG(p.total) AS promedio_global
+    FROM ClientePedido cp
+    JOIN Pedido p ON cp.idPedido = p.id
+    WHERE cp.fecha >= DATEADD(MONTH, -3, CAST(GETDATE() AS DATE))
+)
+SELECT
+    c.nombre,
+    cv.cantidad_pedidos,
+    cv.total_gastado,
+    pg.promedio_global
+FROM ClientesValidos cv
+JOIN Cliente c ON c.id = cv.idCliente
+CROSS JOIN PromedioGastoGlobal pg
+WHERE cv.total_gastado > pg.promedio_global;
+
 --G. Listar los comercios que han recibido más de 20 pedidos en el último mes y que 
 --trabajan al menos 50 horas semanales en la cocina principal de “China”. 
 
@@ -240,3 +340,4 @@ JOIN CocinasChinas as CHI ON C.id = CHI.idComercio
             ELSE 24 - c.hora_apertura + c.hora_cierre
         END) * 7 >= 50
         ORDER BY PUM.TotalPedidos;
+
