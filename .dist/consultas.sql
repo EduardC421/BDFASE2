@@ -27,116 +27,139 @@ END;
 
 --CONSULTA B
 -- Total facturado por comercio en el último mes
-WITH facturacion_ultimo_mes AS (
+
+DECLARE @FechaInicio DATE = DATEADD(MONTH, -1, GETDATE());
+
+--  Comercios activos, con o sin facturación
+WITH comercios_base AS (
+  SELECT id AS id_comercio, nombre AS nombre_comercio
+  FROM Comercio
+  WHERE estaActivo = 1
+),
+
+facturacion_ultimo_mes AS (
   SELECT
     c.id AS id_comercio,
-    c.nombre AS nombre_comercio,
-    SUM(f.total) AS total_facturado
+    SUM(f.monto_total) AS total_facturado
   FROM Comercio c
-  JOIN Cocina co ON co.id_comercio = c.id
-  JOIN Plato p ON p.id_cocina = co.id
-  JOIN Pedido pe ON pe.id_plato = p.id
-  JOIN Factura f ON f.id = pe.id_factura
-  WHERE f.fecha_emision >= DATEADD(MONTH, -1, GETDATE())
-  GROUP BY c.id, c.nombre
+  JOIN Menu m ON m.idComercio = c.id
+  JOIN Seccion s ON s.idMenu = m.id
+  JOIN Plato p ON p.idSeccion = s.id
+  JOIN PedidoDetalle pd ON pd.idPlato = p.id
+  JOIN Pedido pe ON pe.id = pd.idPedido
+  JOIN Factura f ON f.idPedido = pe.id
+  WHERE f.fecha_emision >= @FechaInicio
+  GROUP BY c.id
 ),
 
--- Promedio general del total facturado
+-- Usamos COALESCE para mostrar 0 si no hay facturación
+comercios_facturados AS (
+  SELECT
+    cb.id_comercio,
+    cb.nombre_comercio,
+    COALESCE(f.total_facturado, 0) AS total_facturado
+  FROM comercios_base cb
+  LEFT JOIN facturacion_ultimo_mes f ON cb.id_comercio = f.id_comercio
+),
+
 promedio_general AS (
   SELECT AVG(total_facturado * 1.0) AS promedio
-  FROM facturacion_ultimo_mes
+  FROM comercios_facturados
 ),
 
--- Cocina principal (primera alfabéticamente por comercio)
 cocina_principal AS (
-  SELECT id_comercio, nombre
-  FROM (
-    SELECT
-      co.id_comercio,
-      co.nombre,
-      ROW_NUMBER() OVER (PARTITION BY co.id_comercio ORDER BY co.nombre ASC) AS rn
-    FROM Cocina co
-  ) AS sub
-  WHERE rn = 1
+  SELECT
+    cc.idComercio,
+    MIN(co.nombre) AS nombre
+  FROM ComercioCocina cc
+  JOIN Cocina co ON co.id = cc.idCocina
+  GROUP BY cc.idComercio
 ),
 
--- Plato más pedido por comercio
+platos_pedidos AS (
+  SELECT
+    m.idComercio,
+    p.id AS id_plato,
+    p.nombre AS nombre_plato,
+    COUNT(*) AS cantidad_pedidos
+  FROM PedidoDetalle pd
+  JOIN Plato p ON pd.idPlato = p.id
+  JOIN Seccion s ON p.idSeccion = s.id
+  JOIN Menu m ON s.idMenu = m.id
+  JOIN Pedido pe ON pd.idPedido = pe.id
+  JOIN Factura f ON pe.id = f.idPedido
+  WHERE f.fecha_emision >= @FechaInicio
+  GROUP BY m.idComercio, p.id, p.nombre
+),
+
 plato_mas_pedido AS (
-  SELECT id_comercio, nombre_plato
-  FROM (
+  SELECT
+    pp1.idComercio,
+    pp1.nombre_plato
+  FROM platos_pedidos pp1
+  INNER JOIN (
     SELECT
-      c.id AS id_comercio,
-      p.nombre AS nombre_plato,
-      COUNT(*) AS cantidad,
-      ROW_NUMBER() OVER (PARTITION BY c.id ORDER BY COUNT(*) DESC) AS rn
-    FROM Comercio c
-    JOIN Cocina co ON co.id_comercio = c.id
-    JOIN Plato p ON p.id_cocina = co.id
-    JOIN Pedido pe ON pe.id_plato = p.id
-    JOIN Factura f ON f.id = pe.id_factura
-    WHERE f.fecha_emision >= DATEADD(MONTH, -1, GETDATE())
-    GROUP BY c.id, p.nombre
-  ) AS sub
-  WHERE rn = 1
+      idComercio,
+      MAX(cantidad_pedidos) AS max_pedidos
+    FROM platos_pedidos
+    GROUP BY idComercio
+  ) pp2 ON pp1.idComercio = pp2.idComercio AND pp1.cantidad_pedidos = pp2.max_pedidos
 )
 
--- Resultado final combinando todo
+-- Resultado final enriquecido
 SELECT
-  f.nombre_comercio,
-  f.total_facturado,
-  cp.nombre AS cocina_principal,
-  pm.nombre_plato AS plato_mas_pedido,
+  cf.nombre_comercio,
+  cf.total_facturado,
+  ISNULL(cp.nombre, 'Sin cocina registrada') AS cocina_principal,
+  ISNULL(pm.nombre_plato, 'Sin pedidos recientes') AS plato_mas_pedido,
   CASE
-    WHEN f.total_facturado > pg.promedio THEN 'Por encima del promedio'
-    WHEN f.total_facturado < pg.promedio THEN 'Por debajo del promedio'
+    WHEN cf.total_facturado > pg.promedio THEN 'Por encima del promedio'
+    WHEN cf.total_facturado < pg.promedio THEN 'Por debajo del promedio'
     ELSE 'Promedio exacto'
-  END AS comparacion
-FROM facturacion_ultimo_mes f
+  END AS comparacion,
+  @FechaInicio AS periodo_desde,
+  GETDATE() AS periodo_hasta
+FROM comercios_facturados cf
 CROSS JOIN promedio_general pg
-LEFT JOIN cocina_principal cp ON cp.id_comercio = f.id_comercio
-LEFT JOIN plato_mas_pedido pm ON pm.id_comercio = f.id_comercio
-ORDER BY f.total_facturado DESC;
+LEFT JOIN cocina_principal cp ON cp.idComercio = cf.id_comercio
+LEFT JOIN plato_mas_pedido pm ON pm.idComercio = cf.id_comercio
+ORDER BY cf.total_facturado DESC;
 
 
 
 
 
----Consulta C
-
+--Consulta C
 WITH RECENT_DELIVERED_ORDERS AS (
     SELECT
         p.id AS PedidoID,
-        p.idCliente,
-        p.total_con_iva,
-        p.fecha_pedido
+        cp.idCliente,
+        f.monto_total,
+        f.fecha_emision
     FROM
         Pedido p
-    JOIN
-        (SELECT idPedido, MAX(fecha_cambio_estado) AS last_status_date
-         FROM EstadoPedido_log
-         GROUP BY idPedido) AS latest_status
-    ON p.id = latest_status.idPedido
-    JOIN
-        EstadoPedido_log esl
-    ON esl.idPedido = p.id AND esl.fecha_cambio_estado = latest_status.last_status_date
+        JOIN ClientePedido cp ON p.id = cp.idPedido
+        JOIN Factura f ON p.id = f.idPedido
+        JOIN (
+            SELECT idPedido, MAX(fecha_inicio) AS last_status_date
+            FROM PedidoEstadoPedido
+            GROUP BY idPedido
+        ) AS latest_status ON p.id = latest_status.idPedido
+        JOIN PedidoEstadoPedido pep ON pep.idPedido = p.id AND pep.fecha_inicio = latest_status.last_status_date
     WHERE
-        esl.idEstado = 6 -- 'Entregado'
-        AND p.fecha_pedido >= DATE('2025-07-18', '-6 months')
+        pep.idEstadoPedido = 6 -- Entregado
+        AND f.fecha_emision >= DATEADD(MONTH, -6, CAST('2025-07-18' AS DATE))
 ),
 ORDER_DISH_SECTION_COUNTS AS (
-    
     SELECT
         rd.PedidoID,
         COUNT(DISTINCT pd.idPlato) AS DistinctPlatos,
         COUNT(DISTINCT s.id) AS DistinctSecciones
     FROM
         RECENT_DELIVERED_ORDERS rd
-    JOIN
-        PedidoDetalle pd ON rd.PedidoID = pd.idPedido
-    JOIN
-        Plato pl ON pd.idPlato = pl.id
-    JOIN
-        Seccion s ON pl.idSeccion = s.id
+        JOIN PedidoDetalle pd ON rd.PedidoID = pd.idPedido
+        JOIN Plato pl ON pd.idPlato = pl.id
+        JOIN Seccion s ON pl.idSeccion = s.id
     GROUP BY
         rd.PedidoID
     HAVING
@@ -147,11 +170,10 @@ QUALIFIED_CUSTOMER_ORDERS AS (
     SELECT
         rdo.idCliente,
         COUNT(DISTINCT rdo.PedidoID) AS TotalPedidosValidos,
-        SUM(rdo.total_con_iva) AS MontoTotalGastado
+        SUM(rdo.monto_total) AS MontoTotalGastado
     FROM
         RECENT_DELIVERED_ORDERS rdo
-    JOIN
-        ORDER_DISH_SECTION_COUNTS odsc ON rdo.PedidoID = odsc.PedidoID
+        JOIN ORDER_DISH_SECTION_COUNTS odsc ON rdo.PedidoID = odsc.PedidoID
     GROUP BY
         rdo.idCliente
     HAVING
@@ -162,16 +184,13 @@ CUSTOMER_BEST_DELIVERY_PERSON AS (
         cr.idCliente,
         r.nombre AS NombreRepartidor,
         r.apellido AS ApellidoRepartidor,
-        MAX(cr.estrellas) AS MaxEstrellas
+        cr.puntaje,
+        ROW_NUMBER() OVER (PARTITION BY cr.idCliente ORDER BY cr.puntaje DESC, r.nombre) AS rn
     FROM
-        CalificacionRepartidor cr
-    JOIN
-        Repartidor r ON cr.idRepartidor = r.id
+        ClienteRepartidor cr
+        JOIN Repartidor r ON cr.idRepartidor = r.id
     WHERE
-        cr.estrellas >= 4
-    GROUP BY
-        cr.idCliente, r.nombre, r.apellido
-    QUALIFY ROW_NUMBER() OVER (PARTITION BY cr.idCliente ORDER BY MAX(cr.estrellas) DESC, r.nombre) = 1
+        cr.puntaje >= 4
 )
 SELECT
     c.nombre AS NombreCliente,
@@ -182,33 +201,43 @@ SELECT
     cbdp.ApellidoRepartidor
 FROM
     Cliente c
-JOIN
-    QUALIFIED_CUSTOMER_ORDERS qco ON c.id = qco.idCliente
-LEFT JOIN
-    CUSTOMER_BEST_DELIVERY_PERSON cbdp ON c.id = cbdp.idCliente
+    JOIN QUALIFIED_CUSTOMER_ORDERS qco ON c.id = qco.idCliente
+    LEFT JOIN (
+        SELECT * FROM CUSTOMER_BEST_DELIVERY_PERSON WHERE rn = 1
+    ) AS cbdp ON c.id = cbdp.idCliente
 ORDER BY
     qco.MontoTotalGastado DESC;
 
---Consulta E
 
-SELECT
-    r.id AS id_repartidor,
-    r.nombre || ' ' || r.apellido AS nombre_completo,
-    
-    COUNT(DISTINCT rp.idPedido) AS total_pedidos_asignados,
-    
-    ROUND(AVG(cr.puntaje), 2) AS promedio_puntaje,
-    
-    ROUND(AVG(CASE 
-        WHEN pe.idEstadoPedido = 6 THEN rp.tiempo_entrega
-        ELSE NULL
-    END), 2) AS tiempo_promedio_entrega_exitosas
-    
-FROM
-    Repartidor r
-LEFT JOIN RepartidorPedido rp ON r.id = rp.idRepartidor
-LEFT JOIN ClienteRepartidor cr ON r.id = cr.idRepartidor
-LEFT JOIN PedidoEstadoPedido pe ON rp.idPedido = pe.idPedido
+--G. Listar los comercios que han recibido más de 20 pedidos en el último mes y que 
+--trabajan al menos 50 horas semanales en la cocina principal de “China”. 
 
-GROUP BY r.id, r.nombre, r.apellido
-ORDER BY r.id;
+
+WIth PedidoUltimoMes AS (
+ Select C.id, COUNT(DISTINCT CP.idPedido) AS TotalPedidos 
+  from ClientePedido as CP 
+  JOIN PedidoDetalle as PD ON CP.idPedido = PD.idPedido
+  JOIN Plato AS P ON PD.idPlato = P.id
+  JOIN Seccion as S ON P.idSeccion = S.id
+  JOIN Menu as M on S.idMenu = M.id
+ JOIN Comercio as C ON M.idComercio = C.id
+  Where CP.fecha >= DATEADD(MONTH,-1,GETDATE())
+  GROUP BY C.id),
+  
+  CocinasChinas AS ( select CC.idComercio
+                    from ComercioCocina as CC
+                    JOIN Cocina as CO on CC.idCocina = CO.id
+                    Where CO.nombre = 'China')
+     SELECT C.id, C.nombre as 'Nombre del Comercio', PUM.TotalPedidos, C.hora_apertura, C.hora_cierre, 
+    (CASE WHEN c.hora_cierre >= c.hora_apertura THEN c.hora_cierre - c.hora_apertura
+        ELSE 24 - c.hora_apertura + c.hora_cierre
+     END) * 7 AS horas_semanales
+    FROM Comercio as C
+JOIN PedidoUltimoMes as PUM ON C.id = PUM.id
+JOIN CocinasChinas as CHI ON C.id = CHI.idComercio
+
+     where PUM.TotalPedidos > 20 AND (CASE
+            WHEN c.hora_cierre >= c.hora_apertura THEN c.hora_cierre - c.hora_apertura
+            ELSE 24 - c.hora_apertura + c.hora_cierre
+        END) * 7 >= 50
+        ORDER BY PUM.TotalPedidos;

@@ -165,7 +165,8 @@ CREATE TABLE Factura (
     montoIva DECIMAL(10,2),
     monto_total DECIMAL(10,2),
     idPedido INT UNIQUE,
-    FOREIGN KEY(idPedido) REFERENCES Pedido(id)
+    FOREIGN KEY(idPedido) REFERENCES Pedido(id),
+    CONSTRAINT CK_Factura_FechaNoFutura CHECK (fecha_emision <= CAST(GETDATE() AS DATE))
 );
 
 CREATE TABLE ClientePedido (
