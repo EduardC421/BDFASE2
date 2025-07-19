@@ -24,52 +24,80 @@ BEGIN
     END
 END;
 
---Consulta B 
 
+--CONSULTA B
+-- Total facturado por comercio en el último mes
+WITH facturacion_ultimo_mes AS (
+  SELECT
+    c.id AS id_comercio,
+    c.nombre AS nombre_comercio,
+    SUM(f.total) AS total_facturado
+  FROM Comercio c
+  JOIN Cocina co ON co.id_comercio = c.id
+  JOIN Plato p ON p.id_cocina = co.id
+  JOIN Pedido pe ON pe.id_plato = p.id
+  JOIN Factura f ON f.id = pe.id_factura
+  WHERE f.fecha_emision >= DATEADD(MONTH, -1, GETDATE())
+  GROUP BY c.id, c.nombre
+),
+
+-- Promedio general del total facturado
+promedio_general AS (
+  SELECT AVG(total_facturado * 1.0) AS promedio
+  FROM facturacion_ultimo_mes
+),
+
+-- Cocina principal (primera alfabéticamente por comercio)
+cocina_principal AS (
+  SELECT id_comercio, nombre
+  FROM (
+    SELECT
+      co.id_comercio,
+      co.nombre,
+      ROW_NUMBER() OVER (PARTITION BY co.id_comercio ORDER BY co.nombre ASC) AS rn
+    FROM Cocina co
+  ) AS sub
+  WHERE rn = 1
+),
+
+-- Plato más pedido por comercio
+plato_mas_pedido AS (
+  SELECT id_comercio, nombre_plato
+  FROM (
+    SELECT
+      c.id AS id_comercio,
+      p.nombre AS nombre_plato,
+      COUNT(*) AS cantidad,
+      ROW_NUMBER() OVER (PARTITION BY c.id ORDER BY COUNT(*) DESC) AS rn
+    FROM Comercio c
+    JOIN Cocina co ON co.id_comercio = c.id
+    JOIN Plato p ON p.id_cocina = co.id
+    JOIN Pedido pe ON pe.id_plato = p.id
+    JOIN Factura f ON f.id = pe.id_factura
+    WHERE f.fecha_emision >= DATEADD(MONTH, -1, GETDATE())
+    GROUP BY c.id, p.nombre
+  ) AS sub
+  WHERE rn = 1
+)
+
+-- Resultado final combinando todo
 SELECT
-    C.nombre AS NombreComercio,
-    SUM(P.total_con_iva) AS TotalFacturado,
-    (SELECT Co.nombre
-     FROM ComercioCocina CC
-     JOIN Cocina Co ON CC.idCocina = Co.id
-     WHERE CC.idComercio = C.id
-     ORDER BY Co.nombre ASC
-     LIMIT 1) AS CocinaPrincipal,
-    (SELECT Pl.nombre
-     FROM PedidoDetalle PD_inner
-     JOIN Pedido P_inner ON PD_inner.idPedido = P_inner.id
-     JOIN Plato Pl ON PD_inner.idPlato = Pl.id
-     WHERE P_inner.idComercio = C.id
-       AND P_inner.fecha_creacion >= '2025-06-18'
-       AND P_inner.fecha_creacion <= '2025-07-18'
-     GROUP BY Pl.nombre
-     ORDER BY SUM(PD_inner.cantidad) DESC, Pl.nombre ASC
-     LIMIT 1) AS PlatoMasPedido,
-    CASE
-        WHEN SUM(P.total_con_iva) > (SELECT AVG(TotalPorComercio.Monto)
-                                      FROM (SELECT SUM(P_avg.total_con_iva) AS Monto
-                                            FROM Pedido P_avg
-                                            WHERE P_avg.fecha_creacion >= '2025-06-18'
-                                              AND P_avg.fecha_creacion <= '2025-07-18'
-                                            GROUP BY P_avg.idComercio) AS TotalPorComercio)
-        THEN 'Por encima del promedio'
-        WHEN SUM(P.total_con_iva) < (SELECT AVG(TotalPorComercio.Monto)
-                                      FROM (SELECT SUM(P_avg.total_con_iva) AS Monto
-                                            FROM Pedido P_avg
-                                            WHERE P_avg.fecha_creacion >= '2025-06-18'
-                                              AND P_avg.fecha_creacion <= '2025-07-18'
-                                            GROUP BY P_avg.idComercio) AS TotalPorComercio)
-        THEN 'Por debajo del promedio'
-        ELSE 'Igual al promedio'
-    END AS ComparacionPromedio
-FROM
-    Comercio C
-JOIN
-    Pedido P ON C.id = P.idComercio
-WHERE
-    P.fecha_creacion >= '2025-06-18' AND P.fecha_creacion <= '2025-07-18'
-GROUP BY
-    C.id, C.nombre;
+  f.nombre_comercio,
+  f.total_facturado,
+  cp.nombre AS cocina_principal,
+  pm.nombre_plato AS plato_mas_pedido,
+  CASE
+    WHEN f.total_facturado > pg.promedio THEN 'Por encima del promedio'
+    WHEN f.total_facturado < pg.promedio THEN 'Por debajo del promedio'
+    ELSE 'Promedio exacto'
+  END AS comparacion
+FROM facturacion_ultimo_mes f
+CROSS JOIN promedio_general pg
+LEFT JOIN cocina_principal cp ON cp.id_comercio = f.id_comercio
+LEFT JOIN plato_mas_pedido pm ON pm.id_comercio = f.id_comercio
+ORDER BY f.total_facturado DESC;
+
+
 
 
 
