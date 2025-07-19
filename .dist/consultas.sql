@@ -106,7 +106,6 @@ plato_mas_pedido AS (
   ) pp2 ON pp1.idComercio = pp2.idComercio AND pp1.cantidad_pedidos = pp2.max_pedidos
 )
 
--- Resultado final enriquecido
 SELECT
   cf.nombre_comercio,
   cf.total_facturado,
