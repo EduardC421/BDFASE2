@@ -447,7 +447,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (16, 'Tacos y Burritos', 'Maíz y trigo con rellenos variados', 4),
 (17, 'Enchiladas y Quesadillas', 'Platillos gratinados y rellenos', 4),
 (18, 'Especialidades Regionales', 'Mole Poblano, Chiles Rellenos, etc.', 4),
-(19, 'Bebidas Típicas', 'Aguas frescas, Horchata y Micheladas', 4),
+(19, 'Bebidas', 'Aguas frescas, Horchata y Micheladas', 4),
 (20, 'Sopas y Ensaladas Mexicanas', 'Pozole, Sopa de Tortilla, Ensalada de Nopal', 4),
 
 -- Menú Wok Fusion (idMenu: 5)
@@ -468,7 +468,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (31, 'Entradas Griegas y Árabes', 'Hummus, Tzatziki, Baba Ghanoush', 7),
 (32, 'Pescados y Mariscos Frescos', 'A la plancha, al horno y en papillote', 7),
 (33, 'Ensaladas Mediterráneas', 'Tabule, Griega, Caprese', 7),
-(34, 'Platos Principales', 'Moussaka, Kebab, Cuscús', 7),
+(34, 'Principales', 'Moussaka, Kebab, Cuscús', 7),
 (35, 'Postres Ligeros', 'Frutas frescas, Yogur Griego con miel', 7),
 
 -- Menú Arepera 24/7 (idMenu: 8)
@@ -476,7 +476,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (37, 'Arepas Gourmet', 'Combinaciones especiales e ingredientes premium', 8),
 (38, 'Arepas Veganas', 'Opciones con rellenos a base de plantas', 8),
 (39, 'Empanadas y Tequeños', 'Pasapalos venezolanos tradicionales', 8),
-(40, 'Jugos Naturales', 'Bebidas frescas y energéticas', 8),
+(40, 'Bebidas', 'Jugos frescos y energéticos', 8),
 
 -- Menú Boulangerie (idMenu: 9)
 (41, 'Panes Artesanales', 'Baguettes, Campesinos, Croissants', 9),
@@ -536,7 +536,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Sin Gluten (idMenu: 17)
 (81, 'Entradas Libres de Gluten', 'Ensaladas, cremas, y aperitivos sin trigo', 17),
-(82, 'Platos Principales Sin Gluten', 'Carnes, pescados y aves con guarniciones GF', 17),
+(82, 'Principales', 'Carnes, pescados y aves con guarniciones GF', 17),
 (83, 'Pastas y Panes Sin Gluten', 'Opciones seguras y deliciosas', 17),
 (84, 'Postres Sin Gluten', 'Variedad de dulces aptos para celíacos', 17),
 (85, 'Opciones Veganas Sin Gluten', 'Platos basados en plantas y sin gluten', 17),
@@ -578,7 +578,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Orgánico (idMenu: 23)
 (111, 'Ensaladas Orgánicas', 'Frescas y de temporada con aderezos naturales', 23),
-(112, 'Platos Principales Orgánicos', 'Carnes, aves y vegetales de granjas sostenibles', 23),
+(112, 'Principales', 'Carnes, aves y vegetales de granjas sostenibles', 23),
 (113, 'Opciones Veganas Orgánicas', 'Basadas en plantas con certificación orgánica', 23),
 (114, 'Sopas y Cremas Orgánicas', 'Elaboradas con ingredientes de cultivo ecológico', 23),
 (115, 'Bebidas y Postres Orgánicos', 'Jugos, infusiones y dulces saludables', 23),
@@ -630,7 +630,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (147, 'Pizzas Especiales', 'Combinaciones únicas con ingredientes frescos', 30),
 (148, 'Focaccias y Calzones', 'Panes y masas rellenas', 30),
 (149, 'Ensaladas Italianas', 'Para acompañar tu pizza', 30),
-(150, 'Bebidas y Cervezas', 'Gaseosas, cervezas artesanales', 30),
+(150, 'Bebidas', 'Gaseosas, cervezas artesanales', 30),
 
 -- Menú Oriental (idMenu: 31)
 (151, 'Dim Sum y Dumplings', 'Variedad de rellenos al vapor o fritos', 31),
@@ -676,6 +676,7 @@ INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, i
 (2, 'Punta Trasera a la Brasa', 2, 25, 22.00, 'Corte jugoso y tierno, ideal para amantes de la carne.', 1),
 (3, 'Chorizo Parrillero', 3, 30, 8.00, 'Chorizo casero asado a la perfección.', 3),
 (4, 'Ensalada Rallada', 1, 50, 5.00, 'Repollo y zanahoria rallados con aderezo suave.', 2),
+(122, 'Pepsi Cola', 4, 60, 2.00, 'Refrescante bebida gaseosa de cola negra', 5),
 
 -- Platos para Menú Sushi Experience (idMenu: 2, idSeccion: 6-10)
 (5, 'Roll California', 1, 40, 12.00, 'Clásico rollo con cangrejo, aguacate y pepino.', 7),
@@ -692,7 +693,7 @@ INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, i
 -- Platos para Menú Mexicano (idMenu: 4, idSeccion: 16-20)
 (13, 'Tacos al Pastor', 1, 45, 10.00, 'Cerdo marinado y asado con piña.', 16),
 (14, 'Burrito de Carnitas', 2, 30, 11.50, 'Tortilla de trigo rellena de cerdo confitado.', 16),
-(15, 'Guacamole con Totopos', 1, 50, 8.00, 'Aguacate fresco machacado con pico de gallo.', 19),
+(15, 'Pozol', 1, 50, 8.00, 'Bebida prehispánica a base de maíz fermentado.', 19),
 (16, 'Enchiladas Rojas', 1, 25, 13.00, 'Tortillas rellenas bañadas en salsa roja.', 17),
 
 -- Platos para Menú Wok Fusion (idMenu: 5, idSeccion: 21-25)
@@ -766,7 +767,7 @@ INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, i
 (62, 'Ajiaco Santafereño', 1, 25, 15.00, 'Sopa de pollo y papas con mazorca y aguacate.', 78),
 (63, 'Empanadas Colombianas', 1, 40, 3.50, 'Empanadas de maíz rellenas de papa y carne.', 77),
 (64, 'Postre de Natilla', 1, 30, 5.00, 'Postre cremoso tradicional.', 79),
-
+(121, 'Aguapanela', 3, 80, 7.00, 'Una bebida dulce hecha con agua y panela.', 80),
 -- Platos para Menú Sin Gluten (idMenu: 17, idSeccion: 81-85)
 (65, 'Salmón al Horno con Vegetales Asados', 1, 25, 21.00, 'Plato principal saludable y sin gluten.', 82),
 (66, 'Pasta de Lentejas con Pesto de Albahaca', 1, 30, 15.00, 'Pasta sin gluten con salsa pesto casera.', 83),
@@ -778,6 +779,7 @@ INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, i
 (70, 'Pupusa Revuelta', 2, 40, 4.50, 'Pupusa con chicharrón, frijol y queso.', 86),
 (71, 'Yuca con Chicharrón', 1, 30, 10.00, 'Yuca cocida o frita con trozos de cerdo crujientes.', 87),
 (72, 'Sopa de Res Salvadoreña', 1, 20, 14.00, 'Caldo sustancioso con vegetales y carne.', 88),
+(123, 'Horchata de Morro', 4, 50, 3.50, 'Bebida dulce a base de morro y especias.', 90),
 
 -- Platos para Menú Griego (idMenu: 19, idSeccion: 91-95)
 (73, 'Gyros de Cerdo', 1, 30, 13.00, 'Carne de cerdo en pan pita con tzatziki.', 92),
@@ -814,6 +816,7 @@ INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, i
 (94, 'Sopa de Costilla Casera', 1, 30, 12.00, 'Caldo sustancioso con costilla de res.', 116),
 (95, 'Arroz con Leche', 1, 40, 5.00, 'Postre cremoso de arroz y leche.', 119),
 (96, 'Asado Negro', 1, 20, 18.00, 'Versión casera del clásico venezolano.', 117),
+(124, 'Papelon con Limon', 2, 30, 10.05, 'Bebida dulce y refrescante hecha con panela y jugo de limón',120),
 
 -- Platos para Menú Tex-Mex (idMenu: 25, idSeccion: 121-125)
 (97, 'Fajitas de Pollo', 1, 30, 15.00, 'Tiras de pollo a la parrilla con pimientos y cebolla.', 122),

@@ -27,8 +27,49 @@ END;
 
 
 
-
+-- ta jodida
 -- A. Reporte de estados de pedido con: nombre del estado, cantidad de veces usado, tiempo promedio real vs estimado, y porcentaje de cumplimiento. 
+
+WITH TiemposCalculados AS (
+  SELECT 
+    PEP.idEstadoPedido,
+    EP.nombre,
+    DATEDIFF(MINUTE, PEP.fecha_inicio, NEXT_PEP.fecha_inicio) AS tiempo_real,
+    EP.tiempo_promedio AS tiempo_estimado,
+    CASE WHEN DATEDIFF(MINUTE, PEP.fecha_inicio, NEXT_PEP.fecha_inicio) <= EP.tiempo_promedio 
+      THEN 1 ELSE 0 END AS cumplio
+  FROM 
+    PedidoEstadoPedido PEP   
+  INNER JOIN 
+    EstadoPedido EP ON PEP.idEstadoPedido = EP.id
+  LEFT JOIN 
+    PedidoEstadoPedido NEXT_PEP ON PEP.idPedido = NEXT_PEP.idPedido AND NEXT_PEP.fecha_inicio = (
+          SELECT MIN(fecha_inicio) 
+            FROM PedidoEstadoPedido 
+            WHERE idPedido = PEP.idPedido 
+            AND fecha_inicio > PEP.fecha_inicio
+          )
+  WHERE 
+    NEXT_PEP.fecha_inicio IS NOT NULL
+)
+
+SELECT 
+  TC.nombre AS 'Nombre del Estado',
+  COUNT(*) AS 'Cantidad de Veces Usado',
+  CAST(AVG(TC.tiempo_real) AS DECIMAL(10,2)) AS 'Tiempo Promedio Real (min)',
+  CAST(AVG(TC.tiempo_estimado) AS DECIMAL(10,2)) AS 'Tiempo Promedio Estimado (min)',
+  CAST(SUM(TC.cumplio) * 100.0 / COUNT(TC.cumplio) AS DECIMAL(10,2)) AS 'Porcentaje de Cumplimiento (%)'
+FROM 
+  TiemposCalculados TC
+GROUP BY 
+  TC.idEstadoPedido, TC.nombre
+HAVING
+  COUNT(*) > 0
+ORDER BY 
+  COUNT(*) DESC;
+
+
+
 
 
 
@@ -217,9 +258,6 @@ ORDER BY
 
 
 
-
-
-
 -- D. Consultar el historial de un cliente referido, mostrando si ha realizado pedidos, el total gastado y si ha generado otros referidos. 
 
 SELECT 
@@ -238,6 +276,37 @@ LEFT JOIN Factura F ON F.idPedido = CP.idPedido
 LEFT JOIN ClienteConClienteReferido CCR2 ON CCR2.idCliente = C.id
 GROUP BY CCR.idClienteReferido, C.nombre, C.apellido
 ORDER BY TotalGastado DESC;
+
+
+
+
+
+
+--Consulta E
+
+SELECT
+    r.id AS id_repartidor,
+    r.nombre + ' ' + r.apellido AS nombre_completo,
+    
+    COUNT(DISTINCT rp.idPedido) AS total_pedidos_asignados,
+    
+    ROUND(AVG(cr.puntaje), 2) AS promedio_puntaje,
+    
+    ROUND(AVG(CASE 
+        WHEN pe.idEstadoPedido = 6 THEN rp.tiempo_entrega
+        ELSE NULL
+    END), 2) AS tiempo_promedio_entrega_exitosas
+    
+FROM
+    Repartidor r
+LEFT JOIN RepartidorPedido rp ON r.id = rp.idRepartidor
+LEFT JOIN ClienteRepartidor cr ON r.id = cr.idRepartidor
+LEFT JOIN PedidoEstadoPedido pe ON rp.idPedido = pe.idPedido
+
+GROUP BY r.id, r.nombre, r.apellido
+ORDER BY r.id;
+
+
 
 
 
@@ -308,6 +377,11 @@ JOIN Cliente c ON c.id = cv.idCliente
 CROSS JOIN PromedioGastoGlobal pg
 WHERE cv.total_gastado > pg.promedio_global;
 
+
+
+
+
+
 --G. Listar los comercios que han recibido más de 20 pedidos en el último mes y que 
 --trabajan al menos 50 horas semanales en la cocina principal de “China”. 
 
@@ -340,4 +414,18 @@ JOIN CocinasChinas as CHI ON C.id = CHI.idComercio
             ELSE 24 - c.hora_apertura + c.hora_cierre
         END) * 7 >= 50
         ORDER BY PUM.TotalPedidos;
+
+
+
+
+
+-- H. Se desea calcular el nivel de personalización promedio de los pedidos realizados por los clientes. 
+--    Se deben contabilizar todas las veces que un cliente añadió opciones a sus platos, y luego calcular 
+--    el promedio de opciones por pedido. El resultado debe mostrar el ID del cliente, su nombre completo, 
+--    la cantidad total de pedidos realizados, el total de opciones seleccionadas y el promedio de personalizaciones por pedido. 
+
+
+
+
+
 
