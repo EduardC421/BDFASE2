@@ -1,33 +1,4 @@
--- trigger para insertar en ClienteConClienteReferido automaticamente
-CREATE TRIGGER trg_Cliente_AfterInsert
-ON Cliente
-AFTER INSERT
-AS
-BEGIN
-    SET NOCOUNT ON;
-    -- Asumiendo que el cliente referido es el último cliente insertado antes del actual
-    DECLARE @NuevoClienteID INT;
-    DECLARE @ClienteReferidoID INT;
-    -- Obtener el ID del cliente recién insertado
-    SELECT @NuevoClienteID = id FROM inserted;
-    -- Buscar el último cliente insertado antes del actual para usarlo como referido
-    -- (esto es un ejemplo, ajusta según tu lógica de negocio)
-    SELECT TOP 1 @ClienteReferidoID = id 
-    FROM Cliente 
-    WHERE id < @NuevoClienteID 
-    ORDER BY id DESC;
-    -- Solo insertar si encontramos un cliente referido válido (no para el primer cliente)
-    IF @ClienteReferidoID IS NOT NULL AND @NuevoClienteID > 1
-    BEGIN
-        INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido)
-        VALUES (@NuevoClienteID, @ClienteReferidoID, GETDATE());
-    END
-END;
 
-
-
-
--- ta jodida
 -- A. Reporte de estados de pedido con: nombre del estado, cantidad de veces usado, tiempo promedio real vs estimado, y porcentaje de cumplimiento. 
 
 WITH TiemposCalculados AS (
@@ -424,7 +395,137 @@ JOIN CocinasChinas as CHI ON C.id = CHI.idComercio
 --    el promedio de opciones por pedido. El resultado debe mostrar el ID del cliente, su nombre completo, 
 --    la cantidad total de pedidos realizados, el total de opciones seleccionadas y el promedio de personalizaciones por pedido. 
 
+SELECT
+    C.id AS ID_Cliente,
+    C.nombre AS Nombre,
+    C.apellido AS Apellido,
+    COUNT(DISTINCT CP.idPedido) AS Total_Pedidos,
+    COUNT(PDOV.idOpcionValor) AS Total_Opciones,
+    CAST(
+        ISNULL(
+            CAST(COUNT(PDOV.idOpcionValor) AS FLOAT) / NULLIF(COUNT(DISTINCT CP.idPedido), 0),
+        0.0)
+    AS DECIMAL(10,2)) AS Promedio_Opciones_Por_Pedido
+FROM
+    Cliente AS C
+JOIN
+    ClientePedido AS CP ON C.id = CP.idCliente
+LEFT JOIN
+    PedidoDetalle AS PD ON CP.idPedido = PD.idPedido
+LEFT JOIN
+    PedidoDetalleOpcionValor AS PDOV ON PD.id = PDOV.idPedidoDetalle
+GROUP BY
+    C.id, C.nombre, C.apellido
+ORDER BY
+    C.id;
 
+
+
+-- I
+
+--Consulta I
+Select D.municipio, C.nombre, P.nombre, SUM(PD.cantidad) as 'Cantidad Total Vendida'
+From Plato as P
+JOIN Seccion as S on P.idSeccion = S.id
+JOIN Menu as M on S.idMenu = M.id
+JOIN Comercio as C on M.idComercio = C.id
+JOIN PedidoDetalle as PD on P.id = PD.idPlato
+JOIN Pedido as PE on PD.idPedido = PE.id
+JOIN ClientePedido as CP on PE.id = CP.idPedido
+JOIN Cliente as CL on CP.idCliente = CL.id
+JOIN DireccionCliente AS DC on CL.id = DC.idCliente
+JOIN Direccion as D ON DC.idDireccion = D.id
+WHERE P.nombre LIKE '%Pizza%'
+GROUP BY D.municipio, C.nombre, P.nombre
+ORDER BY 'Cantidad Total Vendida' ASC
+
+
+
+
+-- J   Se requiere obtener un reporte que muestre todos 
+--los platos disponibles en el sistema, junto con sus distintas
+--opciones. Para cada plato, se debe mostrar: su nombre, la sección a la que pertenece y el listado de 
+--nombres de opciones con sus respectivos valores separados por coma, en caso de que un plato no tenga ninguna 
+--opción asociada, se debe mostrar igualmente el plato indicando explícitamente “Sin opciones registradas”. 
+
+SELECT 
+    p.nombre AS NombrePlato,
+    s.nombre AS NombreSeccion,
+    ISNULL(
+        STRING_AGG(ov.nombre + ' ($' + FORMAT(ov.precio_extra, 'N2') + ')', ', '),
+        'Sin opciones registradas'
+    ) AS Opciones
+FROM Plato p
+JOIN Seccion s ON p.idSeccion = s.id
+LEFT JOIN PlatoOpcionValor pov ON pov.idPlato = p.id
+LEFT JOIN OpcionValor ov ON ov.id = pov.idOpcionValor
+GROUP BY p.id, p.nombre, s.nombre
+ORDER BY s.nombre, p.nombre;
+
+
+
+
+Mens. 207, Nivel 16, Estado 1, Línea 12
+Invalid column name 'idPlato'.
+Mens. 207, Nivel 16, Estado 1, Línea 10
+Invalid column name 'valor'.
+
+Help: Error 207 Invalid column name 'idPlato'.
+
+
+-- K. Se desea estimar la proyección de ingresos por pedidos para el próximo año basándose en el comportamiento histórico del último año. 
+  --Para ello, se calculará el ingreso mensual promedio (basado en los montos de las facturas de los últimos 12 meses), 
+  -- y se multiplicará por 12 para proyectar el ingreso anual esperado. El informe debe incluir: ingreso mensual promedio, 
+  -- ingreso total del último año, ingreso proyectado a 12 meses, y la variación porcentual estimada si se mantuviera la misma 
+  -- tendencia de crecimiento comparada con el año anterior 
+
+
+WITH 
+-- Datos del último año completo (últimos 12 meses)
+UltimoAnio AS (
+    SELECT 
+        monto_total,
+        fecha_emision,
+        YEAR(fecha_emision) AS anio,
+        MONTH(fecha_emision) AS mes
+    FROM Factura
+    WHERE fecha_emision >= DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
+),
+-- Datos del año anterior (de 13 a 24 meses atrás)
+AnioAnterior AS (
+    SELECT 
+        SUM(monto_total) AS total_anio_anterior
+    FROM Factura
+    WHERE fecha_emision BETWEEN DATEADD(MONTH, -24, CAST(GETDATE() AS DATE)) 
+                          AND DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
+),
+-- Resumen por mes del último año
+ResumenMensual AS (
+    SELECT 
+        anio,
+        mes,
+        SUM(monto_total) AS total_mensual
+    FROM UltimoAnio
+    GROUP BY anio, mes
+)
+-- Resultado final
+SELECT 
+    -- Ingreso mensual promedio
+    (SELECT AVG(total_mensual) FROM ResumenMensual) AS ingreso_mensual_promedio,
+    
+    -- Ingreso total del último año
+    (SELECT SUM(monto_total) FROM UltimoAnio) AS ingreso_total_ultimo_anio,
+    
+    -- Ingreso proyectado a 12 meses (promedio mensual * 12)
+    (SELECT AVG(total_mensual) FROM ResumenMensual) * 12 AS ingreso_proyectado_12meses,
+    
+    -- Variación porcentual estimada comparada con el año anterior
+    CASE 
+        WHEN (SELECT total_anio_anterior FROM AnioAnterior) = 0 THEN NULL
+        ELSE (((SELECT SUM(monto_total) FROM UltimoAnio) - 
+              (SELECT total_anio_anterior FROM AnioAnterior)) / 
+              (SELECT total_anio_anterior FROM AnioAnterior)) * 100
+    END AS variacion_porcentual_estimada;
 
 
 
