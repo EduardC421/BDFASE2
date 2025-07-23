@@ -62,5 +62,3 @@ BEGIN
         DELETED AS D ON P.id = D.idPlato;
 END;
 
-
-

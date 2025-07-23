@@ -50,6 +50,8 @@ CREATE TABLE Plato (
     precio DECIMAL(10,2) CHECK (precio >= 0),
     descripcion VARCHAR(255) NOT NULL,
     idSeccion INT NOT NULL,
+    disponibilidad BIT NOT NULL
+
     FOREIGN KEY(idSeccion) REFERENCES Seccion(id)
 );
 
