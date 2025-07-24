@@ -91,3 +91,44 @@ BEGIN
 
     RETURN ROUND(@sub_total + @iva + @envio, 2);
 END;
+
+--SELECT 
+    --numero AS Factura,
+    --dbo.fn_ObtenerSubTotal(numero) AS SubTotal,
+    --dbo.fn_ObtenerMontoIVA(numero) AS IVA,
+   -- dbo.fn_ObtenerCostoEnvio(numero) AS Envio,
+    --dbo.fn_ObtenerMontoTotal(numero) AS TotalFinal
+--FROM Factura
+--WHERE numero = 152;
+CREATE FUNCTION fn_RepartidorDisponible (
+    @idRepartidor INT
+)
+RETURNS BIT
+AS
+BEGIN
+    DECLARE @disponible BIT = 0;
+
+    IF EXISTS (
+        SELECT 1
+        FROM Repartidor r
+        WHERE r.id = @idRepartidor AND r.estado = 'Activo'
+              AND NOT EXISTS (
+                SELECT 1
+                FROM RepartidorPedido rp
+                JOIN (
+                    SELECT pep.idPedido, MAX(pep.fecha_inicio) AS fecha_max
+                    FROM PedidoEstadoPedido pep
+                    GROUP BY pep.idPedido
+                ) ultimos ON ultimos.idPedido = rp.idPedido
+                JOIN PedidoEstadoPedido pep_actual ON pep_actual.idPedido = ultimos.idPedido AND pep_actual.fecha_inicio = ultimos.fecha_max
+                JOIN EstadoPedido ep ON ep.id = pep_actual.idEstadoPedido
+                WHERE rp.idRepartidor = r.id
+                AND ep.nombre NOT IN ('Entregado', 'Cancelado')
+              )
+    )
+    BEGIN
+        SET @disponible = 1;
+    END
+
+    RETURN @disponible;
+END;
