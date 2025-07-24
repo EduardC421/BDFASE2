@@ -3181,33 +3181,3 @@ INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_refer
 (34, 31, '2025-07-28'),
 (35, 33, '2025-06-13');
 
--- los otros 9 registros con el trigger (y demas clientes que se inserten)
-CREATE TRIGGER trg_Cliente_AfterInsert
-ON Cliente
-AFTER INSERT
-AS
-BEGIN
-    SET NOCOUNT ON;
-    
-    -- Asumiendo que el cliente referido es el último cliente insertado antes del actual
-    
-    DECLARE @NuevoClienteID INT;
-    DECLARE @ClienteReferidoID INT;
-    
-    -- Obtener el ID del cliente recién insertado
-    SELECT @NuevoClienteID = id FROM inserted;
-    
-    -- Buscar el último cliente insertado antes del actual para usarlo como referido
-    -- (esto es un ejemplo, ajusta según tu lógica de negocio)
-    SELECT TOP 1 @ClienteReferidoID = id 
-    FROM Cliente 
-    WHERE id < @NuevoClienteID 
-    ORDER BY id DESC;
-    
-    -- Solo insertar si encontramos un cliente referido válido (no para el primer cliente)
-    IF @ClienteReferidoID IS NOT NULL AND @NuevoClienteID > 1
-    BEGIN
-        INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido)
-        VALUES (@NuevoClienteID, @ClienteReferidoID, GETDATE());
-    END
-END;

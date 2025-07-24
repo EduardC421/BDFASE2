@@ -38,27 +38,238 @@ END;
 
 
 
-    -- Este trigger se ejecuta DESPUÉS de eliminar una fila de la tabla PedidoDetalle.
+
+
+
+
+-- Este trigger se ejecuta DESPUÉS de eliminar una fila de la tabla PedidoDetalle.
 -- Su propósito es ajustar la cantidad disponible del plato correspondiente
 -- y "restaurar" la disponibilidad si el plato estaba agotado.
-
-CREATE TRIGGER trg_AfterDeletePedidoDetalle
+CREATE TRIGGER trg_InsteadOfDelete_PedidoDetalle
 ON PedidoDetalle
-AFTER DELETE
+INSTEAD OF DELETE
 AS
 BEGIN
-    -- Para cada fila eliminada de PedidoDetalle
+    SET NOCOUNT ON;
+
+    -- 1. Eliminar registros dependientes en PedidoDetalleOpcionValor
+    DELETE FROM PedidoDetalleOpcionValor
+    WHERE idPedidoDetalle IN (SELECT id FROM DELETED);
+
+    -- 2. Actualizar la cantidad disponible y disponibilidad del Plato
     UPDATE P
     SET
-        -- Incrementa la cantidad disponible del plato
-        P.cantidadDisponible = P.cantidadDisponible + D.cantidad
-        -- Nota: No hay una columna 'disponibilidad' explícita en la tabla Plato.
-        -- Se asume que la disponibilidad se infiere de 'cantidadDisponible' (> 0 significa disponible).
-        -- Si hubiera una columna 'disponibilidad' booleana, la lógica sería:
-        -- P.disponibilidad = CASE WHEN (P.cantidadDisponible + D.cantidad) > 0 THEN 1 ELSE P.disponibilidad END
-    FROM
-        Plato AS P
-    INNER JOIN
-        DELETED AS D ON P.id = D.idPlato;
+        P.cantidadDisponible = P.cantidadDisponible + D.cantidad,
+        P.disponibilidad = 1 -- suponiendo que es BIT y 1 significa "disponible"
+    FROM Plato P
+    INNER JOIN DELETED D ON D.idPlato = P.id;
+
+    -- 3. Eliminar de PedidoDetalle
+    DELETE FROM PedidoDetalle
+    WHERE id IN (SELECT id FROM DELETED);
 END;
 
+
+
+
+----------------------C---------------------------
+CREATE TRIGGER trg_InsertarOpciones_PedidoDetalle
+ON PedidoDetalle
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcion, idOpcionValor)
+    SELECT 
+        i.id, 
+        pov.idOpcion,
+        pov.idOpcionValor
+    FROM inserted i
+    INNER JOIN PlatoOpcionValor pov ON pov.idPlato = i.idPlato;
+END;
+
+
+
+CREATE TRIGGER trg_GenerarFactura
+ON Pedido
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @porcentajeIVA DECIMAL(5,2) = 16.00; -- Puedes ajustar este valor según tu configuración fiscal
+
+    INSERT INTO Factura (
+        numero,
+        fecha_emision,
+        sub_total,
+        porcentajeIva,
+        montoIva,
+        monto_total,
+        idPedido
+    )
+    SELECT
+        i.id,  -- usaremos el id del pedido como número de factura
+        CAST(GETDATE() AS DATE) AS fecha_emision,
+        CAST(ISNULL(PD.TotalItems + Extras.TotalExtras, 0) AS DECIMAL(10,2)) AS sub_total,
+        @porcentajeIVA,
+        CAST(ISNULL((PD.TotalItems + Extras.TotalExtras) * @porcentajeIVA / 100, 0) AS DECIMAL(10,2)) AS montoIva,
+        CAST(ISNULL((PD.TotalItems + Extras.TotalExtras) * (1 + @porcentajeIVA / 100), 0) AS DECIMAL(10,2)) AS monto_total,
+        i.id AS idPedido
+    FROM
+        inserted i
+    LEFT JOIN (
+        SELECT
+            idPedido,
+            SUM(total) AS TotalItems
+        FROM PedidoDetalle
+        GROUP BY idPedido
+    ) PD ON PD.idPedido = i.id
+    LEFT JOIN (
+        SELECT
+            PD.idPedido,
+            SUM(OV.precio_extra) AS TotalExtras
+        FROM PedidoDetalle PD
+        JOIN PedidoDetalleOpcionValor PDOV ON PD.id = PDOV.idPedidoDetalle
+        JOIN OpcionValor OV ON PDOV.idOpcionValor = OV.id
+        GROUP BY PD.idPedido
+    ) Extras ON Extras.idPedido = i.id;
+END;
+
+-- nuevo pedido
+INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total) VALUES
+(151, 6, 6.50, 'prueba', 39, 78.50);
+
+SELECT * FROM Pedido;
+SELECT * FROM Factura;
+
+
+--Es el DDDDDD
+
+CREATE TRIGGER trg_validar_inventario_pedido_detalle
+ON PedidoDetalle
+INSTEAD OF INSERT
+AS
+BEGIN
+    DECLARE @idPlato INT, @cantidad INT, @cantidadDisponible INT;
+
+    SELECT TOP 1 
+        @idPlato = i.idPlato,
+        @cantidad = i.cantidad
+    FROM inserted i;
+
+    -- Obtener cantidad disponible del plato
+    SELECT @cantidadDisponible = cantidadDisponible
+    FROM Plato
+    WHERE id = @idPlato;
+
+    -- Validaciones
+    IF @cantidadDisponible IS NULL
+    BEGIN
+        RAISERROR('El producto no existe.', 16, 1);
+        RETURN;
+    END
+
+    IF @cantidadDisponible = 0
+    BEGIN
+        RAISERROR('El producto no está disponible por los momentos.', 16, 1);
+        RETURN;
+    END
+
+    IF @cantidadDisponible < @cantidad
+    BEGIN
+        RAISERROR('No hay unidades suficientes del producto para esta compra.', 16, 1);
+        RETURN;
+    END
+
+    -- Si todo está bien, se realiza la inserción y se actualiza el inventario
+    INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
+    SELECT id, cantidad, nota, total, idPedido, idPlato
+    FROM inserted;
+
+    -- Actualizar inventario
+    UPDATE Plato
+    SET cantidadDisponible = cantidadDisponible - @cantidad
+    WHERE id = @idPlato;
+END;
+
+
+-- El plato tiene 5 unidades disponibles
+INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
+VALUES (1001, 2, 'Sin cebolla', 25.00, 218, 1);
+-- Esperado: éxito, y el inventario se reduce a 3 unidades
+
+
+-- El plato ahora tiene solo 3 unidades disponibles
+INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
+VALUES (1002, 4, 'Extra picante', 50.00, 218, 1);
+-- Esperado: ERROR -> “No hay unidades suficientes del producto para esta compra”
+
+
+-- Manualmente dejamos el inventario en 0 para simular agotado
+UPDATE Plato SET cantidadDisponible = 0 WHERE id = 1;
+
+-- Intentamos pedir 1 unidad
+INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
+VALUES (1003, 1, 'Sin sal', 12.00, 218, 1);
+-- Esperado: ERROR -> “El producto no está disponible por los momentos”
+
+CREATE TRIGGER trg_validar_inventario_pedido_detalle
+ON PedidoDetalle
+INSTEAD OF INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Validar existencia de los platos
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        LEFT JOIN Plato p ON i.idPlato = p.id
+        WHERE p.id IS NULL
+    )
+    BEGIN
+        RAISERROR('Uno o más productos no existen.', 16, 1);
+        RETURN;
+    END
+
+    -- Validar que haya al menos una unidad disponible
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN Plato p ON i.idPlato = p.id
+        WHERE p.cantidadDisponible = 0
+    )
+    BEGIN
+        RAISERROR('El producto no está disponible por los momentos.', 16, 1);
+        RETURN;
+    END
+
+    -- Validar que haya suficientes unidades disponibles para todos los detalles
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        JOIN Plato p ON i.idPlato = p.id
+        WHERE i.cantidad > p.cantidadDisponible
+    )
+    BEGIN
+        RAISERROR('No hay unidades suficientes del producto para esta compra.', 16, 1);
+        RETURN;
+    END
+
+    -- Si todo está correcto, insertar los registros
+    INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
+    SELECT id, cantidad, nota, total, idPedido, idPlato
+    FROM inserted;
+
+    -- Actualizar el inventario restando las cantidades correspondientes
+    UPDATE P
+    SET P.cantidadDisponible = P.cantidadDisponible - T.total_cantidad
+    FROM Plato P
+    JOIN (
+        SELECT idPlato, SUM(cantidad) AS total_cantidad
+        FROM inserted
+        GROUP BY idPlato
+    ) T ON P.id = T.idPlato;
+END;

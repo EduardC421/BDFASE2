@@ -356,7 +356,6 @@ WHERE cv.total_gastado > pg.promedio_global;
 --G. Listar los comercios que han recibido más de 20 pedidos en el último mes y que 
 --trabajan al menos 50 horas semanales en la cocina principal de “China”. 
 
-
 WIth PedidoUltimoMes AS (
  Select C.id, COUNT(DISTINCT CP.idPedido) AS TotalPedidos 
   from ClientePedido as CP 
