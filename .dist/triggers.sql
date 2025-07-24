@@ -32,12 +32,42 @@ BEGIN
 END;
 
 
---  ClienteRepartidor (al registrarse una entrega en RepartidorPedido, y una vez el estado del pedido cambie a
--- “Entregado” en PedidoEstadoPedido, se debe insertar automáticamente un registro en ClienteRepartidor con un 
--- puntaje por defecto y un comentario genérico si el cliente aún no ha emitido su valoración) 
+-- Al cambiar el estado del pedido a “Entregado” en PedidoEstadoPedido, se inserta la valoración en ClienteRepartidor
 
+CREATE TRIGGER trg_ValoracionAutomatica
+ON PedidoEstadoPedido
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
 
+    DECLARE @estadoEntregadoId INT;
 
+    -- Identificamos el ID del estado "Entregado"
+    SELECT @estadoEntregadoId = id
+    FROM EstadoPedido
+    WHERE nombre = 'Entregado';
+
+    -- Insertar valoración automática si se cumple la condición
+    INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentario)
+    SELECT
+        cp.idCliente,
+        rp.idRepartidor,
+        CAST(GETDATE() AS DATE),
+        3, -- puntaje por defecto
+        'Valoración automática generada al completar entrega'
+    FROM
+        inserted i
+    INNER JOIN RepartidorPedido rp ON rp.idPedido = i.idPedido
+    INNER JOIN ClientePedido cp ON cp.idPedido = i.idPedido
+    LEFT JOIN ClienteRepartidor cr ON
+        cr.idCliente = cp.idCliente AND
+        cr.idRepartidor = rp.idRepartidor AND
+        cr.fecha = CAST(GETDATE() AS DATE)
+    WHERE
+        i.idEstadoPedido = @estadoEntregadoId AND
+        cr.idCliente IS NULL; -- solo si aún no hay valoración registrada
+END;
 
 
 
@@ -147,52 +177,6 @@ SELECT * FROM Factura;
 
 --Es el DDDDDD
 
-CREATE TRIGGER trg_validar_inventario_pedido_detalle
-ON PedidoDetalle
-INSTEAD OF INSERT
-AS
-BEGIN
-    DECLARE @idPlato INT, @cantidad INT, @cantidadDisponible INT;
-
-    SELECT TOP 1 
-        @idPlato = i.idPlato,
-        @cantidad = i.cantidad
-    FROM inserted i;
-
-    -- Obtener cantidad disponible del plato
-    SELECT @cantidadDisponible = cantidadDisponible
-    FROM Plato
-    WHERE id = @idPlato;
-
-    -- Validaciones
-    IF @cantidadDisponible IS NULL
-    BEGIN
-        RAISERROR('El producto no existe.', 16, 1);
-        RETURN;
-    END
-
-    IF @cantidadDisponible = 0
-    BEGIN
-        RAISERROR('El producto no está disponible por los momentos.', 16, 1);
-        RETURN;
-    END
-
-    IF @cantidadDisponible < @cantidad
-    BEGIN
-        RAISERROR('No hay unidades suficientes del producto para esta compra.', 16, 1);
-        RETURN;
-    END
-
-    -- Si todo está bien, se realiza la inserción y se actualiza el inventario
-    INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
-    SELECT id, cantidad, nota, total, idPedido, idPlato
-    FROM inserted;
-
-    -- Actualizar inventario
-    UPDATE Plato
-    SET cantidadDisponible = cantidadDisponible - @cantidad
-    WHERE id = @idPlato;
-END;
 
 
 -- El plato tiene 5 unidades disponibles

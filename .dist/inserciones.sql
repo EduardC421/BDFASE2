@@ -1,4 +1,4 @@
---Estado del pedido
+--Estado del pedido 
 INSERT INTO EstadoPedido (id, nombre, tiempo_promedio, descripcion) VALUES
 (1, 'Pendiente', 5, 'Pedido registrado, esperando confirmación.'),
 (2, 'Confirmado', 10, 'Pedido confirmado por el comercio.'),
