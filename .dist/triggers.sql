@@ -2,125 +2,6 @@
 
 
 -- Factura
-
-
-
--- trigger para insertar en ClienteConClienteReferido automaticamente
-CREATE TRIGGER trg_Cliente_AfterInsert
-ON Cliente
-AFTER INSERT
-AS
-BEGIN
-    SET NOCOUNT ON;
-    -- Asumiendo que el cliente referido es el último cliente insertado antes del actual
-    DECLARE @NuevoClienteID INT;
-    DECLARE @ClienteReferidoID INT;
-    -- Obtener el ID del cliente recién insertado
-    SELECT @NuevoClienteID = id FROM inserted;
-    -- Buscar el último cliente insertado antes del actual para usarlo como referido
-    -- (esto es un ejemplo, ajusta según tu lógica de negocio)
-    SELECT TOP 1 @ClienteReferidoID = id 
-    FROM Cliente 
-    WHERE id < @NuevoClienteID 
-    ORDER BY id DESC;
-    -- Solo insertar si encontramos un cliente referido válido (no para el primer cliente)
-    IF @ClienteReferidoID IS NOT NULL AND @NuevoClienteID > 1
-    BEGIN
-        INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido)
-        VALUES (@NuevoClienteID, @ClienteReferidoID, GETDATE());
-    END
-END;
-
-
--- Al cambiar el estado del pedido a “Entregado” en PedidoEstadoPedido, se inserta la valoración en ClienteRepartidor
-
-CREATE TRIGGER trg_ValoracionAutomatica
-ON PedidoEstadoPedido
-AFTER INSERT
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    DECLARE @estadoEntregadoId INT;
-
-    -- Identificamos el ID del estado "Entregado"
-    SELECT @estadoEntregadoId = id
-    FROM EstadoPedido
-    WHERE nombre = 'Entregado';
-
-    -- Insertar valoración automática si se cumple la condición
-    INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentario)
-    SELECT
-        cp.idCliente,
-        rp.idRepartidor,
-        CAST(GETDATE() AS DATE),
-        3, -- puntaje por defecto
-        'Valoración automática generada al completar entrega'
-    FROM
-        inserted i
-    INNER JOIN RepartidorPedido rp ON rp.idPedido = i.idPedido
-    INNER JOIN ClientePedido cp ON cp.idPedido = i.idPedido
-    LEFT JOIN ClienteRepartidor cr ON
-        cr.idCliente = cp.idCliente AND
-        cr.idRepartidor = rp.idRepartidor AND
-        cr.fecha = CAST(GETDATE() AS DATE)
-    WHERE
-        i.idEstadoPedido = @estadoEntregadoId AND
-        cr.idCliente IS NULL; -- solo si aún no hay valoración registrada
-END;
-
-
-
-
--- Este trigger se ejecuta DESPUÉS de eliminar una fila de la tabla PedidoDetalle.
--- Su propósito es ajustar la cantidad disponible del plato correspondiente
--- y "restaurar" la disponibilidad si el plato estaba agotado.
-CREATE TRIGGER trg_InsteadOfDelete_PedidoDetalle
-ON PedidoDetalle
-INSTEAD OF DELETE
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    -- 1. Eliminar registros dependientes en PedidoDetalleOpcionValor
-    DELETE FROM PedidoDetalleOpcionValor
-    WHERE idPedidoDetalle IN (SELECT id FROM DELETED);
-
-    -- 2. Actualizar la cantidad disponible y disponibilidad del Plato
-    UPDATE P
-    SET
-        P.cantidadDisponible = P.cantidadDisponible + D.cantidad,
-        P.disponibilidad = 1 -- suponiendo que es BIT y 1 significa "disponible"
-    FROM Plato P
-    INNER JOIN DELETED D ON D.idPlato = P.id;
-
-    -- 3. Eliminar de PedidoDetalle
-    DELETE FROM PedidoDetalle
-    WHERE id IN (SELECT id FROM DELETED);
-END;
-
-
-
-
-----------------------C---------------------------
-CREATE TRIGGER trg_InsertarOpciones_PedidoDetalle
-ON PedidoDetalle
-AFTER INSERT
-AS
-BEGIN
-    SET NOCOUNT ON;
-
-    INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcion, idOpcionValor)
-    SELECT 
-        i.id, 
-        pov.idOpcion,
-        pov.idOpcionValor
-    FROM inserted i
-    INNER JOIN PlatoOpcionValor pov ON pov.idPlato = i.idPlato;
-END;
-
-
-
 CREATE TRIGGER trg_GenerarFactura
 ON Pedido
 AFTER INSERT
@@ -167,6 +48,120 @@ BEGIN
     ) Extras ON Extras.idPedido = i.id;
 END;
 
+
+-- trigger para insertar en ClienteConClienteReferido automaticamente
+CREATE TRIGGER trg_Cliente_AfterInsert
+ON Cliente
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+    -- Asumiendo que el cliente referido es el último cliente insertado antes del actual
+    DECLARE @NuevoClienteID INT;
+    DECLARE @ClienteReferidoID INT;
+    -- Obtener el ID del cliente recién insertado
+    SELECT @NuevoClienteID = id FROM inserted;
+    -- Buscar el último cliente insertado antes del actual para usarlo como referido
+    -- (esto es un ejemplo, ajusta según tu lógica de negocio)
+    SELECT TOP 1 @ClienteReferidoID = id 
+    FROM Cliente 
+    WHERE id < @NuevoClienteID 
+    ORDER BY id DESC;
+    -- Solo insertar si encontramos un cliente referido válido (no para el primer cliente)
+    IF @ClienteReferidoID IS NOT NULL AND @NuevoClienteID > 1
+    BEGIN
+        INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido)
+        VALUES (@NuevoClienteID, @ClienteReferidoID, GETDATE());
+    END
+END;
+
+
+-- Al cambiar el estado del pedido a “Entregado” en PedidoEstadoPedido, se inserta la valoración en ClienteRepartidor
+
+CREATE TRIGGER llenarClienteRepartidor
+ON PedidoEstadoPedido
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @estado INT;
+
+    SELECT @estado = id
+    FROM EstadoPedido
+    WHERE nombre = 'Entregado';
+
+
+    INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentario)
+    SELECT
+        cp.idCliente,
+        rp.idRepartidor,
+        CAST(GETDATE() AS DATE),
+        5,
+        'Sin valoración'
+    FROM
+        inserted i
+    INNER JOIN RepartidorPedido rp ON rp.idPedido = i.idPedido
+    INNER JOIN ClientePedido cp ON cp.idPedido = i.idPedido
+    LEFT JOIN ClienteRepartidor cr ON
+        cr.idCliente = cp.idCliente AND
+        cr.idRepartidor = rp.idRepartidor AND
+        cr.fecha = CAST(GETDATE() AS DATE)
+    WHERE
+        i.idEstadoPedido = @estado AND
+        cr.idCliente IS NULL; -- Se hará el insert si el cliente no ha calificado a ese repartidor
+END;
+
+
+
+
+--B----------------
+-- Este trigger se ejecuta DESPUÉS de eliminar una fila de la tabla PedidoDetalle.
+-- Su propósito es ajustar la cantidad disponible del plato correspondiente
+-- y "restaurar" la disponibilidad si el plato estaba agotado.
+CREATE TRIGGER trg_InsteadOfDelete_PedidoDetalle
+ON PedidoDetalle
+INSTEAD OF DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- 1. Eliminar registros dependientes en PedidoDetalleOpcionValor
+    DELETE FROM PedidoDetalleOpcionValor
+    WHERE idPedidoDetalle IN (SELECT id FROM DELETED);
+
+    -- 2. Actualizar la cantidad disponible y disponibilidad del Plato
+    UPDATE P
+    SET
+        P.cantidadDisponible = P.cantidadDisponible + D.cantidad,
+        P.disponibilidad = 1 -- suponiendo que es BIT y 1 significa "disponible"
+    FROM Plato P
+    INNER JOIN DELETED D ON D.idPlato = P.id;
+
+    -- 3. Eliminar de PedidoDetalle
+    DELETE FROM PedidoDetalle
+    WHERE id IN (SELECT id FROM DELETED);
+END;
+
+
+----------------------C---------------------------
+CREATE TRIGGER trg_InsertarOpciones_PedidoDetalle
+ON PedidoDetalle
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcion, idOpcionValor)
+    SELECT 
+        i.id, 
+        pov.idOpcion,
+        pov.idOpcionValor
+    FROM inserted i
+    INNER JOIN PlatoOpcionValor pov ON pov.idPlato = i.idPlato;
+END;
+
+
 -- nuevo pedido
 INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total) VALUES
 (151, 6, 6.50, 'prueba', 39, 78.50);
@@ -174,10 +169,7 @@ INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total
 SELECT * FROM Pedido;
 SELECT * FROM Factura;
 
-
---Es el DDDDDD
-
-
+--Es el D
 
 -- El plato tiene 5 unidades disponibles
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)

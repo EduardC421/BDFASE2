@@ -9,7 +9,6 @@ CREATE TABLE Comercio (
     hora_apertura INT CHECK (hora_apertura BETWEEN 0 AND 23),
     hora_cierre INT CHECK (hora_cierre BETWEEN 0 AND 23),
     estaActivo BIT NOT NULL
- 
 );
 
 CREATE TABLE Cocina (
