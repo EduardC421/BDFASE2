@@ -2,50 +2,52 @@
 
 
 -- Factura
-CREATE TRIGGER trg_GenerarFactura
-ON Pedido
+CREATE TRIGGER trg_GenerarFacturas
+ON PedidoDetalleOpcionValor
 AFTER INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    DECLARE @porcentajeIVA DECIMAL(5,2) = 16.00; -- Puedes ajustar este valor según tu configuración fiscal
+    DECLARE @porcentajeIVA DECIMAL(5,2) = 16;
 
-    INSERT INTO Factura (
-        numero,
-        fecha_emision,
-        sub_total,
-        porcentajeIva,
-        montoIva,
-        monto_total,
-        idPedido
-    )
-    SELECT
-        i.id,  -- usaremos el id del pedido como número de factura
-        CAST(GETDATE() AS DATE) AS fecha_emision,
-        CAST(ISNULL(PD.TotalItems + Extras.TotalExtras, 0) AS DECIMAL(10,2)) AS sub_total,
-        @porcentajeIVA,
-        CAST(ISNULL((PD.TotalItems + Extras.TotalExtras) * @porcentajeIVA / 100, 0) AS DECIMAL(10,2)) AS montoIva,
-        CAST(ISNULL((PD.TotalItems + Extras.TotalExtras) * (1 + @porcentajeIVA / 100), 0) AS DECIMAL(10,2)) AS monto_total,
-        i.id AS idPedido
-    FROM
-        inserted i
-    LEFT JOIN (
-        SELECT
-            idPedido,
-            SUM(total) AS TotalItems
-        FROM PedidoDetalle
-        GROUP BY idPedido
-    ) PD ON PD.idPedido = i.id
-    LEFT JOIN (
-        SELECT
-            PD.idPedido,
-            SUM(OV.precio_extra) AS TotalExtras
+    WITH PedidosAfectados AS (
+        SELECT DISTINCT PD.idPedido
+        FROM inserted i
+        JOIN PedidoDetalle PD ON PD.id = i.idPedidoDetalle
+    ),
+    TotalPorItems AS (
+        SELECT PD.idPedido, SUM(PD.total) AS TotalItems
         FROM PedidoDetalle PD
-        JOIN PedidoDetalleOpcionValor PDOV ON PD.id = PDOV.idPedidoDetalle
-        JOIN OpcionValor OV ON PDOV.idOpcionValor = OV.id
+        WHERE PD.idPedido IN (SELECT idPedido FROM PedidosAfectados)
         GROUP BY PD.idPedido
-    ) Extras ON Extras.idPedido = i.id;
+    ),
+    TotalExtras AS (
+        SELECT PD.idPedido, SUM(OV.precio_extra) AS TotalExtras
+        FROM inserted i
+        JOIN PedidoDetalle PD ON PD.id = i.idPedidoDetalle
+        JOIN OpcionValor OV ON OV.id = i.idOpcionValor
+        WHERE PD.idPedido IN (SELECT idPedido FROM PedidosAfectados)
+        GROUP BY PD.idPedido
+    )
+    INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, monto_total, idPedido)
+    SELECT 
+        P.idPedido,                   -- numero factura igual idPedido
+        CAST(GETDATE() AS DATE),      -- fecha emisión actual
+        ROUND(ISNULL(I.TotalItems, 0) + ISNULL(E.TotalExtras, 0), 2),   -- subtotal sin IVA
+        @porcentajeIVA,               -- porcentaje IVA fijo
+        ROUND((ISNULL(I.TotalItems, 0) + ISNULL(E.TotalExtras, 0)) * @porcentajeIVA / 100.0, 2), -- monto IVA
+        ROUND(
+            (ISNULL(I.TotalItems, 0) + ISNULL(E.TotalExtras, 0)) * (1 + @porcentajeIVA / 100.0)
+            + ISNULL(P2.costo_envio, 0), 2),   -- total con IVA + costo envío
+        P.idPedido
+    FROM PedidosAfectados P
+    LEFT JOIN TotalPorItems I ON I.idPedido = P.idPedido
+    LEFT JOIN TotalExtras E ON E.idPedido = P.idPedido
+    JOIN Pedido P2 ON P2.id = P.idPedido
+    WHERE NOT EXISTS (
+        SELECT 1 FROM Factura F WHERE F.idPedido = P.idPedido
+    );
 END;
 
 
