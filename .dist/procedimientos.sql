@@ -240,5 +240,186 @@ EXEC sp_ReportePedidosConsolidado @idComercio = 3;
 
 
 
+
+
 -- D --
 
+CREATE PROCEDURE PlatoNuevo
+    @idComercio INT,
+    @idMenu INT,
+    @nombrePlato VARCHAR(100),
+    @precio DECIMAL(10,2),
+    @descripcion VARCHAR(255),
+    @cantidadDisponible INT,
+    @ordenAparicion INT,
+    @idSeccion INT,
+    @opcionesPersonalizables VARCHAR(MAX) = NULL -- tiene la forma "idOpcion1,idOpcionValor1;idOpcion2,idOpcionValor2"
+AS
+BEGIN
+    SET NOCOUNT ON;
+    
+    BEGIN TRY
+        BEGIN TRANSACTION;
+        
+        IF NOT EXISTS (SELECT 1 FROM Comercio WHERE id = @idComercio AND estaActivo = 1)
+        BEGIN
+            RAISERROR('El comercio no existe o no está activo', 16, 1);
+            RETURN;
+        END
+        
+        IF NOT EXISTS (SELECT 1 FROM Menu WHERE id = @idMenu AND idComercio = @idComercio)
+        BEGIN
+            RAISERROR('El menú no existe o no pertenece al comercio', 16, 1);
+            RETURN;
+        END
+        
+        IF NOT EXISTS (SELECT 1 FROM Seccion WHERE id = @idSeccion AND idMenu = @idMenu)
+        BEGIN
+            RAISERROR('La sección especificada no existe en el menú', 16, 1);
+            RETURN;
+        END
+        
+        -- 4. Verificar que no existe un plato con el mismo nombre en la misma sección
+        IF EXISTS (SELECT 1 FROM Plato WHERE nombre = @nombrePlato AND idSeccion = @idSeccion)
+        BEGIN
+            RAISERROR('Ya existe este plato', 16, 1);
+            RETURN;
+        END
+        
+        -- 5. Generar nuevo ID para el plato
+        DECLARE @nuevoIdPlato INT;
+        SELECT @nuevoIdPlato = ISNULL(MAX(id), 0) + 1 FROM Plato;
+        
+        -- 6. Insertar el nuevo plato
+        INSERT INTO Plato (
+            id, 
+            nombre, 
+            orden, 
+            cantidadDisponible, 
+            precio, 
+            descripcion, 
+            idSeccion, 
+            disponibilidad
+        ) VALUES (
+            @nuevoIdPlato,
+            @nombrePlato,
+            @ordenAparicion,
+            @cantidadDisponible,
+            @precio,
+            @descripcion,
+            @idSeccion,
+            1
+        );
+        
+        -- Procesar opciones
+        IF @opcionesPersonalizables IS NOT NULL AND @opcionesPersonalizables <> ''
+        BEGIN
+            -- Crear tabla temporal para almacenar las opciones
+            DECLARE @OpcionesTemp TABLE (
+                idOpcion INT,
+                idOpcionValor INT
+            );
+            
+            -- Procesamos las opciones
+            DECLARE @pos INT = 1;
+            DECLARE @nextPos INT;
+            DECLARE @pair VARCHAR(100);
+            DECLARE @commaPos INT;
+            DECLARE @idOpcion INT;
+            DECLARE @idOpcionValor INT;
+            
+            WHILE @pos <= LEN(@opcionesPersonalizables)
+            BEGIN
+                SET @nextPos = CHARINDEX(';', @opcionesPersonalizables, @pos);
+                
+                IF @nextPos = 0
+                    SET @nextPos = LEN(@opcionesPersonalizables) + 1;
+                
+                SET @pair = SUBSTRING(@opcionesPersonalizables, @pos, @nextPos - @pos);
+                
+                -- Separamos por idOpcion e idOpcionValor
+                SET @commaPos = CHARINDEX(',', @pair);
+                
+                IF @commaPos > 0
+                BEGIN
+                    SET @idOpcion = CAST(SUBSTRING(@pair, 1, @commaPos - 1) AS INT);
+                    SET @idOpcionValor = CAST(SUBSTRING(@pair, @commaPos + 1, LEN(@pair) - @commaPos) AS INT);
+                    
+                    -- Verificamos que la opción y el valor existan
+                    IF NOT EXISTS (SELECT 1 FROM Opcion WHERE id = @idOpcion)
+                    BEGIN
+                        RAISERROR('La opción con ID %d no existe.', 16, 1, @idOpcion);
+                        RETURN;
+                    END
+                    
+                    IF NOT EXISTS (SELECT 1 FROM OpcionValor WHERE id = @idOpcionValor AND idOpcion = @idOpcion)
+                    BEGIN
+                        RAISERROR('El valor de opción con ID %d no existe para la opción %d.', 16, 1, @idOpcionValor, @idOpcion);
+                        RETURN;
+                    END
+                    
+                    -- Insertar en tabla temporal
+                    INSERT INTO @OpcionesTemp (idOpcion, idOpcionValor)
+                    VALUES (@idOpcion, @idOpcionValor);
+                END
+                
+                SET @pos = @nextPos + 1;
+            END
+            
+            -- Insertar las opciones en las tablas correspondientes
+            INSERT INTO PlatoOpcion (idPlato, idOpcion)
+            SELECT @nuevoIdPlato, idOpcion
+            FROM @OpcionesTemp;
+            
+            INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion)
+            SELECT @nuevoIdPlato, idOpcionValor, idOpcion
+            FROM @OpcionesTemp;
+        END
+        
+        COMMIT TRANSACTION;
+        
+        SELECT @nuevoIdPlato AS NuevoIdPlato;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+            
+        DECLARE @ErrorMessage NVARCHAR(4000) = ERROR_MESSAGE();
+        DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
+        DECLARE @ErrorState INT = ERROR_STATE();
+        
+        RAISERROR(@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH
+END;
+
+-- Ejemplo de prueba sin opciones personalizables
+EXEC PlatoNuevo
+    @idComercio = 1, -- Parrilla Criolla
+    @idMenu = 1, -- Menú Parrillero
+    @nombrePlato = 'Costillas BBQ',
+    @precio = 22.50,
+    @descripcion = 'Costillas de cerdo bañadas en salsa BBQ casera',
+    @cantidadDisponible = 10,
+    @ordenAparicion = 4,
+    @idSeccion = 1; -- Carnes a la Brasa
+
+-- Ejemplo de prueba con opciones personalizables
+EXEC PlatoNuevo
+    @idComercio = 26, -- Street Food Market
+    @idMenu = 26, -- Menú Street Food
+    @nombrePlato = 'Hamburguesa Gourmet',
+    @precio = 15.99,
+    @descripcion = 'Hamburguesa artesanal con queso y vegetales frescos',
+    @cantidadDisponible = 15,
+    @ordenAparicion = 5,
+    @idSeccion = 127, -- Burgers y Hot Dogs Gourmet
+    @opcionesPersonalizables = '3,8;6,17;7,20'; -- Tipo de pan: Pan blanco; Toppings: Queso cheddar; Extras: Aguacate
+
+-- prueba
+SELECT p.*
+FROM Plato p
+JOIN Seccion s ON p.idSeccion = s.id
+JOIN Menu m ON s.idMenu = m.id
+WHERE m.id = 26;
+
+SELECT* from Plato where idMenu=1;
