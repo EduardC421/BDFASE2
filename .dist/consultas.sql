@@ -1,6 +1,4 @@
-
--- A. Reporte de estados de pedido con: nombre del estado, cantidad de veces usado, tiempo promedio real vs estimado, y porcentaje de cumplimiento. 
-
+--Consulta A
 WITH TiemposCalculados AS (
   SELECT 
     PEP.idEstadoPedido,
@@ -39,18 +37,9 @@ HAVING
 ORDER BY 
   COUNT(*) DESC;
 
-
-
-
-
-
-
 --CONSULTA B
--- Total facturado por comercio en el último mes
-
 DECLARE @FechaInicio DATE = DATEADD(MONTH, -1, GETDATE());
 
---  Comercios activos, con o sin facturación
 WITH comercios_base AS (
   SELECT id AS id_comercio, nombre AS nombre_comercio
   FROM Comercio
@@ -72,7 +61,6 @@ facturacion_ultimo_mes AS (
   GROUP BY c.id
 ),
 
--- Usamos COALESCE para mostrar 0 si no hay facturación
 comercios_facturados AS (
   SELECT
     cb.id_comercio,
@@ -142,10 +130,6 @@ LEFT JOIN cocina_principal cp ON cp.idComercio = cf.id_comercio
 LEFT JOIN plato_mas_pedido pm ON pm.idComercio = cf.id_comercio
 ORDER BY cf.total_facturado DESC;
 
-
-
-
-
 --Consulta C
 WITH RECENT_DELIVERED_ORDERS AS (
     SELECT
@@ -164,7 +148,7 @@ WITH RECENT_DELIVERED_ORDERS AS (
         ) AS latest_status ON p.id = latest_status.idPedido
         JOIN PedidoEstadoPedido pep ON pep.idPedido = p.id AND pep.fecha_inicio = latest_status.last_status_date
     WHERE
-        pep.idEstadoPedido = 6 -- Entregado
+        pep.idEstadoPedido = 6
         AND f.fecha_emision >= DATEADD(MONTH, -6, CAST('2025-07-18' AS DATE))
 ),
 ORDER_DISH_SECTION_COUNTS AS (
@@ -225,12 +209,7 @@ FROM
 ORDER BY
     qco.MontoTotalGastado DESC;
 
-
-
-
-
--- D. Consultar el historial de un cliente referido, mostrando si ha realizado pedidos, el total gastado y si ha generado otros referidos. 
-
+--Consulta D
 SELECT 
     CCR.idClienteReferido AS IdReferido,
     C.nombre + ' ' + C.apellido AS NombreCompleto,
@@ -248,13 +227,7 @@ LEFT JOIN ClienteConClienteReferido CCR2 ON CCR2.idCliente = C.id
 GROUP BY CCR.idClienteReferido, C.nombre, C.apellido
 ORDER BY TotalGastado DESC;
 
-
-
-
-
-
 --Consulta E
-
 SELECT
     r.id AS id_repartidor,
     r.nombre + ' ' + r.apellido AS nombre_completo,
@@ -277,14 +250,7 @@ LEFT JOIN PedidoEstadoPedido pe ON rp.idPedido = pe.idPedido
 GROUP BY r.id, r.nombre, r.apellido
 ORDER BY r.id;
 
-
-
-
-
-
-
 --Consulta F
-
 WITH PedidosUltimos3Meses AS (
     SELECT cp.idCliente, cp.idPedido, cp.fecha, p.total
     FROM ClientePedido cp
@@ -309,7 +275,7 @@ PedidosConRepartidorMoto AS (
     JOIN Repartidor r ON rp.idRepartidor = r.id
     WHERE r.detalle_vehiculo LIKE '%Moto%'
 ),
--- Nueva CTE para pre-calcular si un pedido tuvo moto
+
 PedidosMotoFlag AS (
     SELECT
         pum.idCliente,
@@ -323,15 +289,15 @@ ClientesValidos AS (
         p.idCliente,
         COUNT(DISTINCT p.idPedido) AS cantidad_pedidos,
         SUM(p.total) AS total_gastado,
-        SUM(pmf.tiene_moto) AS pedidos_con_moto_count -- Sumamos el flag para contar
+        SUM(pmf.tiene_moto) AS pedidos_con_moto_count
     FROM PedidosUltimos3Meses p
     JOIN PedidosConAmbasSecciones s ON p.idPedido = s.idPedido AND p.idCliente = s.idCliente
     JOIN PedidosMotoFlag pmf ON p.idPedido = pmf.idPedido AND p.idCliente = pmf.idCliente
     GROUP BY p.idCliente
     HAVING
         COUNT(DISTINCT p.idPedido) >= 3 AND
-        SUM(pmf.tiene_moto) >= 1 -- Usamos el conteo del flag aquí
-),
+        SUM(pmf.tiene_moto) >= 1
+
 PromedioGastoGlobal AS (
     SELECT AVG(p.total) AS promedio_global
     FROM ClientePedido cp
@@ -348,14 +314,7 @@ JOIN Cliente c ON c.id = cv.idCliente
 CROSS JOIN PromedioGastoGlobal pg
 WHERE cv.total_gastado > pg.promedio_global;
 
-
-
-
-
-
---G. Listar los comercios que han recibido más de 20 pedidos en el último mes y que 
---trabajan al menos 50 horas semanales en la cocina principal de “China”. 
-
+--Consulta G
 WIth PedidoUltimoMes AS (
  Select C.id, COUNT(DISTINCT CP.idPedido) AS TotalPedidos 
   from ClientePedido as CP 
@@ -385,15 +344,7 @@ JOIN CocinasChinas as CHI ON C.id = CHI.idComercio
         END) * 7 >= 50
         ORDER BY PUM.TotalPedidos;
 
-
-
-
-
--- H. Se desea calcular el nivel de personalización promedio de los pedidos realizados por los clientes. 
---    Se deben contabilizar todas las veces que un cliente añadió opciones a sus platos, y luego calcular 
---    el promedio de opciones por pedido. El resultado debe mostrar el ID del cliente, su nombre completo, 
---    la cantidad total de pedidos realizados, el total de opciones seleccionadas y el promedio de personalizaciones por pedido. 
-
+--Consulta H
 SELECT
     C.id AS ID_Cliente,
     C.nombre AS Nombre,
@@ -418,10 +369,6 @@ GROUP BY
 ORDER BY
     C.id;
 
-
-
--- I
-
 --Consulta I
 Select D.municipio, C.nombre, P.nombre, SUM(PD.cantidad) as 'Cantidad Total Vendida'
 From Plato as P
@@ -438,15 +385,7 @@ WHERE P.nombre LIKE '%Pizza%'
 GROUP BY D.municipio, C.nombre, P.nombre
 ORDER BY 'Cantidad Total Vendida' ASC
 
-
-
-
--- J   Se requiere obtener un reporte que muestre todos 
---los platos disponibles en el sistema, junto con sus distintas
---opciones. Para cada plato, se debe mostrar: su nombre, la sección a la que pertenece y el listado de 
---nombres de opciones con sus respectivos valores separados por coma, en caso de que un plato no tenga ninguna 
---opción asociada, se debe mostrar igualmente el plato indicando explícitamente “Sin opciones registradas”. 
-
+--Consulta J
 SELECT 
     p.nombre AS NombrePlato,
     s.nombre AS NombreSeccion,
@@ -461,26 +400,8 @@ LEFT JOIN OpcionValor ov ON ov.id = pov.idOpcionValor
 GROUP BY p.id, p.nombre, s.nombre
 ORDER BY s.nombre, p.nombre;
 
-
-
-
-Mens. 207, Nivel 16, Estado 1, Línea 12
-Invalid column name 'idPlato'.
-Mens. 207, Nivel 16, Estado 1, Línea 10
-Invalid column name 'valor'.
-
-Help: Error 207 Invalid column name 'idPlato'.
-
-
--- K. Se desea estimar la proyección de ingresos por pedidos para el próximo año basándose en el comportamiento histórico del último año. 
-  --Para ello, se calculará el ingreso mensual promedio (basado en los montos de las facturas de los últimos 12 meses), 
-  -- y se multiplicará por 12 para proyectar el ingreso anual esperado. El informe debe incluir: ingreso mensual promedio, 
-  -- ingreso total del último año, ingreso proyectado a 12 meses, y la variación porcentual estimada si se mantuviera la misma 
-  -- tendencia de crecimiento comparada con el año anterior 
-
-
+--Consulta K
 WITH 
--- Datos del último año completo (últimos 12 meses)
 UltimoAnio AS (
     SELECT 
         monto_total,
@@ -489,16 +410,15 @@ UltimoAnio AS (
         MONTH(fecha_emision) AS mes
     FROM Factura
     WHERE fecha_emision >= DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
+    AND fecha_emision < CAST(GETDATE() AS DATE) -- Quitamos el mes actual que esta incompleto
 ),
--- Datos del año anterior (de 13 a 24 meses atrás)
 AnioAnterior AS (
     SELECT 
-        SUM(monto_total) AS total_anio_anterior
+        SUM(monto_total) AS anioAnterior
     FROM Factura
-    WHERE fecha_emision BETWEEN DATEADD(MONTH, -24, CAST(GETDATE() AS DATE)) 
-                          AND DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
+    WHERE fecha_emision >= DATEADD(MONTH, -24, CAST(GETDATE() AS DATE))
+    AND fecha_emision < DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
 ),
--- Resumen por mes del último año
 ResumenMensual AS (
     SELECT 
         anio,
@@ -506,26 +426,26 @@ ResumenMensual AS (
         SUM(monto_total) AS total_mensual
     FROM UltimoAnio
     GROUP BY anio, mes
+),
+
+Totales AS (
+    SELECT
+        AVG(total_mensual) AS avg_mensual,
+        SUM(total_mensual) AS ultimoAnio,
+        (SELECT anioAnterior FROM AnioAnterior) AS anioAnterior
+    FROM ResumenMensual
 )
--- Resultado final
+
 SELECT 
-    -- Ingreso mensual promedio
-    (SELECT AVG(total_mensual) FROM ResumenMensual) AS ingreso_mensual_promedio,
+    avg_mensual AS AVG_ingreso_mensual,
     
-    -- Ingreso total del último año
-    (SELECT SUM(monto_total) FROM UltimoAnio) AS ingreso_total_ultimo_anio,
+    ultimoAnio AS ingreso_total_ultimo_anio,
     
-    -- Ingreso proyectado a 12 meses (promedio mensual * 12)
-    (SELECT AVG(total_mensual) FROM ResumenMensual) * 12 AS ingreso_proyectado_12meses,
+    avg_mensual * 12 AS ingreso_proyectado_12meses,
     
     -- Variación porcentual estimada comparada con el año anterior
     CASE 
-        WHEN (SELECT total_anio_anterior FROM AnioAnterior) = 0 THEN NULL
-        ELSE (((SELECT SUM(monto_total) FROM UltimoAnio) - 
-              (SELECT total_anio_anterior FROM AnioAnterior)) / 
-              (SELECT total_anio_anterior FROM AnioAnterior)) * 100
-    END AS variacion_porcentual_estimada;
-
-
-
-
+        WHEN anioAnterior = 0 THEN NULL
+        ELSE (ABS(ultimoAnio - anioAnterior) / (anioAnterior)) * 100
+    END AS variacion_porcentual_estimada
+FROM Totales;

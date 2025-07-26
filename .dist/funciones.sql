@@ -14,6 +14,9 @@ BEGIN
     RETURN ISNULL(@costo_envio, 0);
 END;
 
+
+
+
 CREATE FUNCTION fn_ObtenerSubTotal (@numeroFactura INT)
 RETURNS DECIMAL(10,2)
 AS
@@ -40,6 +43,11 @@ BEGIN
     -- Devolver suma segura
     RETURN ISNULL(@totalItems, 0) + ISNULL(@extras, 0);
 END;
+
+
+
+
+
 
 CREATE FUNCTION fn_ObtenerMontoIVA (@numeroFactura INT)
 RETURNS DECIMAL(10,2)
@@ -76,6 +84,10 @@ BEGIN
 END;
 
 
+
+
+
+
 CREATE FUNCTION fn_ObtenerMontoTotal (@numeroFactura INT)
 RETURNS DECIMAL(10,2)
 AS
@@ -100,6 +112,11 @@ END;
     --dbo.fn_ObtenerMontoTotal(numero) AS TotalFinal
 --FROM Factura
 --WHERE numero = 152;
+
+
+
+---------B-------
+
 CREATE FUNCTION fn_RepartidorDisponible (
     @idRepartidor INT
 )

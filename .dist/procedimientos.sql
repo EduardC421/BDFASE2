@@ -1,115 +1,131 @@
 --A
 
-CREATE PROCEDURE CrearPedidoConFactura
+--procedure A V2
+CREATE TYPE DetallePedidoType AS TABLE (
+    idPedidoDetalle INT,
+    idPlato INT,
+    cantidad INT,
+    nota NVARCHAR(500)
+);
+CREATE PROCEDURE sp_CrearPedidoCompletoV2
     @idCliente INT,
-    @nombreCliente VARCHAR(100),
-    @telefono VARCHAR(20),
-    @direccion VARCHAR(255),
-
-    -- Platos (hasta 3 para este ejemplo)
-    @idPlato1 INT, @cantidad1 INT, @opcionValor1 INT = NULL,
-    @idPlato2 INT = NULL, @cantidad2 INT = NULL, @opcionValor2 INT = NULL,
-    @idPlato3 INT = NULL, @cantidad3 INT = NULL, @opcionValor3 INT = NULL
+    @costo_envio DECIMAL(10, 2),
+    @nota NVARCHAR(500),
+    @tiempo_entrega INT,
+    @detallesPedido DetallePedidoType READONLY
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- Verificar si cliente ya existe
-    IF NOT EXISTS (SELECT 1 FROM Cliente WHERE id = @idCliente)
-    BEGIN
-        INSERT INTO Cliente (id, nombre, telefono, direccion)
-        VALUES (@idCliente, @nombreCliente, @telefono, @direccion);
-    END
+    DECLARE @cantidad_items INT;
+    SELECT @cantidad_items = COUNT(*) FROM @detallesPedido;
 
-    -- Crear nuevo ID de pedido
-    DECLARE @idPedido INT;
-    SELECT @idPedido = ISNULL(MAX(id), 0) + 1 FROM Pedido;
+    -- Generar nuevo idPedido (ejemplo)
+    DECLARE @idPedido INT = (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido);
 
-    -- Crear el pedido en estado 'Pendiente' (idEstadoPedido = 1)
-    INSERT INTO Pedido (id, idCliente, fecha, idEstadoPedido, total)
-    VALUES (@idPedido, @idCliente, GETDATE(), 1, 0);
+    -- Insertar pedido sin fecha ni cliente
+    INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, total, tiempo_entrega)
+    VALUES (@idPedido, @cantidad_items, @costo_envio, @nota, 0, @tiempo_entrega);
 
-    -- Variables auxiliares
-    DECLARE @precio DECIMAL(10,2), @extra DECIMAL(10,2), @subtotal DECIMAL(10,2);
-    DECLARE @totalPedido DECIMAL(10,2) = 0;
+    -- Insertar detalles con total calculado
+    INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
+    SELECT 
+        idPedidoDetalle,
+        cantidad,
+        nota,
+        cantidad * p.precio,
+        @idPedido,
+        idPlato
+    FROM @detallesPedido dp
+    JOIN Plato p ON p.id = dp.idPlato;
 
-    -- === Plato 1 ===
-    IF @idPlato1 IS NOT NULL AND @cantidad1 IS NOT NULL
-    BEGIN
-        SELECT @precio = precio FROM Plato WHERE id = @idPlato1;
-        SELECT @extra = ISNULL((SELECT precio_extra FROM OpcionValor WHERE id = @opcionValor1), 0);
-        SET @subtotal = (@precio + @extra) * @cantidad1;
-        
-        INSERT INTO PedidoPlato (idPedido, idPlato, cantidad, subtotal)
-        VALUES (@idPedido, @idPlato1, @cantidad1, @subtotal);
-        
-        IF @opcionValor1 IS NOT NULL
-            INSERT INTO PedidoPlatoOpcionValor (idPedido, idPlato, idOpcionValor)
-            VALUES (@idPedido, @idPlato1, @opcionValor1);
-
-        SET @totalPedido += @subtotal;
-    END
-
-    -- === Plato 2 ===
-    IF @idPlato2 IS NOT NULL AND @cantidad2 IS NOT NULL
-    BEGIN
-        SELECT @precio = precio FROM Plato WHERE id = @idPlato2;
-        SELECT @extra = ISNULL((SELECT precio_extra FROM OpcionValor WHERE id = @opcionValor2), 0);
-        SET @subtotal = (@precio + @extra) * @cantidad2;
-        
-        INSERT INTO PedidoPlato (idPedido, idPlato, cantidad, subtotal)
-        VALUES (@idPedido, @idPlato2, @cantidad2, @subtotal);
-        
-        IF @opcionValor2 IS NOT NULL
-            INSERT INTO PedidoPlatoOpcionValor (idPedido, idPlato, idOpcionValor)
-            VALUES (@idPedido, @idPlato2, @opcionValor2);
-
-        SET @totalPedido += @subtotal;
-    END
-
-    -- === Plato 3 ===
-    IF @idPlato3 IS NOT NULL AND @cantidad3 IS NOT NULL
-    BEGIN
-        SELECT @precio = precio FROM Plato WHERE id = @idPlato3;
-        SELECT @extra = ISNULL((SELECT precio_extra FROM OpcionValor WHERE id = @opcionValor3), 0);
-        SET @subtotal = (@precio + @extra) * @cantidad3;
-        
-        INSERT INTO PedidoPlato (idPedido, idPlato, cantidad, subtotal)
-        VALUES (@idPedido, @idPlato3, @cantidad3, @subtotal);
-        
-        IF @opcionValor3 IS NOT NULL
-            INSERT INTO PedidoPlatoOpcionValor (idPedido, idPlato, idOpcionValor)
-            VALUES (@idPedido, @idPlato3, @opcionValor3);
-
-        SET @totalPedido += @subtotal;
-    END
-
-    -- Actualizar total del pedido
+    -- Actualizar total en Pedido sumando los totales de los detalles
     UPDATE Pedido
-    SET total = @totalPedido
+    SET total = (
+        SELECT SUM(total)
+        FROM PedidoDetalle
+        WHERE idPedido = @idPedido
+    )
     WHERE id = @idPedido;
 
-    -- Mostrar la factura
-    SELECT 
-        P.id AS PedidoID,
-        C.nombre AS Cliente,
-        P.fecha AS Fecha,
-        Pl.nombre AS Plato,
-        Pl.precio AS PrecioBase,
-        PP.cantidad,
-        OV.nombre AS Opcion,
-        OV.precio_extra AS PrecioExtra,
-        (Pl.precio + ISNULL(OV.precio_extra, 0)) * PP.cantidad AS Subtotal
-    FROM Pedido P
-    JOIN Cliente C ON C.id = P.idCliente
-    JOIN PedidoPlato PP ON P.id = PP.idPedido
-    JOIN Plato Pl ON PP.idPlato = Pl.id
-    LEFT JOIN PedidoPlatoOpcionValor PPOV ON PPOV.idPedido = PP.idPedido AND PPOV.idPlato = PP.idPlato
-    LEFT JOIN OpcionValor OV ON OV.id = PPOV.idOpcionValor
-    WHERE P.id = @idPedido;
+    -- Asociar pedido a cliente
+    INSERT INTO ClientePedido (idCliente, idPedido, fecha)
+    VALUES (@idCliente, @idPedido, GETDATE());
 
-    PRINT 'Total del Pedido: $' + CAST(@totalPedido AS VARCHAR);
+    -- Insertar estado pendiente
+    INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio)
+    VALUES (@idPedido, 1, GETDATE());
+
+    -- Esperar que trigger genere factura, luego actualizarla
+    DECLARE @numFactura INT;
+    SELECT @numFactura = numero FROM Factura WHERE idPedido = @idPedido;
+
+    UPDATE Factura
+    SET
+        sub_total = dbo.fn_ObtenerSubTotal(@numFactura),
+        montoIva = dbo.fn_ObtenerMontoIVA(@numFactura),
+        monto_total = dbo.fn_ObtenerMontoTotal(@numFactura)
+    WHERE numero = @numFactura;
+
+    SELECT @idPedido AS NuevoPedidoID;
 END;
+--caso de prueba
+-- Detalles de pedidos relacionados
+SELECT * FROM PedidoDetalle WHERE idPedido >= (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido) - 10;
+
+-- Asociaciones Cliente-Pedido
+SELECT * FROM ClientePedido WHERE idPedido >= (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido) - 10;
+
+-- Estados de pedidos
+SELECT * FROM PedidoEstadoPedido WHERE idPedido >= (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido) - 10;
+
+-- Facturas relacionadas
+SELECT * FROM Factura WHERE idPedido >= (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido) - 10;
+
+-- Ahora, un ejemplo para probar el procedimiento
+DECLARE @detalles DetallePedidoType;
+
+-- Supongamos que tienes estos platos con id 1 y 2, con precios ya cargados en Plato
+INSERT INTO @detalles (idPedidoDetalle, cantidad, nota, idPlato)
+VALUES
+(222, 2, 'Sin cebolla', 5),
+(223, 1, 'Extra picante', 88);
+
+-- Ejecutamos el procedimiento con estos datos
+EXEC sp_CrearPedidoCompletoV2
+    @idCliente = 100,          -- Asegúrate que el cliente con id 101 exista
+    @costo_envio = 5.00,
+    @nota = 'Por favor, rápido',
+    @tiempo_entrega = 45,
+    @detallesPedido = @detalles;
+
+-- El procedimiento devolverá el id del pedido creado
+-- Estado ANTES de ejecutar el procedimiento
+
+-- Pedidos existentes
+SELECT * FROM Pedido WHERE id >= (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido) - 10;
+
+
+
+-- Ejecutar el procedimiento aquí
+-- EXEC sp_CrearPedidoCompletoV2 ...
+
+-- Estado DESPUÉS de ejecutar el procedimiento
+
+-- Pedidos nuevos
+SELECT * FROM Pedido ORDER BY id DESC;
+
+-- Detalles nuevos
+SELECT * FROM PedidoDetalle WHERE idPedido = (SELECT MAX(id) FROM Pedido);
+
+-- ClientePedido nuevo
+SELECT * FROM ClientePedido WHERE idPedido = (SELECT MAX(id) FROM Pedido);
+
+-- EstadoPedido nuevo
+SELECT * FROM PedidoEstadoPedido WHERE idPedido = (SELECT MAX(id) FROM Pedido);
+
+-- Factura nueva
+SELECT * FROM Factura WHERE idPedido = (SELECT MAX(id) FROM Pedido);
 
 ---- ejemplo de uso
 
