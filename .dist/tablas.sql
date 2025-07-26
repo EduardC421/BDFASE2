@@ -9,7 +9,6 @@ CREATE TABLE Comercio (
     hora_apertura INT CHECK (hora_apertura BETWEEN 0 AND 23),
     hora_cierre INT CHECK (hora_cierre BETWEEN 0 AND 23),
     estaActivo BIT NOT NULL
- 
 );
 
 CREATE TABLE Cocina (
@@ -50,6 +49,8 @@ CREATE TABLE Plato (
     precio DECIMAL(10,2) CHECK (precio >= 0),
     descripcion VARCHAR(255) NOT NULL,
     idSeccion INT NOT NULL,
+    disponibilidad BIT NOT NULL
+
     FOREIGN KEY(idSeccion) REFERENCES Seccion(id)
 );
 
@@ -165,7 +166,8 @@ CREATE TABLE Factura (
     montoIva DECIMAL(10,2),
     monto_total DECIMAL(10,2),
     idPedido INT UNIQUE,
-    FOREIGN KEY(idPedido) REFERENCES Pedido(id)
+    FOREIGN KEY(idPedido) REFERENCES Pedido(id),
+    CONSTRAINT CK_Factura_FechaNoFutura CHECK (fecha_emision <= CAST(GETDATE() AS DATE))
 );
 
 CREATE TABLE ClientePedido (

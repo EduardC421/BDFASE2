@@ -1,4 +1,4 @@
---Estado del pedido
+--Estado del pedido 
 INSERT INTO EstadoPedido (id, nombre, tiempo_promedio, descripcion) VALUES
 (1, 'Pendiente', 5, 'Pedido registrado, esperando confirmación.'),
 (2, 'Confirmado', 10, 'Pedido confirmado por el comercio.'),
@@ -56,30 +56,30 @@ INSERT INTO Cocina (id, nombre, descripcion) VALUES
 
 ---Clientes
 INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, apellido, fecha_nac, nro_documento) VALUES
-(1, 'clave001', '04128433977', '2025-07-13', 'manuel.herrera1@gmail.com', 'Manuel', 'Herrera', '1985-10-31', 'V17147694'),
-(2, 'clave002', '04144064468', '2025-08-13', 'manuel.torres2@gmail.com', 'Manuel', 'Torres', '1989-05-30', 'V21060916'),
-(3, 'clave003', '04243993464', '2025-09-13', 'miguel.mendoza3@gmail.com', 'Miguel', 'Mendoza', '1988-11-20', 'V13820454'),
+(1, 'clave001', '04128433977', '2025-07-13', 'manuel.herrera1@gmail.com', 'Manuel', 'Herrera', '1990-10-31', 'V17147694'),
+(2, 'clave002', '04144064468', '2025-08-13', 'manuel.torres2@gmail.com', 'Manuel', 'Torres', '1994-05-30', 'V21060916'),
+(3, 'clave003', '04243993464', '2025-09-13', 'miguel.mendoza3@gmail.com', 'Miguel', 'Mendoza', '1977-11-20', 'V13820454'),
 (4, 'clave004', '04123001786', '2025-08-18', 'laura.mendoza4@gmail.com', 'Laura', 'Mendoza', '2001-07-05', 'V23802098'),
-(5, 'clave005', '04246686214', '2025-07-13', 'ana.fernandez5@gmail.com', 'Ana', 'Fernandez', '1963-04-30', 'V11099308'),
-(6, 'clave006', '04120001111', '2025-10-13', 'juan.garcia6@gmail.com', 'Juan', 'Garcia', '1975-12-12', 'V19325561'),
-(7, 'clave007', '04220002222', '2025-05-16', 'maria.lopez7@gmail.com', 'Maria', 'Lopez', '1990-06-15', 'V26997002'),
-(8, 'clave008', '04130003333', '2025-04-13', 'carlos.ramirez8@gmail.com', 'Carlos', 'Ramirez', '1982-03-10', 'V27234433'),
-(9, 'clave009', '04240004444', '2025-03-13', 'sandra.gomez9@gmail.com', 'Sandra', 'Gomez', '1978-09-23', 'V18768944'),
-(10, 'clave010', '04140005555', '2024-07-13', 'pedro.sanchez10@gmail.com', 'Pedro', 'Sanchez', '1987-11-01', 'V19555055'),
-(11, 'clave011', '04160006666', '2025-01-13', 'laura.perez11@gmail.com', 'Laura', 'Perez', '1995-04-04', 'V20000066'),
-(12, 'clave012', '04240007777', '2023-06-15', 'jose.martinez12@gmail.com', 'Jose', 'Martinez', '1980-01-19', 'V21000077'),
-(13, 'clave013', '04160008888', '2025-07-13', 'marta.silva13@gmail.com', 'Marta', 'Silva', '1965-07-07', 'V22088444'),
-(14, 'clave014', '04260009999', '2021-08-13', 'luis.rodriguez14@gmail.com', 'Luis', 'Rodriguez', '1973-08-16', 'V23788099'),
-(15, 'clave015', '04160001010', '2022-07-13', 'ana.moreno15@gmail.com', 'Ana', 'Moreno', '1992-12-30', 'V24510127'),
-(16, 'clave016', '04240891511', '2022-09-13', 'francisco.diaz16@gmail.com', 'Francisco', 'Diaz', '1989-10-02', 'V25999111'),
-(17, 'clave017', '04120002222', '2023-07-13', 'paula.torres17@gmail.com', 'Paula', 'Torres', '1997-03-21', 'V26999122'),
-(18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1979-05-25', 'V27000133'),
-(19, 'clave019', '04160004444', '2025-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '1984-11-11', 'V28000144'),
-(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155'),
-(21, 'clave021', '04127896504', '2023-06-13', 'maria.torres21@gmail.com', 'Maria', 'Torres', '1986-07-07', 'V30987066'),
-(22, 'clave022', '04144467230', '2025-07-13', 'carlos.martin22@gmail.com', 'Carlos', 'Martin', '1994-02-14', 'V31999177'),
-(23, 'clave023', '04123458888', '2024-08-13', 'luis.lopez23@gmail.com', 'Luis', 'Lopez', '1971-08-25', 'V32060188'),
-(24, 'clave024', '04245569696', '2023-07-13', 'ana.gomez24@gmail.com', 'Ana', 'Gomez', '1983-09-03', 'V33890199'),
+(5, 'clave005', '04246686214', '2025-07-13', 'ana.fernandez5@gmail.com', 'Ana', 'Fernandez', '1975-04-30', 'V11099308'),
+(6, 'clave006', '04120001111', '2025-10-13', 'juan.garcia6@gmail.com', 'Juan', 'Garcia', '1998-12-12', 'V19325561'),
+(7, 'clave007', '04220002222', '2025-05-16', 'maria.lopez7@gmail.com', 'Maria', 'Lopez', '1999-06-15', 'V26997002'),
+(8, 'clave008', '04130003333', '2025-04-13', 'carlos.ramirez8@gmail.com', 'Carlos', 'Ramirez', '2000-03-10', 'V27234433'),
+(9, 'clave009', '04240004444', '2025-03-13', 'sandra.gomez9@gmail.com', 'Sandra', 'Gomez', '1991-09-23', 'V18768944'),
+(10, 'clave010', '04140005555', '2024-07-13', 'pedro.sanchez10@gmail.com', 'Pedro', 'Sanchez', '1992-11-01', 'V19555055'),
+(11, 'clave011', '04160006666', '2025-01-13', 'laura.perez11@gmail.com', 'Laura', 'Perez', '1993-04-04', 'V20000066'),
+(12, 'clave012', '04240007777', '2023-06-15', 'jose.martinez12@gmail.com', 'Jose', 'Martinez', '1994-01-19', 'V21000077'),
+(13, 'clave013', '04160008888', '2025-07-13', 'marta.silva13@gmail.com', 'Marta', 'Silva', '1995-07-07', 'V22088444'),
+(14, 'clave014', '04260009999', '2021-08-13', 'luis.rodriguez14@gmail.com', 'Luis', 'Rodriguez', '1996-08-16', 'V23788099'),
+(15, 'clave015', '04160001010', '2022-07-13', 'ana.moreno15@gmail.com', 'Ana', 'Moreno', '1997-12-30', 'V24510127'),
+(16, 'clave016', '04240891511', '2022-09-13', 'francisco.diaz16@gmail.com', 'Francisco', 'Diaz', '1998-10-02', 'V25999111'),
+(17, 'clave017', '04120002222', '2023-07-13', 'paula.torres17@gmail.com', 'Paula', 'Torres', '1999-03-21', 'V26999122'),
+(18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1999-05-25', 'V27000133'),
+(19, 'clave019', '04160004444', '2025-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '2001-11-11', 'V28000144'),
+(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '2003-01-09', 'V29090155'),
+(21, 'clave021', '04127896504', '2023-06-13', 'maria.torres21@gmail.com', 'Maria', 'Torres', '2004-07-07', 'V30987066'),
+(22, 'clave022', '04144467230', '2025-07-13', 'carlos.martin22@gmail.com', 'Carlos', 'Martin', '2006-02-14', 'V31999177'),
+(23, 'clave023', '04123458888', '2024-08-13', 'luis.lopez23@gmail.com', 'Luis', 'Lopez', '2006-08-25', 'V32060188'),
+(24, 'clave024', '04245569696', '2023-07-13', 'ana.gomez24@gmail.com', 'Ana', 'Gomez', '2008-09-03', 'V33890199'),
 (25, 'clave025', '04163450330', '2021-02-13', 'miguel.perez25@gmail.com', 'Miguel', 'Perez', '1990-04-18', 'V34000200'),
 (26, 'clave026', '04263751177', '2023-07-13', 'laura.ramirez26@gmail.com', 'Laura', 'Ramirez', '1987-06-06', 'V35000211'),
 (27, 'clave027', '04143452222', '2022-04-11', 'juan.sanchez27@gmail.com', 'Juan', 'Sanchez', '1978-11-12', 'V36000222'),
@@ -115,18 +115,18 @@ INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, ape
 (57, 'clave057', '04163452222', '2025-07-13', 'maria.gomez57@gmail.com', 'Maria', 'Gomez', '1973-01-13', 'V6897522'),
 (58, 'clave058', '04263548810', '2022-06-13', 'juan.soto58@gmail.com', 'Juan', 'Soto', '1980-09-19', 'V6750533'),
 (59, 'clave059', '04163454444', '2021-07-13', 'paula.lopez59@gmail.com', 'Paula', 'Lopez', '1991-10-31', 'V68000544'),
-(60, 'clave060', '04240112551', '2021-02-13', 'miguel.perez60@gmail.com', 'Miguel', 'Perez', '1984-06-07', 'V69000555'),
-(61, 'clave061', '04126536271', '2019-07-13', 'sofia.ramirez61@gmail.com', 'Sofia', 'Ramirez', '1976-12-15', 'V70000566'),
-(62, 'clave062', '04249000307', '2022-03-13', 'jose.garcia62@gmail.com', 'Jose', 'Garcia', '1989-03-25', 'V71000577'),
-(63, 'clave063', '04165498685', '2023-01-13', 'laura.sanchez63@gmail.com', 'Laura', 'Sanchez', '1992-07-29', 'V72000588'),
-(64, 'clave064', '04247778799', '2024-02-13', 'miguel.lopez64@gmail.com', 'Miguel', 'Lopez', '1978-01-17', 'V73000599'),
+(60, 'clave060', '04240112551', '2021-02-13', 'miguel.perez60@gmail.com', 'Miguel', 'Perez', '1965-06-07', 'V61142559'),
+(61, 'clave061', '04126536271', '2019-07-13', 'sofia.ramirez61@gmail.com', 'Sofia', 'Ramirez', '2002-12-15', 'V29200566'),
+(62, 'clave062', '04249000307', '2022-03-13', 'jose.garcia62@gmail.com', 'Jose', 'Garcia', '2004-03-25', 'V30675977'),
+(63, 'clave063', '04165498685', '2023-01-13', 'laura.sanchez63@gmail.com', 'Laura', 'Sanchez', '2003-07-29', 'V29711954'),
+(64, 'clave064', '04247778799', '2024-02-13', 'miguel.lopez64@gmail.com', 'Miguel', 'Lopez', '1978-01-17', 'V63089599'),
 (65, 'clave065', '04163450000', '2022-07-18', 'ana.martinez65@gmail.com', 'Ana', 'Martinez', '1987-09-02', 'V74000600'),
-(66, 'clave066', '04267755524', '2021-03-13', 'carlos.perez66@gmail.com', 'Carlos', 'Perez', '1990-11-22', 'V75000611'),
-(67, 'clave067', '04149052622', '2024-07-14', 'maria.gomez67@gmail.com', 'Maria', 'Gomez', '1969-05-05', 'V76000622'),
-(68, 'clave068', '04143323033', '2022-07-13', 'juan.soto68@gmail.com', 'Juan', 'Soto', '1974-08-16', 'V77000633'),
-(69, 'clave069', '04143454444', '2023-07-13', 'paula.lopez69@gmail.com', 'Paula', 'Lopez', '1981-02-26', 'V20555555'),
-(70, 'clave070', '04265599055', '2019-07-12', 'sofia.martinez70@gmail.com', 'Sofia', 'Martinez', '1985-04-11', 'V78000644'),
-(71, 'clave071', '04163456666', '2025-04-13', 'jose.rodriguez71@gmail.com', 'Jose', 'Rodriguez', '1974-09-05', 'V79000655'),
+(66, 'clave066', '04267755524', '2021-03-13', 'carlos.perez66@gmail.com', 'Carlos', 'Perez', '1960-11-22', 'V75000611'),
+(67, 'clave067', '04149052622', '2024-07-14', 'maria.gomez67@gmail.com', 'Maria', 'Gomez', '2003-11-22', 'V2988622'),
+(68, 'clave068', '04143323033', '2022-07-13', 'juan.soto68@gmail.com', 'Juan', 'Soto', '2002-08-16', 'V29111000'),
+(69, 'clave069', '04143454444', '2023-07-13', 'paula.lopez69@gmail.com', 'Paula', 'Lopez', '1995-02-26', 'V20555555'),
+(70, 'clave070', '04265599055', '2019-07-12', 'sofia.martinez70@gmail.com', 'Sofia', 'Martinez', '2003-04-11', 'V29774666'),
+(71, 'clave071', '04163456666', '2025-04-13', 'jose.rodriguez71@gmail.com', 'Jose', 'Rodriguez', '2004-09-05', 'V30427987'),
 (72, 'clave072', '04242305777', '2023-07-13', 'maria.diaz72@gmail.com', 'Maria', 'Diaz', '1988-01-17', 'V28678916'),
 (73, 'clave073', '04120978819', '2022-10-11', 'carlos.soto73@gmail.com', 'Carlos', 'Soto', '1991-10-29', 'V28160677'),
 (74, 'clave074', '04247479099', '2025-12-11', 'ana.lopez74@gmail.com', 'Ana', 'Lopez', '1982-12-23', 'V28234609'),
@@ -143,19 +143,19 @@ INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, ape
 (85, 'clave085', '04149999999', '2025-03-16', 'miguel.martinez85@gmail.com', 'Miguel', 'Martinez', '1990-05-04', 'V33075729'),
 (86, 'clave086', '04240348592', '2023-07-17', 'laura.gomez86@gmail.com', 'Laura', 'Gomez', '1983-09-14', 'V30456780'),
 (87, 'clave087', '04128764343', '2025-07-18', 'juan.lopez87@gmail.com', 'Juan', 'Lopez', '1976-03-07', 'V31000811'),
-(88, 'clave088', '04247555583', '2023-07-24', 'paula.sanchez88@gmail.com', 'Paula', 'Sanchez', '1989-11-30', 'V26680822'),
-(89, 'clave089', '04123454234', '2025-07-13', 'javier.perez89@gmail.com', 'Javier', 'Perez', '1992-07-18', 'V27960833'),
-(90, 'clave090', '04263455555', '2025-07-13', 'sofia.torres90@gmail.com', 'Sofia', 'Torres', '1985-01-27', 'V28506844'),
-(91, 'clave091', '04143456666', '2022-07-27', 'jose.garcia91@gmail.com', 'Jose', 'Garcia', '1974-10-11', 'V29040855'),
-(92, 'clave092', '04240304756', '2025-07-29', 'maria.martinez92@gmail.com', 'Maria', 'Martinez', '1988-03-03', 'V28799066'),
-(93, 'clave093', '04123458688', '2021-07-23', 'carlos.soto93@gmail.com', 'Carlos', 'Soto', '1991-05-15', 'V29056977'),
-(94, 'clave094', '04143459599', '2023-07-13', 'ana.lopez94@gmail.com', 'Ana', 'Lopez', '1982-08-21', 'V6201088'),
-(95, 'clave095', '04122165030', '2025-07-22', 'miguel.gomez95@gmail.com', 'Miguel', 'Gomez', '1979-02-06', 'V273001199'),
-(96, 'clave096', '04263352211', '2025-07-14', 'laura.perez96@gmail.com', 'Laura', 'Perez', '1990-09-29', 'V254001200'),
-(97, 'clave097', '04163332532', '2023-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1983-04-18', 'V22001311'),
+(88, 'clave088', '04247555583', '2023-07-24', 'paula.sanchez88@gmail.com', 'Paula', 'Sanchez', '2003-11-30', 'V29980822'),
+(89, 'clave089', '04123454234', '2025-07-13', 'javier.perez89@gmail.com', 'Javier', 'Perez', '2003-07-18', 'V29860833'),
+(90, 'clave090', '04263455555', '2025-07-13', 'sofia.torres90@gmail.com', 'Sofia', 'Torres', '2002-01-27', 'V28506844'),
+(91, 'clave091', '04143456666', '2022-07-27', 'jose.garcia91@gmail.com', 'Jose', 'Garcia', '2002-10-11', 'V29040855'),
+(92, 'clave092', '04240304756', '2025-07-29', 'maria.martinez92@gmail.com', 'Maria', 'Martinez', '2002-03-03', 'V28799066'),
+(93, 'clave093', '04123458688', '2021-07-23', 'carlos.soto93@gmail.com', 'Carlos', 'Soto', '2003-01-15', 'V29056977'),
+(94, 'clave094', '04143459599', '2023-07-13', 'ana.lopez94@gmail.com', 'Ana', 'Lopez', '1964-08-21', 'V6201088'),
+(95, 'clave095', '04122165030', '2025-07-22', 'miguel.gomez95@gmail.com', 'Miguel', 'Gomez', '2000-02-06', 'V273001199'),
+(96, 'clave096', '04263352211', '2025-07-14', 'laura.perez96@gmail.com', 'Laura', 'Perez', '1997-09-29', 'V254001200'),
+(97, 'clave097', '04163332532', '2023-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1996-04-18', 'V22001311'),
 (98, 'clave098', '04240053930', '2020-07-13', 'paula.sanchez98@gmail.com', 'Paula', 'Sanchez', '1975-07-27', 'V8764002'),
-(99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '1987-08-25', 'V29000999'),
-(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1993-12-10', 'V9768576');
+(99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '2003-08-25', 'V30235888'),
+(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1970-12-10', 'V9768576');
 
 --Direcciones Generales de la base de datos
 INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) VALUES
@@ -329,17 +329,17 @@ INSERT INTO Comercio (id, password, telefono, fecha_registro, correo, nombre, ub
 (22, 'passdef', '04241305252', '2025-10-15', 'fusiongourmet@gmail.com', 'Fusión Gourmet', 'Calle Marino, Porlamar', 18, 23, 1),
 (23, 'passghi', '04149354643', '2025-11-10', 'organicbistro@outlook.com', 'Organic Bistro', 'Av. Bolívar, Maturín', 10, 20, 1),
 (24, 'passjkl', '04129120103', '2025-12-05', 'caserakitchen@hotmail.com', 'Casera Kitchen', 'Calle Principal, La Guaira', 9, 18, 1),
-(25, 'passmno', '04242294644', '2026-01-20', 'texmexgrill@gmail.com', 'Tex-Mex Grill', 'Av. Intercomunal, Cabimas', 11, 22, 1),
-(26, 'passpqr', '04161208669', '2026-02-15', 'streetfood@yahoo.com', 'Street Food Market', 'Calle Zamora, Coro', 12, 23, 1),
-(27, 'passtuv', '04120646803', '2026-03-10', 'healthyfit@gmail.com', 'Healthy & Fit', 'Av. Sucre, San Fernando', 7, 19, 1),
-(28, 'passwxy', '04242109539', '2026-04-05', 'comfortfood@outlook.com', 'Comfort Food', 'Calle 5, Acarigua', 8, 20, 1),
-(29, 'passz12', '04120108961', '2026-05-01', 'marytierra@hotmail.com', 'Mar y Tierra', 'Av. Principal, Guarenas', 12, 22, 1),
-(30, 'pass345', '04248980302', '2026-06-15', 'pizzanapoli@gmail.com', 'Pizza Napoli', 'Calle Italia, El Tigre', 10, 23, 1),
-(31, 'pass678', '04123700998', '2024-10-10', 'orientexpress@yahoo.com', 'Orient Express', 'Av. Este, Valencia', 11, 22, 0),
-(32, 'pass901', '04249870123', '2024-09-05', 'argentinagrill@gmail.com', 'Argentina Grill', 'Calle Páez, Barinas', 12, 23, 0),
+(25, 'passmno', '04242294644', '2025-01-20', 'texmexgrill@gmail.com', 'Tex-Mex Grill', 'Av. Intercomunal, Cabimas', 11, 22, 1),
+(26, 'passpqr', '04161208669', '2025-02-15', 'streetfood@yahoo.com', 'Street Food Market', 'Calle Zamora, Coro', 12, 23, 1),
+(27, 'passtuv', '04120646803', '2025-03-10', 'healthyfit@gmail.com', 'Healthy & Fit', 'Av. Sucre, San Fernando', 7, 19, 1),
+(28, 'passwxy', '04242109539', '2025-04-05', 'comfortfood@outlook.com', 'Comfort Food', 'Calle 5, Acarigua', 8, 20, 1),
+(29, 'passz12', '04120108961', '2025-05-01', 'marytierra@hotmail.com', 'Mar y Tierra', 'Av. Principal, Guarenas', 12, 22, 1),
+(30, 'pass345', '04248980302', '2025-06-15', 'pizzanapoli@gmail.com', 'Pizza Napoli', 'Calle Italia, El Tigre', 10, 23, 1),
+(31, 'pass678', '04123700998', '2025-10-10', 'orientexpress@yahoo.com', 'Orient Express', 'Av. Este, Valencia', 11, 22, 0),
+(32, 'pass901', '04249870123', '2025-09-05', 'argentinagrill@gmail.com', 'Argentina Grill', 'Calle Páez, Barinas', 12, 23, 0),
 (33, 'pass234', '04127115643', '2024-08-12', 'frenchbakery@outlook.com', 'French Bakery', 'Av. 15, Maracaibo', 9, 18, 0),
-(34, 'pass567', '04269020888', '2024-07-20', 'tapesbar@hotmail.com', 'Tapas Bar', 'Calle España, Caracas', 13, 22, 0),
-(35, 'pass890', '04142137207', '2024-06-15', 'koreabbq@gmail.com', 'Korea BBQ', 'Av. Fuerzas Armadas, Puerto Ordaz', 11, 21, 0);
+(34, 'pass567', '04269020888', '2025-07-20', 'tapesbar@hotmail.com', 'Tapas Bar', 'Calle España, Caracas', 13, 22, 0),
+(35, 'pass890', '04142137207', '2024-04-24', 'koreabbq@gmail.com', 'Korea BBQ', 'Av. Fuerzas Armadas, Puerto Ordaz', 11, 21, 0);
 
 -- Asignación aleatoria de cocinas (30% con 2+ cocinas)
 INSERT INTO ComercioCocina (idComercio, idCocina) VALUES
@@ -447,7 +447,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (16, 'Tacos y Burritos', 'Maíz y trigo con rellenos variados', 4),
 (17, 'Enchiladas y Quesadillas', 'Platillos gratinados y rellenos', 4),
 (18, 'Especialidades Regionales', 'Mole Poblano, Chiles Rellenos, etc.', 4),
-(19, 'Bebidas Típicas', 'Aguas frescas, Horchata y Micheladas', 4),
+(19, 'Bebidas', 'Aguas frescas, Horchata y Micheladas', 4),
 (20, 'Sopas y Ensaladas Mexicanas', 'Pozole, Sopa de Tortilla, Ensalada de Nopal', 4),
 
 -- Menú Wok Fusion (idMenu: 5)
@@ -468,7 +468,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (31, 'Entradas Griegas y Árabes', 'Hummus, Tzatziki, Baba Ghanoush', 7),
 (32, 'Pescados y Mariscos Frescos', 'A la plancha, al horno y en papillote', 7),
 (33, 'Ensaladas Mediterráneas', 'Tabule, Griega, Caprese', 7),
-(34, 'Platos Principales', 'Moussaka, Kebab, Cuscús', 7),
+(34, 'Principales', 'Moussaka, Kebab, Cuscús', 7),
 (35, 'Postres Ligeros', 'Frutas frescas, Yogur Griego con miel', 7),
 
 -- Menú Arepera 24/7 (idMenu: 8)
@@ -476,7 +476,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (37, 'Arepas Gourmet', 'Combinaciones especiales e ingredientes premium', 8),
 (38, 'Arepas Veganas', 'Opciones con rellenos a base de plantas', 8),
 (39, 'Empanadas y Tequeños', 'Pasapalos venezolanos tradicionales', 8),
-(40, 'Jugos Naturales', 'Bebidas frescas y energéticas', 8),
+(40, 'Bebidas', 'Jugos frescos y energéticos', 8),
 
 -- Menú Boulangerie (idMenu: 9)
 (41, 'Panes Artesanales', 'Baguettes, Campesinos, Croissants', 9),
@@ -536,7 +536,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Sin Gluten (idMenu: 17)
 (81, 'Entradas Libres de Gluten', 'Ensaladas, cremas, y aperitivos sin trigo', 17),
-(82, 'Platos Principales Sin Gluten', 'Carnes, pescados y aves con guarniciones GF', 17),
+(82, 'Principales', 'Carnes, pescados y aves con guarniciones GF', 17),
 (83, 'Pastas y Panes Sin Gluten', 'Opciones seguras y deliciosas', 17),
 (84, 'Postres Sin Gluten', 'Variedad de dulces aptos para celíacos', 17),
 (85, 'Opciones Veganas Sin Gluten', 'Platos basados en plantas y sin gluten', 17),
@@ -578,31 +578,31 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Orgánico (idMenu: 23)
 (111, 'Ensaladas Orgánicas', 'Frescas y de temporada con aderezos naturales', 23),
-(112, 'Platos Principales Orgánicos', 'Carnes, aves y vegetales de granjas sostenibles', 23),
+(112, 'Principales', 'Carnes, aves y vegetales de granjas sostenibles', 23),
 (113, 'Opciones Veganas Orgánicas', 'Basadas en plantas con certificación orgánica', 23),
 (114, 'Sopas y Cremas Orgánicas', 'Elaboradas con ingredientes de cultivo ecológico', 23),
 (115, 'Bebidas y Postres Orgánicos', 'Jugos, infusiones y dulces saludables', 23),
 
 -- Menú Casero (idMenu: 24)
 (116, 'Sopas y Cremas Caseras', 'Recetas de la abuela, con sabor a hogar', 24),
-(117, 'Platos Principales Caseros', 'Guisos, Asados y Estofados tradicionales', 24),
+(117, 'Principales', 'Guisos, Asados y Estofados tradicionales', 24),
 (118, 'Contornos Venezolanos', 'Arroz, Tajadas, Ensalada rallada', 24),
 (119, 'Postres de la Abuela', 'Arroz con leche, Dulce de lechosa', 24),
-(120, 'Bebidas Refrescantes', 'Papelón con limón, Chicha', 24),
+(120, 'Bebidas', 'Papelón con limón, Chicha', 24),
 
 -- Menú Tex-Mex (idMenu: 25)
 (121, 'Nachos y Entradas Tex-Mex', 'Queso, jalapeños, guacamole', 25),
 (122, 'Fajitas y Chimichangas', 'Con carnes, pollo o vegetales', 25),
 (123, 'Burritos y Enchiladas', 'Rellenos abundantes y salsas picantes', 25),
 (124, 'Chili y Soups', 'Chili con carne, Sopa de tortilla', 25),
-(125, 'Bebidas Americanas', 'Refrescos, Cervezas artesanales', 25),
+(125, 'Bebidas', 'Refrescos, Cervezas artesanales', 25),
 
 -- Menú Street Food (idMenu: 26)
 (126, 'Tacos y Arepas Callejeras', 'Variedad de rellenos rápidos', 26),
 (127, 'Burgers y Hot Dogs Gourmet', 'Versiones elevadas de clásicos urbanos', 26),
 (128, 'Brochetas y Pinchos', 'Carnes, vegetales y mariscos a la brasa', 26),
 (129, 'Fritos Internacionales', 'Papas fritas con aderezos, Churros', 26),
-(130, 'Bebidas Refrescantes', 'Limonadas, Tes fríos, Smoothies', 26),
+(130, 'Bebidas', 'Limonadas, Tes fríos, Smoothies', 26),
 
 -- Menú Saludable (idMenu: 27)
 (131, 'Ensaladas de Autor', 'Frescas y nutritivas con ingredientes de calidad', 27),
@@ -616,7 +616,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (137, 'Platos Clásicos Americanos', 'Mac and Cheese, Albóndigas, Pastel de carne', 28),
 (138, 'Acompañamientos Abundantes', 'Puré de papa, Patatas asadas', 28),
 (139, 'Postres Caseros', 'Brownies, Crumble de manzana, Cookies', 28),
-(140, 'Bebidas Clásicas', 'Malteadas, Chocolates Calientes', 28),
+(140, 'Bebidas', 'Malteadas, Chocolates Calientes', 28),
 
 -- Menú Mar y Tierra (idMenu: 29)
 (141, 'Cortes Premium de Carne', 'Filet Mignon, Ribeye, Lomo de Cerdo', 29),
@@ -630,7 +630,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (147, 'Pizzas Especiales', 'Combinaciones únicas con ingredientes frescos', 30),
 (148, 'Focaccias y Calzones', 'Panes y masas rellenas', 30),
 (149, 'Ensaladas Italianas', 'Para acompañar tu pizza', 30),
-(150, 'Bebidas y Cervezas', 'Gaseosas, cervezas artesanales', 30),
+(150, 'Bebidas', 'Gaseosas, cervezas artesanales', 30),
 
 -- Menú Oriental (idMenu: 31)
 (151, 'Dim Sum y Dumplings', 'Variedad de rellenos al vapor o fritos', 31),
@@ -648,7 +648,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- Menú Francés (idMenu: 33)
 (161, 'Entradas Francesas', 'Sopa de cebolla, Paté, Tartare de bœuf', 33),
-(162, 'Platos Principales Clásicos', 'Coq au Vin, Boeuf Bourguignon, Confit de Canard', 33),
+(162, 'Principales', 'Coq au Vin, Boeuf Bourguignon, Confit de Canard', 33),
 (163, 'Pescados y Mariscos', 'Meunière, Bouillabaisse', 33),
 (164, 'Guarniciones y Verduras', 'Gratin Dauphinois, Haricots Verts', 33),
 (165, 'Postres y Quesos', 'Crème brûlée, Tarta de manzana, Selección de quesos', 33),
@@ -657,7 +657,7 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 (166, 'Tapas Frías', 'Jamón Serrano, Queso Manchego, Tortilla Española', 34),
 (167, 'Tapas Calientes', 'Gambas al ajillo, Croquetas, Patatas Bravas', 34),
 (168, 'Paellas y Arroces', 'Paella de marisco, Arroz negro, Fideuá', 34),
-(169, 'Platos Principales', 'Cochinillo Asado, Rabo de Toro', 34),
+(169, 'Principales', 'Cochinillo Asado, Rabo de Toro', 34),
 (170, 'Postres Españoles', 'Churros con chocolate, Crema catalana', 34),
 
 -- Menú Coreano BBQ (idMenu: 35)
@@ -670,186 +670,189 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 
 -- 120 Platos
 
-INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, idSeccion) VALUES
+INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, idSeccion, disponibilidad) VALUES
 -- Platos para Menú Parrillero (idMenu: 1, idSeccion: 1-5)
-(1, 'Asado Negro Criollo', 1, 20, 18.50, 'Carne de res cocida lentamente en su jugo oscuro.', 1),
-(2, 'Punta Trasera a la Brasa', 2, 25, 22.00, 'Corte jugoso y tierno, ideal para amantes de la carne.', 1),
-(3, 'Chorizo Parrillero', 3, 30, 8.00, 'Chorizo casero asado a la perfección.', 3),
-(4, 'Ensalada Rallada', 1, 50, 5.00, 'Repollo y zanahoria rallados con aderezo suave.', 2),
+(1, 'Asado Negro Criollo', 1, 20, 18.50, 'Carne de res cocida lentamente en su jugo oscuro.', 1, 1),
+(2, 'Punta Trasera a la Brasa', 2, 25, 22.00, 'Corte jugoso y tierno, ideal para amantes de la carne.', 1, 1),
+(3, 'Chorizo Parrillero', 3, 30, 8.00, 'Chorizo casero asado a la perfección.', 3, 1),
+(4, 'Ensalada Rallada', 1, 50, 5.00, 'Repollo y zanahoria rallados con aderezo suave.', 2, 1),
+(122, 'Pepsi Cola', 4, 60, 2.00, 'Refrescante bebida gaseosa de cola negra', 5, 1),
 
 -- Platos para Menú Sushi Experience (idMenu: 2, idSeccion: 6-10)
-(5, 'Roll California', 1, 40, 12.00, 'Clásico rollo con cangrejo, aguacate y pepino.', 7),
-(6, 'Nigiri Salmón', 2, 35, 3.50, 'Fina lámina de salmón fresco sobre arroz avinagrado.', 6),
-(7, 'Sopa Miso', 1, 60, 4.00, 'Caldo ligero con tofu, alga nori y cebollín.', 10),
-(8, 'Ebi Tempura', 1, 28, 15.00, 'Camarones en tempura crujiente.', 9),
+(5, 'Roll California', 1, 40, 12.00, 'Clásico rollo con cangrejo, aguacate y pepino.', 7, 1),
+(6, 'Nigiri Salmón', 2, 35, 3.50, 'Fina lámina de salmón fresco sobre arroz avinagrado.', 6, 1),
+(7, 'Sopa Miso', 1, 60, 4.00, 'Caldo ligero con tofu, alga nori y cebollín.', 10, 1),
+(8, 'Ebi Tempura', 1, 28, 15.00, 'Camarones en tempura crujiente.', 9, 1),
 
 -- Platos para Menú Pasta Artesanal (idMenu: 3, idSeccion: 11-15)
-(9, 'Fettuccine Alfredo', 1, 30, 14.50, 'Pasta fresca con cremosa salsa Alfredo.', 11),
-(10, 'Lasagna Clásica', 2, 20, 16.00, 'Capas de pasta, carne y bechamel horneadas.', 12),
-(11, 'Ensalada Caprese', 1, 35, 9.00, 'Tomate, mozzarella fresca y albahaca.', 14),
-(12, 'Tiramisú', 1, 25, 7.50, 'Postre italiano con café, mascarpone y bizcochos.', 15),
+(9, 'Fettuccine Alfredo', 1, 30, 14.50, 'Pasta fresca con cremosa salsa Alfredo.', 11, 1),
+(10, 'Lasagna Clásica', 2, 20, 16.00, 'Capas de pasta, carne y bechamel horneadas.', 12, 1),
+(11, 'Ensalada Caprese', 1, 35, 9.00, 'Tomate, mozzarella fresca y albahaca.', 14, 1),
+(12, 'Tiramisú', 1, 25, 7.50, 'Postre italiano con café, mascarpone y bizcochos.', 15, 1),
 
 -- Platos para Menú Mexicano (idMenu: 4, idSeccion: 16-20)
-(13, 'Tacos al Pastor', 1, 45, 10.00, 'Cerdo marinado y asado con piña.', 16),
-(14, 'Burrito de Carnitas', 2, 30, 11.50, 'Tortilla de trigo rellena de cerdo confitado.', 16),
-(15, 'Guacamole con Totopos', 1, 50, 8.00, 'Aguacate fresco machacado con pico de gallo.', 19),
-(16, 'Enchiladas Rojas', 1, 25, 13.00, 'Tortillas rellenas bañadas en salsa roja.', 17),
+(13, 'Tacos al Pastor', 1, 45, 10.00, 'Cerdo marinado y asado con piña.', 16, 1),
+(14, 'Burrito de Carnitas', 2, 30, 11.50, 'Tortilla de trigo rellena de cerdo confitado.', 16, 1),
+(15, 'Pozol', 1, 50, 8.00, 'Bebida prehispánica a base de maíz fermentado.', 19, 1),
+(16, 'Enchiladas Rojas', 1, 25, 13.00, 'Tortillas rellenas bañadas en salsa roja.', 17, 1),
 
 -- Platos para Menú Wok Fusion (idMenu: 5, idSeccion: 21-25)
-(17, 'Wok de Pollo Teriyaki', 1, 35, 14.00, 'Pollo salteado con vegetales y salsa teriyaki.', 21),
-(18, 'Arroz Frito Especial', 2, 40, 10.50, 'Arroz con camarones, pollo y vegetales.', 23),
-(19, 'Rollitos Primavera', 1, 50, 7.00, 'Vegetales frescos envueltos y fritos.', 24),
-(20, 'Fideos de Arroz con Camarones', 1, 30, 16.00, 'Fideos finos con camarones y salsa suave.', 22),
+(17, 'Wok de Pollo Teriyaki', 1, 35, 14.00, 'Pollo salteado con vegetales y salsa teriyaki.', 21, 1),
+(18, 'Arroz Frito Especial', 2, 40, 10.50, 'Arroz con camarones, pollo y vegetales.', 23, 1),
+(19, 'Rollitos Primavera', 1, 50, 7.00, 'Vegetales frescos envueltos y fritos.', 24, 1),
+(20, 'Fideos de Arroz con Camarones', 1, 30, 16.00, 'Fideos finos con camarones y salsa suave.', 22, 1),
 
 -- Platos para Menú Curry Tradicional (idMenu: 6, idSeccion: 26-30)
-(21, 'Curry Rojo de Res', 1, 25, 17.00, 'Carne de res en curry rojo tailandés.', 26),
-(22, 'Curry Verde de Pollo', 2, 30, 15.50, 'Pollo en cremoso curry verde.', 27),
-(23, 'Arroz Basmati', 1, 50, 4.00, 'Arroz aromático para acompañar.', 29),
-(24, 'Pan Naan', 1, 40, 3.00, 'Pan plano tradicional indio.', 29),
+(21, 'Curry Rojo de Res', 1, 25, 17.00, 'Carne de res en curry rojo tailandés.', 26, 1),
+(22, 'Curry Verde de Pollo', 2, 30, 15.50, 'Pollo en cremoso curry verde.', 27, 1),
+(23, 'Arroz Basmati', 1, 50, 4.00, 'Arroz aromático para acompañar.', 29, 1),
+(24, 'Pan Naan', 1, 40, 3.00, 'Pan plano tradicional indio.', 29, 1),
 
 -- Platos para Menú Mediterráneo (idMenu: 7, idSeccion: 31-35)
-(25, 'Hummus con Pan Pita', 1, 40, 8.50, 'Crema de garbanzos con pan árabe.', 31),
-(26, 'Moussaka', 1, 20, 16.00, 'Pastel de berenjenas, carne y bechamel.', 34),
-(27, 'Ensalada Griega', 1, 35, 9.50, 'Tomate, pepino, cebolla, aceitunas y queso feta.', 33),
-(28, 'Souvlaki de Pollo', 1, 28, 14.00, 'Brochetas de pollo a la parrilla.', 32),
+(25, 'Hummus con Pan Pita', 1, 40, 8.50, 'Crema de garbanzos con pan árabe.', 31, 1),
+(26, 'Moussaka', 1, 20, 16.00, 'Pastel de berenjenas, carne y bechamel.', 34, 1),
+(27, 'Ensalada Griega', 1, 35, 9.50, 'Tomate, pepino, cebolla, aceitunas y queso feta.', 33, 1),
+(28, 'Souvlaki de Pollo', 1, 28, 14.00, 'Brochetas de pollo a la parrilla.', 32, 1),
 
 -- Platos para Menú Arepera 24/7 (idMenu: 8, idSeccion: 36-40)
-(29, 'Arepa Reina Pepiada', 1, 60, 9.00, 'Rellena de pollo desmechado con aguacate.', 36),
-(30, 'Arepa Pelúa', 2, 55, 9.50, 'Rellena de carne mechada con queso amarillo.', 36),
-(31, 'Empanada de Carne', 1, 70, 4.00, 'Crujiente empanada frita rellena de carne.', 39),
-(32, 'Jugo de Parchita', 1, 50, 3.50, 'Jugo natural de maracuyá.', 40),
+(29, 'Arepa Reina Pepiada', 1, 60, 9.00, 'Rellena de pollo desmechado con aguacate.', 36, 1),
+(30, 'Arepa Pelúa', 2, 55, 9.50, 'Rellena de carne mechada con queso amarillo.', 36, 1),
+(31, 'Empanada de Carne', 1, 70, 4.00, 'Crujiente empanada frita rellena de carne.', 39, 1),
+(32, 'Jugo de Parchita', 1, 50, 3.50, 'Jugo natural de maracuyá.', 40, 1),
 
 -- Platos para Menú Boulangerie (idMenu: 9, idSeccion: 41-45)
-(33, 'Croissant de Almendras', 1, 40, 4.50, 'Crujiente croissant con crema de almendras.', 42),
-(34, 'Baguette Clásica', 1, 30, 3.00, 'Pan francés recién horneado.', 41),
-(35, 'Éclair de Chocolate', 1, 25, 5.00, 'Dulce francés relleno de crema y cubierto de chocolate.', 43),
-(36, 'Café Latte', 1, 60, 4.00, 'Café con leche espumosa.', 45),
+(33, 'Croissant de Almendras', 1, 40, 4.50, 'Crujiente croissant con crema de almendras.', 42, 1),
+(34, 'Baguette Clásica', 1, 30, 3.00, 'Pan francés recién horneado.', 41, 1),
+(35, 'Éclair de Chocolate', 1, 25, 5.00, 'Dulce francés relleno de crema y cubierto de chocolate.', 43, 1),
+(36, 'Café Latte', 1, 60, 4.00, 'Café con leche espumosa.', 45, 1),
 
 -- Platos para Menú Paellero (idMenu: 10, idSeccion: 46-50)
-(37, 'Paella de Mariscos', 1, 20, 25.00, 'Arroz con azafrán y una variedad de mariscos.', 46),
-(38, 'Tapas de Gambas al Ajillo', 1, 30, 12.00, 'Gambas salteadas en aceite de oliva y ajo.', 49),
-(39, 'Paella Mixta', 2, 18, 24.00, 'Arroz con pollo, cerdo y mariscos.', 47),
-(40, 'Sangría Tradicional', 1, 25, 8.00, 'Vino tinto con frutas y especias.', 50),
+(37, 'Paella de Mariscos', 1, 20, 25.00, 'Arroz con azafrán y una variedad de mariscos.', 46, 1),
+(38, 'Tapas de Gambas al Ajillo', 1, 30, 12.00, 'Gambas salteadas en aceite de oliva y ajo.', 49, 1),
+(39, 'Paella Mixta', 2, 18, 24.00, 'Arroz con pollo, cerdo y mariscos.', 47, 1),
+(40, 'Sangría Tradicional', 1, 25, 8.00, 'Vino tinto con frutas y especias.', 50, 1),
 
 -- Platos para Menú Cevichero (idMenu: 11, idSeccion: 51-55)
-(41, 'Ceviche Clásico de Pescado', 1, 30, 18.00, 'Pescado blanco marinado en leche de tigre.', 51),
-(42, 'Tiradito de Pulpo', 1, 25, 19.50, 'Finas láminas de pulpo con salsa de aceitunas.', 52),
-(43, 'Causa Limeña', 1, 28, 14.00, 'Puré de papa amarilla relleno de atún o pollo.', 52),
-(44, 'Chicha Morada', 1, 40, 4.00, 'Bebida de maíz morado.', 55),
+(41, 'Ceviche Clásico de Pescado', 1, 30, 18.00, 'Pescado blanco marinado en leche de tigre.', 51, 1),
+(42, 'Tiradito de Pulpo', 1, 25, 19.50, 'Finas láminas de pulpo con salsa de aceitunas.', 52, 1),
+(43, 'Causa Limeña', 1, 28, 14.00, 'Puré de papa amarilla relleno de atún o pollo.', 52, 1),
+(44, 'Chicha Morada', 1, 40, 4.00, 'Bebida de maíz morado.', 55, 1),
 
 -- Platos para Menú Churrasco (idMenu: 12, idSeccion: 56-60)
-(45, 'Picanha a la Espada', 1, 20, 28.00, 'Corte estrella de la churrasquería brasileña.', 56),
-(46, 'Fraldinha', 2, 22, 26.00, 'Corte de falda jugoso y lleno de sabor.', 56),
-(47, 'Arroz Blanco', 1, 50, 4.00, 'Arroz suelto y perfecto para acompañar.', 58),
-(48, 'Brigadeiro', 1, 35, 3.00, 'Dulce de chocolate brasileño.', 60),
+(45, 'Picanha a la Espada', 1, 20, 28.00, 'Corte estrella de la churrasquería brasileña.', 56, 1),
+(46, 'Fraldinha', 2, 22, 26.00, 'Corte de falda jugoso y lleno de sabor.', 56, 1),
+(47, 'Arroz Blanco', 1, 50, 4.00, 'Arroz suelto y perfecto para acompañar.', 58, 1),
+(48, 'Brigadeiro', 1, 35, 3.00, 'Dulce de chocolate brasileño.', 60, 1),
 
 -- Platos para Menú Coreano (idMenu: 13, idSeccion: 61-65)
-(49, 'Bibimbap', 1, 30, 16.00, 'Arroz mezclado con vegetales, carne y huevo.', 63),
-(50, 'Kimchi Jjigae', 1, 25, 14.00, 'Estofado picante de kimchi con tofu y carne.', 61),
-(51, 'Japchae', 1, 28, 13.50, 'Fideos de batata salteados con vegetales y carne.', 62),
-(52, 'Kimchi', 1, 50, 5.00, 'Col fermentada picante, acompañamiento esencial.', 64),
+(49, 'Bibimbap', 1, 30, 16.00, 'Arroz mezclado con vegetales, carne y huevo.', 63, 1),
+(50, 'Kimchi Jjigae', 1, 25, 14.00, 'Estofado picante de kimchi con tofu y carne.', 61, 1),
+(51, 'Japchae', 1, 28, 13.50, 'Fideos de batata salteados con vegetales y carne.', 62, 1),
+(52, 'Kimchi', 1, 50, 5.00, 'Col fermentada picante, acompañamiento esencial.', 64, 1),
 
 -- Platos para Menú Thai (idMenu: 14, idSeccion: 66-70)
-(53, 'Pad Thai con Pollo', 1, 35, 14.00, 'Fideos de arroz salteados con pollo, huevo y cacahuetes.', 67),
-(54, 'Tom Yum Goong', 1, 28, 12.00, 'Sopa picante de camarones con hierbas aromáticas.', 68),
-(55, 'Curry Massaman con Res', 1, 20, 17.50, 'Curry suave y aromático con cacahuetes y papa.', 66),
-(56, 'Mango Sticky Rice', 1, 25, 7.00, 'Arroz pegajoso con mango fresco y leche de coco.', 70),
+(53, 'Pad Thai con Pollo', 1, 35, 14.00, 'Fideos de arroz salteados con pollo, huevo y cacahuetes.', 67, 1),
+(54, 'Tom Yum Goong', 1, 28, 12.00, 'Sopa picante de camarones con hierbas aromáticas.', 68, 1),
+(55, 'Curry Massaman con Res', 1, 20, 17.50, 'Curry suave y aromático con cacahuetes y papa.', 66, 1),
+(56, 'Mango Sticky Rice', 1, 25, 7.00, 'Arroz pegajoso con mango fresco y leche de coco.', 70, 1),
 
 -- Platos para Menú Vietnamita (idMenu: 15, idSeccion: 71-75)
-(57, 'Pho Bo (Sopa de Res)', 1, 30, 15.00, 'Sopa de fideos de arroz con carne de res y hierbas.', 71),
-(58, 'Gỏi Cuốn (Rollos de Verano)', 1, 40, 9.00, 'Rollos frescos con camarones, cerdo y vegetales.', 72),
-(59, 'Bún Chả', 1, 25, 16.00, 'Fideos de arroz con carne de cerdo a la parrilla.', 74),
-(60, 'Café Vietnamita con Leche Condensada', 1, 35, 5.00, 'Café fuerte con leche condensada dulce.', 75),
+(57, 'Pho Bo (Sopa de Res)', 1, 30, 15.00, 'Sopa de fideos de arroz con carne de res y hierbas.', 71, 1),
+(58, 'Gỏi Cuốn (Rollos de Verano)', 1, 40, 9.00, 'Rollos frescos con camarones, cerdo y vegetales.', 72, 1),
+(59, 'Bún Chả', 1, 25, 16.00, 'Fideos de arroz con carne de cerdo a la parrilla.', 74, 1),
+(60, 'Café Vietnamita con Leche Condensada', 1, 35, 5.00, 'Café fuerte con leche condensada dulce.', 75, 1),
 
 -- Platos para Menú Colombiano (idMenu: 16, idSeccion: 76-80)
-(61, 'Bandeja Paisa', 1, 20, 20.00, 'Plato insignia con carne, frijoles, arroz, huevo, etc.', 76),
-(62, 'Ajiaco Santafereño', 1, 25, 15.00, 'Sopa de pollo y papas con mazorca y aguacate.', 78),
-(63, 'Empanadas Colombianas', 1, 40, 3.50, 'Empanadas de maíz rellenas de papa y carne.', 77),
-(64, 'Postre de Natilla', 1, 30, 5.00, 'Postre cremoso tradicional.', 79),
-
+(61, 'Bandeja Paisa', 1, 20, 20.00, 'Plato insignia con carne, frijoles, arroz, huevo, etc.', 76, 1),
+(62, 'Ajiaco Santafereño', 1, 25, 15.00, 'Sopa de pollo y papas con mazorca y aguacate.', 78, 1),
+(63, 'Empanadas Colombianas', 1, 40, 3.50, 'Empanadas de maíz rellenas de papa y carne.', 77, 1),
+(64, 'Postre de Natilla', 1, 30, 5.00, 'Postre cremoso tradicional.', 79, 1),
+(121, 'Aguapanela', 3, 80, 7.00, 'Una bebida dulce hecha con agua y panela.', 80, 1),
 -- Platos para Menú Sin Gluten (idMenu: 17, idSeccion: 81-85)
-(65, 'Salmón al Horno con Vegetales Asados', 1, 25, 21.00, 'Plato principal saludable y sin gluten.', 82),
-(66, 'Pasta de Lentejas con Pesto de Albahaca', 1, 30, 15.00, 'Pasta sin gluten con salsa pesto casera.', 83),
-(67, 'Brownie de Chocolate Sin Gluten', 1, 35, 6.00, 'Delicioso brownie apto para celíacos.', 84),
-(68, 'Ensalada Quinoa y Aguacate', 1, 40, 12.00, 'Ensalada nutritiva con proteína completa.', 81),
+(65, 'Salmón al Horno con Vegetales Asados', 1, 25, 21.00, 'Plato principal saludable y sin gluten.', 82, 1),
+(66, 'Pasta de Lentejas con Pesto de Albahaca', 1, 30, 15.00, 'Pasta sin gluten con salsa pesto casera.', 83, 1),
+(67, 'Brownie de Chocolate Sin Gluten', 1, 35, 6.00, 'Delicioso brownie apto para celíacos.', 84, 1),
+(68, 'Ensalada Quinoa y Aguacate', 1, 40, 12.00, 'Ensalada nutritiva con proteína completa.', 81, 1),
 
 -- Platos para Menú Salvadoreño (idMenu: 18, idSeccion: 86-90)
-(69, 'Pupusa de Queso con Loroco', 1, 45, 4.00, 'Pupusa rellena de queso y flor de loroco.', 86),
-(70, 'Pupusa Revuelta', 2, 40, 4.50, 'Pupusa con chicharrón, frijol y queso.', 86),
-(71, 'Yuca con Chicharrón', 1, 30, 10.00, 'Yuca cocida o frita con trozos de cerdo crujientes.', 87),
-(72, 'Sopa de Res Salvadoreña', 1, 20, 14.00, 'Caldo sustancioso con vegetales y carne.', 88),
+(69, 'Pupusa de Queso con Loroco', 1, 45, 4.00, 'Pupusa rellena de queso y flor de loroco.', 86, 1),
+(70, 'Pupusa Revuelta', 2, 40, 4.50, 'Pupusa con chicharrón, frijol y queso.', 86, 1),
+(71, 'Yuca con Chicharrón', 1, 30, 10.00, 'Yuca cocida o frita con trozos de cerdo crujientes.', 87, 1),
+(72, 'Sopa de Res Salvadoreña', 1, 20, 14.00, 'Caldo sustancioso con vegetales y carne.', 88, 1),
+(123, 'Horchata de Morro', 4, 50, 3.50, 'Bebida dulce a base de morro y especias.', 90, 1),
 
 -- Platos para Menú Griego (idMenu: 19, idSeccion: 91-95)
-(73, 'Gyros de Cerdo', 1, 30, 13.00, 'Carne de cerdo en pan pita con tzatziki.', 92),
-(74, 'Moussaka', 1, 25, 16.50, 'Capas de berenjena, carne picada y bechamel.', 92),
-(75, 'Tzatziki con Pan Pita', 1, 40, 7.50, 'Salsa de yogur, pepino y ajo.', 91),
-(76, 'Baklava', 1, 35, 6.00, 'Postre de hojaldre con nueces y almíbar.', 95),
+(73, 'Gyros de Cerdo', 1, 30, 13.00, 'Carne de cerdo en pan pita con tzatziki.', 92, 1),
+(74, 'Moussaka', 1, 25, 16.50, 'Capas de berenjena, carne picada y bechamel.', 92, 1),
+(75, 'Tzatziki con Pan Pita', 1, 40, 7.50, 'Salsa de yogur, pepino y ajo.', 91, 1),
+(76, 'Baklava', 1, 35, 6.00, 'Postre de hojaldre con nueces y almíbar.', 95, 1),
 
 -- Platos para Menú Turco (idMenu: 20, idSeccion: 96-100)
-(77, 'Adana Kebab', 1, 28, 15.00, 'Brocheta de carne picada sazonada y asada.', 98),
-(78, 'Lahmacun', 1, 35, 9.00, 'Pizza turca con carne picada y vegetales.', 99),
-(79, 'Hummus', 1, 40, 7.00, 'Crema de garbanzos tradicional.', 96),
-(80, 'Künefe', 1, 20, 8.00, 'Postre de queso caliente con cabello de ángel.', 100),
+(77, 'Adana Kebab', 1, 28, 15.00, 'Brocheta de carne picada sazonada y asada.', 98, 1),
+(78, 'Lahmacun', 1, 35, 9.00, 'Pizza turca con carne picada y vegetales.', 99, 1),
+(79, 'Hummus', 1, 40, 7.00, 'Crema de garbanzos tradicional.', 96, 1),
+(80, 'Künefe', 1, 20, 8.00, 'Postre de queso caliente con cabello de ángel.', 100, 1),
 
 -- Platos para Menú Alemán (idMenu: 21, idSeccion: 101-105)
-(81, 'Bratwurst con Sauerkraut', 1, 30, 14.00, 'Salchicha alemana con col fermentada.', 101),
-(82, 'Wiener Schnitzel', 1, 25, 18.00, 'Escalope de ternera empanado y frito.', 102),
-(83, 'Kartoffelsalat', 1, 40, 6.00, 'Ensalada de papa al estilo alemán.', 104),
-(84, 'Apfelstrudel', 1, 30, 6.50, 'Strudel de manzana con helado o crema.', 105),
+(81, 'Bratwurst con Sauerkraut', 1, 30, 14.00, 'Salchicha alemana con col fermentada.', 101, 1),
+(82, 'Wiener Schnitzel', 1, 25, 18.00, 'Escalope de ternera empanado y frito.', 102, 1),
+(83, 'Kartoffelsalat', 1, 40, 6.00, 'Ensalada de papa al estilo alemán.', 104, 1),
+(84, 'Apfelstrudel', 1, 30, 6.50, 'Strudel de manzana con helado o crema.', 105, 1),
 
 -- Platos para Menú Fusión (idMenu: 22, idSeccion: 106-110)
-(85, 'Tacos de Kimchi y Cerdo', 1, 35, 12.00, 'Fusión coreano-mexicana.', 106),
-(86, 'Sushi Burger', 1, 28, 16.00, 'Hamburguesa con pan de arroz y relleno de sushi.', 109),
-(87, 'Pasta al Curry y Leche de Coco', 1, 25, 15.00, 'Combinación de sabores italianos y asiáticos.', 107),
-(88, 'Cheesecake de Matcha', 1, 20, 8.00, 'Postre clásico con toque japonés.', 110),
+(85, 'Tacos de Kimchi y Cerdo', 1, 35, 12.00, 'Fusión coreano-mexicana.', 106, 1),
+(86, 'Sushi Burger', 1, 28, 16.00, 'Hamburguesa con pan de arroz y relleno de sushi.', 109, 1),
+(87, 'Pasta al Curry y Leche de Coco', 1, 25, 15.00, 'Combinación de sabores italianos y asiáticos.', 107, 1),
+(88, 'Cheesecake de Matcha', 1, 20, 8.00, 'Postre clásico con toque japonés.', 110, 1),
 
 -- Platos para Menú Orgánico (idMenu: 23, idSeccion: 111-115)
-(89, 'Ensalada de Lentejas y Vegetales Orgánicos', 1, 40, 11.00, 'Opción saludable y nutritiva.', 111),
-(90, 'Pollo Orgánico al Limón con Quinoa', 1, 30, 19.00, 'Plato principal con ingredientes de calidad.', 112),
-(91, 'Sopa de Calabaza Asada Orgánica', 1, 35, 9.00, 'Crema cremosa y natural.', 114),
-(92, 'Smoothie Verde Detox', 1, 50, 7.00, 'Mezcla de frutas y vegetales frescos.', 115),
+(89, 'Ensalada de Lentejas y Vegetales Orgánicos', 1, 40, 11.00, 'Opción saludable y nutritiva.', 111, 1),
+(90, 'Pollo Orgánico al Limón con Quinoa', 1, 30, 19.00, 'Plato principal con ingredientes de calidad.', 112, 1),
+(91, 'Sopa de Calabaza Asada Orgánica', 1, 35, 9.00, 'Crema cremosa y natural.', 114, 1),
+(92, 'Smoothie Verde Detox', 1, 50, 7.00, 'Mezcla de frutas y vegetales frescos.', 115, 1),
 
 -- Platos para Menú Casero (idMenu: 24, idSeccion: 116-120)
-(93, 'Pabellón Criollo Completo', 1, 25, 17.00, 'Plato nacional venezolano con todos sus componentes.', 117),
-(94, 'Sopa de Costilla Casera', 1, 30, 12.00, 'Caldo sustancioso con costilla de res.', 116),
-(95, 'Arroz con Leche', 1, 40, 5.00, 'Postre cremoso de arroz y leche.', 119),
-(96, 'Asado Negro', 1, 20, 18.00, 'Versión casera del clásico venezolano.', 117),
+(93, 'Pabellón Criollo Completo', 1, 25, 17.00, 'Plato nacional venezolano con todos sus componentes.', 117, 1),
+(94, 'Sopa de Costilla Casera', 1, 30, 12.00, 'Caldo sustancioso con costilla de res.', 116, 1),
+(95, 'Arroz con Leche', 1, 40, 5.00, 'Postre cremoso de arroz y leche.', 119, 1),
+(96, 'Asado Negro', 1, 20, 18.00, 'Versión casera del clásico venezolano.', 117, 1),
+(124, 'Papelon con Limon', 2, 30, 10.05, 'Bebida dulce y refrescante hecha con panela y jugo de limón',120, 1),
 
 -- Platos para Menú Tex-Mex (idMenu: 25, idSeccion: 121-125)
-(97, 'Fajitas de Pollo', 1, 30, 15.00, 'Tiras de pollo a la parrilla con pimientos y cebolla.', 122),
-(98, 'Nachos Supremos', 1, 40, 11.00, 'Tortillas de maíz con queso, frijoles y más.', 121),
-(99, 'Burrito de Carne Asada', 1, 35, 13.00, 'Relleno de carne asada, arroz, frijoles y salsa.', 123),
-(100, 'Chili con Carne', 1, 25, 10.00, 'Estofado de carne picada con frijoles y especias.', 124),
+(97, 'Fajitas de Pollo', 1, 30, 15.00, 'Tiras de pollo a la parrilla con pimientos y cebolla.', 122, 1),
+(98, 'Nachos Supremos', 1, 40, 11.00, 'Tortillas de maíz con queso, frijoles y más.', 121, 1),
+(99, 'Burrito de Carne Asada', 1, 35, 13.00, 'Relleno de carne asada, arroz, frijoles y salsa.', 123, 1),
+(100, 'Chili con Carne', 1, 25, 10.00, 'Estofado de carne picada con frijoles y especias.', 124, 1),
 
 -- Platos para Menú Street Food (idMenu: 26, idSeccion: 126-130)
-(101, 'Taco de Carnitas', 1, 45, 4.00, 'Mini taco con cerdo confitado y cilantro.', 126),
-(102, 'Hamburguesa Clásica con Papas', 1, 35, 12.00, 'Carne, queso, lechuga, tomate y papas fritas.', 127),
-(103, 'Churros con Chocolate', 1, 50, 6.00, 'Masa frita con azúcar y salsa de chocolate.', 129),
-(104, 'Arepa con Queso Telita', 1, 40, 7.50, 'Arepa rellena de queso fresco y suave.', 126),
+(101, 'Taco de Carnitas', 1, 45, 4.00, 'Mini taco con cerdo confitado y cilantro.', 126, 1),
+(102, 'Hamburguesa Clásica con Papas', 1, 35, 12.00, 'Carne, queso, lechuga, tomate y papas fritas.', 127, 1),
+(103, 'Churros con Chocolate', 1, 50, 6.00, 'Masa frita con azúcar y salsa de chocolate.', 129, 1),
+(104, 'Arepa con Queso Telita', 1, 40, 7.50, 'Arepa rellena de queso fresco y suave.', 126, 1),
 
 -- Platos para Menú Saludable (idMenu: 27, idSeccion: 131-135)
-(105, 'Bowl de Salmón y Aguacate', 1, 30, 16.00, 'Salmón a la plancha, aguacate, quinoa y vegetales.', 133),
-(106, 'Ensalada de Pollo a la Parrilla', 1, 35, 13.00, 'Pechuga de pollo, mix de lechugas, aderezo ligero.', 131),
-(107, 'Lentejas Estofadas con Verduras', 1, 28, 10.00, 'Plato vegano y nutritivo.', 132),
-(108, 'Barra Energética Casera', 1, 40, 4.00, 'Avena, frutos secos y miel.', 134),
+(105, 'Bowl de Salmón y Aguacate', 1, 30, 16.00, 'Salmón a la plancha, aguacate, quinoa y vegetales.', 133, 1),
+(106, 'Ensalada de Pollo a la Parrilla', 1, 35, 13.00, 'Pechuga de pollo, mix de lechugas, aderezo ligero.', 131, 1),
+(107, 'Lentejas Estofadas con Verduras', 1, 28, 10.00, 'Plato vegano y nutritivo.', 132, 1),
+(108, 'Barra Energética Casera', 1, 40, 4.00, 'Avena, frutos secos y miel.', 134, 1),
 
 -- Platos para Menú Comfort Food (idMenu: 28, idSeccion: 136-140)
-(109, 'Mac and Cheese Clásico', 1, 30, 12.00, 'Macarrones con cremosa salsa de queso.', 137),
-(110, 'Albóndigas en Salsa de Tomate', 1, 25, 14.00, 'Albóndigas de carne en salsa casera.', 137),
-(111, 'Puré de Papa Cremoso', 1, 40, 6.00, 'Acompañamiento clásico.', 138),
-(112, 'Brownie con Helado', 1, 35, 7.00, 'Cálido brownie con bola de helado de vainilla.', 139),
+(109, 'Mac and Cheese Clásico', 1, 30, 12.00, 'Macarrones con cremosa salsa de queso.', 137, 1),
+(110, 'Albóndigas en Salsa de Tomate', 1, 25, 14.00, 'Albóndigas de carne en salsa casera.', 137, 1),
+(111, 'Puré de Papa Cremoso', 1, 40, 6.00, 'Acompañamiento clásico.', 138, 1),
+(112, 'Brownie con Helado', 1, 35, 7.00, 'Cálido brownie con bola de helado de vainilla.', 139, 1),
 
 -- Platos para Menú Mar y Tierra (idMenu: 29, idSeccion: 141-145)
-(113, 'Surf & Turf', 1, 20, 35.00, 'Filet mignon con cola de langosta.', 143),
-(114, 'Ribeye a la Parrilla', 1, 25, 29.00, 'Corte premium de carne.', 141),
-(115, 'Camarones al Ajillo', 1, 30, 18.00, 'Camarones salteados en aceite de oliva y ajo.', 142),
-(116, 'Espárragos Asados', 1, 40, 7.00, 'Guarnición fresca y saludable.', 144),
+(113, 'Surf & Turf', 1, 20, 35.00, 'Filet mignon con cola de langosta.', 143, 1),
+(114, 'Ribeye a la Parrilla', 1, 25, 29.00, 'Corte premium de carne.', 141, 1),
+(115, 'Camarones al Ajillo', 1, 30, 18.00, 'Camarones salteados en aceite de oliva y ajo.', 142, 1),
+(116, 'Espárragos Asados', 1, 40, 7.00, 'Guarnición fresca y saludable.', 144, 1),
 
 -- Platos para Menú Pizza Napolitana (idMenu: 30, idSeccion: 146-150)
-(117, 'Pizza Margherita', 1, 40, 14.00, 'Clásica pizza con tomate, mozzarella y albahaca.', 146),
-(118, 'Pizza Diavola', 2, 35, 16.00, 'Pizza picante con salami y chile.', 147),
-(119, 'Calzone Relleno', 1, 25, 15.00, 'Masa de pizza doblada con ricotta, jamón y mozzarella.', 148),
-(120, 'Ensalada Rúcula y Parmesano', 1, 30, 9.00, 'Ensalada fresca para acompañar.', 149);
+(117, 'Pizza Margherita', 1, 40, 14.00, 'Clásica pizza con tomate, mozzarella y albahaca.', 146, 1),
+(118, 'Pizza Diavola', 2, 35, 16.00, 'Pizza picante con salami y chile.', 147, 1),
+(119, 'Calzone Relleno', 1, 25, 15.00, 'Masa de pizza doblada con ricotta, jamón y mozzarella.', 148, 1),
+(120, 'Ensalada Rúcula y Parmesano', 1, 30, 9.00, 'Ensalada fresca para acompañar.', 149, 1);
 
 INSERT INTO Opcion (id, nombre, descripcion) VALUES
 (1, 'Tamaño', 'Permite seleccionar entre diferentes tamaños del plato.'),
@@ -1111,7 +1114,7 @@ INSERT INTO PlatoOpcion (idPlato, idOpcion) VALUES
 (26, 1),
 (26, 8),
 (26, 32),
-(27, 7),
+(27, 7), 
 (27, 31),
 (27, 20),
 (28, 1),
@@ -1408,10 +1411,10 @@ INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
 (67, 91, 36), (67, 92, 36),
 -- Plato 68: Ensalada Quinoa y Aguacate (Vegetales Extras: 31)
 (68, 58, 31), (68, 59, 31), (68, 60, 31),
--- Plato 69: Pupusa de Queso con Loroco (Toppings: 19)
-(69, 76, 19), (69, 77, 19),
--- Plato 70: Pupusa Revuelta (Toppings: 19)
-(70, 76, 19), (70, 77, 19),
+-- Plato 69: Pupusa de Queso con Loroco (Tipo de Tortilla: 19)
+(69, 54, 19), (69, 55, 19),
+-- Plato 70: Pupusa Revuelta (Tipo de Tortilla: 19)
+(70, 54, 19), (70, 55, 19),
 
 -- Platos 71-80 (Yuca con Chicharrón, Sopa de Res Salvadoreña, Gyros de Cerdo, etc.)
 -- Plato 71: Yuca con Chicharrón (Contornos: 9)
@@ -1433,7 +1436,7 @@ INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
 -- Plato 79: Hummus (Extras: 7)
 (79, 20, 7), (79, 21, 7),
 -- Plato 80: Künefe (Cobertura: 36)
-(80, 91, 36), (80, 92, 36)
+(80, 91, 36), (80, 92, 36),
 -- Platos 81-90 (Bratwurst con Sauerkraut, Wiener Schnitzel, Kartoffelsalat, etc.)
 -- Plato 81: Bratwurst con Sauerkraut (Contornos: 9)
 (81, 24, 9), (81, 25, 9), (81, 26, 9),
@@ -1847,17 +1850,17 @@ INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 
 INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, monto_total, idPedido) VALUES
 (1, '2023-07-16', 85.50, 16.00, 13.68, 99.18, 1),
-(2, '2023-07-17', 120.00, 16.00, 19.20, 139.20, 2),
-(3, '2023-07-18', 45.75, 16.00, 7.32, 53.07, 3),
-(4, '2023-07-19', 200.25, 16.00, 32.04, 232.29, 4),
-(5, '2023-07-20', 70.00, 16.00, 11.20, 81.20, 5),
+(2, '2025-07-17', 120.00, 16.00, 19.20, 139.20, 2),
+(3, '2025-07-18', 45.75, 16.00, 7.32, 53.07, 3),
+(4, '2024-07-01', 200.25, 16.00, 32.04, 232.29, 4),
+(5, '2025-07-05', 70.00, 16.00, 11.20, 81.20, 5), 
 (6, '2023-07-21', 95.00, 16.00, 15.20, 110.20, 6),
-(7, '2023-07-22', 150.00, 16.00, 24.00, 174.00, 7),
-(8, '2023-07-23', 30.00, 16.00, 4.80, 34.80, 8),
-(9, '2023-07-24', 180.50, 16.00, 28.88, 209.38, 9),
-(10, '2023-07-25', 62.50, 16.00, 10.00, 72.50, 10),
+(7, '2025-07-10', 150.00, 16.00, 24.00, 174.00, 7),
+(8, '2024-07-25', 30.00, 16.00, 4.80, 34.80, 8),
+(9, '2025-07-15', 180.50, 16.00, 28.88, 209.38, 9),
+(10, '2024-07-20', 62.50, 16.00, 10.00, 72.50, 10),
 (11, '2023-07-26', 110.00, 16.00, 17.60, 127.60, 11),
-(12, '2023-07-27', 75.00, 16.00, 12.00, 87.00, 12),
+(12, '2024-07-25', 75.00, 16.00, 12.00, 87.00, 12), 
 (13, '2023-07-28', 130.00, 16.00, 20.80, 150.80, 13),
 (14, '2023-07-29', 55.00, 16.00, 8.80, 63.80, 14),
 (15, '2023-07-30', 90.00, 16.00, 14.40, 104.40, 15),
@@ -1872,7 +1875,7 @@ INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, 
 (24, '2023-08-08', 190.00, 16.00, 30.40, 220.40, 24),
 (25, '2023-08-09', 72.00, 16.00, 11.52, 83.52, 25),
 (26, '2023-08-10', 125.00, 16.00, 20.00, 145.00, 26),
-(27, '2023-08-11', 50.00, 16.00, 8.00, 58.00, 27),
+(27, '2024-07-02', 50.00, 16.00, 8.00, 58.00, 27), 
 (28, '2023-08-12', 160.00, 16.00, 25.60, 185.60, 28),
 (29, '2023-08-13', 65.00, 16.00, 10.40, 75.40, 29),
 (30, '2023-08-14', 100.00, 16.00, 16.00, 116.00, 30),
@@ -1886,7 +1889,7 @@ INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, 
 (38, '2023-08-22', 118.00, 16.00, 18.88, 136.88, 38),
 (39, '2023-08-23', 85.00, 16.00, 13.60, 98.60, 39),
 (40, '2023-08-24', 155.00, 16.00, 24.80, 179.80, 40),
-(41, '2023-08-25', 52.00, 16.00, 8.32, 60.32, 41),
+(41, '2024-07-03', 52.00, 16.00, 8.32, 60.32, 41),
 (42, '2023-08-26', 165.00, 16.00, 26.40, 191.40, 42),
 (43, '2023-08-27', 70.00, 16.00, 11.20, 81.20, 43),
 (44, '2023-08-28', 122.00, 16.00, 19.52, 141.52, 44),
@@ -1953,7 +1956,7 @@ INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, 
 (105, '2024-01-20', 60.00, 16.00, 9.60, 69.60, 105),
 (106, '2024-01-25', 140.00, 16.00, 22.40, 162.40, 106),
 (107, '2024-01-30', 90.00, 16.00, 14.40, 104.40, 107),
-(108, '2024-02-04', 200.00, 16.00, 32.00, 232.00, 108),
+(108, '2024-07-04', 200.00, 16.00, 32.00, 232.00, 108),
 (109, '2024-02-09', 65.00, 16.00, 10.40, 75.40, 109),
 (110, '2024-02-14', 110.00, 16.00, 17.60, 127.60, 110),
 (111, '2024-02-19', 85.00, 16.00, 13.60, 98.60, 111),
@@ -1977,23 +1980,23 @@ INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, 
 (129, '2024-05-19', 88.00, 16.00, 14.08, 102.08, 129),
 (130, '2024-05-24', 200.00, 16.00, 32.00, 232.00, 130),
 (131, '2024-05-29', 42.00, 16.00, 6.72, 48.72, 131),
-(132, '2024-06-03', 112.00, 16.00, 17.92, 129.92, 132),
+(132, '2025-06-03', 112.00, 16.00, 17.92, 129.92, 132),
 (133, '2024-06-08', 70.00, 16.00, 11.20, 81.20, 133),
 (134, '2024-06-13', 145.00, 16.00, 23.20, 168.20, 134),
 (135, '2024-06-18', 60.00, 16.00, 9.60, 69.60, 135),
-(136, '2024-06-23', 100.00, 16.00, 16.00, 116.00, 136),
+(136, '2025-06-23', 100.00, 16.00, 16.00, 116.00, 136),
 (137, '2024-06-28', 85.00, 16.00, 13.60, 98.60, 137),
-(138, '2024-07-03', 150.00, 16.00, 24.00, 174.00, 138),
-(139, '2024-07-08', 45.00, 16.00, 7.20, 52.20, 139),
-(140, '2024-07-13', 115.00, 16.00, 18.40, 133.40, 140),
-(141, '2024-07-18', 78.00, 16.00, 12.48, 90.48, 141),
+(138, '2025-07-05', 150.00, 16.00, 24.00, 174.00, 138),
+(139, '2024-07-06', 45.00, 16.00, 7.20, 52.20, 139), 
+(140, '2025-07-13', 115.00, 16.00, 18.40, 133.40, 140),
+(141, '2025-07-18', 78.00, 16.00, 12.48, 90.48, 141),
 (142, '2024-07-23', 190.00, 16.00, 30.40, 220.40, 142),
-(143, '2024-07-28', 68.00, 16.00, 10.88, 78.88, 143),
+(143, '2025-07-07', 68.00, 16.00, 10.88, 78.88, 143),
 (144, '2024-08-02', 125.00, 16.00, 20.00, 145.00, 144),
 (145, '2024-08-07', 93.00, 16.00, 14.88, 107.88, 145),
-(146, '2024-08-12', 210.00, 16.00, 33.60, 243.60, 146),
+(146, '2025-07-08', 210.00, 16.00, 33.60, 243.60, 146),
 (147, '2024-08-17', 50.00, 16.00, 8.00, 58.00, 147),
-(148, '2024-08-22', 120.00, 16.00, 19.20, 139.20, 148),
+(148, '2025-07-09', 120.00, 16.00, 19.20, 139.20, 148),
 (149, '2024-08-27', 75.00, 16.00, 12.00, 87.00, 149),
 (150, '2024-09-01', 180.00, 16.00, 28.80, 208.80, 150);
 
@@ -2168,184 +2171,184 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (86, 1, 'Sin Nota', 7.50, 20, 76),
 (87, 1, 'Sin Nota', 15.00, 20, 77),
 -- Pedido 21 (ID 21 en tabla Pedido: nota 'Sin Nota')
-(68, 1, 'Sin Nota', 6.00, 21, 75),
+
 
 -- Pedido 22 (ID 22 en tabla Pedido: nota 'Sin Nota')
-(69, 1, 'Sin Nota', 15.00, 22, 77),
+(88, 1, 'Sin Nota', 15.00, 22, 77),
 
 -- Pedido 23 (ID 23 en tabla Pedido: nota "Con opciones adicionales")
-(70, 1, 'Sin ajo, Extra pimentón', 7.50, 23, 79),
+(89, 1, 'Sin ajo, Extra pimentón', 7.50, 23, 79),
 
 -- Pedido 24 (ID 24 en tabla Pedido: nota 'Sin Nota')
-(71, 1, 'Sin Nota', 14.00, 24, 81),
+(90, 1, 'Sin Nota', 14.00, 24, 81),
 
 -- Pedido 25 (ID 25 en tabla Pedido: nota 'Sin Nota')
-(72, 1, 'Sin Nota', 6.00, 25, 83),
+(91, 1, 'Sin Nota', 6.00, 25, 83),
 
 -- Pedido 26 (ID 26 en tabla Pedido: nota "Con opciones adicionales")
-(73, 1, 'Penne, Picante medio', 13.50, 26, 85),
+(92, 1, 'Penne, Picante medio', 13.50, 26, 85),
 
 -- Pedido 27 (ID 27 en tabla Pedido: nota 'Sin Nota')
-(74, 1, 'Sin Nota', 15.00, 27, 87),
+(93, 1, 'Sin Nota', 15.00, 27, 87),
 
 -- Pedido 28 (ID 28 en tabla Pedido: nota 'Sin Nota')
-(75, 1, 'Sin Nota', 11.00, 28, 89),
+(94, 1, 'Sin Nota', 11.00, 28, 89),
 
 -- Pedido 29 (ID 29 en tabla Pedido: nota "Con opciones adicionales")
-(76, 1, 'Extra crema, Pan tostado medio', 10.25, 29, 91),
+(95, 1, 'Extra crema, Pan tostado medio', 10.25, 29, 91),
+
+(96, 1, 'Sin Nota', 24.20, 67, 65),
 
 -- Pedido 30 (ID 30 en tabla Pedido: nota 'Sin Nota')
-(77, 1, 'Sin Nota', 17.00, 30, 93),
+(97, 1, 'Sin Nota', 17.00, 30, 93),
 
 -- Pedido 31 (ID 31 en tabla Pedido: nota 'Sin Nota')
-(78, 1, 'Sin Nota', 5.00, 31, 95),
+(98, 1, 'Sin Nota', 5.00, 31, 95),
 
 -- Pedido 32 (ID 32 en tabla Pedido: nota "Con opciones adicionales")
-(79, 1, 'Extra vegetales, Término medio', 16.00, 32, 97),
+(99, 1, 'Extra vegetales, Término medio', 16.00, 32, 97),
 
 -- Pedido 33 (ID 33 en tabla Pedido: nota 'Sin Nota')
-(80, 1, 'Sin Nota', 13.00, 33, 99),
+(100, 1, 'Sin Nota', 13.00, 33, 99),
 
 -- Pedido 34 (ID 34 en tabla Pedido: nota 'Sin Nota')
-(81, 1, 'Sin Nota', 4.00, 34, 101),
+(101, 1, 'Sin Nota', 4.00, 34, 101),
 
 -- Pedido 35 (ID 35 en tabla Pedido: nota "Con opciones adicionales")
-(82, 1, 'Extra chocolate, Muy dulce', 7.04, 35, 103),
+(102, 1, 'Extra chocolate, Muy dulce', 7.04, 35, 103),
 
 -- Pedido 36 (ID 36 en tabla Pedido: nota 'Sin Nota')
-(83, 1, 'Sin Nota', 16.00, 36, 105),
+(103, 1, 'Sin Nota', 16.00, 36, 105),
 
 -- Pedido 37 (ID 37 en tabla Pedido: nota 'Sin Nota')
-(84, 1, 'Sin Nota', 10.00, 37, 107),
+(104, 1, 'Sin Nota', 10.00, 37, 107),
 
 -- Pedido 38 (ID 38 en tabla Pedido: nota "Con opciones adicionales")
-(85, 1, 'Extra queso, Queso cheddar', 13.50, 38, 109),
+(105, 1, 'Extra queso, Queso cheddar', 13.50, 38, 109),
 
 -- Pedido 39 (ID 39 en tabla Pedido: nota 'Sin Nota')
-(86, 1, 'Sin Nota', 6.00, 39, 111),
+(106, 1, 'Sin Nota', 6.00, 39, 111),
 
 -- Pedido 40 (ID 40 en tabla Pedido: nota 'Sin Nota')
-(87, 1, 'Sin Nota', 35.00, 40, 113);
+(107, 1, 'Sin Nota', 35.00, 40, 113),
 
 -- Pedidos 41-60
-(88, 1, 'Sin Nota', 18.00, 41, 114),
-(89, 1, 'Sin Nota', 7.00, 42, 116),
-(90, 1, 'Vegetales extra, Sin sal', 7.00, 43, 116),
-(91, 1, 'Sin Nota', 14.00, 44, 117),
-(92, 1, 'Sin Nota', 16.00, 45, 118),
-(93, 1, 'Borde de queso, Extra picante', 17.50, 46, 118),
-(94, 1, 'Sin Nota', 15.00, 47, 119),
-(95, 1, 'Sin Nota', 9.00, 48, 120),
-(96, 1, 'Base quinoa, Aderezo aparte', 10.25, 49, 120),
-(97, 1, 'Sin Nota', 28.00, 50, 45),
-(98, 1, 'Sin Nota', 26.00, 51, 46),
-(99, 1, 'Arroz integral, Bien cocido', 27.50, 52, 46),
-(100, 1, 'Sin Nota', 4.00, 53, 47),
-(101, 1, 'Sin Nota', 3.00, 54, 48),
-(102, 1, 'Extra chocolate', 3.75, 55, 48),
-(103, 1, 'Sin Nota', 16.00, 56, 49),
-(104, 1, 'Sin Nota', 14.00, 57, 50),
-(105, 1, 'Extra picante, Tofu extra', 15.50, 58, 50),
-(106, 1, 'Sin Nota', 13.50, 59, 51),
-(107, 1, 'Sin Nota', 5.00, 60, 52);
+(108, 1, 'Sin Nota', 18.00, 41, 114),
+(109, 1, 'Sin Nota', 7.00, 42, 116),
+(110, 1, 'Vegetales extra, Sin sal', 7.00, 43, 116),
+(111, 1, 'Sin Nota', 14.00, 44, 117),
+(112, 1, 'Sin Nota', 16.00, 45, 118),
+(113, 1, 'Borde de queso, Extra picante', 17.50, 46, 118),
+(114, 1, 'Sin Nota', 15.00, 47, 119),
+(115, 1, 'Sin Nota', 9.00, 48, 120),
+(116, 1, 'Base quinoa, Aderezo aparte', 10.25, 49, 120),
+(117, 1, 'Sin Nota', 28.00, 50, 45),
+(118, 1, 'Sin Nota', 26.00, 51, 46),
+(119, 1, 'Arroz integral, Bien cocido', 27.50, 52, 46),
+(120, 1, 'Sin Nota', 4.00, 53, 47),
+(121, 1, 'Sin Nota', 3.00, 54, 48),
+(122, 1, 'Extra chocolate', 3.75, 55, 48),
+(123, 1, 'Sin Nota', 16.00, 56, 49),
+(124, 1, 'Sin Nota', 14.00, 57, 50),
+(125, 1, 'Extra picante, Tofu extra', 15.50, 58, 50),
+(126, 1, 'Sin Nota', 13.50, 59, 51),
+(127, 1, 'Sin Nota', 5.00, 60, 52),
 
 -- Pedidos 61-80
-(108, 1, 'Sin Nota', 14.00, 61, 53),
-(109, 1, 'Sin Nota', 12.00, 62, 54),
-(110, 1, 'Sin camarones, Extra vegetales', 12.00, 63, 54),
-(111, 1, 'Sin Nota', 17.50, 64, 55),
-(112, 1, 'Sin Nota', 7.00, 65, 56),
-(113, 1, 'Leche de coco extra', 8.00, 66, 56),
-(114, 1, 'Sin Nota', 15.00, 67, 57),
-(115, 1, 'Sin Nota', 9.00, 68, 58),
-(116, 1, 'Sin cerdo, Tofu', 10.00, 69, 58),
-(117, 1, 'Sin Nota', 16.00, 70, 59),
-(118, 1, 'Sin Nota', 5.00, 71, 60),
-(119, 1, 'Leche condensada extra', 6.00, 72, 60),
-(120, 1, 'Sin Nota', 20.00, 73, 61),
-(121, 1, 'Sin Nota', 15.00, 74, 62),
-(122, 1, 'Sin aguacate', 15.00, 75, 62),
-(123, 1, 'Sin Nota', 3.50, 76, 63),
-(124, 1, 'Sin Nota', 5.00, 77, 64),
-(125, 1, 'Extra canela', 5.50, 78, 64),
-(126, 1, 'Sin Nota', 21.00, 79, 65),
-(127, 1, 'Sin Nota', 15.00, 80, 66);
+(128, 1, 'Sin Nota', 14.00, 61, 53),
+(129, 1, 'Sin Nota', 12.00, 62, 54),
+(130, 1, 'Sin camarones, Extra vegetales', 12.00, 63, 54),
+(131, 1, 'Sin Nota', 17.50, 64, 55),
+(132, 1, 'Sin Nota', 7.00, 65, 56),
+(133, 1, 'Leche de coco extra', 8.00, 66, 56),
+(134, 1, 'Sin Nota', 15.00, 67, 57),
+(135, 1, 'Sin Nota', 9.00, 68, 58),
+(136, 1, 'Sin cerdo, Tofu', 10.00, 69, 58),
+(137, 1, 'Sin Nota', 16.00, 70, 59),
+(138, 1, 'Sin Nota', 5.00, 71, 60),
+(139, 1, 'Leche condensada extra', 6.00, 72, 60),
+(140, 1, 'Sin Nota', 20.00, 73, 61),
+(141, 1, 'Sin Nota', 15.00, 74, 62),
+(142, 1, 'Sin aguacate', 15.00, 75, 62),
+(143, 1, 'Sin Nota', 3.50, 76, 63),
+(144, 1, 'Sin Nota', 5.00, 77, 64),
+(145, 1, 'Extra canela', 5.50, 78, 64),
+(146, 1, 'Sin Nota', 21.00, 79, 65),
+(147, 1, 'Sin Nota', 15.00, 80, 66),
 
 -- Pedidos 81-100
-(128, 1, 'Sin Nota', 6.00, 81, 67),
-(129, 1, 'Sin Nota', 12.00, 82, 68),
-(130, 1, 'Quinoa extra, Aguacate extra', 14.00, 83, 68),
-(131, 1, 'Sin Nota', 4.00, 84, 69),
-(132, 1, 'Sin Nota', 4.50, 85, 70),
-(133, 1, 'Extra chicharrón', 5.50, 86, 70),
-(134, 1, 'Sin Nota', 10.00, 87, 71),
-(135, 1, 'Sin Nota', 14.00, 88, 72),
-(136, 1, 'Extra carne', 16.00, 89, 72),
-(137, 1, 'Sin Nota', 13.00, 90, 73),
-(138, 1, 'Sin Nota', 16.50, 91, 74),
-(139, 1, 'Sin berenjena', 16.50, 92, 74),
-(140, 1, 'Sin Nota', 7.50, 93, 75),
-(141, 1, 'Sin Nota', 6.00, 94, 76),
-(142, 1, 'Extra miel', 6.75, 95, 76),
-(143, 1, 'Sin Nota', 15.00, 96, 77),
-(144, 1, 'Sin Nota', 9.00, 97, 78),
-(145, 1, 'Extra ajo', 10.00, 98, 78),
-(146, 1, 'Sin Nota', 7.00, 99, 79),
-(147, 1, 'Sin Nota', 8.00, 100, 80);
-
--- Pedidos 101-120
-(148, 1, 'Sin Nota', 14.00, 101, 81),
-(149, 1, 'Sin Nota', 18.00, 102, 82),
-(150, 1, 'Término medio, Papas extra', 19.50, 103, 82),
-(151, 1, 'Sin Nota', 6.00, 104, 83),
-(152, 1, 'Sin Nota', 6.50, 105, 84),
-(153, 1, 'Extra helado', 7.50, 106, 84),
-(154, 1, 'Sin Nota', 12.00, 107, 85),
-(155, 1, 'Sin Nota', 16.00, 108, 86),
-(156, 1, 'Pan de arroz integral', 17.00, 109, 86),
-(157, 1, 'Sin Nota', 15.00, 110, 87),
-(158, 1, 'Sin Nota', 8.00, 111, 88),
-(159, 1, 'Extra matcha', 9.00, 112, 88),
-(160, 1, 'Sin Nota', 11.00, 113, 89),
-(161, 1, 'Sin Nota', 19.00, 114, 90),
-(162, 1, 'Sin lácteos', 19.00, 115, 90),
-(163, 1, 'Sin Nota', 9.00, 116, 91),
-(164, 1, 'Sin Nota', 7.00, 117, 92),
-(165, 1, 'Extra jengibre', 8.00, 118, 92),
-(166, 1, 'Sin Nota', 17.00, 119, 93),
-(167, 1, 'Sin Nota', 12.00, 120, 94);
+(148, 1, 'Sin Nota', 6.00, 81, 67),
+(149, 1, 'Sin Nota', 12.00, 82, 68),
+(150, 1, 'Quinoa extra, Aguacate extra', 14.00, 83, 68),
+(151, 1, 'Sin Nota', 4.00, 84, 69),
+(152, 1, 'Sin Nota', 4.50, 85, 70),
+(153, 1, 'Extra chicharrón', 5.50, 86, 70),
+(154, 1, 'Sin Nota', 10.00, 87, 71),
+(155, 1, 'Sin Nota', 14.00, 88, 72),
+(156, 1, 'Extra carne', 16.00, 89, 72),
+(157, 1, 'Sin Nota', 13.00, 90, 73),
+(158, 1, 'Sin Nota', 16.50, 91, 74),
+(159, 1, 'Sin berenjena', 16.50, 92, 74),
+(160, 1, 'Sin Nota', 7.50, 93, 75),
+(161, 1, 'Sin Nota', 6.00, 94, 76),
+(162, 1, 'Extra miel', 6.75, 95, 76),
+(163, 1, 'Sin Nota', 15.00, 96, 77),
+(164, 1, 'Sin Nota', 9.00, 97, 78),
+(165, 1, 'Extra ajo', 10.00, 98, 78),
+(166, 1, 'Sin Nota', 7.00, 99, 79),
+(167, 1, 'Sin Nota', 8.00, 100, 80),
+(168, 1, 'Sin Nota', 14.00, 101, 81),
+(169, 1, 'Sin Nota', 18.00, 102, 82),
+(170, 1, 'Término medio, Papas extra', 19.50, 103, 82),
+(171, 1, 'Sin Nota', 6.00, 104, 83),
+(172, 1, 'Sin Nota', 6.50, 105, 84),
+(173, 1, 'Extra helado', 7.50, 106, 84),
+(174, 1, 'Sin Nota', 12.00, 107, 85),
+(175, 1, 'Sin Nota', 16.00, 108, 86),
+(176, 1, 'Pan de arroz integral', 17.00, 109, 86),
+(177, 1, 'Sin Nota', 15.00, 110, 87),
+(178, 1, 'Sin Nota', 8.00, 111, 88),
+(179, 1, 'Extra matcha', 9.00, 112, 88),
+(180, 1, 'Sin Nota', 11.00, 113, 89),
+(181, 1, 'Sin Nota', 19.00, 114, 90),
+(182, 1, 'Sin lácteos', 19.00, 115, 90),
+(183, 1, 'Sin Nota', 9.00, 116, 91),
+(184, 1, 'Sin Nota', 7.00, 117, 92),
+(185, 1, 'Extra jengibre', 8.00, 118, 92),
+(186, 1, 'Sin Nota', 17.00, 119, 93),
+(187, 1, 'Sin Nota', 12.00, 120, 94),
 
 -- Pedidos 121-150
-(168, 1, 'Sin Nota', 5.00, 121, 95),
-(169, 1, 'Sin Nota', 18.00, 122, 96),
-(170, 1, 'Sin cebolla', 18.00, 123, 96),
-(171, 1, 'Sin Nota', 15.00, 124, 97),
-(172, 1, 'Sin Nota', 11.00, 125, 98),
-(173, 1, 'Extra queso', 12.50, 126, 98),
-(174, 1, 'Sin Nota', 13.00, 127, 99),
-(175, 1, 'Sin Nota', 10.00, 128, 100),
-(176, 1, 'Extra frijoles', 11.50, 129, 100),
-(177, 1, 'Sin Nota', 4.00, 130, 101),
-(178, 1, 'Sin Nota', 12.00, 131, 102),
-(179, 1, 'Queso azul', 13.00, 132, 102),
-(180, 1, 'Sin Nota', 6.00, 133, 103),
-(181, 1, 'Sin Nota', 7.50, 134, 104),
-(182, 1, 'Extra queso', 8.75, 135, 104),
-(183, 1, 'Sin Nota', 16.00, 136, 105),
-(184, 1, 'Sin Nota', 13.00, 137, 106),
-(185, 1, 'Aderezo aparte', 13.00, 138, 106),
-(186, 1, 'Sin Nota', 10.00, 139, 107),
-(187, 1, 'Sin Nota', 4.00, 140, 108),
-(188, 1, 'Sin Nota', 12.00, 141, 109),
-(189, 1, 'Sin Nota', 14.00, 142, 110),
-(190, 1, 'Puré extra', 15.00, 143, 111),
-(191, 1, 'Sin Nota', 7.00, 144, 112),
-(192, 1, 'Sin Nota', 35.00, 145, 113),
-(193, 1, 'Sin Nota', 29.00, 146, 114),
-(194, 1, 'Término medio', 29.00, 147, 114),
-(195, 1, 'Sin Nota', 18.00, 148, 115),
-(196, 1, 'Sin Nota', 7.00, 149, 116),
-(197, 1, 'Sin Nota', 14.00, 150, 117);
+(188, 1, 'Sin Nota', 5.00, 121, 95),
+(189, 1, 'Sin Nota', 18.00, 122, 96),
+(190, 1, 'Sin cebolla', 18.00, 123, 96),
+(191, 1, 'Sin Nota', 15.00, 124, 97),
+(192, 1, 'Sin Nota', 11.00, 125, 98),
+(193, 1, 'Extra queso', 12.50, 126, 98),
+(194, 1, 'Sin Nota', 13.00, 127, 99),
+(195, 1, 'Sin Nota', 10.00, 128, 100),
+(196, 1, 'Extra frijoles', 11.50, 129, 100),
+(197, 1, 'Sin Nota', 4.00, 130, 101),
+(198, 1, 'Sin Nota', 12.00, 131, 102),
+(199, 1, 'Queso azul', 13.00, 132, 102),
+(200, 1, 'Sin Nota', 6.00, 133, 103),
+(201, 1, 'Sin Nota', 7.50, 134, 104),
+(202, 1, 'Extra queso', 8.75, 135, 104),
+(203, 1, 'Sin Nota', 16.00, 136, 105),
+(204, 1, 'Sin Nota', 13.00, 137, 106),
+(205, 1, 'Aderezo aparte', 13.00, 138, 106),
+(206, 1, 'Sin Nota', 10.00, 139, 107),
+(207, 1, 'Sin Nota', 4.00, 140, 108),
+(208, 1, 'Sin Nota', 12.00, 141, 109),
+(209, 1, 'Sin Nota', 14.00, 142, 110),
+(210, 1, 'Puré extra', 15.00, 143, 111),
+(211, 1, 'Sin Nota', 7.00, 144, 112),
+(212, 1, 'Sin Nota', 35.00, 145, 113),
+(213, 1, 'Sin Nota', 29.00, 146, 114),
+(214, 1, 'Término medio', 29.00, 147, 114),
+(215, 1, 'Sin Nota', 18.00, 148, 115),
+(216, 1, 'Sin Nota', 7.00, 149, 116),
+(217, 1, 'Sin Nota', 14.00, 150, 117);
 
 INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (1, 1, 45),
@@ -2500,782 +2503,681 @@ INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (10, 150, 39);
 
 INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) VALUES
--- Opciones para el pedido detalle 1 (ejemplos iniciales)
-(1, 3, 1),    -- Tamaño (OpcionValor 3 de Opcion 1)
-(1, 5, 2),    -- Nivel de picante (OpcionValor 5 de Opcion 2)
-(1, 8, 3),    -- Tipo de pan (OpcionValor 8 de Opcion 3),
--- Opciones para el pedido detalle 2
-(2, 10, 4),   -- Tipo de pasta (OpcionValor 10 de Opcion 4)
-(2, 12, 5),   -- Salsas adicionales (OpcionValor 12 de Opcion 5)
-(2, 14, 6),   -- Ingredientes extra (OpcionValor 14 de Opcion 6)
--- Opciones para el pedido detalle 3
-(3, 17, 7),   -- Extras (OpcionValor 17 de Opcion 7)
-(3, 22, 22),  -- Exclusiones (OpcionValor 22 de Opcion 22)
-(3, 58, 31),  -- Vegetales Extras (OpcionValor 58 de Opcion 31)
--- Opciones para el pedido detalle 4
-(4, 91, 36),  -- Cobertura (OpcionValor 91 de Opcion 36)
-(4, 24, 9),   -- Contornos (OpcionValor 24 de Opcion 9)
-(4, 78, 30),  -- Extra Proteína (OpcionValor 78 de Opcion 30)
--- Opciones para el pedido detalle 5
-(5, 76, 18),  -- Toppings (OpcionValor 76 de Opcion 18)
-(5, 76, 29),  -- Borde relleno (OpcionValor 76 de Opcion 29)
-(5, 88, 35),  -- Tipo de base (OpcionValor 88 de Opcion 35)
--- Opciones para el pedido detalle 6
-(6, 1, 1),    -- Tamaño (OpcionValor 1 de Opcion 1)
-(6, 4, 2),    -- Nivel de picante (OpcionValor 4 de Opcion 2)
-(6, 9, 3),    -- Tipo de pan (OpcionValor 9 de Opcion 3)
--- Opciones para el pedido detalle 7
-(7, 11, 4),   -- Tipo de pasta (OpcionValor 11 de Opcion 4)
-(7, 13, 5),   -- Salsas adicionales (OpcionValor 13 de Opcion 5)
-(7, 15, 6),   -- Ingredientes extra (OpcionValor 15 de Opcion 6)
--- Opciones para el pedido detalle 8
-(8, 18, 7),   -- Extras (OpcionValor 18 de Opcion 7)
-(8, 23, 22),  -- Exclusiones (OpcionValor 23 de Opcion 22)
-(8, 59, 31),  -- Vegetales Extras (OpcionValor 59 de Opcion 31)
--- Opciones para el pedido detalle 9
-(9, 92, 36),  -- Cobertura (OpcionValor 92 de Opcion 36)
-(9, 25, 9),   -- Contornos (OpcionValor 25 de Opcion 9)
-(9, 77, 18),  -- Toppings (OpcionValor 77 de Opcion 18)
--- Opciones para el pedido detalle 10
-(10, 77, 29), -- Borde relleno (OpcionValor 77 de Opcion 29)
-(10, 89, 35), -- Tipo de base (OpcionValor 89 de Opcion 35)
-(10, 2, 1),   -- Tamaño (OpcionValor 2 de Opcion 1)
--- Opciones para el pedido detalle 11
-(11, 6, 2),   -- Nivel de picante (OpcionValor 6 de Opcion 2)
-(11, 16, 6),  -- Ingredientes extra (OpcionValor 16 de Opcion 6)
-(11, 19, 7),  -- Extras (OpcionValor 19 de Opcion 7)
--- Opciones para el pedido detalle 12
-(12, 60, 31), -- Vegetales Extras (OpcionValor 60 de Opcion 31)
-(12, 26, 9),  -- Contornos (OpcionValor 26 de Opcion 9)
-(12, 90, 35), -- Tipo de base (OpcionValor 90 de Opcion 35)
--- Opciones para el pedido detalle 13
-(13, 7, 2),   -- Nivel de picante (OpcionValor 7 de Opcion 2)
-(13, 20, 7),  -- Extras (OpcionValor 20 de Opcion 7)
-(13, 21, 7),  -- Extras (OpcionValor 21 de Opcion 7)
--- Opciones para el pedido detalle 14
-(14, 3, 1),   -- Tamaño (OpcionValor 3 de Opcion 1)
-(14, 5, 2),   -- Nivel de picante (OpcionValor 5 de Opcion 2)
-(14, 8, 3),   -- Tipo de pan (OpcionValor 8 de Opcion 3)
--- Opciones para el pedido detalle 15
-(15, 10, 4),  -- Tipo de pasta (OpcionValor 10 de Opcion 4)
-(15, 12, 5),  -- Salsas adicionales (OpcionValor 12 de Opcion 5)
-(15, 14, 6);  -- Ingredientes extra (OpcionValor 14 de Opcion 6)
--- Pedido Detalle 15: Variedad de opciones
-(15, 10, 4),  -- Tipo de pasta: Espagueti
-(15, 12, 5),  -- Salsas adicionales: Tomate
-(15, 14, 6),  -- Ingredientes extra: Champiñones
-(15, 17, 7),  -- Extras: Queso
--- Pedido Detalle 16: Opciones de picante y exclusiones
-(16, 6, 2),   -- Nivel de picante: Alto
-(16, 23, 22), -- Exclusiones: Lactosa
--- Pedido Detalle 17: Personalización de ingredientes
-(17, 58, 31), -- Vegetales Extras: Tomate
-(17, 91, 36), -- Cobertura: Chocolate
--- Pedido Detalle 18: Contornos y toppings
-(18, 24, 9),  -- Contornos: Papas fritas
-(18, 76, 18), -- Toppings: Crema
--- Pedido Detalle 19: Proteínas y base
-(19, 78, 30), -- Extra Proteína: Pollo
-(19, 88, 35), -- Tipo de base: Delgada
--- Pedido Detalle 20: Más personalización
-(20, 3, 1),   -- Tamaño: Grande
-(20, 7, 2),   -- Nivel de picante: Muy Alto
--- Pedido Detalle 21: Combinaciones variadas
-(21, 9, 3),   -- Tipo de pan: Integral
-(21, 11, 4),  -- Tipo de pasta: Fetuccini
--- Pedido Detalle 22: Salsas e ingredientes
-(22, 13, 5),  -- Salsas adicionales: Blanca
-(22, 15, 6),  -- Ingredientes extra: Pepinillos
--- Pedido Detalle 23: Extras y exclusiones
-(23, 19, 7),  -- Extras: Jengibre
-(23, 22, 22), -- Exclusiones: Frijoles
--- Pedido Detalle 24: Vegetales y coberturas
-(24, 59, 31), -- Vegetales Extras: Lechuga
-(24, 92, 36), -- Cobertura: Caramelo
--- Pedido Detalle 25: Contornos y toppings
-(25, 25, 9),  -- Contornos: Arroz
-(25, 77, 18), -- Toppings: Chocolate
--- Pedido Detalle 26: Proteínas y bordes
-(26, 78, 30), -- Extra Proteína: Pollo
-(26, 76, 29), -- Borde relleno: Queso
--- Pedido Detalle 27: Tipos de base y tamaño
-(27, 89, 35), -- Tipo de base: Gruesa
-(27, 1, 1),   -- Tamaño: Pequeño
--- Pedido Detalle 28: Nivel de picante y pan
-(28, 5, 2),   -- Nivel de picante: Medio
-(28, 8, 3),   -- Tipo de pan: Blanco
--- Pedido Detalle 29: Pasta y salsas
-(29, 10, 4),  -- Tipo de pasta: Espagueti
-(29, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 30: Ingredientes y extras
-(30, 14, 6),  -- Ingredientes extra: Champiñones
-(30, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 31: Exclusiones y vegetales
-(31, 23, 22), -- Exclusiones: Lactosa
-(31, 60, 31), -- Vegetales Extras: Cebolla
--- Pedido Detalle 32: Coberturas y contornos
-(32, 91, 36), -- Cobertura: Chocolate
-(32, 26, 9),  -- Contornos: Ensalada
--- Pedido Detalle 33: Toppings y bordes
-(33, 77, 18), -- Toppings: Chocolate
-(33, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 34: Bases y tamaños
-(34, 90, 35), -- Tipo de base: Sin gluten
-(34, 2, 1),   -- Tamaño: Mediano
--- Pedido Detalle 35: Nivel de picante y pan
-(35, 4, 2),   -- Nivel de picante: Bajo
-(35, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 36: Pasta y salsas
-(36, 11, 4),  -- Tipo de pasta: Fetuccini
-(36, 13, 5),  -- Salsas adicionales: Blanca
--- Pedido Detalle 37: Ingredientes y extras
-(37, 16, 6),  -- Ingredientes extra: Cebolla
-(37, 20, 7),  -- Extras: Piña
--- Pedido Detalle 38: Exclusiones y vegetales
-(38, 22, 22), -- Exclusiones: Frijoles
-(38, 58, 31), -- Vegetales Extras: Tomate
--- Pedido Detalle 39: Coberturas y contornos
-(39, 92, 36), -- Cobertura: Caramelo
-(39, 24, 9),  -- Contornos: Papas fritas
--- Pedido Detalle 40: Toppings y proteínas
-(40, 76, 18), -- Toppings: Crema
-(40, 78, 30); -- Extra Proteína: Pollo
--- Pedido Detalle 41: Tamaño y nivel de picante
-(41, 1, 1),   -- Tamaño: Pequeño
-(41, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 42: Tipo de pan y pasta
-(42, 8, 3),   -- Tipo de pan: Blanco
-(42, 10, 4),  -- Tipo de pasta: Espagueti
--- Pedido Detalle 43: Salsas e ingredientes extra
-(43, 12, 5),  -- Salsas adicionales: Tomate
-(43, 14, 6),  -- Ingredientes extra: Champiñones
--- Pedido Detalle 44: Extras y exclusiones
-(44, 17, 7),  -- Extras: Queso
-(44, 22, 22), -- Exclusiones: Frijoles
--- Pedido Detalle 45: Vegetales extra y cobertura
-(45, 58, 31), -- Vegetales Extras: Tomate
-(45, 91, 36), -- Cobertura: Chocolate
--- Pedido Detalle 46: Contornos y toppings
-(46, 24, 9),  -- Contornos: Papas fritas
-(46, 76, 18), -- Toppings: Crema
--- Pedido Detalle 47: Extra proteína y borde relleno
-(47, 78, 30), -- Extra Proteína: Pollo
-(47, 76, 29), -- Borde relleno: Queso
--- Pedido Detalle 48: Tipo de base y tamaño
-(48, 88, 35), -- Tipo de base: Delgada
-(48, 2, 1),   -- Tamaño: Mediano
--- Pedido Detalle 49: Nivel de picante y tipo de pan
-(49, 5, 2),   -- Nivel de picante: Medio
-(49, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 50: Tipo de pasta y salsas adicionales
-(50, 11, 4),  -- Tipo de pasta: Fetuccini
-(50, 13, 5),  -- Salsas adicionales: Blanca
--- Pedido Detalle 51: Ingredientes extra y extras
-(51, 15, 6),  -- Ingredientes extra: Pepinillos
-(51, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 52: Exclusiones y vegetales extra
-(52, 23, 22), -- Exclusiones: Lactosa
-(52, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 53: Cobertura y contornos
-(53, 92, 36), -- Cobertura: Caramelo
-(53, 25, 9),  -- Contornos: Arroz
--- Pedido Detalle 54: Toppings y borde relleno
-(54, 77, 18), -- Toppings: Chocolate
-(54, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 55: Tipo de base y tamaño
-(55, 89, 35), -- Tipo de base: Gruesa
-(55, 3, 1),   -- Tamaño: Grande
--- Pedido Detalle 56: Nivel de picante y tipo de pan
-(56, 6, 2),   -- Nivel de picante: Alto
-(56, 8, 3),   -- Tipo de pan: Blanco
--- Pedido Detalle 57: Tipo de pasta y salsas adicionales
-(57, 10, 4),  -- Tipo de pasta: Espagueti
-(57, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 58: Ingredientes extra y extras
-(58, 16, 6),  -- Ingredientes extra: Cebolla
-(58, 19, 7),  -- Extras: Jengibre
--- Pedido Detalle 59: Exclusiones y vegetales extra
-(59, 22, 22), -- Exclusiones: Frijoles
-(59, 60, 31), -- Vegetales Extras: Cebolla
--- Pedido Detalle 60: Cobertura y contornos
-(60, 91, 36), -- Cobertura: Chocolate
-(60, 26, 9),  -- Contornos: Ensalada
--- Pedido Detalle 61: Toppings y extra proteína
-(61, 76, 18), -- Toppings: Crema
-(61, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 62: Borde relleno y tipo de base
-(62, 76, 29), -- Borde relleno: Queso
-(62, 90, 35), -- Tipo de base: Sin gluten
--- Pedido Detalle 63: Tamaño y nivel de picante
-(63, 1, 1),   -- Tamaño: Pequeño
-(63, 7, 2),   -- Nivel de picante: Muy Alto
--- Pedido Detalle 64: Tipo de pan y pasta
-(64, 8, 3),   -- Tipo de pan: Blanco
-(64, 11, 4),  -- Tipo de pasta: Fetuccini
--- Pedido Detalle 65: Salsas e ingredientes extra
-(65, 13, 5),  -- Salsas adicionales: Blanca
-(65, 14, 6),  -- Ingredientes extra: Champiñones
--- Pedido Detalle 66: Extras y exclusiones
-(66, 20, 7),  -- Extras: Piña
-(66, 23, 22), -- Exclusiones: Lactosa
--- Pedido Detalle 67: Vegetales extra y cobertura
-(67, 58, 31), -- Vegetales Extras: Tomate
-(67, 92, 36), -- Cobertura: Caramelo
--- Pedido Detalle 68: Contornos y toppings
-(68, 24, 9),  -- Contornos: Papas fritas
-(68, 77, 18), -- Toppings: Chocolate
--- Pedido Detalle 69: Extra proteína y borde relleno
-(69, 78, 30), -- Extra Proteína: Pollo
-(69, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 70: Tipo de base y tamaño
-(70, 88, 35), -- Tipo de base: Delgada
-(70, 3, 1),   -- Tamaño: Grande
--- Pedido Detalle 71: Nivel de picante y tipo de pan
-(71, 4, 2),   -- Nivel de picante: Bajo
-(71, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 72: Tipo de pasta y salsas adicionales
-(72, 10, 4),  -- Tipo de pasta: Espagueti
-(72, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 73: Ingredientes extra y extras
-(73, 15, 6),  -- Ingredientes extra: Pepinillos
-(73, 21, 7),  -- Extras: Crema batida
--- Pedido Detalle 74: Exclusiones y vegetales extra
-(74, 22, 22), -- Exclusiones: Frijoles
-(74, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 75: Cobertura y contornos
-(75, 91, 36), -- Cobertura: Chocolate
-(75, 25, 9),  -- Contornos: Arroz
--- Pedido Detalle 76: Toppings y extra proteína
-(76, 76, 18), -- Toppings: Crema
-(76, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 77: Borde relleno y tipo de base
-(77, 76, 29), -- Borde relleno: Queso
-(77, 89, 35), -- Tipo de base: Gruesa
--- Pedido Detalle 78: Tamaño y nivel de picante
-(78, 1, 1),   -- Tamaño: Pequeño
-(78, 5, 2),   -- Nivel de picante: Medio
--- Pedido Detalle 79: Tipo de pan y pasta
-(79, 8, 3),   -- Tipo de pan: Blanco
-(79, 11, 4),  -- Tipo de pasta: Fetuccini
--- Pedido Detalle 80: Salsas e ingredientes extra
-(80, 13, 5),  -- Salsas adicionales: Blanca
-(80, 16, 6);  -- Ingredientes extra: Cebolla
--- Pedido Detalle 81 (idPlato: 41): Extra queso
-(81, 76, 29), -- Borde relleno: Queso (consistent with Plato 41 options, as closest for 'queso')
-(81, 17, 7),  -- Extras: Queso (general option for 'extra queso')
--- Pedido Detalle 82 (idPlato: 42): Sin Nota
-(82, 88, 35), -- Tipo de base: Delgada (consistent with Plato 42 options)
-(82, 1, 1),   -- Tamaño: Pequeño (general option)
--- Pedido Detalle 83 (idPlato: 43): Sin Nota (idPlato > 42, using general options)
-(83, 1, 1),   -- Tamaño: Pequeño
-(83, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 84 (idPlato: 44): Extra picante (idPlato > 42, using general options)
-(84, 7, 2),   -- Nivel de picante: Muy Alto
-(84, 8, 3),   -- Tipo de pan: Blanco
--- Pedido Detalle 85 (idPlato: 45): Sin cebolla (idPlato > 42, using general options)
-(85, 16, 6),  -- Ingredientes extra: Cebolla (as exclusion)
-(85, 10, 4),  -- Tipo de pasta: Espagueti (general option)
--- Pedido Detalle 86 (idPlato: 46): Tamaño grande (idPlato > 42, using general options)
-(86, 3, 1),   -- Tamaño: Grande
-(86, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 87 (idPlato: 47): Sin Nota (idPlato > 42, using general options)
-(87, 14, 6),  -- Ingredientes extra: Champiñones
-(87, 17, 7),  -- Extras: Queso
--- Pedido Detalle 88 (idPlato: 48): Con extra de salsa (idPlato > 42, using general options)
-(88, 12, 5),  -- Salsas adicionales: Tomate
-(88, 22, 22), -- Exclusiones: Frijoles (general option)
--- Pedido Detalle 89 (idPlato: 49): Vegetales extra (idPlato > 42, using general options)
-(89, 58, 31), -- Vegetales Extras: Tomate
-(89, 91, 36), -- Cobertura: Chocolate
--- Pedido Detalle 90 (idPlato: 50): Sin lactosa (idPlato > 42, using general options)
-(90, 23, 22), -- Exclusiones: Lactosa
-(90, 24, 9),  -- Contornos: Papas fritas (general option)
--- Pedido Detalle 91 (idPlato: 51): Con crema batida (idPlato > 42, using general options)
-(91, 21, 7),  -- Extras: Crema batida
-(91, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 92 (idPlato: 52): Sin Nota (idPlato > 42, using general options)
-(92, 76, 18), -- Toppings: Crema
-(92, 76, 29), -- Borde relleno: Queso
--- Pedido Detalle 93 (idPlato: 53): Tipo de pan integral (idPlato > 42, using general options)
-(93, 9, 3),   -- Tipo de pan: Integral
-(93, 88, 35), -- Tipo de base: Delgada
--- Pedido Detalle 94 (idPlato: 54): Borde grueso (idPlato > 42, using general options)
-(94, 89, 35), -- Tipo de base: Gruesa
-(94, 1, 1),   -- Tamaño: Pequeño
--- Pedido Detalle 95 (idPlato: 55): Extra proteína de pollo (idPlato > 42, using general options)
-(95, 78, 30), -- Extra Proteína: Pollo
-(95, 4, 2),   -- Nivel de picante: Bajo (general option)
--- Pedido Detalle 96 (idPlato: 56): Sin azúcar (idPlato > 42, using general options)
-(96, 22, 22), -- Exclusiones: Frijoles (as general exclusion)
-(96, 8, 3),   -- Tipo de pan: Blanco (general option)
--- Pedido Detalle 97 (idPlato: 57): Con champiñones (idPlato > 42, using general options)
-(97, 14, 6),  -- Ingredientes extra: Champiñones
-(97, 10, 4),  -- Tipo de pasta: Espagueti (general option)
--- Pedido Detalle 98 (idPlato: 58): Sin Nota (idPlato > 42, using general options)
-(98, 12, 5),  -- Salsas adicionales: Tomate
-(98, 15, 6),  -- Ingredientes extra: Pepinillos
--- Pedido Detalle 99 (idPlato: 59): Extra jengibre (idPlato > 42, using general options)
-(99, 19, 7),  -- Extras: Jengibre
-(99, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 100 (idPlato: 60): Sin pepinillos (idPlato > 42, using general options)
-(100, 15, 6), -- Ingredientes extra: Pepinillos (as exclusion)
-(100, 22, 22),-- Exclusiones: Frijoles
--- Pedido Detalle 101 (idPlato: 61): Con extra de piña (idPlato > 42, using general options)
-(101, 20, 7), -- Extras: Piña
-(101, 58, 31),-- Vegetales Extras: Tomate
--- Pedido Detalle 102 (idPlato: 62): Sin Nota (idPlato > 42, using general options)
-(102, 91, 36),-- Cobertura: Chocolate
-(102, 24, 9), -- Contornos: Papas fritas
--- Pedido Detalle 103 (idPlato: 63): Sin gluten (idPlato > 42, using general options)
-(103, 90, 35),-- Tipo de base: Sin gluten
-(103, 76, 18),-- Toppings: Crema
--- Pedido Detalle 104 (idPlato: 64): Bajo en calorías (idPlato > 42, using general options)
-(104, 2, 1),  -- Tamaño: Mediano (general option)
-(104, 78, 30),-- Extra Proteína: Pollo (general option)
--- Pedido Detalle 105 (idPlato: 65): Picante suave (idPlato > 42, using general options)
-(105, 4, 2),  -- Nivel de picante: Bajo
-(105, 76, 29),-- Borde relleno: Queso
--- Pedido Detalle 106 (idPlato: 66): Sin Nota (idPlato > 42, using general options)
-(106, 88, 35),-- Tipo de base: Delgada
-(106, 8, 3),  -- Tipo de pan: Blanco
--- Pedido Detalle 107 (idPlato: 67): Sin frijoles (idPlato > 42, using general options)
-(107, 22, 22),-- Exclusiones: Frijoles
-(107, 10, 4), -- Tipo de pasta: Espagueti
--- Pedido Detalle 108 (idPlato: 68): Con aderezo aparte (idPlato > 42, using general options)
-(108, 13, 5), -- Salsas adicionales: Blanca
-(108, 16, 6), -- Ingredientes extra: Cebolla
--- Pedido Detalle 109 (idPlato: 69): Sin Nota (idPlato > 42, using general options)
-(109, 17, 7), -- Extras: Queso
-(109, 19, 7), -- Extras: Jengibre
--- Pedido Detalle 110 (idPlato: 70): Extra queso (idPlato > 42, using general options)
-(110, 17, 7), -- Extras: Queso
-(110, 23, 22),-- Exclusiones: Lactosa
--- Pedido Detalle 111 (idPlato: 71): Sin cebolla (idPlato > 42, using general options)
-(111, 16, 6), -- Ingredientes extra: Cebolla (as exclusion)
-(111, 58, 31),-- Vegetales Extras: Tomate
--- Pedido Detalle 112 (idPlato: 72): Tamaño grande (idPlato > 42, using general options)
-(112, 3, 1),  -- Tamaño: Grande
-(112, 91, 36),-- Cobertura: Chocolate
--- Pedido Detalle 113 (idPlato: 73): Sin Nota (idPlato > 42, using general options)
-(113, 24, 9), -- Contornos: Papas fritas
-(113, 76, 18),-- Toppings: Crema
--- Pedido Detalle 114 (idPlato: 74): Con extra de salsa (idPlato > 42, using general options)
-(114, 12, 5), -- Salsas adicionales: Tomate
-(114, 78, 30),-- Extra Proteína: Pollo
--- Pedido Detalle 115 (idPlato: 75): Vegetales extra (idPlato > 42, using general options)
-(115, 58, 31),-- Vegetales Extras: Tomate
-(115, 76, 29),-- Borde relleno: Queso
--- Pedido Detalle 116 (idPlato: 76): Sin lactosa (idPlato > 42, using general options)
-(116, 23, 22),-- Exclusiones: Lactosa
-(116, 88, 35),-- Tipo de base: Delgada
--- Pedido Detalle 117 (idPlato: 77): Sin Nota (idPlato > 42, using general options)
-(117, 1, 1),  -- Tamaño: Pequeño
-(117, 4, 2),  -- Nivel de picante: Bajo
--- Pedido Detalle 118 (idPlato: 78): Sin picante (idPlato > 42, using general options)
-(118, 4, 2),  -- Nivel de picante: Bajo
-(118, 8, 3),  -- Tipo de pan: Blanco
--- Pedido Detalle 119 (idPlato: 79): Sin Nota (idPlato > 42, using general options)
-(119, 10, 4), -- Tipo de pasta: Espagueti
-(119, 12, 5), -- Salsas adicionales: Tomate
--- Pedido Detalle 120 (idPlato: 80): Sin Nota (idPlato > 42, using general options)
-(120, 14, 6), -- Ingredientes extra: Champiñones
-(120, 17, 7), -- Extras: Queso
--- Pedido Detalle 121 (idPlato: 95): Sin Nota (idPlato > 42, using general options)
-(121, 1, 1),   -- Tamaño: Pequeño
-(121, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 122 (idPlato: 96): Sin Nota (idPlato > 42, using general options)
-(122, 8, 3),   -- Tipo de pan: Blanco
-(122, 10, 4),  -- Tipo de pasta: Espagueti
--- Pedido Detalle 123 (idPlato: 96): Sin cebolla (idPlato > 42, using general options)
-(123, 16, 6),  -- Ingredientes extra: Cebolla (as exclusion)
-(123, 12, 5),  -- Salsas adicionales: Tomate (general option)
--- Pedido Detalle 124 (idPlato: 97): Sin Nota (idPlato > 42, using general options)
-(124, 14, 6),  -- Ingredientes extra: Champiñones
-(124, 17, 7),  -- Extras: Queso
--- Pedido Detalle 125 (idPlato: 98): Sin Nota (idPlato > 42, using general options)
-(125, 22, 22), -- Exclusiones: Frijoles
-(125, 58, 31), -- Vegetales Extras: Tomate
--- Pedido Detalle 126 (idPlato: 99): Sin Nota (idPlato > 42, using general options)
-(126, 91, 36), -- Cobertura: Chocolate
-(126, 24, 9),  -- Contornos: Papas fritas
--- Pedido Detalle 127 (idPlato: 100): Sin Nota (idPlato > 42, using general options)
-(127, 76, 18), -- Toppings: Crema
-(127, 78, 30), -- Extra Proteína: Pollo
--- Pedido Detalle 128 (idPlato: 101): Sin Nota (idPlato > 42, using general options)
-(128, 76, 29), -- Borde relleno: Queso
-(128, 88, 35), -- Tipo de base: Delgada
--- Pedido Detalle 129 (idPlato: 102): Extra queso (idPlato > 42, using general options)
-(129, 17, 7),  -- Extras: Queso
-(129, 2, 1),   -- Tamaño: Mediano (general option)
--- Pedido Detalle 130 (idPlato: 103): Bien cocido (idPlato > 42, general options, no direct option)
-(130, 5, 2),   -- Nivel de picante: Medio
-(130, 9, 3),   -- Tipo de pan: Integral
--- Pedido Detalle 131 (idPlato: 104): Poco cocido (idPlato > 42, general options, no direct option)
-(131, 11, 4),  -- Tipo de pasta: Fetuccini
-(131, 13, 5),  -- Salsas adicionales: Blanca
--- Pedido Detalle 132 (idPlato: 105): Sin lactosa (idPlato > 42, using general options)
-(132, 23, 22), -- Exclusiones: Lactosa
-(132, 15, 6),  -- Ingredientes extra: Pepinillos (general option)
--- Pedido Detalle 133 (idPlato: 106): Con extra de salsa (idPlato > 42, using general options)
-(133, 12, 5),  -- Salsas adicionales: Tomate
-(133, 18, 7),  -- Extras: Aguacate
--- Pedido Detalle 134 (idPlato: 107): Extra picante (idPlato > 42, using general options)
-(134, 7, 2),   -- Nivel de picante: Muy Alto
-(134, 20, 7),  -- Extras: Piña (general option)
--- Pedido Detalle 135 (idPlato: 108): Sin gluten (idPlato > 42, using general options)
-(135, 90, 35), -- Tipo de base: Sin gluten (closest match for exclusion)
-(135, 22, 22), -- Exclusiones: Frijoles
--- Pedido Detalle 136 (idPlato: 109): Bajo en sal (idPlato > 42, general options, no direct option)
-(136, 58, 31), -- Vegetales Extras: Tomate
-(136, 92, 36), -- Cobertura: Caramelo
--- Pedido Detalle 137 (idPlato: 110): Vegetales extra (idPlato > 42, using general options)
-(137, 58, 31), -- Vegetales Extras: Tomate
-(137, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 138 (idPlato: 111): Sin azúcar (idPlato > 42, using general options)
-(138, 22, 22), -- Exclusiones: Frijoles (as general exclusion)
-(138, 26, 9),  -- Contornos: Ensalada (general option)
--- Pedido Detalle 139 (idPlato: 112): Tamaño grande (idPlato > 42, using general options)
-(139, 3, 1),   -- Tamaño: Grande
-(139, 77, 18), -- Toppings: Chocolate
--- Pedido Detalle 140 (idPlato: 113): Tipo de pan integral (idPlato > 42, using general options)
-(140, 9, 3),   -- Tipo de pan: Integral
-(140, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 141 (idPlato: 114): Con cebolla (idPlato > 42, using general options)
-(141, 16, 6),  -- Ingredientes extra: Cebolla
-(141, 89, 35), -- Tipo de base: Gruesa (general option)
--- Pedido Detalle 142 (idPlato: 115): Extra jengibre (idPlato > 42, using general options)
-(142, 19, 7),  -- Extras: Jengibre
-(142, 17, 7),  -- Extras: Queso
--- Pedido Detalle 143 (idPlato: 116): Bajo en calorías (idPlato > 42, general options, no direct option)
-(143, 1, 1),   -- Tamaño: Pequeño
-(143, 4, 2),   -- Nivel de picante: Bajo
--- Pedido Detalle 144 (idPlato: 117): Con crema batida (idPlato > 42, using general options)
-(144, 21, 7),  -- Extras: Crema batida
-(144, 76, 18), -- Toppings: Crema
--- Pedido Detalle 145 (idPlato: 118): Sin pepinillos (idPlato > 42, using general options)
-(145, 15, 6),  -- Ingredientes extra: Pepinillos (as exclusion)
-(145, 23, 22), -- Exclusiones: Lactosa
--- Pedido Detalle 146 (idPlato: 119): Con extra de piña (idPlato > 42, using general options)
-(146, 20, 7),  -- Extras: Piña
-(146, 59, 31), -- Vegetales Extras: Lechuga
--- Pedido Detalle 147 (idPlato: 120): Borde grueso (idPlato > 42, using general options)
-(147, 89, 35), -- Tipo de base: Gruesa
-(147, 77, 29), -- Borde relleno: Ajo
--- Pedido Detalle 148 (idPlato: 121): Extra proteína de pollo (idPlato > 42, using general options)
-(148, 78, 30), -- Extra Proteína: Pollo
-(148, 25, 9),  -- Contornos: Arroz (general option)
--- Pedido Detalle 149 (idPlato: 122): Con aderezo aparte (idPlato > 42, using general options)
-(149, 13, 5),  -- Salsas adicionales: Blanca
-(149, 12, 5),  -- Salsas adicionales: Tomate
--- Pedido Detalle 150 (idPlato: 123): Sin frijoles (idPlato > 42, using general options)
-(150, 22, 22), -- Exclusiones: Frijoles
-(150, 90, 35); -- Tipo de base: Sin gluten (closest for general exclusion)
+(1, 18, 6),
+(2, 27, 9),
+(2, 12, 3),
+(2, 13, 4),
+(3, 16, 5),
+(3, 5, 2),
+(3, 26, 9),
+(4, 13, 4),
+(4, 19, 6),
+(5, 12, 3),
+(5, 16, 5),
+(6, 18, 6),
+(6, 27, 9),
+(6, 7, 2),
+(7, 6, 2),
+(7, 16, 5),
+(8, 29, 10),
+(8, 26, 9),
+(8, 3, 1),
+(9, 1, 1),
+(9, 19, 6),
+(10, 7, 2),
+(10, 26, 9),
+(11, 16, 5),
+(12, 29, 10),
+(13, 12, 3),
+(13, 18, 6),
+(13, 28, 10),
+(14, 6, 2),
+(14, 24, 8),
+(14, 16, 5),
+(15, 26, 9),
+(16, 19, 6),
+(16, 3, 1),
+(16, 28, 10),
+(17, 25, 8),
+(17, 22, 7),
+(18, 20, 6),
+(18, 22, 7),
+(18, 28, 10),
+(19, 18, 6),
+(20, 24, 8),
+(21, 15, 4),
+(21, 21, 7),
+(22, 18, 6),
+(22, 3, 1),
+(23, 11, 3),
+(24, 23, 8),
+(25, 13, 4),
+(25, 1, 1),
+(26, 27, 9),
+(26, 11, 3),
+(26, 18, 6),
+(27, 21, 7),
+(28, 24, 8),
+(29, 22, 7),
+(29, 20, 6),
+(30, 21, 7),
+(31, 19, 6),
+(31, 27, 9),
+(32, 16, 5),
+(32, 2, 1),
+(32, 27, 9),
+(33, 28, 10),
+(33, 17, 5),
+(34, 22, 7),
+(34, 26, 9),
+(35, 19, 6),
+(36, 6, 2),
+(37, 27, 9),
+(38, 7, 2),
+(38, 11, 3),
+(38, 30, 10),
+(39, 1, 1),
+(39, 19, 6),
+(40, 1, 1),
+(40, 7, 2),
+(40, 27, 9),
+(41, 25, 8),
+(41, 2, 1),
+(42, 15, 4),
+(43, 28, 10),
+(43, 17, 5),
+(43, 20, 6),
+(44, 7, 2),
+(44, 14, 4),
+(45, 17, 5),
+(45, 9, 3),
+(46, 18, 6),
+(47, 13, 4),
+(48, 26, 9),
+(48, 20, 6),
+(49, 17, 5),
+(49, 22, 7),
+(49, 7, 2),
+(50, 8, 2),
+(50, 21, 7),
+(50, 28, 10),
+(51, 20, 6),
+(51, 4, 1),
+(52, 23, 8),
+(52, 20, 6),
+(53, 25, 8),
+(53, 22, 7),
+(54, 29, 10),
+(55, 4, 1),
+(55, 18, 6),
+(55, 14, 4),
+(56, 26, 9),
+(57, 24, 8),
+(57, 27, 9),
+(58, 14, 4),
+(59, 21, 7),
+(59, 29, 10),
+(59, 20, 6),
+(60, 30, 10),
+(60, 9, 3),
+(61, 7, 2),
+(62, 16, 5),
+(62, 11, 3),
+(63, 17, 5),
+(63, 12, 3),
+(63, 26, 9),
+(64, 28, 10),
+(64, 17, 5),
+(64, 21, 7),
+(65, 26, 9),
+(66, 2, 1),
+(66, 21, 7),
+(66, 29, 10),
+(67, 17, 5),
+(67, 4, 1),
+(68, 23, 8),
+(68, 17, 5),
+(68, 15, 4),
+(69, 22, 7),
+(69, 19, 6),
+(69, 24, 8),
+(70, 17, 5),
+(70, 23, 8),
+(70, 26, 9),
+(71, 24, 8),
+(72, 4, 1),
+(72, 21, 7),
+(72, 20, 6),
+(73, 17, 5),
+(73, 26, 9),
+(73, 6, 2),
+(74, 13, 4),
+(74, 4, 1),
+(75, 19, 6),
+(75, 26, 9),
+(76, 5, 2),
+(77, 12, 3),
+(77, 26, 9),
+(78, 25, 8),
+(79, 3, 1),
+(79, 27, 9),
+(80, 28, 10),
+(80, 9, 3),
+(80, 14, 4),
+(81, 13, 4),
+(82, 5, 2),
+(82, 16, 5),
+(83, 22, 7),
+(83, 20, 6),
+(84, 18, 6),
+(84, 6, 2),
+(84, 22, 7),
+(85, 11, 3),
+(86, 11, 3),
+(87, 20, 6),
+(87, 30, 10),
+(88, 28, 10),
+(88, 22, 7),
+(88, 16, 5),
+(89, 26, 9),
+(89, 14, 4),
+(89, 22, 7),
+(90, 25, 8),
+(90, 16, 5),
+(90, 28, 10),
+(91, 27, 9),
+(91, 22, 7),
+(91, 17, 5),
+(92, 19, 6),
+(93, 8, 2),
+(93, 22, 7),
+(93, 11, 3),
+(94, 19, 6),
+(95, 17, 5),
+(96, 2, 1),
+(96, 8, 7),
+(96, 9, 3),
+(96, 14, 5),
+(97, 14, 4),
+(97, 30, 10),
+(97, 7, 2),
+(98, 22, 7),
+(98, 19, 6),
+(98, 24, 8),
+(99, 18, 6),
+(100, 5, 2),
+(100, 15, 4),
+(101, 6, 2),
+(101, 24, 8),
+(102, 17, 5),
+(102, 4, 1),
+(103, 15, 4),
+(103, 7, 2),
+(103, 11, 3),
+(104, 18, 6),
+(105, 1, 1),
+(105, 24, 8),
+(106, 13, 4),
+(106, 11, 3),
+(106, 3, 1),
+(107, 16, 5),
+(107, 25, 8),
+(108, 18, 6),
+(108, 27, 9),
+(109, 13, 4),
+(109, 30, 10),
+(109, 11, 3),
+(110, 1, 1),
+(110, 27, 9),
+(110, 8, 2),
+(111, 16, 5),
+(111, 19, 6),
+(111, 8, 2),
+(112, 5, 2),
+(113, 22, 7),
+(113, 14, 4),
+(113, 6, 2),
+(114, 22, 7),
+(115, 16, 5),
+(116, 26, 9),
+(117, 4, 1),
+(117, 15, 4),
+(117, 24, 8),
+(118, 19, 6),
+(119, 2, 1),
+(120, 3, 1),
+(121, 19, 6),
+(122, 8, 2),
+(122, 15, 4),
+(123, 14, 4),
+(124, 16, 5),
+(124, 14, 4),
+(125, 21, 7),
+(125, 10, 3),
+(125, 27, 9),
+(126, 23, 8),
+(126, 19, 6),
+(126, 21, 7),
+(127, 8, 2),
+(127, 26, 9),
+(128, 8, 2),
+(128, 22, 7),
+(128, 25, 8),
+(129, 17, 5),
+(129, 4, 1),
+(129, 12, 3),
+(130, 9, 3),
+(130, 27, 9),
+(131, 9, 3),
+(131, 22, 7),
+(131, 14, 4),
+(132, 21, 7),
+(133, 22, 7),
+(133, 15, 4),
+(133, 26, 9),
+(134, 20, 6),
+(135, 14, 4),
+(135, 8, 2),
+(135, 30, 10),
+(136, 22, 7),
+(136, 26, 9),
+(137, 10, 3),
+(137, 14, 4),
+(138, 19, 6),
+(138, 26, 9),
+(139, 17, 5),
+(140, 30, 10),
+(140, 2, 1),
+(141, 24, 8),
+(142, 27, 9),
+(143, 10, 3),
+(143, 26, 9),
+(144, 7, 2),
+(144, 26, 9),
+(144, 24, 8),
+(145, 4, 1),
+(145, 27, 9),
+(146, 27, 9),
+(146, 18, 6),
+(146, 22, 7),
+(147, 1, 1),
+(147, 17, 5),
+(148, 30, 10),
+(148, 3, 1),
+(149, 21, 7),
+(150, 19, 6),
+(150, 10, 3),
+(150, 24, 8),
+(151, 27, 9),
+(152, 1, 1),
+(152, 16, 5),
+(152, 27, 9),
+(153, 3, 1),
+(154, 4, 1),
+(154, 17, 5),
+(155, 21, 7),
+(156, 9, 3),
+(156, 8, 2),
+(157, 13, 4),
+(158, 14, 4),
+(158, 22, 7),
+(159, 23, 8),
+(160, 22, 7),
+(161, 1, 1),
+(161, 8, 2),
+(162, 8, 2),
+(163, 3, 1),
+(164, 17, 5),
+(164, 9, 3),
+(165, 4, 1),
+(166, 17, 5),
+(166, 29, 10),
+(166, 21, 7),
+(167, 28, 10),
+(167, 27, 9),
+(167, 5, 2),
+(168, 13, 4),
+(168, 18, 6),
+(168, 24, 8),
+(169, 3, 1),
+(170, 24, 8),
+(171, 1, 1),
+(172, 22, 7),
+(172, 19, 6),
+(172, 16, 5),
+(173, 4, 1),
+(173, 22, 7),
+(174, 10, 3),
+(174, 20, 6),
+(174, 28, 10),
+(175, 13, 4),
+(175, 25, 8),
+(175, 8, 2),
+(176, 12, 3),
+(176, 8, 2),
+(177, 18, 6),
+(178, 2, 1),
+(179, 7, 2),
+(180, 4, 1),
+(181, 27, 9),
+(182, 27, 9),
+(182, 23, 8),
+(182, 20, 6),
+(183, 17, 5),
+(183, 5, 2),
+(183, 29, 10),
+(184, 13, 4),
+(184, 20, 6),
+(185, 29, 10),
+(186, 19, 6),
+(186, 27, 9),
+(186, 4, 1),
+(187, 13, 4),
+(187, 8, 2),
+(187, 2, 1),
+(188, 19, 6),
+(189, 20, 6),
+(189, 6, 2),
+(190, 26, 9),
+(190, 8, 2),
+(190, 29, 10),
+(191, 29, 10),
+(191, 22, 7),
+(192, 14, 4),
+(193, 1, 1),
+(194, 25, 8),
+(195, 17, 5),
+(195, 19, 6),
+(196, 20, 6),
+(196, 7, 2),
+(197, 13, 4),
+(198, 21, 7),
+(198, 17, 5),
+(198, 7, 2),
+(199, 17, 5),
+(199, 22, 7),
+(200, 14, 4),
+(200, 23, 8),
+(200, 20, 6),
+(201, 16, 5),
+(201, 26, 9),
+(202, 27, 9),
+(202, 9, 3),
+(202, 18, 6),
+(203, 27, 9),
+(204, 9, 3),
+(204, 16, 5),
+(205, 16, 5),
+(205, 15, 4),
+(206, 27, 9),
+(206, 15, 4),
+(207, 20, 6),
+(207, 29, 10),
+(208, 12, 3),
+(208, 29, 10),
+(208, 19, 6),
+(209, 30, 10),
+(210, 23, 8),
+(210, 15, 4),
+(211, 3, 1),
+(212, 10, 3),
+(212, 29, 10),
+(213, 13, 4),
+(213, 26, 9),
+(213, 28, 10),
+(214, 25, 8),
+(214, 27, 9),
+(215, 25, 8),
+(215, 16, 5),
+(215, 5, 2),
+(216, 17, 5),
+(217, 6, 2),
+(217, 29, 10),
+(217, 17, 5);
 
 INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
--- Pedido 1: Ruta feliz
-(1, 1, '2025-07-10 16:53:35'), -- Pendiente
-(1, 2, '2025-07-10 17:05:35'), -- Confirmado
-(1, 3, '2025-07-10 17:28:35'), -- En Preparación
-(1, 4, '2025-07-10 17:35:35'), -- Listo para Entrega
-(1, 5, '2025-07-10 17:42:35'), -- En Camino
-(1, 6, '2025-07-10 18:24:35'), -- Entregado
-
--- Pedido 2: Cancelado por el cliente
-(2, 1, '2025-07-11 05:27:14'), -- Pendiente
-(2, 2, '2025-07-11 05:32:14'), -- Confirmado
-(2, 7, '2025-07-11 05:45:14'), -- Cancelado
-
--- Pedido 3: Retrasado y luego entregado
-(3, 1, '2025-07-10 19:48:42'), -- Pendiente
-(3, 2, '2025-07-10 19:54:42'), -- Confirmado
-(3, 3, '2025-07-10 20:17:42'), -- En Preparación
-(3, 8, '2025-07-10 20:25:42'), -- Retrasado
-(3, 4, '2025-07-10 20:40:42'), -- Listo para Entrega (después de retraso)
-(3, 5, '2025-07-10 20:50:42'), -- En Camino
-(3, 6, '2025-07-10 21:20:42'), -- Entregado
-
--- Pedido 4: Rechazado por comercio (MODIFICADO)
-(4, 1, '2025-07-11 11:22:20'), -- Pendiente
-(4, 11, '2025-07-11 11:30:20'), -- Rechazado por Comercio
-(4, 7, '2025-07-11 11:40:20'), -- Cancelado
-
--- Pedido 5: Error en pago y cancelado
-(5, 1, '2025-07-10 19:04:36'), -- Pendiente
-(5, 15, '2025-07-10 19:10:36'), -- Error en Pago
-(5, 7, '2025-07-10 19:20:36'), -- Cancelado
-
--- Pedido 6: Esperando repartidor, luego entregado
-(6, 1, '2025-07-11 12:35:53'), -- Pendiente
-(6, 2, '2025-07-11 12:47:53'), -- Confirmado
-(6, 3, '2025-07-11 13:00:53'), -- En Preparación
-(6, 4, '2025-07-11 13:07:53'), -- Listo para Entrega
-(6, 12, '2025-07-11 13:15:53'), -- Esperando Repartidor
-(6, 5, '2025-07-11 13:25:53'), -- En Camino
-(6, 6, '2025-07-11 13:51:53'), -- Entregado
-
--- Pedido 7: Programado y entregado
-(7, 1, '2025-07-10 18:28:16'), -- Pendiente
-(7, 14, '2025-07-10 18:35:16'), -- Programado
-(7, 4, '2025-07-10 19:10:16'), -- Listo para Entrega (a la hora programada)
-(7, 5, '2025-07-10 19:24:16'), -- En Camino
-(7, 6, '2025-07-10 19:59:16'), -- Entregado
-
--- Pedido 8: Devolución en proceso (después de una entrega simulada)
-(8, 1, '2025-07-11 15:46:27'), -- Pendiente
-(8, 2, '2025-07-11 15:52:27'), -- Confirmado
-(8, 3, '2025-07-11 16:16:27'), -- En Preparación
-(8, 4, '2025-07-11 16:26:27'), -- Listo para Entrega
-(8, 5, '2025-07-11 16:34:27'), -- En Camino
-(8, 6, '2025-07-11 17:09:27'), -- Entregado
-(8, 9, '2025-07-11 17:30:27'), -- Devolución en Proceso
-(8, 10, '2025-07-11 17:45:27'), -- Reembolsado
-
--- Pedido 9: Reintento de entrega
-(9, 1, '2025-07-11 02:49:50'), -- Pendiente
-(9, 2, '2025-07-11 03:00:50'), -- Confirmado
-(9, 3, '2025-07-11 03:22:50'), -- En Preparación
-(9, 4, '2025-07-11 03:30:50'), -- Listo para Entrega
-(9, 5, '2025-07-11 03:41:50'), -- En Camino
-(9, 13, '2025-07-11 04:00:50'), -- Reintento de Entrega (fallido)
-(9, 5, '2025-07-11 04:10:50'), -- En Camino (segundo intento)
-(9, 6, '2025-07-11 04:30:50'), -- Entregado
-
--- Pedido 10-150: Variaciones de los escenarios anteriores
-
--- Ruta Feliz (varias instancias)
-(10, 1, '2025-07-11 10:18:20'), (10, 2, '2025-07-11 10:28:20'), (10, 3, '2025-07-11 10:48:20'), (10, 4, '2025-07-11 10:57:20'), (10, 5, '2025-07-11 11:10:20'), (10, 6, '2025-07-11 11:42:20'),
-(11, 1, '2025-07-11 01:23:49'), (11, 2, '2025-07-11 01:31:49'), (11, 3, '2025-07-11 01:46:49'), (11, 4, '2025-07-11 01:54:49'), (11, 5, '2025-07-11 02:08:49'), (11, 6, '2025-07-11 02:37:49'),
-(12, 1, '2025-07-11 10:04:13'), (12, 2, '2025-07-11 10:12:13'), (12, 3, '2025-07-11 10:39:13'), (12, 4, '2025-07-11 10:47:13'), (12, 5, '2025-07-11 10:55:13'), (12, 6, '2025-07-11 11:32:13'),
-(13, 1, '2025-07-11 05:44:03'), (13, 2, '2025-07-11 05:51:03'), (13, 3, '2025-07-11 06:16:03'), (13, 4, '2025-07-11 06:21:03'), (13, 5, '2025-07-11 06:28:03'), (13, 6, '2025-07-11 07:07:03'),
-(14, 1, '2025-07-10 16:54:02'), (14, 2, '2025-07-10 17:01:02'), (14, 3, '2025-07-10 17:15:02'), (14, 4, '2025-07-10 17:23:02'), (14, 5, '2025-07-10 17:37:02'), (14, 6, '2025-07-10 18:04:02'),
-(15, 1, '2025-07-11 09:37:03'), (15, 2, '2025-07-11 09:47:03'), (15, 3, '2025-07-11 10:11:03'), (15, 4, '2025-07-11 10:20:03'), (15, 5, '2025-07-11 10:25:03'), (15, 6, '2025-07-11 10:57:03'),
-(16, 1, '2025-07-11 00:09:05'), (16, 2, '2025-07-11 00:15:05'), (16, 3, '2025-07-11 00:39:05'), (16, 4, '2025-07-11 00:46:05'), (16, 5, '2025-07-11 00:56:05'), (16, 6, '2025-07-11 01:21:05'),
+-- Pedido 1: Ruta feliz (ejemplo original)
+(1, 1, CONVERT(DATETIME, '2025-05-18 16:53:35')), (1, 2, CONVERT(DATETIME, '2025-05-18 17:05:35')), -- Confirmado
+(1, 3, CONVERT(DATETIME, '2025-05-18 17:28:35')), -- En Preparación
+(1, 4, CONVERT(DATETIME, '2025-05-18 17:35:35')), -- Listo para Entrega
+(1, 5, CONVERT(DATETIME, '2025-05-18 17:42:35')), -- En Camino
+(1, 6, CONVERT(DATETIME, '2025-05-18 18:24:35')), -- Entregado
+-- Generación de pedidos aleatorios hasta un mes en el futuro (18 de agosto de 2025)
+-- Ruta Feliz
+(2, 1, CONVERT(DATETIME, '2025-06-20 09:10:00')), (2, 2, CONVERT(DATETIME, '2025-06-20 09:18:00')), (2, 3, CONVERT(DATETIME, '2025-06-20 09:40:00')), (2, 4, CONVERT(DATETIME, '2025-06-20 09:48:00')), (2, 5, CONVERT(DATETIME, '2025-06-20 09:55:00')), (2, 6, CONVERT(DATETIME, '2025-06-20 10:25:00')),
+(3, 1, CONVERT(DATETIME, '2025-07-01 14:05:00')), (3, 2, CONVERT(DATETIME, '2025-07-01 14:15:00')), (3, 3, CONVERT(DATETIME, '2025-07-01 14:38:00')), (3, 4, CONVERT(DATETIME, '2025-07-01 14:46:00')), (3, 5, CONVERT(DATETIME, '2025-07-01 14:58:00')), (3, 6, CONVERT(DATETIME, '2025-07-01 15:30:00')),
+(4, 1, CONVERT(DATETIME, '2025-05-22 18:30:00')), (4, 2, CONVERT(DATETIME, '2025-05-22 18:37:00')), (4, 3, CONVERT(DATETIME, '2025-05-22 19:00:00')), (4, 4, CONVERT(DATETIME, '2025-05-22 19:08:00')), (4, 5, CONVERT(DATETIME, '2025-05-22 19:20:00')), (4, 6, CONVERT(DATETIME, '2025-05-22 19:55:00')),
+(5, 1, CONVERT(DATETIME, '2025-06-03 07:45:00')), (5, 2, CONVERT(DATETIME, '2025-06-03 07:52:00')), (5, 3, CONVERT(DATETIME, '2025-06-03 08:15:00')), (5, 4, CONVERT(DATETIME, '2025-06-03 08:23:00')), (5, 5, CONVERT(DATETIME, '2025-06-03 08:30:00')), (5, 6, CONVERT(DATETIME, '2025-06-03 09:00:00')),
+(6, 1, CONVERT(DATETIME, '2025-07-04 11:20:00')), (6, 2, CONVERT(DATETIME, '2025-07-04 11:28:00')), (6, 3, CONVERT(DATETIME, '2025-07-04 11:50:00')), (6, 4, CONVERT(DATETIME, '2025-07-04 11:58:00')), (6, 5, CONVERT(DATETIME, '2025-07-04 12:05:00')), (6, 6, CONVERT(DATETIME, '2025-07-04 12:35:00')),
+(7, 1, CONVERT(DATETIME, '2025-05-25 21:00:00')), (7, 2, CONVERT(DATETIME, '2025-05-25 21:08:00')), (7, 3, CONVERT(DATETIME, '2025-05-25 21:30:00')), (7, 4, CONVERT(DATETIME, '2025-05-25 21:38:00')), (7, 5, CONVERT(DATETIME, '2025-05-25 21:45:00')), (7, 6, CONVERT(DATETIME, '2025-05-25 22:15:00')),
+(8, 1, CONVERT(DATETIME, '2025-06-26 06:30:00')), (8, 2, CONVERT(DATETIME, '2025-06-26 06:37:00')), (8, 3, CONVERT(DATETIME, '2025-06-26 07:00:00')), (8, 4, CONVERT(DATETIME, '2025-06-26 07:08:00')), (8, 5, CONVERT(DATETIME, '2025-06-26 07:15:00')), (8, 6, CONVERT(DATETIME, '2025-06-26 07:45:00')),
+(9, 1, CONVERT(DATETIME, '2025-07-07 10:15:00')), (9, 2, CONVERT(DATETIME, '2025-07-07 10:23:00')), (9, 3, CONVERT(DATETIME, '2025-07-07 10:45:00')), (9, 4, CONVERT(DATETIME, '2025-07-07 10:53:00')), (9, 5, CONVERT(DATETIME, '2025-07-07 11:00:00')), (9, 6, CONVERT(DATETIME, '2025-07-07 11:30:00')),
+(10, 1, CONVERT(DATETIME, '2025-05-28 15:50:00')), (10, 2, CONVERT(DATETIME, '2025-05-28 16:00:00')), (10, 3, CONVERT(DATETIME, '2025-05-28 16:20:00')), (10, 4, CONVERT(DATETIME, '2025-05-28 16:28:00')), (10, 5, CONVERT(DATETIME, '2025-05-28 16:35:00')), (10, 6, CONVERT(DATETIME, '2025-05-28 17:05:00')),
+(11, 1, CONVERT(DATETIME, '2025-06-09 08:00:00')), (11, 2, CONVERT(DATETIME, '2025-06-09 08:08:00')), (11, 3, CONVERT(DATETIME, '2025-06-09 08:30:00')), (11, 4, CONVERT(DATETIME, '2025-06-09 08:38:00')), (11, 5, CONVERT(DATETIME, '2025-06-09 08:45:00')), (11, 6, CONVERT(DATETIME, '2025-06-09 09:15:00')),
+(12, 1, CONVERT(DATETIME, '2025-07-10 13:00:00')), (12, 2, CONVERT(DATETIME, '2025-07-10 13:07:00')), (12, 3, CONVERT(DATETIME, '2025-07-10 13:28:00')), (12, 4, CONVERT(DATETIME, '2025-07-10 13:35:00')), (12, 5, CONVERT(DATETIME, '2025-07-10 13:42:00')), (12, 6, CONVERT(DATETIME, '2025-07-10 14:12:00')),
+(13, 1, CONVERT(DATETIME, '2025-05-31 19:10:00')), (13, 2, CONVERT(DATETIME, '2025-05-31 19:18:00')), (13, 3, CONVERT(DATETIME, '2025-05-31 19:40:00')), (13, 4, CONVERT(DATETIME, '2025-05-31 19:48:00')), (13, 5, CONVERT(DATETIME, '2025-05-31 19:55:00')), (13, 6, CONVERT(DATETIME, '2025-05-31 20:25:00')),
+(14, 1, CONVERT(DATETIME, '2025-06-01 09:30:00')), (14, 2, CONVERT(DATETIME, '2025-06-01 09:38:00')), (14, 3, CONVERT(DATETIME, '2025-06-01 10:00:00')), (14, 4, CONVERT(DATETIME, '2025-06-01 10:08:00')), (14, 5, CONVERT(DATETIME, '2025-06-01 10:15:00')), (14, 6, CONVERT(DATETIME, '2025-06-01 10:45:00')),
+(15, 1, CONVERT(DATETIME, '2025-07-02 14:40:00')), (15, 2, CONVERT(DATETIME, '2025-07-02 14:48:00')), (15, 3, CONVERT(DATETIME, '2025-07-02 15:10:00')), (15, 4, CONVERT(DATETIME, '2025-07-02 15:18:00')), (15, 5, CONVERT(DATETIME, '2025-07-02 15:25:00')), (15, 6, CONVERT(DATETIME, '2025-07-02 15:55:00')),
 
 -- Cancelaciones tempranas (después de Pendiente o Confirmado)
-(17, 1, '2025-07-11 06:58:19'), -- Pendiente
-(17, 2, '2025-07-11 07:05:19'), -- Confirmado (ADDED)
-(17, 7, '2025-07-11 07:10:19'), -- Cancelado
-(18, 1, '2025-07-11 00:23:14'), (18, 2, '2025-07-11 00:33:14'), (18, 7, '2025-07-11 00:45:14'), -- Cancelado
+(16, 1, CONVERT(DATETIME, '2025-05-20 10:00:00')), -- Pendiente
+(16, 2, CONVERT(DATETIME, '2025-05-20 10:07:00')), -- Confirmado
+(16, 7, CONVERT(DATETIME, '2025-05-20 10:15:00')), -- Cancelado
+(17, 1, CONVERT(DATETIME, '2025-06-22 05:30:00')), (17, 2, CONVERT(DATETIME, '2025-06-22 05:38:00')), (17, 7, CONVERT(DATETIME, '2025-06-22 05:45:00')),
+(18, 1, CONVERT(DATETIME, '2025-07-01 16:00:00')), (18, 2, CONVERT(DATETIME, '2025-07-01 16:08:00')), (18, 7, CONVERT(DATETIME, '2025-07-01 16:15:00')),
 
 -- Rechazado por Comercio
-(19, 1, '2025-07-11 09:20:31'), -- Pendiente
-(19, 11, '2025-07-11 09:28:31'), -- Rechazado por Comercio
-(19, 7, '2025-07-11 09:38:31'), -- Cancelado (ADDED)
-(20, 1, '2025-07-11 02:40:19'), (20, 2, '2025-07-11 02:48:19'), (20, 11, '2025-07-11 03:00:19'), -- Rechazado por Comercio
+(19, 1, CONVERT(DATETIME, '2025-05-21 11:00:00')), -- Pendiente
+(19, 11, CONVERT(DATETIME, '2025-05-21 11:08:00')), -- Rechazado por Comercio
+(19, 7, CONVERT(DATETIME, '2025-05-21 11:15:00')), -- Cancelado
+(20, 1, CONVERT(DATETIME, '2025-06-25 09:20:00')), (20, 2, CONVERT(DATETIME, '2025-06-25 09:28:00')), (20, 11, CONVERT(DATETIME, '2025-06-25 09:35:00')),
+(21, 1, CONVERT(DATETIME, '2025-07-03 14:00:00')), (21, 11, CONVERT(DATETIME, '2025-07-03 14:08:00')), (21, 7, CONVERT(DATETIME, '2025-07-03 14:15:00')),
 
 -- Retrasados
-(21, 1, '2025-07-11 12:44:48'), (21, 2, '2025-07-11 12:54:48'), (21, 3, '2025-07-11 13:16:48'), (21, 8, '2025-07-11 13:25:48'), (21, 5, '2025-07-11 13:40:48'), (21, 6, '2025-07-11 14:10:48'),
-(22, 1, '2025-07-10 14:13:58'), (22, 2, '2025-07-10 14:24:58'), (22, 3, '2025-07-10 14:48:58'), (22, 8, '2025-07-10 14:58:58'), (22, 4, '2025-07-10 15:15:58'), (22, 5, '2025-07-10 15:25:58'), (22, 6, '2025-07-10 15:55:58'),
+(22, 1, CONVERT(DATETIME, '2025-05-22 13:00:00')), (22, 2, CONVERT(DATETIME, '2025-05-22 13:08:00')), (22, 3, CONVERT(DATETIME, '2025-05-22 13:30:00')), (22, 8, CONVERT(DATETIME, '2025-05-22 13:38:00')), (22, 5, CONVERT(DATETIME, '2025-05-22 13:50:00')), (22, 6, CONVERT(DATETIME, '2025-05-22 14:20:00')),
+(23, 1, CONVERT(DATETIME, '2025-06-26 18:00:00')), (23, 2, CONVERT(DATETIME, '2025-06-26 18:08:00')), (23, 3, CONVERT(DATETIME, '2025-06-26 18:30:00')), (23, 8, CONVERT(DATETIME, '2025-06-26 18:38:00')), (23, 4, CONVERT(DATETIME, '2025-06-26 18:50:00')), (23, 5, CONVERT(DATETIME, '2025-06-26 19:00:00')), (23, 6, CONVERT(DATETIME, '2025-06-26 19:30:00')),
+(24, 1, CONVERT(DATETIME, '2025-07-05 20:00:00')), (24, 2, CONVERT(DATETIME, '2025-07-05 20:08:00')), (24, 3, CONVERT(DATETIME, '2025-07-05 20:30:00')), (24, 8, CONVERT(DATETIME, '2025-07-05 20:38:00')), (24, 5, CONVERT(DATETIME, '2025-07-05 20:50:00')), (24, 6, CONVERT(DATETIME, '2025-07-05 21:20:00')),
 
--- Esperando Repartidor (varias instancias)
-(23, 1, '2025-07-10 18:27:00'), (23, 2, '2025-07-10 18:37:00'), (23, 3, '2025-07-10 18:59:00'), (23, 4, '2025-07-10 19:07:00'), (23, 12, '2025-07-10 19:15:00'), (23, 5, '2025-07-10 19:25:00'), (23, 6, '2025-07-10 19:58:00'),
-(24, 1, '2025-07-11 07:11:03'), (24, 2, '2025-07-11 07:22:03'), (24, 3, '2025-07-11 07:44:03'), (24, 4, '2025-07-11 07:53:03'), (24, 12, '2025-07-11 08:00:03'), (24, 5, '2025-07-11 08:10:03'), (24, 6, '2025-07-11 08:40:03'),
+-- Esperando Repartidor
+(25, 1, CONVERT(DATETIME, '2025-05-23 09:00:00')), (25, 2, CONVERT(DATETIME, '2025-05-23 09:08:00')), (25, 3, CONVERT(DATETIME, '2025-05-23 09:30:00')), (25, 4, CONVERT(DATETIME, '2025-05-23 09:38:00')), (25, 12, CONVERT(DATETIME, '2025-05-23 09:45:00')), (25, 5, CONVERT(DATETIME, '2025-05-23 09:55:00')), (25, 6, CONVERT(DATETIME, '2025-05-23 10:25:00')),
+(26, 1, CONVERT(DATETIME, '2025-06-28 12:00:00')), (26, 2, CONVERT(DATETIME, '2025-06-28 12:08:00')), (26, 3, CONVERT(DATETIME, '2025-06-28 12:30:00')), (26, 4, CONVERT(DATETIME, '2025-06-28 12:38:00')), (26, 12, CONVERT(DATETIME, '2025-06-28 12:45:00')), (26, 5, CONVERT(DATETIME, '2025-06-28 12:55:00')), (26, 6, CONVERT(DATETIME, '2025-06-28 13:25:00')),
+(27, 1, CONVERT(DATETIME, '2025-07-07 10:00:00')), (27, 2, CONVERT(DATETIME, '2025-07-07 10:08:00')), (27, 3, CONVERT(DATETIME, '2025-07-07 10:30:00')), (27, 4, CONVERT(DATETIME, '2025-07-07 10:38:00')), (27, 12, CONVERT(DATETIME, '2025-07-07 10:45:00')), (27, 5, CONVERT(DATETIME, '2025-07-07 10:55:00')), (27, 6, CONVERT(DATETIME, '2025-07-07 11:25:00')),
 
 -- Reintento de Entrega
-(25, 1, '2025-07-10 17:09:52'), (25, 2, '2025-07-10 17:16:52'), (25, 3, '2025-07-10 17:39:52'), (25, 4, '2025-07-10 17:49:52'), (25, 5, '2025-07-10 18:04:52'), (25, 13, '2025-07-10 18:15:52'), (25, 5, '2025-07-10 18:25:52'), (25, 6, '2025-07-10 18:50:52'),
+(28, 1, CONVERT(DATETIME, '2025-05-24 07:00:00')), (28, 2, CONVERT(DATETIME, '2025-05-24 07:08:00')), (28, 3, CONVERT(DATETIME, '2025-05-24 07:30:00')), (28, 4, CONVERT(DATETIME, '2025-05-24 07:38:00')), (28, 5, CONVERT(DATETIME, '2025-05-24 07:45:00')), (28, 13, CONVERT(DATETIME, '2025-05-24 07:55:00')), (28, 5, CONVERT(DATETIME, '2025-05-24 08:05:00')), (28, 6, CONVERT(DATETIME, '2025-05-24 08:30:00')),
+(29, 1, CONVERT(DATETIME, '2025-07-08 15:00:00')), (29, 2, CONVERT(DATETIME, '2025-07-08 15:08:00')), (29, 3, CONVERT(DATETIME, '2025-07-08 15:30:00')), (29, 4, CONVERT(DATETIME, '2025-07-08 15:38:00')), (29, 5, CONVERT(DATETIME, '2025-07-08 15:45:00')), (29, 13, CONVERT(DATETIME, '2025-07-08 15:55:00')), (29, 6, CONVERT(DATETIME, '2025-07-08 16:20:00')),
 
 -- Error en Pago y Cancelado
-(26, 1, '2025-07-11 08:32:00'), (26, 15, '2025-07-11 08:40:00'), (26, 7, '2025-07-11 08:50:00'),
-(27, 1, '2025-07-11 04:09:46'), (27, 2, '2025-07-11 04:19:46'), (27, 15, '2025-07-11 04:30:46'), (27, 7, '2025-07-11 04:40:46'),
+(30, 1, CONVERT(DATETIME, '2025-05-25 10:00:00')), (30, 15, CONVERT(DATETIME, '2025-05-25 10:08:00')), (30, 7, CONVERT(DATETIME, '2025-05-25 10:15:00')),
+(31, 1, CONVERT(DATETIME, '2025-06-04 11:30:00')), (31, 2, CONVERT(DATETIME, '2025-06-04 11:38:00')), (31, 15, CONVERT(DATETIME, '2025-06-04 11:45:00')), (31, 7, CONVERT(DATETIME, '2025-06-04 11:55:00')),
 
--- Programado (varias instancias)
-(28, 1, '2025-07-11 00:03:00'), (28, 14, '2025-07-11 00:10:00'), (28, 4, '2025-07-11 00:40:00'), (28, 5, '2025-07-11 00:50:00'), (28, 6, '2025-07-11 01:25:00'),
-(29, 1, '2025-07-11 01:43:40'), (29, 14, '2025-07-11 01:50:40'), (29, 4, '2025-07-11 02:20:40'), (29, 5, '2025-07-11 02:30:40'), (29, 6, '2025-07-11 03:05:40'),
+-- Programado
+(32, 1, CONVERT(DATETIME, '2025-05-26 14:00:00')), (32, 14, CONVERT(DATETIME, '2025-05-26 14:08:00')), (32, 4, CONVERT(DATETIME, '2025-05-26 14:30:00')), (32, 5, CONVERT(DATETIME, '2025-05-26 14:40:00')), (32, 6, CONVERT(DATETIME, '2025-05-26 15:10:00')),
+(33, 1, CONVERT(DATETIME, '2025-07-09 09:00:00')), (33, 14, CONVERT(DATETIME, '2025-07-09 09:08:00')), (33, 4, CONVERT(DATETIME, '2025-07-09 09:30:00')), (33, 5, CONVERT(DATETIME, '2025-07-09 09:40:00')), (33, 6, CONVERT(DATETIME, '2025-07-09 10:10:00')),
+
+-- Devolución en proceso (después de una entrega simulada)
+(34, 1, CONVERT(DATETIME, '2025-05-27 16:00:00')), (34, 2, CONVERT(DATETIME, '2025-05-27 16:08:00')), (34, 3, CONVERT(DATETIME, '2025-05-27 16:30:00')), (34, 4, CONVERT(DATETIME, '2025-05-27 16:38:00')), (34, 5, CONVERT(DATETIME, '2025-05-27 16:45:00')), (34, 6, CONVERT(DATETIME, '2025-05-27 17:15:00')), (34, 9, CONVERT(DATETIME, '2025-05-27 17:30:00')), (34, 10, CONVERT(DATETIME, '2025-05-27 17:45:00')),
+(35, 1, CONVERT(DATETIME, '2025-07-10 11:00:00')), (35, 2, CONVERT(DATETIME, '2025-07-10 11:08:00')), (35, 3, CONVERT(DATETIME, '2025-07-10 11:30:00')), (35, 4, CONVERT(DATETIME, '2025-07-10 11:38:00')), (35, 5, CONVERT(DATETIME, '2025-07-10 11:45:00')), (35, 6, CONVERT(DATETIME, '2025-07-10 12:15:00')), (35, 9, CONVERT(DATETIME, '2025-07-10 12:30:00')), (35, 10, CONVERT(DATETIME, '2025-07-10 12:45:00')),
 
 -- Mezcla de estados: Retrasado -> Cancelado
-(30, 1, '2025-07-10 13:00:33'), (30, 2, '2025-07-10 13:08:33'), (30, 3, '2025-07-10 13:31:33'), (30, 8, '2025-07-10 13:38:33'), (30, 7, '2025-07-10 13:50:33'),
+(36, 1, CONVERT(DATETIME, '2025-05-28 13:00:00')), (36, 2, CONVERT(DATETIME, '2025-05-28 13:08:00')), (36, 3, CONVERT(DATETIME, '2025-05-28 13:30:00')), (36, 8, CONVERT(DATETIME, '2025-05-28 13:38:00')), (36, 7, CONVERT(DATETIME, '2025-05-28 13:50:00')),
+(37, 1, CONVERT(DATETIME, '2025-07-11 17:00:00')), (37, 2, CONVERT(DATETIME, '2025-07-11 17:08:00')), (37, 3, CONVERT(DATETIME, '2025-07-11 17:30:00')), (37, 8, CONVERT(DATETIME, '2025-07-11 17:38:00')), (37, 7, CONVERT(DATETIME, '2025-07-11 17:50:00')),
 
 -- Mezcla de estados: Esperando Repartidor -> Retrasado -> Entregado
-(31, 1, '2025-07-10 17:09:47'), (31, 2, '2025-07-10 17:20:47'), (31, 3, '2025-07-10 17:39:47'), (31, 4, '2025-07-10 17:45:47'), (31, 12, '2025-07-10 17:59:47'), (31, 8, '2025-07-10 18:15:47'), (31, 5, '2025-07-10 18:25:47'), (31, 6, '2025-07-10 18:55:47'),
-
--- Más rutas felices
-(32, 1, '2025-07-11 09:21:28'), (32, 2, '2025-07-11 09:27:28'), (32, 3, '2025-07-11 09:47:28'), (32, 4, '2025-07-11 09:54:28'), (32, 5, '2025-07-11 10:01:28'), (32, 6, '2025-07-11 10:33:28'),
-(33, 1, '2025-07-10 20:25:01'), (33, 2, '2025-07-10 20:30:01'), (33, 3, '2025-07-10 20:57:01'), (33, 4, '2025-07-10 21:05:01'), (33, 5, '2025-07-10 21:13:01'), (33, 6, '2025-07-10 21:50:01'),
-(34, 1, '2025-07-11 05:43:16'), (34, 2, '2025-07-11 05:51:16'), (34, 3, '2025-07-11 06:14:16'), (34, 4, '2025-07-11 06:21:16'), (34, 5, '2025-07-11 06:26:16'), (34, 6, '2025-07-11 06:51:16'),
-(35, 1, '2025-07-11 03:00:26'), (35, 2, '2025-07-11 03:06:26'), (35, 3, '2025-07-11 03:22:26'), (35, 4, '2025-07-11 03:31:26'), (35, 5, '2025-07-11 03:36:26'), (35, 6, '2025-07-11 04:08:26'),
-(36, 1, '2025-07-11 07:44:59'), (36, 2, '2025-07-11 07:53:59'), (36, 3, '2025-07-11 08:14:59'), (36, 4, '2025-07-11 08:23:59'), (36, 5, '2025-07-11 08:35:59'), (36, 6, '2025-07-11 09:18:59'),
-(37, 1, '2025-07-10 13:08:18'), (37, 2, '2025-07-10 13:16:18'), (37, 3, '2025-07-10 13:41:18'), (37, 4, '2025-07-10 13:46:18'), (37, 5, '2025-07-10 13:58:18'), (37, 6, '2025-07-10 14:38:18'),
-(38, 1, '2025-07-11 07:07:07'), (38, 2, '2025-07-11 07:12:07'), (38, 3, '2025-07-11 07:33:07'), (38, 4, '2025-07-11 07:42:07'), (38, 5, '2025-07-11 07:54:07'), (38, 6, '2025-07-11 08:23:07'),
-(39, 1, '2025-07-11 00:03:52'), (39, 2, '2025-07-11 00:13:52'), (39, 3, '2025-07-11 00:36:52'), (39, 4, '2025-07-11 00:46:52'), (39, 5, '2025-07-11 00:59:52'), (39, 6, '2025-07-11 01:29:52'),
-(40, 1, '2025-07-11 11:27:26'), (40, 2, '2025-07-11 11:34:26'), (40, 3, '2025-07-11 11:51:26'), (40, 4, '2025-07-11 12:00:26'), (40, 5, '2025-07-11 12:12:26'), (40, 6, '2025-07-11 12:47:26'),
-
--- Más cancelaciones (después de Confirmado)
-(41, 1, '2025-07-10 13:47:49'), (41, 2, '2025-07-10 13:58:49'), (41, 7, '2025-07-10 14:10:49'),
-(42, 1, '2025-07-10 20:39:27'), (42, 2, '2025-07-10 20:47:27'), (42, 7, '2025-07-10 20:55:27'),
-
--- Más rechazos por comercio
-(43, 1, '2025-07-11 00:45:00'), -- Pendiente
-(43, 11, '2025-07-11 00:55:00'), -- Rechazado por Comercio
-(43, 7, '2025-07-11 01:05:00'), -- Cancelado (ADDED)
-(44, 1, '2025-07-11 07:18:03'), (44, 2, '2025-07-11 07:23:03'), (44, 11, '2025-07-11 07:35:03'),
-
--- Más errores de pago
-(45, 1, '2025-07-11 04:30:05'), (45, 15, '2025-07-11 04:37:05'), (45, 7, '2025-07-11 04:45:05'),
-
--- Más retrasos
-(46, 1, '2025-07-11 00:03:36'), (46, 2, '2025-07-11 00:10:36'), (46, 3, '2025-07-11 00:30:36'), (46, 8, '2025-07-11 00:36:36'), (46, 5, '2025-07-11 00:45:36'), (46, 6, '2025-07-11 01:15:36'),
-
--- Más esperando repartidor
-(47, 1, '2025-07-11 06:17:16'), (47, 2, '2025-07-11 06:27:16'), (47, 3, '2025-07-11 06:48:16'), (47, 4, '2025-07-11 06:55:16'), (47, 12, '2025-07-11 07:07:16'), (47, 5, '2025-07-11 07:17:16'), (47, 6, '2025-07-11 07:45:16'),
-
--- Más reintentos de entrega
-(48, 1, '2025-07-11 03:03:42'), (48, 2, '2025-07-11 03:08:42'), (48, 3, '2025-07-11 03:38:42'), (48, 4, '2025-07-11 03:45:42'), (48, 5, '2025-07-11 03:52:42'), (48, 13, '2025-07-11 04:05:42'), (48, 6, '2025-07-11 04:25:42'),
-
--- Devoluciones (después de entrega)
-(49, 1, '2025-07-10 13:58:39'), (49, 2, '2025-07-10 14:04:39'), (49, 3, '2025-07-10 14:25:39'), (49, 4, '2025-07-10 14:30:39'), (49, 5, '2025-07-10 14:41:39'), (49, 6, '2025-07-10 15:15:39'), (49, 9, '2025-07-10 15:30:39'), (49, 10, '2025-07-10 15:45:39'),
+(38, 1, CONVERT(DATETIME, '2025-05-29 08:30:00')), (38, 2, CONVERT(DATETIME, '2025-05-29 08:38:00')), (38, 3, CONVERT(DATETIME, '2025-05-29 09:00:00')), (38, 4, CONVERT(DATETIME, '2025-05-29 09:08:00')), (38, 12, CONVERT(DATETIME, '2025-05-29 09:15:00')), (38, 8, CONVERT(DATETIME, '2025-05-29 09:25:00')), (38, 5, CONVERT(DATETIME, '2025-05-29 09:35:00')), (38, 6, CONVERT(DATETIME, '2025-05-29 10:05:00')),
+(39, 1, CONVERT(DATETIME, '2025-07-12 12:00:00')), (39, 2, CONVERT(DATETIME, '2025-07-12 12:08:00')), (39, 3, CONVERT(DATETIME, '2025-07-12 12:30:00')), (39, 4, CONVERT(DATETIME, '2025-07-12 12:38:00')), (39, 12, CONVERT(DATETIME, '2025-07-12 12:45:00')), (39, 8, CONVERT(DATETIME, '2025-07-12 12:55:00')), (39, 5, CONVERT(DATETIME, '2025-07-12 13:05:00')), (39, 6, CONVERT(DATETIME, '2025-07-12 13:35:00')),
 
 -- Combinación: Pendiente -> Programado -> Cancelado (antes de entrega)
-(50, 1, '2025-07-11 09:27:36'), (50, 14, '2025-07-11 09:37:36'), (50, 7, '2025-07-11 10:00:36'),
+(40, 1, CONVERT(DATETIME, '2025-05-30 10:00:00')), (40, 14, CONVERT(DATETIME, '2025-05-30 10:08:00')), (40, 7, CONVERT(DATETIME, '2025-05-30 10:15:00')),
+(41, 1, CONVERT(DATETIME, '2025-07-13 14:00:00')), (41, 14, CONVERT(DATETIME, '2025-07-13 14:08:00')), (41, 7, CONVERT(DATETIME, '2025-07-13 14:15:00')),
+
+-- Más rutas felices (para completar los 150)
+(42, 1, CONVERT(DATETIME, '2025-05-19 10:18:20')), (42, 2, CONVERT(DATETIME, '2025-05-19 10:28:20')), (42, 3, CONVERT(DATETIME, '2025-05-19 10:48:20')), (42, 4, CONVERT(DATETIME, '2025-05-19 10:57:20')), (42, 5, CONVERT(DATETIME, '2025-05-19 11:10:20')), (42, 6, CONVERT(DATETIME, '2025-05-19 11:42:20')),
+(43, 1, CONVERT(DATETIME, '2025-06-20 01:23:49')), (43, 2, CONVERT(DATETIME, '2025-06-20 01:31:49')), (43, 3, CONVERT(DATETIME, '2025-06-20 01:46:49')), (43, 4, CONVERT(DATETIME, '2025-06-20 01:54:49')), (43, 5, CONVERT(DATETIME, '2025-06-20 02:08:49')), (43, 6, CONVERT(DATETIME, '2025-06-20 02:37:49')),
+(44, 1, CONVERT(DATETIME, '2025-07-01 10:04:13')), (44, 2, CONVERT(DATETIME, '2025-07-01 10:12:13')), (44, 3, CONVERT(DATETIME, '2025-07-01 10:39:13')), (44, 4, CONVERT(DATETIME, '2025-07-01 10:47:13')), (44, 5, CONVERT(DATETIME, '2025-07-01 10:55:13')), (44, 6, CONVERT(DATETIME, '2025-07-01 11:32:13')),
+(45, 1, CONVERT(DATETIME, '2025-05-22 05:44:03')), (45, 2, CONVERT(DATETIME, '2025-05-22 05:51:03')), (45, 3, CONVERT(DATETIME, '2025-05-22 06:16:03')), (45, 4, CONVERT(DATETIME, '2025-05-22 06:21:03')), (45, 5, CONVERT(DATETIME, '2025-05-22 06:28:03')), (45, 6, CONVERT(DATETIME, '2025-05-22 07:07:03')),
+(46, 1, CONVERT(DATETIME, '2025-06-23 16:54:02')), (46, 2, CONVERT(DATETIME, '2025-06-23 17:01:02')), (46, 3, CONVERT(DATETIME, '2025-06-23 17:15:02')), (46, 4, CONVERT(DATETIME, '2025-06-23 17:23:02')), (46, 5, CONVERT(DATETIME, '2025-06-23 17:37:02')), (46, 6, CONVERT(DATETIME, '2025-06-23 18:04:02')),
+(47, 1, CONVERT(DATETIME, '2025-07-04 09:37:03')), (47, 2, CONVERT(DATETIME, '2025-07-04 09:47:03')), (47, 3, CONVERT(DATETIME, '2025-07-04 10:11:03')), (47, 4, CONVERT(DATETIME, '2025-07-04 10:20:03')), (47, 5, CONVERT(DATETIME, '2025-07-04 10:25:03')), (47, 6, CONVERT(DATETIME, '2025-07-04 10:57:03')),
+(48, 1, CONVERT(DATETIME, '2025-05-25 00:09:05')), (48, 2, CONVERT(DATETIME, '2025-05-25 00:15:05')), (48, 3, CONVERT(DATETIME, '2025-05-25 00:39:05')), (48, 4, CONVERT(DATETIME, '2025-05-25 00:46:05')), (48, 5, CONVERT(DATETIME, '2025-05-25 00:56:05')), (48, 6, CONVERT(DATETIME, '2025-05-25 01:21:05')),
+(49, 1, CONVERT(DATETIME, '2025-06-26 06:58:19')), (49, 2, CONVERT(DATETIME, '2025-06-26 07:05:19')), (49, 7, CONVERT(DATETIME, '2025-06-26 07:10:19')),
+(50, 1, CONVERT(DATETIME, '2025-07-07 00:23:14')), (50, 2, CONVERT(DATETIME, '2025-07-07 00:33:14')), (50, 7, CONVERT(DATETIME, '2025-07-07 00:45:14')),
+(51, 1, CONVERT(DATETIME, '2025-05-28 09:20:31')), (51, 11, CONVERT(DATETIME, '2025-05-28 09:28:31')), (51, 7, CONVERT(DATETIME, '2025-05-28 09:38:31')),
+(52, 1, CONVERT(DATETIME, '2025-06-29 02:40:19')), (52, 2, CONVERT(DATETIME, '2025-06-29 02:48:19')), (52, 11, CONVERT(DATETIME, '2025-06-29 03:00:19')),
+(53, 1, CONVERT(DATETIME, '2025-07-10 12:44:48')), (53, 2, CONVERT(DATETIME, '2025-07-10 12:54:48')), (53, 3, CONVERT(DATETIME, '2025-07-10 13:16:48')), (53, 8, CONVERT(DATETIME, '2025-07-10 13:25:48')), (53, 5, CONVERT(DATETIME, '2025-07-10 13:40:48')), (53, 6, CONVERT(DATETIME, '2025-07-10 14:10:48')),
+(54, 1, CONVERT(DATETIME, '2025-05-31 14:13:58')), (54, 2, CONVERT(DATETIME, '2025-05-31 14:24:58')), (54, 3, CONVERT(DATETIME, '2025-05-31 14:48:58')), (54, 8, CONVERT(DATETIME, '2025-05-31 14:58:58')), (54, 4, CONVERT(DATETIME, '2025-05-31 15:15:58')), (54, 5, CONVERT(DATETIME, '2025-05-31 15:25:58')), (54, 6, CONVERT(DATETIME, '2025-05-31 15:55:58')),
+(55, 1, CONVERT(DATETIME, '2025-06-01 18:27:00')), (55, 2, CONVERT(DATETIME, '2025-06-01 18:37:00')), (55, 3, CONVERT(DATETIME, '2025-06-01 18:59:00')), (55, 4, CONVERT(DATETIME, '2025-06-01 19:07:00')), (55, 12, CONVERT(DATETIME, '2025-06-01 19:15:00')), (55, 5, CONVERT(DATETIME, '2025-06-01 19:25:00')), (55, 6, CONVERT(DATETIME, '2025-06-01 19:58:00')),
+(56, 1, CONVERT(DATETIME, '2025-07-02 07:11:03')), (56, 2, CONVERT(DATETIME, '2025-07-02 07:22:03')), (56, 3, CONVERT(DATETIME, '2025-07-02 07:44:03')), (56, 4, CONVERT(DATETIME, '2025-07-02 07:53:03')), (56, 12, CONVERT(DATETIME, '2025-07-02 08:00:03')), (56, 5, CONVERT(DATETIME, '2025-07-02 08:10:03')), (56, 6, CONVERT(DATETIME, '2025-07-02 08:40:03')),
+(57, 1, CONVERT(DATETIME, '2025-05-03 17:09:52')), (57, 2, CONVERT(DATETIME, '2025-05-03 17:16:52')), (57, 3, CONVERT(DATETIME, '2025-05-03 17:39:52')), (57, 4, CONVERT(DATETIME, '2025-05-03 17:49:52')), (57, 5, CONVERT(DATETIME, '2025-05-03 18:04:52')), (57, 13, CONVERT(DATETIME, '2025-05-03 18:15:52')), (57, 5, CONVERT(DATETIME, '2025-05-03 18:25:52')), (57, 6, CONVERT(DATETIME, '2025-05-03 18:50:52')),
+(58, 1, CONVERT(DATETIME, '2025-06-04 08:32:00')), (58, 15, CONVERT(DATETIME, '2025-06-04 08:40:00')), (58, 7, CONVERT(DATETIME, '2025-06-04 08:50:00')),
+(59, 1, CONVERT(DATETIME, '2025-07-05 04:09:46')), (59, 2, CONVERT(DATETIME, '2025-07-05 04:19:46')), (59, 15, CONVERT(DATETIME, '2025-07-05 04:30:46')), (59, 7, CONVERT(DATETIME, '2025-07-05 04:40:46')),
+(60, 1, CONVERT(DATETIME, '2025-05-06 00:03:00')), (60, 14, CONVERT(DATETIME, '2025-05-06 00:10:00')), (60, 4, CONVERT(DATETIME, '2025-05-06 00:40:00')), (60, 5, CONVERT(DATETIME, '2025-05-06 00:50:00')), (60, 6, CONVERT(DATETIME, '2025-05-06 01:25:00')),
+(61, 1, CONVERT(DATETIME, '2025-06-07 01:43:40')), (61, 14, CONVERT(DATETIME, '2025-06-07 01:50:40')), (61, 4, CONVERT(DATETIME, '2025-06-07 02:20:40')), (61, 5, CONVERT(DATETIME, '2025-06-07 02:30:40')), (61, 6, CONVERT(DATETIME, '2025-06-07 03:05:40')),
+(62, 1, CONVERT(DATETIME, '2025-07-08 13:00:33')), (62, 2, CONVERT(DATETIME, '2025-07-08 13:08:33')), (62, 3, CONVERT(DATETIME, '2025-07-08 13:31:33')), (62, 8, CONVERT(DATETIME, '2025-07-08 13:38:33')), (62, 7, CONVERT(DATETIME, '2025-07-08 13:50:33')),
+(63, 1, CONVERT(DATETIME, '2025-05-09 17:09:47')), (63, 2, CONVERT(DATETIME, '2025-05-09 17:20:47')), (63, 3, CONVERT(DATETIME, '2025-05-09 17:39:47')), (63, 4, CONVERT(DATETIME, '2025-05-09 17:45:47')), (63, 12, CONVERT(DATETIME, '2025-05-09 17:59:47')), (63, 8, CONVERT(DATETIME, '2025-05-09 18:15:47')), (63, 5, CONVERT(DATETIME, '2025-05-09 18:25:47')), (63, 6, CONVERT(DATETIME, '2025-05-09 18:55:47')),
+(64, 1, CONVERT(DATETIME, '2025-06-10 09:21:28')), (64, 2, CONVERT(DATETIME, '2025-06-10 09:27:28')), (64, 3, CONVERT(DATETIME, '2025-06-10 09:47:28')), (64, 4, CONVERT(DATETIME, '2025-06-10 09:54:28')), (64, 5, CONVERT(DATETIME, '2025-06-10 10:01:28')), (64, 6, CONVERT(DATETIME, '2025-06-10 10:33:28')),
+(65, 1, CONVERT(DATETIME, '2025-07-11 20:25:01')), (65, 2, CONVERT(DATETIME, '2025-07-11 20:30:01')), (65, 3, CONVERT(DATETIME, '2025-07-11 20:57:01')), (65, 4, CONVERT(DATETIME, '2025-07-11 21:05:01')), (65, 5, CONVERT(DATETIME, '2025-07-11 21:13:01')), (65, 6, CONVERT(DATETIME, '2025-07-11 21:50:01')),
+(66, 1, CONVERT(DATETIME, '2025-05-12 05:43:16')), (66, 2, CONVERT(DATETIME, '2025-05-12 05:51:16')), (66, 3, CONVERT(DATETIME, '2025-05-12 06:14:16')), (66, 4, CONVERT(DATETIME, '2025-05-12 06:21:16')), (66, 5, CONVERT(DATETIME, '2025-05-12 06:26:16')), (66, 6, CONVERT(DATETIME, '2025-05-12 06:51:16')),
+(67, 1, CONVERT(DATETIME, '2025-06-13 03:00:26')), (67, 2, CONVERT(DATETIME, '2025-06-13 03:06:26')), (67, 3, CONVERT(DATETIME, '2025-06-13 03:22:26')), (67, 4, CONVERT(DATETIME, '2025-06-13 03:31:26')), (67, 5, CONVERT(DATETIME, '2025-06-13 03:36:26')), (67, 6, CONVERT(DATETIME, '2025-06-13 04:08:26')),
+(68, 1, CONVERT(DATETIME, '2025-07-14 07:44:59')), (68, 2, CONVERT(DATETIME, '2025-07-14 07:53:59')), (68, 3, CONVERT(DATETIME, '2025-07-14 08:14:59')), (68, 4, CONVERT(DATETIME, '2025-07-14 08:23:59')), (68, 5, CONVERT(DATETIME, '2025-07-14 08:35:59')), (68, 6, CONVERT(DATETIME, '2025-07-14 09:18:59')),
+(69, 1, CONVERT(DATETIME, '2025-05-15 13:08:18')), (69, 2, CONVERT(DATETIME, '2025-05-15 13:16:18')), (69, 3, CONVERT(DATETIME, '2025-05-15 13:41:18')), (69, 4, CONVERT(DATETIME, '2025-05-15 13:46:18')), (69, 5, CONVERT(DATETIME, '2025-05-15 13:58:18')), (69, 6, CONVERT(DATETIME, '2025-05-15 14:38:18')),
+(70, 1, CONVERT(DATETIME, '2025-06-16 07:07:07')), (70, 2, CONVERT(DATETIME, '2025-06-16 07:12:07')), (70, 3, CONVERT(DATETIME, '2025-06-16 07:33:07')), (70, 4, CONVERT(DATETIME, '2025-06-16 07:42:07')), (70, 5, CONVERT(DATETIME, '2025-06-16 07:54:07')), (70, 6, CONVERT(DATETIME, '2025-06-16 08:23:07')),
+(71, 1, CONVERT(DATETIME, '2025-07-17 00:03:52')), (71, 2, CONVERT(DATETIME, '2025-07-17 00:13:52')), (71, 3, CONVERT(DATETIME, '2025-07-17 00:36:52')), (71, 4, CONVERT(DATETIME, '2025-07-17 00:46:52')), (71, 5, CONVERT(DATETIME, '2025-07-17 00:59:52')), (71, 6, CONVERT(DATETIME, '2025-07-17 01:29:52')),
+(72, 1, CONVERT(DATETIME, '2025-07-18 11:27:26')), (72, 2, CONVERT(DATETIME, '2025-07-18 11:34:26')), (72, 3, CONVERT(DATETIME, '2025-07-18 11:51:26')), (72, 4, CONVERT(DATETIME, '2025-07-18 12:00:26')), (72, 5, CONVERT(DATETIME, '2025-07-18 12:12:26')), (72, 6, CONVERT(DATETIME, '2025-07-18 12:47:26')),
+
+-- Más cancelaciones (después de Confirmado)
+(73, 1, CONVERT(DATETIME, '2025-05-20 13:47:49')), (73, 2, CONVERT(DATETIME, '2025-05-20 13:58:49')), (73, 7, CONVERT(DATETIME, '2025-05-20 14:10:49')),
+(74, 1, CONVERT(DATETIME, '2025-06-24 20:39:27')), (74, 2, CONVERT(DATETIME, '2025-06-24 20:47:27')), (74, 7, CONVERT(DATETIME, '2025-06-24 20:55:27')),
+(75, 1, CONVERT(DATETIME, '2025-07-01 00:45:00')), (75, 11, CONVERT(DATETIME, '2025-07-01 00:55:00')), (75, 7, CONVERT(DATETIME, '2025-07-01 01:05:00')),
+(76, 1, CONVERT(DATETIME, '2025-05-05 07:18:03')), (76, 2, CONVERT(DATETIME, '2025-05-05 07:23:03')), (76, 11, CONVERT(DATETIME, '2025-05-05 07:35:03')),
+(77, 1, CONVERT(DATETIME, '2025-06-09 04:30:05')), (77, 15, CONVERT(DATETIME, '2025-06-09 04:37:05')), (77, 7, CONVERT(DATETIME, '2025-06-09 04:45:05')),
+(78, 1, CONVERT(DATETIME, '2025-07-13 00:03:36')), (78, 2, CONVERT(DATETIME, '2025-07-13 00:10:36')), (78, 3, CONVERT(DATETIME, '2025-07-13 00:30:36')), (78, 8, CONVERT(DATETIME, '2025-07-13 00:36:36')), (78, 5, CONVERT(DATETIME, '2025-07-13 00:45:36')), (78, 6, CONVERT(DATETIME, '2025-07-13 01:15:36')),
+(79, 1, CONVERT(DATETIME, '2025-05-17 06:17:16')), (79, 2, CONVERT(DATETIME, '2025-05-17 06:27:16')), (79, 3, CONVERT(DATETIME, '2025-05-17 06:48:16')), (79, 4, CONVERT(DATETIME, '2025-05-17 06:55:16')), (79, 12, CONVERT(DATETIME, '2025-05-17 07:07:16')), (79, 5, CONVERT(DATETIME, '2025-05-17 07:17:16')), (79, 6, CONVERT(DATETIME, '2025-05-17 07:45:16')),
+(80, 1, CONVERT(DATETIME, '2025-06-19 03:03:42')), (80, 2, CONVERT(DATETIME, '2025-06-19 03:08:42')), (80, 3, CONVERT(DATETIME, '2025-06-19 03:38:42')), (80, 4, CONVERT(DATETIME, '2025-06-19 03:45:42')), (80, 5, CONVERT(DATETIME, '2025-06-19 03:52:42')), (80, 13, CONVERT(DATETIME, '2025-06-19 04:05:42')), (80, 6, CONVERT(DATETIME, '2025-06-19 04:25:42')),
+(81, 1, CONVERT(DATETIME, '2025-07-03 13:58:39')), (81, 2, CONVERT(DATETIME, '2025-07-03 14:04:39')), (81, 3, CONVERT(DATETIME, '2025-07-03 14:25:39')), (81, 4, CONVERT(DATETIME, '2025-07-03 14:30:39')), (81, 5, CONVERT(DATETIME, '2025-07-03 14:41:39')), (81, 6, CONVERT(DATETIME, '2025-07-03 15:15:39')), (81, 9, CONVERT(DATETIME, '2025-07-03 15:30:39')), (81, 10, CONVERT(DATETIME, '2025-07-03 15:45:39')),
+(82, 1, CONVERT(DATETIME, '2025-05-27 09:27:36')), (82, 14, CONVERT(DATETIME, '2025-05-27 09:37:36')), (82, 7, CONVERT(DATETIME, '2025-05-27 10:00:36')),
 
 -- Repetimos y mezclamos para llegar a 150 pedidos con variaciones
 -- Ruta Feliz
-(51, 1, '2025-07-10 18:31:21'), (51, 2, '2025-07-10 18:37:21'), (51, 3, '2025-07-10 19:04:21'), (51, 4, '2025-07-10 19:10:21'), (51, 5, '2025-07-10 19:19:21'), (51, 6, '2025-07-10 19:57:21'),
-(52, 1, '2025-07-11 09:34:36'), (52, 2, '2025-07-11 09:41:36'), (52, 3, '2025-07-11 10:00:36'), (52, 4, '2025-07-11 10:05:36'), (52, 5, '2025-07-11 10:19:36'), (52, 6, '2025-07-11 10:56:36'),
-(53, 1, '2025-07-11 03:00:15'), (53, 2, '2025-07-11 03:06:15'), (53, 3, '2025-07-11 03:34:15'), (53, 4, '2025-07-11 03:40:15'), (53, 5, '2025-07-11 03:52:15'), (53, 6, '2025-07-11 04:26:15'),
-(54, 1, '2025-07-10 17:09:49'), (54, 2, '2025-07-10 17:16:49'), (54, 3, '2025-07-10 17:42:49'), (54, 4, '2025-07-10 17:48:49'), (54, 5, '2025-07-10 17:58:49'), (54, 6, '2025-07-10 18:27:49'),
-(55, 1, '2025-07-10 13:57:20'), (55, 2, '2025-07-10 14:02:20'), (55, 3, '2025-07-10 14:22:20'), (55, 4, '2025-07-10 14:31:20'), (55, 5, '2025-07-10 14:41:20'), (55, 6, '2025-07-10 15:15:20'),
-(56, 1, '2025-07-11 00:54:19'), (56, 2, '2025-07-11 01:04:19'), (56, 3, '2025-07-11 01:21:19'), (56, 4, '2025-07-11 01:27:19'), (56, 5, '2025-07-11 01:40:19'), (56, 6, '2025-07-11 02:05:19'),
-(57, 1, '2025-07-11 08:35:10'), (57, 2, '2025-07-11 08:44:10'), (57, 3, '2025-07-11 09:07:10'), (57, 4, '2025-07-11 09:12:10'), (57, 5, '2025-07-11 09:23:10'), (57, 6, '2025-07-11 10:05:10'),
-(58, 1, '2025-07-10 18:59:16'), (58, 2, '2025-07-10 19:07:16'), (58, 3, '2025-07-10 19:20:16'), (58, 4, '2025-07-10 19:29:16'), (58, 5, '2025-07-10 19:35:16'), (58, 6, '2025-07-10 20:01:16'),
-(59, 1, '2025-07-11 07:05:15'), (59, 2, '2025-07-11 07:14:15'), (59, 3, '2025-07-11 07:38:15'), (59, 4, '2025-07-11 07:44:15'), (59, 5, '2025-07-11 07:54:15'), (59, 6, '2025-07-11 08:31:15'),
-(60, 1, '2025-07-10 18:37:11'), (60, 2, '2025-07-10 18:47:11'), (60, 3, '2025-07-10 19:15:11'), (60, 4, '2025-07-10 19:22:11'), (60, 5, '2025-07-10 19:30:11'), (60, 6, '2025-07-10 20:00:11'),
+(83, 1, CONVERT(DATETIME, '2025-06-20 18:31:21')), (83, 2, CONVERT(DATETIME, '2025-06-20 18:37:21')), (83, 3, CONVERT(DATETIME, '2025-06-20 19:04:21')), (83, 4, CONVERT(DATETIME, '2025-06-20 19:10:21')), (83, 5, CONVERT(DATETIME, '2025-06-20 19:19:21')), (83, 6, CONVERT(DATETIME, '2025-06-20 19:57:21')),
+(84, 1, CONVERT(DATETIME, '2025-07-01 09:34:36')), (84, 2, CONVERT(DATETIME, '2025-07-01 09:41:36')), (84, 3, CONVERT(DATETIME, '2025-07-01 10:00:36')), (84, 4, CONVERT(DATETIME, '2025-07-01 10:05:36')), (84, 5, CONVERT(DATETIME, '2025-07-01 10:19:36')), (84, 6, CONVERT(DATETIME, '2025-07-01 10:56:36')),
+(85, 1, CONVERT(DATETIME, '2025-05-22 03:00:15')), (85, 2, CONVERT(DATETIME, '2025-05-22 03:06:15')), (85, 3, CONVERT(DATETIME, '2025-05-22 03:34:15')), (85, 4, CONVERT(DATETIME, '2025-05-22 03:40:15')), (85, 5, CONVERT(DATETIME, '2025-05-22 03:52:15')), (85, 6, CONVERT(DATETIME, '2025-05-22 04:26:15')),
+(86, 1, CONVERT(DATETIME, '2025-06-23 17:09:49')), (86, 2, CONVERT(DATETIME, '2025-06-23 17:16:49')), (86, 3, CONVERT(DATETIME, '2025-06-23 17:42:49')), (86, 4, CONVERT(DATETIME, '2025-06-23 17:48:49')), (86, 5, CONVERT(DATETIME, '2025-06-23 17:58:49')), (86, 6, CONVERT(DATETIME, '2025-06-23 18:27:49')),
+(87, 1, CONVERT(DATETIME, '2025-07-04 13:57:20')), (87, 2, CONVERT(DATETIME, '2025-07-04 14:02:20')), (87, 3, CONVERT(DATETIME, '2025-07-04 14:22:20')), (87, 4, CONVERT(DATETIME, '2025-07-04 14:31:20')), (87, 5, CONVERT(DATETIME, '2025-07-04 14:41:20')), (87, 6, CONVERT(DATETIME, '2025-07-04 15:15:20')),
+(88, 1, CONVERT(DATETIME, '2025-05-25 00:54:19')), (88, 2, CONVERT(DATETIME, '2025-05-25 01:04:19')), (88, 3, CONVERT(DATETIME, '2025-05-25 01:21:19')), (88, 4, CONVERT(DATETIME, '2025-05-25 01:27:19')), (88, 5, CONVERT(DATETIME, '2025-05-25 01:40:19')), (88, 6, CONVERT(DATETIME, '2025-05-25 02:05:19')),
+(89, 1, CONVERT(DATETIME, '2025-06-26 08:35:10')), (89, 2, CONVERT(DATETIME, '2025-06-26 08:44:10')), (89, 3, CONVERT(DATETIME, '2025-06-26 09:07:10')), (89, 4, CONVERT(DATETIME, '2025-06-26 09:12:10')), (89, 5, CONVERT(DATETIME, '2025-06-26 09:23:10')), (89, 6, CONVERT(DATETIME, '2025-06-26 10:05:10')),
+(90, 1, CONVERT(DATETIME, '2025-07-07 18:59:16')), (90, 2, CONVERT(DATETIME, '2025-07-07 19:07:16')), (90, 3, CONVERT(DATETIME, '2025-07-07 19:20:16')), (90, 4, CONVERT(DATETIME, '2025-07-07 19:29:16')), (90, 5, CONVERT(DATETIME, '2025-07-07 19:35:16')), (90, 6, CONVERT(DATETIME, '2025-07-07 20:01:16')),
+(91, 1, CONVERT(DATETIME, '2025-05-28 07:05:15')), (91, 2, CONVERT(DATETIME, '2025-05-28 07:14:15')), (91, 3, CONVERT(DATETIME, '2025-05-28 07:38:15')), (91, 4, CONVERT(DATETIME, '2025-05-28 07:44:15')), (91, 5, CONVERT(DATETIME, '2025-05-28 07:54:15')), (91, 6, CONVERT(DATETIME, '2025-05-28 08:31:15')),
+(92, 1, CONVERT(DATETIME, '2025-06-29 18:37:11')), (92, 2, CONVERT(DATETIME, '2025-06-29 18:47:11')), (92, 3, CONVERT(DATETIME, '2025-06-29 19:15:11')), (92, 4, CONVERT(DATETIME, '2025-06-29 19:22:11')), (92, 5, CONVERT(DATETIME, '2025-06-29 19:30:11')), (92, 6, CONVERT(DATETIME, '2025-06-29 20:00:11')),
 
 -- Más Cancelaciones
-(61, 1, '2025-07-11 00:19:16'), -- Pendiente
-(61, 2, '2025-07-11 00:25:16'), -- Confirmado (ADDED)
-(61, 7, '2025-07-11 00:30:16'), -- Cancelado
-(62, 1, '2025-07-11 06:14:00'), (62, 2, '2025-07-11 06:21:00'), (62, 7, '2025-07-11 06:35:00'),
+(93, 1, CONVERT(DATETIME, '2025-07-01 00:19:16')), (93, 2, CONVERT(DATETIME, '2025-07-01 00:25:16')), (93, 7, CONVERT(DATETIME, '2025-07-01 00:30:16')),
+(94, 1, CONVERT(DATETIME, '2025-05-31 06:14:00')), (94, 2, CONVERT(DATETIME, '2025-05-31 06:21:00')), (94, 7, CONVERT(DATETIME, '2025-05-31 06:35:00')),
 
 -- Más Rechazos por Comercio
-(63, 1, '2025-07-11 02:44:23'), -- Pendiente
-(63, 11, '2025-07-11 02:55:23'), -- Rechazado por Comercio
-(63, 7, '2025-07-11 03:05:23'), -- Cancelado (ADDED)
-(64, 1, '2025-07-10 14:52:33'), (64, 2, '2025-07-10 15:01:33'), (64, 11, '2025-07-10 15:10:33'),
+(95, 1, CONVERT(DATETIME, '2025-06-01 02:44:23')), (95, 11, CONVERT(DATETIME, '2025-06-01 02:55:23')), (95, 7, CONVERT(DATETIME, '2025-06-01 03:05:23')),
+(96, 1, CONVERT(DATETIME, '2025-07-02 14:52:33')), (96, 2, CONVERT(DATETIME, '2025-07-02 15:01:33')), (96, 11, CONVERT(DATETIME, '2025-07-02 15:10:33')),
 
 -- Más Errores en Pago
-(65, 1, '2025-07-11 03:41:25'), (65, 15, '2025-07-11 03:46:25'), (65, 7, '2025-07-11 03:55:25'),
+(97, 1, CONVERT(DATETIME, '2025-05-03 03:41:25')), (97, 15, CONVERT(DATETIME, '2025-05-03 03:46:25')), (97, 7, CONVERT(DATETIME, '2025-05-03 03:55:25')),
 
 -- Más Retrasados
-(66, 1, '2025-07-10 14:18:49'), (66, 2, '2025-07-10 14:26:49'), (66, 3, '2025-07-10 14:48:49'), (66, 8, '2025-07-10 14:57:49'), (66, 5, '2025-07-10 15:10:49'), (66, 6, '2025-07-10 15:40:49'),
+(98, 1, CONVERT(DATETIME, '2025-06-04 14:18:49')), (98, 2, CONVERT(DATETIME, '2025-06-04 14:26:49')), (98, 3, CONVERT(DATETIME, '2025-06-04 14:48:49')), (98, 8, CONVERT(DATETIME, '2025-06-04 14:57:49')), (98, 5, CONVERT(DATETIME, '2025-06-04 15:10:49')), (98, 6, CONVERT(DATETIME, '2025-06-04 15:40:49')),
 
 -- Más Esperando Repartidor
-(67, 1, '2025-07-11 02:44:03'), (67, 2, '2025-07-11 02:51:03'), (67, 3, '2025-07-11 03:13:03'), (67, 4, '2025-07-11 03:22:03'), (67, 12, '2025-07-11 03:30:03'), (67, 5, '2025-07-11 03:40:03'), (67, 6, '2025-07-11 04:05:03'),
+(99, 1, CONVERT(DATETIME, '2025-07-05 02:44:03')), (99, 2, CONVERT(DATETIME, '2025-07-05 02:51:03')), (99, 3, CONVERT(DATETIME, '2025-07-05 03:13:03')), (99, 4, CONVERT(DATETIME, '2025-07-05 03:22:03')), (99, 12, CONVERT(DATETIME, '2025-07-05 03:30:03')), (99, 5, CONVERT(DATETIME, '2025-07-05 03:40:03')), (99, 6, CONVERT(DATETIME, '2025-07-05 04:05:03')),
 
 -- Más Reintentos de Entrega
-(68, 1, '2025-07-10 15:10:04'), (68, 2, '2025-07-10 15:21:04'), (68, 3, '2025-07-10 15:43:04'), (68, 4, '2025-07-10 15:52:04'), (68, 5, '2025-07-10 16:03:04'), (68, 13, '2025-07-10 16:15:04'), (68, 6, '2025-07-10 16:40:04'),
+(100, 1, CONVERT(DATETIME, '2025-05-06 15:10:04')), (100, 2, CONVERT(DATETIME, '2025-05-06 15:21:04')), (100, 3, CONVERT(DATETIME, '2025-05-06 15:43:04')), (100, 4, CONVERT(DATETIME, '2025-05-06 15:52:04')), (100, 5, CONVERT(DATETIME, '2025-05-06 16:03:04')), (100, 13, CONVERT(DATETIME, '2025-05-06 16:15:04')), (100, 6, CONVERT(DATETIME, '2025-05-06 16:40:04')),
 
 -- Más Devoluciones
-(69, 1, '2025-07-10 17:34:25'), (69, 2, '2025-07-10 17:44:25'), (69, 3, '2025-07-10 18:02:25'), (69, 4, '2025-07-10 18:11:25'), (69, 5, '2025-07-10 18:24:25'), (69, 6, '2025-07-10 18:50:25'), (69, 9, '2025-07-10 19:05:25'), (69, 10, '2025-07-10 19:20:25'),
+(101, 1, CONVERT(DATETIME, '2025-06-07 17:34:25')), (101, 2, CONVERT(DATETIME, '2025-06-07 17:44:25')), (101, 3, CONVERT(DATETIME, '2025-06-07 18:02:25')), (101, 4, CONVERT(DATETIME, '2025-06-07 18:11:25')), (101, 5, CONVERT(DATETIME, '2025-06-07 18:24:25')), (101, 6, CONVERT(DATETIME, '2025-06-07 18:50:25')), (101, 9, CONVERT(DATETIME, '2025-06-07 19:05:25')), (101, 10, CONVERT(DATETIME, '2025-06-07 19:20:25')),
 
 -- Más Programados
-(70, 1, '2025-07-11 07:11:42'), (70, 14, '2025-07-11 07:22:42'), (70, 4, '2025-07-11 07:50:42'), (70, 5, '2025-07-11 08:00:42'), (70, 6, '2025-07-11 08:35:42'),
+(102, 1, CONVERT(DATETIME, '2025-07-08 07:11:42')), (102, 14, CONVERT(DATETIME, '2025-07-08 07:22:42')), (102, 4, CONVERT(DATETIME, '2025-07-08 07:50:42')), (102, 5, CONVERT(DATETIME, '2025-07-08 08:00:42')), (102, 6, CONVERT(DATETIME, '2025-07-08 08:35:42')),
 
 -- Mezclas Adicionales
-(71, 1, '2025-07-10 18:35:50'), (71, 2, '2025-07-10 18:41:50'), (71, 8, '2025-07-10 19:00:50'), (71, 7, '2025-07-10 19:15:50'), -- Retrasado y Cancelado
-(72, 1, '2025-07-11 00:36:28'), (72, 15, '2025-07-11 00:43:28'), (72, 11, '2025-07-11 00:55:28'), -- Error en Pago y Rechazado
-(73, 1, '2025-07-11 00:46:58'), (73, 2, '2025-07-11 00:54:58'), (73, 3, '2025-07-11 01:13:58'), (73, 12, '2025-07-11 01:19:58'), (73, 8, '2025-07-11 01:35:58'), (73, 5, '2025-07-11 01:45:58'), (73, 6, '2025-07-11 02:15:58'), -- Esperando Repartidor, Retrasado, Entregado
-(74, 1, '2025-07-10 17:51:49'), (74, 14, '2025-07-10 18:02:49'), (74, 7, '2025-07-10 18:20:49'), -- Programado y Cancelado
-
--- Continuación de estados variados para los pedidos restantes (75-150)
--- Mezclando los patrones ya definidos: Ruta Feliz, Cancelado, Retrasado, Rechazado, Esperando Repartidor, Programado, Devolución/Reembolso, Reintento.
-
--- Pedidos 75-80: Ruta Feliz
-(75, 1, '2025-07-10 19:57:42'), (75, 2, '2025-07-10 20:07:42'), (75, 3, '2025-07-10 20:25:42'), (75, 4, '2025-07-10 20:34:42'), (75, 5, '2025-07-10 20:49:42'), (75, 6, '2025-07-10 21:19:42'),
-(76, 1, '2025-07-10 20:03:00'), (76, 2, '2025-07-10 20:13:00'), (76, 3, '2025-07-10 20:36:00'), (76, 4, '2025-07-10 20:46:00'), (76, 5, '2025-07-10 20:53:00'), (76, 6, '2025-07-10 21:28:00'),
-(77, 1, '2025-07-11 00:09:44'), (77, 2, '2025-07-11 00:15:44'), (77, 3, '2025-07-11 00:36:44'), (77, 4, '2025-07-11 00:43:44'), (77, 5, '2025-07-11 00:54:44'), (77, 6, '2025-07-11 01:25:44'),
-(78, 1, '2025-07-11 02:49:50'), (78, 2, '2025-07-11 02:59:50'), (78, 3, '2025-07-11 03:22:50'), (78, 4, '2025-07-11 03:28:50'), (78, 5, '2025-07-11 03:41:50'), (78, 6, '2025-07-11 04:14:50'),
-(79, 1, '2025-07-11 00:13:16'), (79, 2, '2025-07-11 00:18:16'), (79, 3, '2025-07-11 00:33:16'), (79, 4, '2025-07-11 00:40:16'), (79, 5, '2025-07-11 00:53:16'), (79, 6, '2025-07-11 01:21:16'),
-(80, 1, '2025-07-11 03:09:59'), (80, 2, '2025-07-11 03:19:59'), (80, 3, '2025-07-11 03:39:59'), (80, 4, '2025-07-11 03:49:59'), (80, 5, '2025-07-11 03:57:59'), (80, 6, '2025-07-11 04:22:59'),
-
--- Pedidos 81-85: Cancelados o Rechazados
-(81, 1, '2025-07-11 01:54:57'), (81, 2, '2025-07-11 02:04:57'), (81, 7, '2025-07-11 02:15:57'),
-(82, 1, '2025-07-10 22:54:25'), -- Pendiente
-(82, 11, '2025-07-10 23:05:25'), -- Rechazado por Comercio
-(82, 7, '2025-07-10 23:15:25'), -- Cancelado (ADDED)
-(83, 1, '2025-07-11 04:36:19'), (83, 2, '2025-07-11 04:47:19'), (83, 15, '2025-07-11 04:55:19'), (83, 7, '2025-07-11 05:05:19'),
-(84, 1, '2025-07-11 00:17:59'), (84, 14, '2025-07-11 00:25:59'), (84, 7, '2025-07-11 00:40:59'),
-(85, 1, '2025-07-11 05:51:57'), (85, 2, '2025-07-11 06:01:57'), (85, 3, '2025-07-11 06:21:57'), (85, 8, '2025-07-11 06:30:57'), (85, 7, '2025-07-11 06:45:57'),
-
--- Pedidos 86-90: Rutas con retraso o esperando repartidor
-(86, 1, '2025-07-11 04:54:02'), (86, 2, '2025-07-11 05:03:02'), (86, 3, '2025-07-11 05:22:02'), (86, 8, '2025-07-11 05:31:02'), (86, 5, '2025-07-11 05:43:02'), (86, 6, '2025-07-11 06:17:02'),
-(87, 1, '2025-07-10 18:29:40'), (87, 2, '2025-07-10 18:36:40'), (87, 3, '2025-07-10 19:00:40'), (87, 4, '2025-07-10 19:07:40'), (87, 12, '2025-07-10 19:15:40'), (87, 5, '2025-07-10 19:25:40'), (87, 6, '2025-07-10 19:54:40'),
-(88, 1, '2025-07-11 08:31:47'), (88, 2, '2025-07-11 08:42:47'), (88, 3, '2025-07-11 09:07:47'), (88, 4, '2025-07-11 09:12:47'), (88, 13, '2025-07-11 09:25:47'), (88, 6, '2025-07-11 09:59:47'),
-(89, 1, '2025-07-11 01:21:58'), (89, 2, '2025-07-11 01:29:58'), (89, 3, '2025-07-11 01:59:58'), (89, 4, '2025-07-11 02:07:58'), (89, 12, '2025-07-11 02:18:58'), (89, 8, '2025-07-11 02:30:58'), (89, 5, '2025-07-11 02:40:58'), (89, 6, '2025-07-11 03:10:58'),
-(90, 1, '2025-07-11 03:00:36'), (90, 2, '2025-07-11 03:05:36'), (90, 3, '2025-07-11 03:22:36'), (90, 8, '2025-07-11 03:28:36'), (90, 5, '2025-07-11 03:42:36'), (90, 6, '2025-07-11 04:17:36'),
-
--- Pedidos 91-100: Más variaciones
-(91, 1, '2025-07-11 03:09:31'), (91, 2, '2025-07-11 03:19:31'), (91, 3, '2025-07-11 03:41:31'), (91, 4, '2025-07-11 03:46:31'), (91, 5, '2025-07-11 03:52:31'), (91, 6, '2025-07-11 04:22:31'),
-(92, 1, '2025-07-11 05:27:00'), (92, 2, '2025-07-11 05:33:00'), (92, 3, '2025-07-11 05:51:00'), (92, 4, '2025-07-11 06:00:00'), (92, 5, '2025-07-11 06:05:00'), (92, 6, '2025-07-11 06:40:00'),
-(93, 1, '2025-07-10 16:35:10'), (93, 2, '2025-07-10 16:44:10'), (93, 3, '2025-07-10 17:09:10'), (93, 4, '2025-07-10 17:15:10'), (93, 5, '2025-07-10 17:21:10'), (93, 6, '2025-07-10 17:58:10'),
-(94, 1, '2025-07-11 02:49:15'), (94, 2, '2025-07-11 02:59:15'), (94, 3, '2025-07-11 03:19:15'), (94, 4, '2025-07-11 03:25:15'), (94, 5, '2025-07-11 03:30:15'), (94, 6, '2025-07-11 03:58:15'),
-(95, 1, '2025-07-10 19:35:01'), (95, 2, '2025-07-10 19:40:01'), (95, 3, '2025-07-10 20:00:01'), (95, 4, '2025-07-10 20:06:01'), (95, 5, '2025-07-10 20:13:01'), (95, 6, '2025-07-10 20:44:01'),
-(96, 1, '2025-07-10 18:22:18'), (96, 2, '2025-07-10 18:28:18'), (96, 3, '2025-07-10 18:57:18'), (96, 4, '2025-07-10 19:04:18'), (96, 5, '2025-07-10 19:11:18'), (96, 6, '2025-07-10 19:43:18'),
-(97, 1, '2025-07-11 08:38:08'), (97, 2, '2025-07-11 08:44:08'), (97, 3, '2025-07-11 09:07:08'), (97, 4, '2025-07-11 09:16:08'), (97, 5, '2025-07-11 09:21:08'), (97, 6, '2025-07-11 09:59:08'),
-(98, 1, '2025-07-11 02:49:15'), (98, 2, '2025-07-11 02:59:15'), (98, 3, '2025-07-11 03:22:15'), (98, 4, '2025-07-11 03:31:15'), (98, 5, '2025-07-11 03:43:15'), (98, 6, '2025-07-11 04:18:15'),
-(99, 1, '2025-07-11 06:14:13'), (99, 2, '2025-07-11 06:24:13'), (99, 3, '2025-07-11 06:40:13'), (99, 4, '2025-07-11 06:49:13'), (99, 5, '2025-07-11 06:58:13'), (99, 6, '2025-07-11 07:33:13'),
-(100, 1, '2025-07-11 02:18:04'), (100, 2, '2025-07-11 02:26:04'), (100, 3, '2025-07-11 02:49:04'), (100, 4, '2025-07-11 02:59:04'), (100, 5, '2025-07-11 03:06:04'), (100, 6, '2025-07-11 03:44:04'),
-
--- Pedidos 101-110: Variaciones de cancelación, retraso, etc.
-(101, 1, '2025-07-11 04:30:10'), (101, 2, '2025-07-11 04:36:10'), (101, 7, '2025-07-11 04:50:10'),
-(102, 1, '2025-07-11 00:23:08'), -- Pendiente
-(102, 11, '2025-07-11 00:35:08'), -- Rechazado por Comercio
-(102, 7, '2025-07-11 00:45:08'), -- Cancelado (ADDED)
-(103, 1, '2025-07-11 06:17:51'), (103, 2, '2025-07-11 06:27:51'), (103, 3, '2025-07-11 06:47:51'), (103, 8, '2025-07-11 06:53:51'), (103, 5, '2025-07-11 07:05:51'), (103, 6, '2025-07-11 07:34:51'),
-(104, 1, '2025-07-10 18:28:16'), (104, 2, '2025-07-10 18:35:16'), (104, 3, '2025-07-10 18:59:16'), (104, 4, '2025-07-10 19:08:16'), (104, 12, '2025-07-10 19:15:16'), (104, 5, '2025-07-10 19:25:16'), (104, 6, '2025-07-10 19:50:16'),
-(105, 1, '2025-07-11 03:41:25'), (105, 14, '2025-07-11 03:51:25'), (105, 7, '2025-07-11 04:10:25'),
-(106, 1, '2025-07-10 17:27:26'), (106, 2, '2025-07-10 17:34:26'), (106, 3, '2025-07-10 17:51:26'), (106, 4, '2025-07-10 17:59:26'), (106, 13, '2025-07-10 18:12:26'), (106, 6, '2025-07-10 18:45:26'),
-(107, 1, '2025-07-11 07:11:42'), (107, 15, '2025-07-11 07:16:42'), (107, 11, '2025-07-11 07:25:42'),
-(108, 1, '2025-07-11 03:00:15'), (108, 2, '2025-07-11 03:05:15'), (108, 3, '2025-07-11 03:26:15'), (108, 4, '2025-07-11 03:34:15'), (108, 5, '2025-07-11 03:44:15'), (108, 6, '2025-07-11 04:15:15'),
-(109, 1, '2025-07-11 00:09:44'), (109, 2, '2025-07-11 00:14:44'), (109, 3, '2025-07-11 00:30:44'), (109, 4, '2025-07-11 00:39:44'), (109, 5, '2025-07-11 00:44:44'), (109, 6, '2025-07-11 01:21:44'),
-(110, 1, '2025-07-10 16:35:10'), (110, 2, '2025-07-10 16:40:10'), (110, 3, '2025-07-10 17:03:10'), (110, 4, '2025-07-10 17:08:10'), (110, 5, '2025-07-10 17:15:10'), (110, 6, '2025-07-10 17:51:10'),
+(103, 1, CONVERT(DATETIME, '2025-05-09 18:35:50')), (103, 2, CONVERT(DATETIME, '2025-05-09 18:41:50')), (103, 8, CONVERT(DATETIME, '2025-05-09 19:00:50')), (103, 7, CONVERT(DATETIME, '2025-05-09 19:15:50')), -- Retrasado y Cancelado
+(104, 1, CONVERT(DATETIME, '2025-06-10 00:36:28')), (104, 15, CONVERT(DATETIME, '2025-06-10 00:43:28')), (104, 11, CONVERT(DATETIME, '2025-06-10 00:55:28')), -- Error en Pago y Rechazado
+(105, 1, CONVERT(DATETIME, '2025-07-11 00:46:58')), (105, 2, CONVERT(DATETIME, '2025-07-11 00:54:58')), (105, 3, CONVERT(DATETIME, '2025-07-11 01:13:58')), (105, 12, CONVERT(DATETIME, '2025-07-11 01:19:58')), (105, 8, CONVERT(DATETIME, '2025-07-11 01:35:58')), (105, 5, CONVERT(DATETIME, '2025-07-11 01:45:58')), (105, 6, CONVERT(DATETIME, '2025-07-11 02:15:58')), -- Esperando Repartidor, Retrasado, Entregado
+(106, 1, CONVERT(DATETIME, '2025-05-12 17:51:49')), (106, 14, CONVERT(DATETIME, '2025-05-12 18:02:49')), (106, 7, CONVERT(DATETIME, '2025-05-12 18:20:49')), -- Programado y Cancelado
+(107, 1, CONVERT(DATETIME, '2025-07-11 07:11:42')), (107, 15, CONVERT(DATETIME, '2025-07-11 07:16:42')), (107, 11, CONVERT(DATETIME, '2025-07-11 07:25:42')),
+-- Pedidos 107-110: Variaciones iniciales
+(107, 1, CONVERT(DATETIME, '2025-07-11 00:00:00')), (107, 2, CONVERT(DATETIME, '2025-07-11 00:05:00')), (107, 3, CONVERT(DATETIME, '2025-07-11 00:25:00')), (107, 4, CONVERT(DATETIME, '2025-07-11 00:30:00')), (107, 5, CONVERT(DATETIME, '2025-07-11 00:40:00')), (107, 6, CONVERT(DATETIME, '2025-07-11 01:10:00')),
+(108, 1, CONVERT(DATETIME, '2025-07-11 03:00:15')), (108, 2, CONVERT(DATETIME, '2025-07-11 03:05:15')), (108, 3, CONVERT(DATETIME, '2025-07-11 03:26:15')), (108, 4, CONVERT(DATETIME, '2025-07-11 03:34:15')), (108, 5, CONVERT(DATETIME, '2025-07-11 03:44:15')), (108, 6, CONVERT(DATETIME, '2025-07-11 04:15:15')),
+(109, 1, CONVERT(DATETIME, '2025-07-11 00:09:44')), (109, 2, CONVERT(DATETIME, '2025-07-11 00:14:44')), (109, 3, CONVERT(DATETIME, '2025-07-11 00:30:44')), (109, 4, CONVERT(DATETIME, '2025-07-11 00:39:44')), (109, 5, CONVERT(DATETIME, '2025-07-11 00:44:44')), (109, 6, CONVERT(DATETIME, '2025-07-11 01:21:44')),
+(110, 1, CONVERT(DATETIME, '2025-07-10 16:35:10')), (110, 2, CONVERT(DATETIME, '2025-07-10 16:40:10')), (110, 3, CONVERT(DATETIME, '2025-07-10 17:03:10')), (110, 4, CONVERT(DATETIME, '2025-07-10 17:08:10')), (110, 5, CONVERT(DATETIME, '2025-07-10 17:15:10')), (110, 6, CONVERT(DATETIME, '2025-07-10 17:51:10')),
 
 -- Pedidos 111-120: Más variaciones
-(111, 1, '2025-07-11 00:13:16'), (111, 2, '2025-07-11 00:21:16'), (111, 3, '2025-07-11 00:39:16'), (111, 8, '2025-07-11 00:44:16'), (111, 5, '2025-07-11 00:54:16'), (111, 6, '2025-07-11 01:32:16'),
-(112, 1, '2025-07-10 22:54:25'), (112, 2, '2025-07-10 23:02:25'), (112, 3, '2025-07-10 23:23:25'), (112, 4, '2025-07-10 23:28:25'), (112, 12, '2025-07-10 23:36:25'), (112, 5, '2025-07-10 23:45:25'), (112, 6, '2025-07-11 00:15:25'),
-(113, 1, '2025-07-11 05:43:16'), (113, 2, '2025-07-11 05:48:16'), (113, 7, '2025-07-11 06:00:16'),
-(114, 1, '2025-07-11 02:40:19'), -- Pendiente
-(114, 11, '2025-07-11 02:50:19'), -- Rechazado por Comercio
-(114, 7, '2025-07-11 03:00:19'), -- Cancelado (ADDED)
-(115, 1, '2025-07-10 19:35:01'), (115, 15, '2025-07-10 19:40:01'), (115, 7, '2025-07-10 19:50:01'),
-(116, 1, '2025-07-11 04:54:02'), (116, 2, '2025-07-11 05:03:02'), (116, 3, '2025-07-11 05:22:02'), (116, 4, '2025-07-11 05:31:02'), (116, 5, '2025-07-11 05:44:02'), (116, 6, '2025-07-11 06:18:02'),
-(117, 1, '2025-07-11 07:18:03'), (117, 2, '2025-07-11 07:28:03'), (117, 3, '2025-07-11 07:46:03'), (117, 4, '2025-07-11 07:53:03'), (117, 5, '2025-07-11 08:00:03'), (117, 6, '2025-07-11 08:34:03'),
-(118, 1, '2025-07-11 00:45:00'), (118, 2, '2025-07-11 00:50:00'), (118, 3, '2025-07-11 01:08:00'), (118, 4, '2025-07-11 01:17:00'), (118, 5, '2025-07-11 01:25:00'), (118, 6, '2025-07-11 01:53:00'),
-(119, 1, '2025-07-11 07:05:15'), (119, 2, '2025-07-11 07:10:15'), (119, 3, '2025-07-11 07:29:15'), (119, 4, '2025-07-11 07:37:15'), (119, 5, '2025-07-11 07:42:15'), (119, 6, '2025-07-11 08:14:15'),
-(120, 1, '2025-07-10 18:31:21'), (120, 2, '2025-07-10 18:36:21'), (120, 3, '2025-07-10 18:57:21'), (120, 4, '2025-07-10 19:03:21'), (120, 5, '2025-07-10 19:16:21'), (120, 6, '2025-07-10 19:43:21'),
+(111, 1, CONVERT(DATETIME, '2025-07-11 00:13:16')), (111, 2, CONVERT(DATETIME, '2025-07-11 00:21:16')), (111, 3, CONVERT(DATETIME, '2025-07-11 00:39:16')), (111, 8, CONVERT(DATETIME, '2025-07-11 00:44:16')), (111, 5, CONVERT(DATETIME, '2025-07-11 00:54:16')), (111, 6, CONVERT(DATETIME, '2025-07-11 01:32:16')),
+(112, 1, CONVERT(DATETIME, '2025-07-10 22:54:25')), (112, 2, CONVERT(DATETIME, '2025-07-10 23:02:25')), (112, 3, CONVERT(DATETIME, '2025-07-10 23:23:25')), (112, 4, CONVERT(DATETIME, '2025-07-10 23:28:25')), (112, 12, CONVERT(DATETIME, '2025-07-10 23:36:25')), (112, 5, CONVERT(DATETIME, '2025-07-10 23:45:25')), (112, 6, CONVERT(DATETIME, '2025-07-11 00:15:25')),
+(113, 1, CONVERT(DATETIME, '2025-07-11 05:43:16')), (113, 2, CONVERT(DATETIME, '2025-07-11 05:48:16')), (113, 7, CONVERT(DATETIME, '2025-07-11 06:00:16')),
+(114, 1, CONVERT(DATETIME, '2025-07-11 02:40:19')), -- Pendiente
+(114, 11, CONVERT(DATETIME, '2025-07-11 02:50:19')), -- Rechazado por Comercio
+(114, 7, CONVERT(DATETIME, '2025-07-11 03:00:19')), -- Cancelado (ADDED)
+(115, 1, CONVERT(DATETIME, '2025-07-10 19:35:01')), (115, 15, CONVERT(DATETIME, '2025-07-10 19:40:01')), (115, 7, CONVERT(DATETIME, '2025-07-10 19:50:01')),
+(116, 1, CONVERT(DATETIME, '2025-07-11 04:54:02')), (116, 2, CONVERT(DATETIME, '2025-07-11 05:03:02')), (116, 3, CONVERT(DATETIME, '2025-07-11 05:22:02')), (116, 4, CONVERT(DATETIME, '2025-07-11 05:31:02')), (116, 5, CONVERT(DATETIME, '2025-07-11 05:44:02')), (116, 6, CONVERT(DATETIME, '2025-07-11 06:18:02')),
+(117, 1, CONVERT(DATETIME, '2025-07-11 07:18:03')), (117, 2, CONVERT(DATETIME, '2025-07-11 07:28:03')), (117, 3, CONVERT(DATETIME, '2025-07-11 07:46:03')), (117, 4, CONVERT(DATETIME, '2025-07-11 07:53:03')), (117, 5, CONVERT(DATETIME, '2025-07-11 08:00:03')), (117, 6, CONVERT(DATETIME, '2025-07-11 08:34:03')),
+(118, 1, CONVERT(DATETIME, '2025-07-11 00:45:00')), (118, 2, CONVERT(DATETIME, '2025-07-11 00:50:00')), (118, 3, CONVERT(DATETIME, '2025-07-11 01:08:00')), (118, 4, CONVERT(DATETIME, '2025-07-11 01:17:00')), (118, 5, CONVERT(DATETIME, '2025-07-11 01:25:00')), (118, 6, CONVERT(DATETIME, '2025-07-11 01:53:00')),
+(119, 1, CONVERT(DATETIME, '2025-07-11 07:05:15')), (119, 2, CONVERT(DATETIME, '2025-07-11 07:10:15')), (119, 3, CONVERT(DATETIME, '2025-07-11 07:29:15')), (119, 4, CONVERT(DATETIME, '2025-07-11 07:37:15')), (119, 5, CONVERT(DATETIME, '2025-07-11 07:42:15')), (119, 6, CONVERT(DATETIME, '2025-07-11 08:14:15')),
+(120, 1, CONVERT(DATETIME, '2025-07-10 18:31:21')), (120, 2, CONVERT(DATETIME, '2025-07-10 18:36:21')), (120, 3, CONVERT(DATETIME, '2025-07-10 18:57:21')), (120, 4, CONVERT(DATETIME, '2025-07-10 19:03:21')), (120, 5, CONVERT(DATETIME, '2025-07-10 19:16:21')), (120, 6, CONVERT(DATETIME, '2025-07-10 19:43:21')),
 
 -- Pedidos 121-130: Nuevas combinaciones
-(121, 1, '2025-07-11 00:54:19'), (121, 2, '2025-07-11 01:04:19'), (121, 3, '2025-07-11 01:26:19'), (121, 8, '2025-07-11 01:31:19'), (121, 7, '2025-07-11 01:45:19'), -- Retrasado y Cancelado
-(122, 1, '2025-07-11 06:17:16'), (122, 14, '2025-07-11 06:27:16'), (122, 4, '2025-07-11 06:50:16'), (122, 5, '2025-07-11 06:59:16'), (122, 6, '2025-07-11 07:31:16'), -- Programado y Entregado
-(123, 1, '2025-07-10 13:58:39'), (123, 2, '2025-07-10 14:03:39'), (123, 12, '2025-07-10 14:15:39'), (123, 8, '2025-07-10 14:25:39'), (123, 7, '2025-07-10 14:40:39'), -- Esperando Repartidor, Retrasado, Cancelado
-(124, 1, '2025-07-11 09:27:36'), (124, 15, '2025-07-11 09:37:36'), (124, 11, '2025-07-11 09:45:36'), -- Error en Pago y Rechazado
-(125, 1, '2025-07-10 18:31:21'), (125, 2, '2025-07-10 18:37:21'), (125, 3, '2025-07-10 19:04:21'), (125, 4, '2025-07-10 19:10:21'), (125, 5, '2025-07-10 19:22:21'), (125, 6, '2025-07-10 19:54:21'), (125, 9, '2025-07-10 20:10:21'), (125, 10, '2025-07-10 20:25:21'), -- Devolución y Reembolso
-(126, 1, '2025-07-11 09:34:36'), (126, 2, '2025-07-11 09:41:36'), (126, 3, '2025-07-11 10:00:36'), (126, 4, '2025-07-11 10:08:36'), (126, 5, '2025-07-11 10:15:36'), (126, 6, '2025-07-11 10:52:36'),
-(127, 1, '2025-07-11 03:00:15'), (127, 2, '2025-07-11 03:11:15'), (127, 3, '2025-07-11 03:29:15'), (127, 4, '2025-07-11 03:38:15'), (127, 5, '2025-07-11 03:43:15'), (127, 6, '2025-07-11 04:18:15'),
-(128, 1, '2025-07-10 17:09:49'), (128, 2, '2025-07-10 17:16:49'), (128, 3, '2025-07-10 17:42:49'), (128, 4, '2025-07-10 17:51:49'), (128, 5, '2025-07-10 17:58:49'), (128, 6, '2025-07-10 18:31:49'),
-(129, 1, '2025-07-10 13:57:20'), (129, 2, '2025-07-10 14:07:20'), (129, 3, '2025-07-10 14:26:20'), (129, 4, '2025-07-10 14:35:20'), (129, 5, '2025-07-10 14:48:20'), (129, 6, '2025-07-10 15:15:20'),
-(130, 1, '2025-07-11 00:54:19'), (130, 2, '2025-07-11 01:04:19'), (130, 3, '2025-07-11 01:21:19'), (130, 4, '2025-07-11 01:27:19'), (130, 5, '2025-07-11 01:34:19'), (130, 6, '2025-07-11 02:08:19'),
+(121, 1, CONVERT(DATETIME, '2025-07-11 00:54:19')), (121, 2, CONVERT(DATETIME, '2025-07-11 01:04:19')), (121, 3, CONVERT(DATETIME, '2025-07-11 01:26:19')), (121, 8, CONVERT(DATETIME, '2025-07-11 01:31:19')), (121, 7, CONVERT(DATETIME, '2025-07-11 01:45:19')), -- Retrasado y Cancelado
+(122, 1, CONVERT(DATETIME, '2025-07-11 06:17:16')), (122, 14, CONVERT(DATETIME, '2025-07-11 06:27:16')), (122, 4, CONVERT(DATETIME, '2025-07-11 06:50:16')), (122, 5, CONVERT(DATETIME, '2025-07-11 06:59:16')), (122, 6, CONVERT(DATETIME, '2025-07-11 07:31:16')), -- Programado y Entregado
+(123, 1, CONVERT(DATETIME, '2025-07-10 13:58:39')), (123, 2, CONVERT(DATETIME, '2025-07-10 14:03:39')), (123, 12, CONVERT(DATETIME, '2025-07-10 14:15:39')), (123, 8, CONVERT(DATETIME, '2025-07-10 14:25:39')), (123, 7, CONVERT(DATETIME, '2025-07-10 14:40:39')), -- Esperando Repartidor, Retrasado, Cancelado
+(124, 1, CONVERT(DATETIME, '2025-07-11 09:27:36')), (124, 15, CONVERT(DATETIME, '2025-07-11 09:37:36')), (124, 11, CONVERT(DATETIME, '2025-07-11 09:45:36')), -- Error en Pago y Rechazado
+(125, 1, CONVERT(DATETIME, '2025-07-10 18:31:21')), (125, 2, CONVERT(DATETIME, '2025-07-10 18:37:21')), (125, 3, CONVERT(DATETIME, '2025-07-10 19:04:21')), (125, 4, CONVERT(DATETIME, '2025-07-10 19:10:21')), (125, 5, CONVERT(DATETIME, '2025-07-10 19:22:21')), (125, 6, CONVERT(DATETIME, '2025-07-10 19:54:21')), (125, 9, CONVERT(DATETIME, '2025-07-10 20:10:21')), (125, 10, CONVERT(DATETIME, '2025-07-10 20:25:21')), -- Devolución y Reembolso
+(126, 1, CONVERT(DATETIME, '2025-07-11 09:34:36')), (126, 2, CONVERT(DATETIME, '2025-07-11 09:41:36')), (126, 3, CONVERT(DATETIME, '2025-07-11 10:00:36')), (126, 4, CONVERT(DATETIME, '2025-07-11 10:08:36')), (126, 5, CONVERT(DATETIME, '2025-07-11 10:15:36')), (126, 6, CONVERT(DATETIME, '2025-07-11 10:52:36')),
+(127, 1, CONVERT(DATETIME, '2025-07-11 03:00:15')), (127, 2, CONVERT(DATETIME, '2025-07-11 03:11:15')), (127, 3, CONVERT(DATETIME, '2025-07-11 03:29:15')), (127, 4, CONVERT(DATETIME, '2025-07-11 03:38:15')), (127, 5, CONVERT(DATETIME, '2025-07-11 03:43:15')), (127, 6, CONVERT(DATETIME, '2025-07-11 04:18:15')),
+(128, 1, CONVERT(DATETIME, '2025-07-10 17:09:49')), (128, 2, CONVERT(DATETIME, '2025-07-10 17:16:49')), (128, 3, CONVERT(DATETIME, '2025-07-10 17:42:49')), (128, 4, CONVERT(DATETIME, '2025-07-10 17:51:49')), (128, 5, CONVERT(DATETIME, '2025-07-10 17:58:49')), (128, 6, CONVERT(DATETIME, '2025-07-10 18:31:49')),
+(129, 1, CONVERT(DATETIME, '2025-07-10 13:57:20')), (129, 2, CONVERT(DATETIME, '2025-07-10 14:07:20')), (129, 3, CONVERT(DATETIME, '2025-07-10 14:26:20')), (129, 4, CONVERT(DATETIME, '2025-07-10 14:35:20')), (129, 5, CONVERT(DATETIME, '2025-07-10 14:48:20')), (129, 6, CONVERT(DATETIME, '2025-07-10 15:15:20')),
+(130, 1, CONVERT(DATETIME, '2025-07-11 00:54:19')), (130, 2, CONVERT(DATETIME, '2025-07-11 01:04:19')), (130, 3, CONVERT(DATETIME, '2025-07-11 01:21:19')), (130, 4, CONVERT(DATETIME, '2025-07-11 01:27:19')), (130, 5, CONVERT(DATETIME, '2025-07-11 01:34:19')), (130, 6, CONVERT(DATETIME, '2025-07-11 02:08:19')),
 
 -- Pedidos 131-140: Más variaciones y repeticiones
-(131, 1, '2025-07-11 08:35:10'), (131, 2, '2025-07-11 08:44:10'), (131, 3, '2025-07-11 09:07:10'), (131, 4, '2025-07-11 09:12:10'), (131, 5, '2025-07-11 09:23:10'), (131, 6, '2025-07-11 09:59:10'),
-(132, 1, '2025-07-10 18:59:16'), (132, 2, '2025-07-10 19:07:16'), (132, 3, '2025-07-10 19:20:16'), (132, 4, '2025-07-10 19:26:16'), (132, 5, '2025-07-10 19:35:16'), (132, 6, '2025-07-10 20:12:16'),
-(133, 1, '2025-07-11 07:05:15'), (133, 2, '2025-07-11 07:14:15'), (133, 3, '2025-07-11 07:38:15'), (133, 4, '2025-07-11 07:43:15'), (133, 5, '2025-07-11 07:56:15'), (133, 6, '2025-07-11 08:31:15'),
-(134, 1, '2025-07-10 18:37:11'), (134, 2, '2025-07-10 18:47:11'), (134, 3, '2025-07-10 19:15:11'), (134, 4, '2025-07-10 19:20:11'), (134, 5, '2025-07-10 19:33:11'), (134, 6, '2025-07-10 20:06:11'),
-(135, 1, '2025-07-11 00:19:16'), (135, 2, '2025-07-11 00:27:16'), (135, 3, '2025-07-11 00:46:16'), (135, 4, '2025-07-11 00:54:16'), (135, 5, '2025-07-11 01:03:16'), (135, 6, '2025-07-11 01:36:16'),
-(136, 1, '2025-07-11 06:14:00'), (136, 2, '2025-07-11 06:21:00'), (136, 3, '2025-07-11 06:40:00'), (136, 4, '2025-07-11 06:46:00'), (136, 5, '2025-07-11 06:54:00'), (136, 6, '2025-07-11 07:29:00'),
-(137, 1, '2025-07-11 02:44:23'), (137, 2, '2025-07-11 02:51:23'), (137, 3, '2025-07-11 03:13:23'), (137, 4, '2025-07-11 03:22:23'), (137, 5, '2025-07-11 03:37:23'), (137, 6, '2025-07-11 04:08:23'),
-(138, 1, '2025-07-10 14:52:33'), (138, 2, '2025-07-10 15:01:33'), (138, 3, '2025-07-10 15:21:33'), (138, 4, '2025-07-10 15:29:33'), (138, 5, '2025-07-10 15:37:33'), (138, 6, '2025-07-10 16:15:33'),
-(139, 1, '2025-07-11 03:41:25'), (139, 2, '2025-07-11 03:46:25'), (139, 3, '2025-07-11 04:02:25'), (139, 4, '2025-07-11 04:10:25'), (139, 5, '2025-07-11 04:19:25'), (139, 6, '2025-07-11 04:54:25'),
-(140, 1, '2025-07-10 14:18:49'), (140, 2, '2025-07-10 14:26:49'), (140, 3, '2025-07-10 14:48:49'), (140, 4, '2025-07-10 14:57:49'), (140, 5, '2025-07-10 15:07:49'), (140, 6, '2025-07-10 15:43:49'),
+(131, 1, CONVERT(DATETIME, '2025-07-13 08:35:10')), (131, 2, CONVERT(DATETIME, '2025-07-13 08:44:10')), (131, 3, CONVERT(DATETIME, '2025-07-13 09:07:10')), (131, 4, CONVERT(DATETIME, '2025-07-13 09:12:10')), (131, 5, CONVERT(DATETIME, '2025-07-13 09:23:10')), (131, 6, CONVERT(DATETIME, '2025-07-13 09:59:10')),
+(132, 1, CONVERT(DATETIME, '2025-07-18 18:59:16')), (132, 2, CONVERT(DATETIME, '2025-07-18 19:07:16')), (132, 3, CONVERT(DATETIME, '2025-07-18 19:20:16')), (132, 4, CONVERT(DATETIME, '2025-07-18 19:26:16')), (132, 5, CONVERT(DATETIME, '2025-07-18 19:35:16')), (132, 6, CONVERT(DATETIME, '2025-07-18 20:12:16')),
+(133, 1, CONVERT(DATETIME, '2025-07-20 07:05:15')), (133, 2, CONVERT(DATETIME, '2025-07-20 07:14:15')), (133, 3, CONVERT(DATETIME, '2025-07-20 07:38:15')), (133, 4, CONVERT(DATETIME, '2025-07-20 07:43:15')), (133, 5, CONVERT(DATETIME, '2025-07-20 07:56:15')), (133, 6, CONVERT(DATETIME, '2025-07-20 08:31:15')),
+(134, 1, CONVERT(DATETIME, '2025-07-10 18:37:11')), (134, 2, CONVERT(DATETIME, '2025-07-10 18:47:11')), (134, 3, CONVERT(DATETIME, '2025-07-10 19:15:11')), (134, 4, CONVERT(DATETIME, '2025-07-10 19:20:11')), (134, 5, CONVERT(DATETIME, '2025-07-10 19:33:11')), (134, 6, CONVERT(DATETIME, '2025-07-10 20:06:11')),
+(135, 1, CONVERT(DATETIME, '2025-07-11 00:19:16')), (135, 2, CONVERT(DATETIME, '2025-07-11 00:27:16')), (135, 3, CONVERT(DATETIME, '2025-07-11 00:46:16')), (135, 4, CONVERT(DATETIME, '2025-07-11 00:54:16')), (135, 5, CONVERT(DATETIME, '2025-07-11 01:03:16')), (135, 6, CONVERT(DATETIME, '2025-07-11 01:36:16')),
+(136, 1, CONVERT(DATETIME, '2025-07-11 06:14:00')), (136, 2, CONVERT(DATETIME, '2025-07-11 06:21:00')), (136, 3, CONVERT(DATETIME, '2025-07-11 06:40:00')), (136, 4, CONVERT(DATETIME, '2025-07-11 06:46:00')), (136, 5, CONVERT(DATETIME, '2025-07-11 06:54:00')), (136, 6, CONVERT(DATETIME, '2025-07-11 07:29:00')),
+(137, 1, CONVERT(DATETIME, '2025-07-11 02:44:23')), (137, 2, CONVERT(DATETIME, '2025-07-11 02:51:23')), (137, 3, CONVERT(DATETIME, '2025-07-11 03:13:23')), (137, 4, CONVERT(DATETIME, '2025-07-11 03:22:23')), (137, 5, CONVERT(DATETIME, '2025-07-11 03:37:23')), (137, 6, CONVERT(DATETIME, '2025-07-11 04:08:23')),
+(138, 1, CONVERT(DATETIME, '2025-07-19 06:00:00')), (138, 2, CONVERT(DATETIME, '2025-07-19 06:05:00')), (138, 3, CONVERT(DATETIME, '2025-07-19 06:20:00')), (138, 4, CONVERT(DATETIME, '2025-07-19 06:28:00')), (138, 5, CONVERT(DATETIME, '2025-07-19 06:35:00')), (138, 6, CONVERT(DATETIME, '2025-07-19 07:00:00')),
+(139, 1, CONVERT(DATETIME, '2025-07-19 09:00:00')), (139, 2, CONVERT(DATETIME, '2025-07-19 09:05:00')), (139, 3, CONVERT(DATETIME, '2025-07-19 09:20:00')), (139, 4, CONVERT(DATETIME, '2025-07-19 09:28:00')), (139, 5, CONVERT(DATETIME, '2025-07-19 09:35:00')), (139, 6, CONVERT(DATETIME, '2025-07-19 10:00:00')),
+(140, 1, CONVERT(DATETIME, '2025-07-18 23:00:00')), (140, 2, CONVERT(DATETIME, '2025-07-18 23:05:00')), (140, 3, CONVERT(DATETIME, '2025-07-18 23:20:00')), (140, 4, CONVERT(DATETIME, '2025-07-18 23:28:00')), (140, 5, CONVERT(DATETIME, '2025-07-18 23:35:00')), (140, 6, CONVERT(DATETIME, '2025-07-19 00:00:00')),
 
 -- Pedidos 141-150: Más variaciones
-(141, 1, '2025-07-11 02:44:03'), (141, 2, '2025-07-11 02:51:03'), (141, 3, '2025-07-11 03:13:03'), (141, 4, '2025-07-11 03:22:03'), (141, 5, '2025-07-11 03:34:03'), (141, 6, '2025-07-11 04:03:03'),
-(142, 1, '2025-07-10 15:10:04'), (142, 2, '2025-07-10 15:21:04'), (142, 3, '2025-07-10 15:43:04'), (142, 4, '2025-07-10 15:52:04'), (142, 5, '2025-07-10 16:03:04'), (142, 6, '2025-07-10 16:36:04'),
-(143, 1, '2025-07-10 17:34:25'), (143, 2, '2025-07-10 17:44:25'), (143, 3, '2025-07-10 18:02:25'), (143, 4, '2025-07-10 18:11:25'), (143, 5, '2025-07-10 18:24:25'), (143, 6, '2025-07-10 19:00:25'),
-(144, 1, '2025-07-11 07:11:42'), (144, 2, '2025-07-11 07:22:42'), (144, 3, '2025-07-11 07:42:42'), (144, 4, '2025-07-11 07:51:42'), (144, 5, '2025-07-11 08:00:42'), (144, 6, '2025-07-11 08:35:42'),
-(145, 1, '2025-07-10 18:35:50'), (145, 2, '2025-07-10 18:41:50'), (145, 3, '2025-07-10 19:04:50'), (145, 4, '2025-07-10 19:10:50'), (145, 5, '2025-07-10 19:22:50'), (145, 6, '2025-07-10 19:54:50'),
-(146, 1, '2025-07-11 00:36:28'), (146, 2, '2025-07-11 00:43:28'), (146, 3, '2025-07-11 00:58:28'), (146, 4, '2025-07-11 01:05:28'), (146, 5, '2025-07-11 01:13:28'), (146, 6, '2025-07-11 01:43:28'),
-(147, 1, '2025-07-11 00:46:58'), (147, 2, '2025-07-11 00:54:58'), (147, 3, '2025-07-11 01:13:58'), (147, 4, '2025-07-11 01:19:58'), (147, 5, '2025-07-11 01:31:58'), (147, 6, '2025-07-11 02:08:58'),
-(148, 1, '2025-07-10 17:51:49'), (148, 2, '2025-07-10 18:02:49'), (148, 3, '2025-07-10 18:24:49'), (148, 4, '2025-07-10 18:31:49'), (148, 5, '2025-07-10 18:37:49'), (148, 6, '2025-07-10 19:11:49'),
-(149, 1, '2025-07-10 19:57:42'), (149, 2, '2025-07-10 20:07:42'), (149, 3, '2025-07-10 20:25:42'), (149, 4, '2025-07-10 20:34:42'), (149, 5, '2025-07-10 20:49:42'), (149, 6, '2025-07-10 21:19:42'),
-(150, 1, '2025-07-10 20:03:00'), (150, 2, '2025-07-10 20:13:00'), (150, 3, '2025-07-10 20:36:00'), (150, 4, '2025-07-10 20:46:00'), (150, 5, '2025-07-10 20:53:00'), (150, 6, '2025-07-10 21:28:00');
+(141, 1, CONVERT(DATETIME, '2025-07-12 02:44:03')), (141, 2, CONVERT(DATETIME, '2025-07-12 02:51:03')), (141, 3, CONVERT(DATETIME, '2025-07-12 03:13:03')), (141, 4, CONVERT(DATETIME, '2025-07-12 03:22:03')), (141, 5, CONVERT(DATETIME, '2025-07-12 03:34:03')), (141, 6, CONVERT(DATETIME, '2025-07-12 04:03:03')),
+(142, 1, CONVERT(DATETIME, '2025-07-10 15:10:04')), (142, 2, CONVERT(DATETIME, '2025-07-10 15:21:04')), (142, 3, CONVERT(DATETIME, '2025-07-10 15:43:04')), (142, 4, CONVERT(DATETIME, '2025-07-10 15:52:04')), (142, 5, CONVERT(DATETIME, '2025-07-10 16:03:04')), (142, 6, CONVERT(DATETIME, '2025-07-10 16:36:04')),
+(143, 1, CONVERT(DATETIME, '2025-07-10 17:34:25')), (143, 2, CONVERT(DATETIME, '2025-07-10 17:44:25')), (143, 3, CONVERT(DATETIME, '2025-07-10 18:02:25')), (143, 4, CONVERT(DATETIME, '2025-07-10 18:11:25')), (143, 5, CONVERT(DATETIME, '2025-07-10 18:24:25')), (143, 6, CONVERT(DATETIME, '2025-07-10 19:00:25')),
+(144, 1, CONVERT(DATETIME, '2025-07-15 07:11:42')), (144, 2, CONVERT(DATETIME, '2025-07-15 07:22:42')), (144, 3, CONVERT(DATETIME, '2025-07-15 07:42:42')), (144, 4, CONVERT(DATETIME, '2025-07-15 07:51:42')), (144, 5, CONVERT(DATETIME, '2025-07-15 08:00:42')), (144, 6, CONVERT(DATETIME, '2025-07-15 08:35:42')),
+(145, 1, CONVERT(DATETIME, '2025-07-16 18:35:50')), (145, 2, CONVERT(DATETIME, '2025-07-16 18:41:50')), (145, 3, CONVERT(DATETIME, '2025-07-16 19:04:50')), (145, 4, CONVERT(DATETIME, '2025-07-16 19:10:50')), (145, 5, CONVERT(DATETIME, '2025-07-16 19:22:50')), (145, 6, CONVERT(DATETIME, '2025-07-16 19:54:50')),
+(146, 1, CONVERT(DATETIME, '2025-07-11 00:36:28')), (146, 2, CONVERT(DATETIME, '2025-07-11 00:43:28')), (146, 3, CONVERT(DATETIME, '2025-07-11 00:58:28')), (146, 4, CONVERT(DATETIME, '2025-07-11 01:05:28')), (146, 5, CONVERT(DATETIME, '2025-07-11 01:13:28')), (146, 6, CONVERT(DATETIME, '2025-07-11 01:43:28')),
+(147, 1, CONVERT(DATETIME, '2025-07-11 00:46:58')), (147, 2, CONVERT(DATETIME, '2025-07-11 00:54:58')), (147, 3, CONVERT(DATETIME, '2025-07-11 01:13:58')), (147, 4, CONVERT(DATETIME, '2025-07-11 01:19:58')), (147, 5, CONVERT(DATETIME, '2025-07-11 01:31:58')), (147, 6, CONVERT(DATETIME, '2025-07-11 02:08:58')),
+(148, 1, CONVERT(DATETIME, '2025-07-10 17:51:49')), (148, 2, CONVERT(DATETIME, '2025-07-10 18:02:49')), (148, 3, CONVERT(DATETIME, '2025-07-10 18:24:49')), (148, 4, CONVERT(DATETIME, '2025-07-10 18:31:49')), (148, 5, CONVERT(DATETIME, '2025-07-10 18:37:49')), (148, 6, CONVERT(DATETIME, '2025-07-10 19:11:49')),
+(149, 1, CONVERT(DATETIME, '2025-07-10 19:57:42')), (149, 2, CONVERT(DATETIME, '2025-07-10 20:07:42')), (149, 3, CONVERT(DATETIME, '2025-07-10 20:25:42')), (149, 4, CONVERT(DATETIME, '2025-07-10 20:34:42')), (149, 5, CONVERT(DATETIME, '2025-07-10 20:49:42')), (149, 6, CONVERT(DATETIME, '2025-07-10 21:19:42')),
+(150, 1, CONVERT(DATETIME, '2025-07-10 20:03:00')), (150, 2, CONVERT(DATETIME, '2025-07-10 20:13:00')), (150, 3, CONVERT(DATETIME, '2025-07-10 20:36:00')), (150, 4, CONVERT(DATETIME, '2025-07-10 20:46:00')), (150, 5, CONVERT(DATETIME, '2025-07-10 20:53:00')), (150, 6, CONVERT(DATETIME, '2025-07-10 21:28:00'));
+
+-- 21 inserts a mano de ClienteConClienteReferido(idCliente, idClienteReferido, fecha_referido) 
+INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido) VALUES
+(2, 1, '2025-08-13'),
+(3, 1, '2025-09-13'),
+(4, 2, '2025-08-18'),
+(6, 5, '2025-10-13'),
+(7, 6, '2025-05-16'),
+(8, 7, '2025-04-13'),
+(9, 8, '2025-03-13'),
+(11, 10, '2025-01-13'),
+(13, 12, '2025-07-13'),
+(17, 15, '2023-07-13'),
+(19, 18, '2025-07-13'),
+(21, 20, '2023-06-13'),
+(22, 19, '2025-07-13'),
+(23, 21, '2024-08-13'),
+(24, 22, '2023-07-13'),
+(26, 25, '2023-07-13'),
+(29, 28, '2025-03-13'),
+(31, 30, '2024-07-29'),
+(33, 32, '2023-05-13'),
+(34, 31, '2025-07-28'),
+(35, 33, '2025-06-13');
 
