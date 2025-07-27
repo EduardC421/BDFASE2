@@ -1,4 +1,4 @@
---trigger a
+--triggers parte a
 
 
 -- Factura
@@ -49,25 +49,21 @@ BEGIN
 END;
 
 
--- trigger para insertar en ClienteConClienteReferido automaticamente
-CREATE TRIGGER trg_Cliente_AfterInsert
+-- al insertar en Cliente se inserta en ClienteConClienteReferido
+CREATE TRIGGER llenarClienteConClienteReferido
 ON Cliente
 AFTER INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
-    -- Asumiendo que el cliente referido es el último cliente insertado antes del actual
     DECLARE @NuevoClienteID INT;
     DECLARE @ClienteReferidoID INT;
-    -- Obtener el ID del cliente recién insertado
     SELECT @NuevoClienteID = id FROM inserted;
     -- Buscar el último cliente insertado antes del actual para usarlo como referido
-    -- (esto es un ejemplo, ajusta según tu lógica de negocio)
     SELECT TOP 1 @ClienteReferidoID = id 
     FROM Cliente 
     WHERE id < @NuevoClienteID 
     ORDER BY id DESC;
-    -- Solo insertar si encontramos un cliente referido válido (no para el primer cliente)
     IF @ClienteReferidoID IS NOT NULL AND @NuevoClienteID > 1
     BEGIN
         INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido)
@@ -76,8 +72,7 @@ BEGIN
 END;
 
 
--- Al cambiar el estado del pedido a “Entregado” en PedidoEstadoPedido, se inserta la valoración en ClienteRepartidor
-
+-- Al insertar un registro en PedidoEstadoPedido con el estado = “Entregado”, se inserta la valoración en ClienteRepartidor
 CREATE TRIGGER llenarClienteRepartidor
 ON PedidoEstadoPedido
 AFTER INSERT
@@ -90,7 +85,6 @@ BEGIN
     SELECT @estado = id
     FROM EstadoPedido
     WHERE nombre = 'Entregado';
-
 
     INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentario)
     SELECT
@@ -115,10 +109,8 @@ END;
 
 
 
---B----------------
--- Este trigger se ejecuta DESPUÉS de eliminar una fila de la tabla PedidoDetalle.
--- Su propósito es ajustar la cantidad disponible del plato correspondiente
--- y "restaurar" la disponibilidad si el plato estaba agotado.
+
+
 CREATE TRIGGER trg_InsteadOfDelete_PedidoDetalle
 ON PedidoDetalle
 INSTEAD OF DELETE

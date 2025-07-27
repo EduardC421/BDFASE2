@@ -72,8 +72,6 @@ END;
 
 
 
-
-
 -- La B
 
 CREATE PROCEDURE asignar_repartidor_menos_cargado
