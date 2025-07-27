@@ -20,7 +20,6 @@ BEGIN
     SELECT @cantidad_items = COUNT(*) FROM @detallesPedido;
     DECLARE @idPedido INT = (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido);
 
-    -- pedido sin fecha ni cliente
     INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, total, tiempo_entrega)
     VALUES (@idPedido, @cantidad_items, @costo_envio, @nota, 0, @tiempo_entrega);
 
@@ -44,7 +43,6 @@ BEGIN
     )
     WHERE id = @idPedido;
 
-    -- Asociar pedido a cliente
     INSERT INTO ClientePedido (idCliente, idPedido, fecha)
     VALUES (@idCliente, @idPedido, GETDATE());
 
@@ -68,77 +66,63 @@ END;
 
 
 
--- La B
+
+----------- B ----------
 
 CREATE PROCEDURE asignar_repartidor_menos_cargado
     @id_pedido INT
 AS
 BEGIN
-    SET NOCOUNT ON; -- Suprime los mensajes de conteo de filas afectadas
+    SET NOCOUNT ON;
 
     DECLARE @fecha_pedido DATE;
     DECLARE @id_repartidor_menos_cargado INT;
 
-    -- 1. Obtener la fecha del pedido desde la tabla ClientePedido
-    -- Se asume que cada pedido tiene una entrada en ClientePedido que define su fecha.
     SELECT @fecha_pedido = CP.fecha
     FROM Pedido P
     JOIN ClientePedido CP ON P.id = CP.idPedido
     WHERE P.id = @id_pedido;
 
-    -- Verificar si se encontró la fecha del pedido
     IF @fecha_pedido IS NULL
     BEGIN
-        PRINT 'Error: No se encontró la fecha para el pedido con ID ' + CAST(@id_pedido AS NVARCHAR(10)) + '. Asegúrate de que el pedido exista y esté asociado a un cliente en ClientePedido.';
-        RETURN; -- Salir del procedimiento si no se encuentra la fecha
+        RETURN;
     END;
 
-    -- 2. Encontrar el repartidor activo con menos pedidos para esa fecha específica
-    -- Se unen Repartidor con un subconsulta que cuenta los pedidos de cada repartidor para la fecha actual.
     SELECT TOP 1 @id_repartidor_menos_cargado = R.id
     FROM Repartidor R
     LEFT JOIN (
-        -- Subconsulta para contar los pedidos de cada repartidor para la fecha del pedido
         SELECT RP.idRepartidor, COUNT(RP.idPedido) AS total_pedidos_hoy
         FROM RepartidorPedido RP
         JOIN ClientePedido CP_Inner ON RP.idPedido = CP_Inner.idPedido
         WHERE CP_Inner.fecha = @fecha_pedido
         GROUP BY RP.idRepartidor
     ) AS EntregasDia ON R.id = EntregasDia.idRepartidor
-    WHERE R.estado = 'Activo' -- Considerar solo repartidores activos
-    ORDER BY ISNULL(EntregasDia.total_pedidos_hoy, 0) ASC; -- Ordenar por el total de pedidos (los NULL van primero)
+    WHERE R.estado = 'Activo' 
+    ORDER BY ISNULL(EntregasDia.total_pedidos_hoy, 0) ASC; 
 
-    -- Verificar si se encontró un repartidor
     IF @id_repartidor_menos_cargado IS NULL
     BEGIN
-        PRINT 'Error: No hay repartidores activos disponibles o no se pudo encontrar el menos cargado.';
-        RETURN; -- Salir del procedimiento si no se encuentra un repartidor
+        RETURN; 
     END;
 
-    -- 3. Asignar el repartidor al pedido en la tabla RepartidorPedido
-    -- Si el pedido ya tiene un repartidor asignado, se actualiza; de lo contrario, se inserta.
+    -- Si el pedido ya tiene un repartidor asignado, se actualiza, sino, se inserta.
     IF EXISTS (SELECT 1 FROM RepartidorPedido WHERE idPedido = @id_pedido)
     BEGIN
         UPDATE RepartidorPedido
         SET idRepartidor = @id_repartidor_menos_cargado,
-            tiempo_entrega = NULL -- Puedes ajustar este valor si tienes una lógica específica para el tiempo de entrega inicial
+            tiempo_entrega = NULL 
         WHERE idPedido = @id_pedido;
-        PRINT 'Repartidor actualizado para el pedido ' + CAST(@id_pedido AS NVARCHAR(10)) + ': ' + CAST(@id_repartidor_menos_cargado AS NVARCHAR(10));
     END
     ELSE
     BEGIN
         INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega)
-        VALUES (@id_repartidor_menos_cargado, @id_pedido, NULL); -- tiempo_entrega puede ser NULL inicialmente
-        PRINT 'Repartidor asignado al pedido ' + CAST(@id_pedido AS NVARCHAR(10)) + ': ' + CAST(@id_repartidor_menos_cargado AS NVARCHAR(10));
+        VALUES (@id_repartidor_menos_cargado, @id_pedido, NULL); -- asumimos que como apenas le estamos asignando el pedido al repartidor, la fecha de entrega es null porque el pedido no se ha entregado aún
+
     END
 END;
 
-EXEC asignar_repartidor_menos_cargado @idPedido = 123;
 
-
-
-
----C----
+------ -C----
 CREATE PROCEDURE ReportePedidosPorComercio
     @idComercio INT
 AS
@@ -176,7 +160,7 @@ BEGIN
     GROUP BY CAST(ped.fecha AS DATE)
     ORDER BY fecha;
 END;
-EXEC sp_ReportePedidosConsolidado @idComercio = 3;
+EXEC ReportePedidosPorComercio @idComercio = 3;
 
 
 
@@ -219,18 +203,15 @@ BEGIN
             RETURN;
         END
         
-        -- 4. Verificar que no existe un plato con el mismo nombre en la misma sección
         IF EXISTS (SELECT 1 FROM Plato WHERE nombre = @nombrePlato AND idSeccion = @idSeccion)
         BEGIN
             RAISERROR('Ya existe este plato', 16, 1);
             RETURN;
         END
         
-        -- 5. Generar nuevo ID para el plato
         DECLARE @nuevoIdPlato INT;
         SELECT @nuevoIdPlato = ISNULL(MAX(id), 0) + 1 FROM Plato;
         
-        -- 6. Insertar el nuevo plato
         INSERT INTO Plato (
             id, 
             nombre, 

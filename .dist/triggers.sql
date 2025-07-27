@@ -8,7 +8,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    DECLARE @porcentajeIVA DECIMAL(5,2) = 16.00; -- Puedes ajustar este valor según tu configuración fiscal
+    DECLARE @porcentajeIVA DECIMAL(5,2) = 16.00; 
 
     INSERT INTO Factura (
         numero,
@@ -20,7 +20,7 @@ BEGIN
         idPedido
     )
     SELECT
-        i.id,  -- usaremos el id del pedido como número de factura
+        i.id, 
         CAST(GETDATE() AS DATE) AS fecha_emision,
         CAST(ISNULL(PD.TotalItems + Extras.TotalExtras, 0) AS DECIMAL(10,2)) AS sub_total,
         @porcentajeIVA,
@@ -117,19 +117,17 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- 1. Eliminar registros dependientes en PedidoDetalleOpcionValor
+    -- eliminamos las tuplas dependientes en PedidoDetalleOpcionValor
     DELETE FROM PedidoDetalleOpcionValor
     WHERE idPedidoDetalle IN (SELECT id FROM DELETED);
 
-    -- 2. Actualizar la cantidad disponible y disponibilidad del Plato
     UPDATE P
     SET
         P.cantidadDisponible = P.cantidadDisponible + D.cantidad,
-        P.disponibilidad = 1 -- suponiendo que es BIT y 1 significa "disponible"
+        P.disponibilidad = 1 
     FROM Plato P
     INNER JOIN DELETED D ON D.idPlato = P.id;
 
-    -- 3. Eliminar de PedidoDetalle
     DELETE FROM PedidoDetalle
     WHERE id IN (SELECT id FROM DELETED);
 END;
@@ -183,14 +181,13 @@ VALUES (1003, 1, 'Sin sal', 12.00, 218, 1);
 
 
 ------------- Es el D ------------------
-CREATE TRIGGER trg_validar_inventario_pedido_detalle
+CREATE TRIGGER validarDisponibilidadPlato
 ON PedidoDetalle
 INSTEAD OF INSERT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- Validar existencia de los platos
     IF EXISTS (
         SELECT 1
         FROM inserted i
@@ -198,11 +195,10 @@ BEGIN
         WHERE p.id IS NULL
     )
     BEGIN
-        RAISERROR('Uno o más productos no existen.', 16, 1);
+        RAISERROR('Uno o más productos no existen', 16, 1);
         RETURN;
     END
 
-    -- Validar que haya al menos una unidad disponible
     IF EXISTS (
         SELECT 1
         FROM inserted i
@@ -210,11 +206,11 @@ BEGIN
         WHERE p.cantidadDisponible = 0
     )
     BEGIN
-        RAISERROR('El producto no está disponible por los momentos.', 16, 1);
+        RAISERROR('El producto no está disponible por los momentos', 16, 1);
         RETURN;
     END
 
-    -- Validar que haya suficientes unidades disponibles para todos los detalles
+    -- Validar que haya suficientes unidades disponibles para todos los detalles asociados al pedido
     IF EXISTS (
         SELECT 1
         FROM inserted i
@@ -222,16 +218,14 @@ BEGIN
         WHERE i.cantidad > p.cantidadDisponible
     )
     BEGIN
-        RAISERROR('No hay unidades suficientes del producto para esta compra.', 16, 1);
+        RAISERROR('No hay unidades suficientes del producto para esta compra', 16, 1);
         RETURN;
     END
 
-    -- Si todo está correcto, insertar los registros
     INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
     SELECT id, cantidad, nota, total, idPedido, idPlato
     FROM inserted;
 
-    -- Actualizar el inventario restando las cantidades correspondientes
     UPDATE P
     SET P.cantidadDisponible = P.cantidadDisponible - T.total_cantidad
     FROM Plato P

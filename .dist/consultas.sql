@@ -211,7 +211,7 @@ ORDER BY
     qco.MontoTotalGastado DESC;
 
 
---Consulta D
+----------- D------------------------------
 SELECT 
     CCR.idClienteReferido AS id_referido,
     C.nombre + ' ' + C.apellido AS nombre_completo,

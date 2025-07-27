@@ -1,4 +1,3 @@
---Estado del pedido 
 INSERT INTO EstadoPedido (id, nombre, tiempo_promedio, descripcion) VALUES
 (1, 'Pendiente', 5, 'Pedido registrado, esperando confirmación.'),
 (2, 'Confirmado', 10, 'Pedido confirmado por el comercio.'),
@@ -16,7 +15,7 @@ INSERT INTO EstadoPedido (id, nombre, tiempo_promedio, descripcion) VALUES
 (14, 'Programado', 60, 'Pedido programado para entrega futura.'),
 (15, 'Error en Pago', 0, 'El pago no se procesó correctamente, pedido en revisión.');
 
---Cocina
+
 INSERT INTO Cocina (id, nombre, descripcion) VALUES
 (1, 'China', 'Especialidades de comida china y oriental.'),
 (2, 'Mexicana', 'Tacos, enchiladas y gastronomía mexicana tradicional.'),
@@ -157,7 +156,7 @@ INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, ape
 (99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '2003-08-25', 'V30235888'),
 (100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1970-12-10', 'V9768576');
 
---Direcciones Generales de la base de datos
+
 INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) VALUES
 (1, '1010', 'Av. Principal', 'Caracas', 'Casa', 'Quinta Carmen'),
 (2, '1020', 'Calle Sucre', 'Maracaibo', 'Apartamento', 'Res. Altamira'),
@@ -260,7 +259,7 @@ INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) 
 (99, '1891', 'Calle 21', 'Guarenas', 'Apartamento', 'Res. Río Verde'),
 (100, '1901', 'Calle 9', 'Mérida', 'Casa', 'Casa del Río');
 
--- Clientes con 1 dirección (clientes 1 al 80)
+-- Clientes con 1 dirección
 INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
 (1, 1), (2, 2), (3, 3), (4, 4), (5, 5),
 (6, 6), (7, 7), (8, 8), (9, 9), (10, 10),
@@ -279,7 +278,8 @@ INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
 (71, 71), (72, 72), (73, 73), (74, 74), (75, 75),
 (76, 76), (77, 77), (78, 78), (79, 79), (80, 80);
 
--- Clientes con 2 o más direcciones (clientes 81 al 100)
+
+-- Clientes con 2 o más direcciones
 INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
 (81, 81), (81, 91),
 (82, 82), (82, 92),
@@ -303,7 +303,6 @@ INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
 (100, 8), (100, 9), (100, 10);
 
 
--- Insertar 35 comercios con datos aleatorios
 INSERT INTO Comercio (id, password, telefono, fecha_registro, correo, nombre, ubicacion_fisica, hora_apertura, hora_cierre, estaActivo) VALUES
 (1, 'pass123', '0412134567', '2024-01-15', 'parrillacriolla@gmail.com', 'Parrilla Criolla', 'Av. Libertador, Caracas', 11, 23, 1),
 (2, 'pass456', '0414986543', '2024-02-10', 'sushiplace@hotmail.com', 'Sushi Place', 'Calle Colombia, Valencia', 12, 22, 1),
@@ -341,9 +340,9 @@ INSERT INTO Comercio (id, password, telefono, fecha_registro, correo, nombre, ub
 (34, 'pass567', '04269020888', '2025-07-20', 'tapesbar@hotmail.com', 'Tapas Bar', 'Calle España, Caracas', 13, 22, 0),
 (35, 'pass890', '04142137207', '2024-04-24', 'koreabbq@gmail.com', 'Korea BBQ', 'Av. Fuerzas Armadas, Puerto Ordaz', 11, 21, 0);
 
--- Asignación aleatoria de cocinas (30% con 2+ cocinas)
+-- 30% con 2 o mas cocinas
 INSERT INTO ComercioCocina (idComercio, idCocina) VALUES
--- Comercios con múltiples cocinas (12 comercios)
+-- 12 comercios con múltiples cocinas
 (1, 7), (1, 25), (1, 35),
 (2, 4), (2, 24), (2, 28),
 (3, 3), (3, 9), (3, 26),
@@ -357,7 +356,7 @@ INSERT INTO ComercioCocina (idComercio, idCocina) VALUES
 (11, 12), (11, 35),
 (12, 13), (12, 14),
 
--- Comercios con una sola cocina (23 comercios)
+-- 23 comercios con una sola cocina
 (13, 15),
 (14, 16),
 (15, 17),
@@ -382,7 +381,7 @@ INSERT INTO ComercioCocina (idComercio, idCocina) VALUES
 (34, 11),
 (35, 15);
 
--- Insertar menús para cada comercio (1 menú por comercio)
+-- 35 menús, 1 por cada comercio
 INSERT INTO Menu (id, nombre, descripcion, idComercio) VALUES
 (1, 'Menú Parrillero', 'Especialidades de parrilla criolla venezolana', 1),
 (2, 'Menú Sushi Experience', 'Variedad de sushi, sashimi y rolls japoneses', 2),
@@ -420,247 +419,213 @@ INSERT INTO Menu (id, nombre, descripcion, idComercio) VALUES
 (34, 'Menú Español', 'Tapas y platos tradicionales españoles', 34),
 (35, 'Menú Coreano BBQ', 'Barbacoa coreana con cortes selectos', 35);
 
--- Por lo menos 5 secciones por menú
+-- 175 secciones, 5 por cada menú
 INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
--- Menú Parrillero (idMenu: 1)
+
 (1, 'Carnes a la Brasa', 'Cortes premium y clásicos de la parrilla', 1),
 (2, 'Contornos', 'Acompañamientos frescos y sabrosos', 1),
 (3, 'Entradas Parrilleras', 'Picadas y aperitivos para empezar', 1),
 (4, 'Postres Criollos', 'Dulces típicos para cerrar con broche de oro', 1),
 (5, 'Bebidas', 'Jugos naturales y refrescos', 1),
 
--- Menú Sushi Experience (idMenu: 2)
 (6, 'Nigiri y Sashimi', 'Selección de pescados frescos y mariscos', 2),
 (7, 'Rolls Especiales', 'Variedad de makis y uramakis innovadores', 2),
 (8, 'Temaki y Gunkan', 'Conos y barquitos de arroz y alga', 2),
 (9, 'Platos Calientes Japoneses', 'Tempuras, yakitoris y otras delicias', 2),
 (10, 'Ensaladas y Sopas', 'Opciones ligeras y tradicionales', 2),
 
--- Menú Pasta Artesanal (idMenu: 3)
 (11, 'Pastas Largas', 'Spaghetti, Fettuccine y Linguine con diversas salsas', 3),
 (12, 'Pastas Rellenas', 'Ravioles, Tortellinis y Gnocchis caseros', 3),
 (13, 'Salsas Clásicas', 'Boloñesa, Pesto, Carbonara y más', 3),
 (14, 'Antipastos', 'Entradas italianas para compartir', 3),
 (15, 'Postres Italianos', 'Tiramisú, Panna Cotta y Cannoli', 3),
 
--- Menú Mexicano (idMenu: 4)
 (16, 'Tacos y Burritos', 'Maíz y trigo con rellenos variados', 4),
 (17, 'Enchiladas y Quesadillas', 'Platillos gratinados y rellenos', 4),
 (18, 'Especialidades Regionales', 'Mole Poblano, Chiles Rellenos, etc.', 4),
 (19, 'Bebidas', 'Aguas frescas, Horchata y Micheladas', 4),
 (20, 'Sopas y Ensaladas Mexicanas', 'Pozole, Sopa de Tortilla, Ensalada de Nopal', 4),
 
--- Menú Wok Fusion (idMenu: 5)
 (21, 'Wok de Carnes', 'Res, pollo y cerdo salteados al wok', 5),
 (22, 'Wok de Mariscos y Vegetales', 'Frescos vegetales y frutos del mar', 5),
 (23, 'Fideos y Arroces Wok', 'Chow Mein, Arroz Frito y Pad Thai', 5),
 (24, 'Entradas Asiáticas', 'Rollitos Primavera, Gyozas, Satays', 5),
 (25, 'Salsas Especiales', 'Salsa de ostras, agridulce, cacahuete', 5),
 
--- Menú Curry Tradicional (idMenu: 6)
 (26, 'Currys Rojos', 'Picantes y aromáticos con leche de coco', 6),
 (27, 'Currys Verdes', 'Ligeros y herbáceos con especias frescas', 6),
 (28, 'Currys Amarillos', 'Suaves y cremosos, ideales para iniciarse', 6),
 (29, 'Acompañamientos', 'Arroz Basmati, Naan, Chutney', 6),
 (30, 'Platos Tandoori', 'Carnes y panes cocidos en horno Tandoor', 6),
 
--- Menú Mediterráneo (idMenu: 7)
 (31, 'Entradas Griegas y Árabes', 'Hummus, Tzatziki, Baba Ghanoush', 7),
 (32, 'Pescados y Mariscos Frescos', 'A la plancha, al horno y en papillote', 7),
 (33, 'Ensaladas Mediterráneas', 'Tabule, Griega, Caprese', 7),
 (34, 'Principales', 'Moussaka, Kebab, Cuscús', 7),
 (35, 'Postres Ligeros', 'Frutas frescas, Yogur Griego con miel', 7),
 
--- Menú Arepera 24/7 (idMenu: 8)
 (36, 'Arepas Rellenas Clásicas', 'Reina Pepiada, Dominó, Pelúa', 8),
 (37, 'Arepas Gourmet', 'Combinaciones especiales e ingredientes premium', 8),
 (38, 'Arepas Veganas', 'Opciones con rellenos a base de plantas', 8),
 (39, 'Empanadas y Tequeños', 'Pasapalos venezolanos tradicionales', 8),
 (40, 'Bebidas', 'Jugos frescos y energéticos', 8),
 
--- Menú Boulangerie (idMenu: 9)
 (41, 'Panes Artesanales', 'Baguettes, Campesinos, Croissants', 9),
 (42, 'Bollería Fina', 'Pain au chocolat, Brioches, Danesas', 9),
 (43, 'Tartas y Pasteles', 'Éclairs, Tarte Tatin, Mille-feuille', 9),
 (44, 'Sándwiches Gourmet', 'Bocadillos con pan recién horneado', 9),
 (45, 'Bebidas', 'Café, Chocolate, Infusiones', 9),
 
--- Menú Paellero (idMenu: 10)
 (46, 'Paellas de Mariscos', 'La clásica valenciana con frutos del mar', 10),
 (47, 'Paellas Mixtas', 'Mariscos y carnes de pollo y conejo', 10),
 (48, 'Paellas de Carne y Vegetales', 'Opciones robustas sin mariscos', 10),
 (49, 'Tapas y Entremeses', 'Patatas Bravas, Gambas al Ajillo, Chorizo a la Sidra', 10),
 (50, 'Bebidas', 'Sangría, Cava, Vinos de la región', 10),
 
--- Menú Cevichero (idMenu: 11)
 (51, 'Ceviches Clásicos', 'Pescado blanco, mixtos, con ají amarillo', 11),
 (52, 'Tiraditos y Causas', 'Delicados cortes y purés de papa', 11),
 (53, 'Leche de Tigre', 'La esencia del ceviche para beber', 11),
 (54, 'Platos Calientes Peruanos', 'Lomo Saltado, Ají de Gallina', 11),
 (55, 'Bebidas', 'Chicha Morada, Inca Kola', 11),
 
--- Menú Churrasco (idMenu: 12)
 (56, 'Cortes de Res', 'Picanha, Maminha, Fraldinha', 12),
 (57, 'Cortes de Cerdo y Pollo', 'Costillas, Linguiça, Corazón de Pollo', 12),
 (58, 'Acompañamientos Brasileños', 'Arroz, Feijão, Farofa, Vinagrete', 12),
 (59, 'Ensaladas Frescas', 'Variedad para equilibrar las carnes', 12),
 (60, 'Postres Típicos', 'Brigadeiro, Pudim de Leite Condensado', 12),
 
--- Menú Coreano (idMenu: 13)
 (61, 'Sopas y Estofados', 'Kimchi Jjigae, Sundubu Jjigae', 13),
 (62, 'Noodles Coreanos', 'Japchae, Bibim Guksu', 13),
 (63, 'Arroces Coreanos', 'Bibimbap, Gimbap', 13),
 (64, 'Acompañamientos (Banchan)', 'Kimchi, Danmuji, Namul', 13),
 (65, 'Fritos y Snacks', 'Tteokbokki, Pajeon', 13),
 
--- Menú Thai (idMenu: 14)
 (66, 'Currys Tailandeses', 'Massaman, Panang, Gaeng Keow Wan', 14),
 (67, 'Fideos y Arroces', 'Pad Thai, Khao Pad, Pad See Ew', 14),
 (68, 'Sopas Thai', 'Tom Yum Goong, Tom Kha Gai', 14),
 (69, 'Platos Salteados', 'Pad Krapow, Pad Priew Wan', 14),
 (70, 'Entradas y Postres', 'Spring Rolls, Mango Sticky Rice', 14),
 
--- Menú Vietnamita (idMenu: 15)
 (71, 'Pho y Sopas', 'La icónica sopa de fideos, Bun Bo Hue', 15),
 (72, 'Rollos Frescos y Fritos', 'Gỏi Cuốn (Rollos de Verano), Nem Rán (Rollos Fritos)', 15),
 (73, 'Platos con Arroz', 'Cơm Tấm (Arroz Partido), Arroz Frito Vietnamita', 15),
 (74, 'Platos con Fideos de Arroz', 'Bún Chả, Bún Thịt Nướng', 15),
 (75, 'Bebidas y Postres', 'Café Vietnamita, Chè', 15),
 
--- Menú Colombiano (idMenu: 16)
 (76, 'Bandejas y Platos Fuertes', 'Bandeja Paisa, Sancocho, Lechona', 16),
 (77, 'Arepas y Empanadas', 'Variedad de rellenos y acompañamientos', 16),
 (78, 'Sopas y Cremas', 'Ajiaco, Crema de Champiñones', 16),
 (79, 'Postres Típicos', 'Obleas, Natilla, Brevas con Arequipe', 16),
 (80, 'Bebidas', 'Aguapanela, Jugos en Leche', 16),
 
--- Menú Sin Gluten (idMenu: 17)
 (81, 'Entradas Libres de Gluten', 'Ensaladas, cremas, y aperitivos sin trigo', 17),
 (82, 'Principales', 'Carnes, pescados y aves con guarniciones GF', 17),
 (83, 'Pastas y Panes Sin Gluten', 'Opciones seguras y deliciosas', 17),
 (84, 'Postres Sin Gluten', 'Variedad de dulces aptos para celíacos', 17),
 (85, 'Opciones Veganas Sin Gluten', 'Platos basados en plantas y sin gluten', 17),
 
--- Menú Salvadoreño (idMenu: 18)
 (86, 'Pupusas y Curtido', 'La especialidad salvadoreña por excelencia', 18),
 (87, 'Tamales y Yuca', 'Platos tradicionales con maíz y yuca', 18),
 (88, 'Sopas y Caldos', 'Sopa de Res, Sopa de Pescado', 18),
 (89, 'Platos Fuertes', 'Carne Asada, Pollo Guisado', 18),
 (90, 'Bebidas', 'Horchata de Morro, Tamarindo', 18),
 
--- Menú Griego (idMenu: 19)
 (91, 'Mezze (Entradas)', 'Tzatziki, Hummus, Dolmades', 19),
 (92, 'Principales', 'Moussaka, Gyros, Souvlaki', 19),
 (93, 'Ensaladas y Guarniciones', 'Ensalada Griega, Arroz Pilaf', 19),
 (94, 'Mariscos y Pescados', 'Pulpo a la Parrilla, Pescado Fresco', 19),
 (95, 'Postres Griegos', 'Baklava, Loukoumades', 19),
 
--- Menú Turco (idMenu: 20)
 (96, 'Mezze Fríos', 'Haydari, Ezme, Patlıcan Salatası', 20),
 (97, 'Mezze Calientes', 'Sigara Böreği, Sucuk Izgara', 20),
 (98, 'Kebabs y Carnes a la Parrilla', 'Adana Kebab, Shish Kebab, Köfte', 20),
 (99, 'Principales', 'Testi Kebab, İskender Kebab', 20),
 (100, 'Postres Turcos', 'Baklava, Künefe, Lokum', 20),
 
--- Menú Alemán (idMenu: 21)
 (101, 'Salchichas y Wurst', 'Bratwurst, Currywurst, Weisswurst', 21),
 (102, 'Platos con Carne', 'Schnitzel, Schweinshaxe (Codillo de cerdo)', 21),
 (103, 'Acompañamientos', 'Sauerkraut, Knödel, Spätzle', 21),
 (104, 'Sopas y Ensaladas', 'Kartoffelsalat (Ensalada de Papa), Goulashsuppe', 21),
 (105, 'Postres Alemanes', 'Apfelstrudel, Schwarzwälder Kirschtorte (Tarta Selva Negra)', 21),
 
--- Menú Fusión (idMenu: 22)
 (106, 'Entradas Fusion', 'Combinaciones inesperadas de sabores', 22),
 (107, 'Platos Fuertes Fusion', 'Creaciones únicas con influencias diversas', 22),
 (108, 'Wok y Salteados Fusion', 'Técnicas asiáticas con ingredientes occidentales', 22),
 (109, 'Sushi Creativo', 'Rolls con ingredientes no tradicionales', 22),
 (110, 'Postres Innovadores', 'Mezclas de dulces de diferentes culturas', 22),
 
--- Menú Orgánico (idMenu: 23)
 (111, 'Ensaladas Orgánicas', 'Frescas y de temporada con aderezos naturales', 23),
 (112, 'Principales', 'Carnes, aves y vegetales de granjas sostenibles', 23),
 (113, 'Opciones Veganas Orgánicas', 'Basadas en plantas con certificación orgánica', 23),
 (114, 'Sopas y Cremas Orgánicas', 'Elaboradas con ingredientes de cultivo ecológico', 23),
 (115, 'Bebidas y Postres Orgánicos', 'Jugos, infusiones y dulces saludables', 23),
 
--- Menú Casero (idMenu: 24)
 (116, 'Sopas y Cremas Caseras', 'Recetas de la abuela, con sabor a hogar', 24),
 (117, 'Principales', 'Guisos, Asados y Estofados tradicionales', 24),
 (118, 'Contornos Venezolanos', 'Arroz, Tajadas, Ensalada rallada', 24),
 (119, 'Postres de la Abuela', 'Arroz con leche, Dulce de lechosa', 24),
 (120, 'Bebidas', 'Papelón con limón, Chicha', 24),
 
--- Menú Tex-Mex (idMenu: 25)
 (121, 'Nachos y Entradas Tex-Mex', 'Queso, jalapeños, guacamole', 25),
 (122, 'Fajitas y Chimichangas', 'Con carnes, pollo o vegetales', 25),
 (123, 'Burritos y Enchiladas', 'Rellenos abundantes y salsas picantes', 25),
 (124, 'Chili y Soups', 'Chili con carne, Sopa de tortilla', 25),
 (125, 'Bebidas', 'Refrescos, Cervezas artesanales', 25),
 
--- Menú Street Food (idMenu: 26)
 (126, 'Tacos y Arepas Callejeras', 'Variedad de rellenos rápidos', 26),
 (127, 'Burgers y Hot Dogs Gourmet', 'Versiones elevadas de clásicos urbanos', 26),
 (128, 'Brochetas y Pinchos', 'Carnes, vegetales y mariscos a la brasa', 26),
 (129, 'Fritos Internacionales', 'Papas fritas con aderezos, Churros', 26),
 (130, 'Bebidas', 'Limonadas, Tes fríos, Smoothies', 26),
 
--- Menú Saludable (idMenu: 27)
 (131, 'Ensaladas de Autor', 'Frescas y nutritivas con ingredientes de calidad', 27),
 (132, 'Proteínas Magras', 'Pollo a la plancha, Pescado al vapor, Tofu', 27),
 (133, 'Bowl de Cereales y Vegetales', 'Quinoa, Arroz integral, Legumbres', 27),
 (134, 'Snacks Saludables', 'Frutas, frutos secos, barras energéticas', 27),
 (135, 'Jugos Verdes y Detox', 'Combinaciones de frutas y vegetales', 27),
 
--- Menú Comfort Food (idMenu: 28)
 (136, 'Sopas y Guisos Reconfortantes', 'Sopa de lentejas, Estofado de res', 28),
 (137, 'Platos Clásicos Americanos', 'Mac and Cheese, Albóndigas, Pastel de carne', 28),
 (138, 'Acompañamientos Abundantes', 'Puré de papa, Patatas asadas', 28),
 (139, 'Postres Caseros', 'Brownies, Crumble de manzana, Cookies', 28),
 (140, 'Bebidas', 'Malteadas, Chocolates Calientes', 28),
 
--- Menú Mar y Tierra (idMenu: 29)
 (141, 'Cortes Premium de Carne', 'Filet Mignon, Ribeye, Lomo de Cerdo', 29),
 (142, 'Mariscos Frescos', 'Langosta, Camarones, Pulpo a la parrilla', 29),
 (143, 'Combinados de Mar y Tierra', 'Surf & Turf, Paella Mixta', 29),
 (144, 'Guarniciones Gourmet', 'Espárragos, Patatas gratinadas, Hongos salteados', 29),
 (145, 'Postres Delicados', 'Mousse de chocolate, Crème brûlée', 29),
 
--- Menú Pizza Napolitana (idMenu: 30)
 (146, 'Pizzas Clásicas', 'Margherita, Marinara, Prosciutto e Funghi', 30),
 (147, 'Pizzas Especiales', 'Combinaciones únicas con ingredientes frescos', 30),
 (148, 'Focaccias y Calzones', 'Panes y masas rellenas', 30),
 (149, 'Ensaladas Italianas', 'Para acompañar tu pizza', 30),
 (150, 'Bebidas', 'Gaseosas, cervezas artesanales', 30),
 
--- Menú Oriental (idMenu: 31)
 (151, 'Dim Sum y Dumplings', 'Variedad de rellenos al vapor o fritos', 31),
 (152, 'Platos con Arroz', 'Arroz frito, arroz al vapor, arroces especiales', 31),
 (153, 'Fideos Orientales', 'Chow Mein, Pad Thai, Udon', 31),
 (154, 'Sopas Orientales', 'Sopa wonton, Sopa agripicante, Ramen', 31),
 (155, 'Entradas y Postres', 'Rollitos, helados de té verde', 31),
 
--- Menú Argentino (idMenu: 32)
 (156, 'Cortes de Res Argentinos', 'Bife de Chorizo, Ojo de Bife, Asado de Tira', 32),
 (157, 'Empanadas Argentinas', 'Carne, Pollo, Jamón y Queso', 32),
 (158, 'Achuras y Provolone', 'Mollejas, Chinchulines, Queso Provolone a la parrilla', 32),
 (159, 'Guarniciones Típicas', 'Papas fritas, Ensalada mixta, Puré de calabaza', 32),
 (160, 'Postres y Bebidas', 'Flan mixto, Alfajores, Vinos argentinos', 32),
 
--- Menú Francés (idMenu: 33)
 (161, 'Entradas Francesas', 'Sopa de cebolla, Paté, Tartare de bœuf', 33),
 (162, 'Principales', 'Gallo al vino, Carne de res a la borgoñona, Confitado de pato', 33),
 (163, 'Pescados y Mariscos', 'Meunière, Sopa de pescado provenzal', 33),
 (164, 'Guarniciones y Verduras', 'Gratin Dauphinois, Haricots Verts', 33),
 (165, 'Postres y Quesos', 'Crème brûlée, Tarta de manzana, Selección de quesos', 33),
 
--- Menú Español (idMenu: 34)
 (166, 'Tapas Frías', 'Jamón Serrano, Queso Manchego, Tortilla Española', 34),
 (167, 'Tapas Calientes', 'Gambas al ajillo, Croquetas, Patatas Bravas', 34),
 (168, 'Paellas y Arroces', 'Paella de marisco, Arroz negro, Fideuá', 34),
 (169, 'Principales', 'Cochinillo Asado, Rabo de Toro', 34),
 (170, 'Postres Españoles', 'Churros con chocolate, Crema catalana', 34),
 
--- Menú Coreano BBQ (idMenu: 35)
 (171, 'Cortes de Carne para BBQ', 'Bulgogi, Galbi, Samgyeopsal', 35),
 (172, 'Marinados Especiales', 'Recetas tradicionales y picantes', 35),
 (173, 'Guarniciones de BBQ (Banchan)', 'Kimchi fresco, Ensaladas de repollo', 35),
@@ -671,184 +636,155 @@ INSERT INTO Seccion (id, nombre, descripcion, idMenu) VALUES
 -- 120 Platos
 
 INSERT INTO Plato (id, nombre, orden, cantidadDisponible, precio, descripcion, idSeccion, disponibilidad) VALUES
--- Platos para Menú Parrillero (idMenu: 1, idSeccion: 1-5)
 (1, 'Asado Negro Criollo', 1, 20, 18.50, 'Carne de res cocida lentamente en su jugo oscuro.', 1, 1),
 (2, 'Punta Trasera a la Brasa', 2, 25, 22.00, 'Corte jugoso y tierno, ideal para amantes de la carne.', 1, 1),
 (3, 'Chorizo Parrillero', 3, 30, 8.00, 'Chorizo casero asado a la perfección.', 3, 1),
 (4, 'Ensalada Rallada', 1, 50, 5.00, 'Repollo y zanahoria rallados con aderezo suave.', 2, 1),
 (122, 'Pepsi Cola', 4, 60, 2.00, 'Refrescante bebida gaseosa de cola negra', 5, 1),
 
--- Platos para Menú Sushi Experience (idMenu: 2, idSeccion: 6-10)
 (5, 'Roll California', 1, 40, 12.00, 'Clásico rollo con cangrejo, aguacate y pepino.', 7, 1),
 (6, 'Nigiri Salmón', 2, 35, 3.50, 'Fina lámina de salmón fresco sobre arroz avinagrado.', 6, 1),
 (7, 'Sopa Miso', 1, 60, 4.00, 'Caldo ligero con tofu, alga nori y cebollín.', 10, 1),
 (8, 'Ebi Tempura', 1, 28, 15.00, 'Camarones en tempura crujiente.', 9, 1),
 
--- Platos para Menú Pasta Artesanal (idMenu: 3, idSeccion: 11-15)
 (9, 'Fettuccine Alfredo', 1, 30, 14.50, 'Pasta fresca con cremosa salsa Alfredo.', 11, 1),
 (10, 'Lasagna Clásica', 2, 20, 16.00, 'Capas de pasta, carne y bechamel horneadas.', 12, 1),
 (11, 'Ensalada Caprese', 1, 35, 9.00, 'Tomate, mozzarella fresca y albahaca.', 14, 1),
 (12, 'Tiramisú', 1, 25, 7.50, 'Postre italiano con café, mascarpone y bizcochos.', 15, 1),
 
--- Platos para Menú Mexicano (idMenu: 4, idSeccion: 16-20)
 (13, 'Tacos al Pastor', 1, 45, 10.00, 'Cerdo marinado y asado con piña.', 16, 1),
 (14, 'Burrito de Carnitas', 2, 30, 11.50, 'Tortilla de trigo rellena de cerdo confitado.', 16, 1),
 (15, 'Pozol', 1, 50, 8.00, 'Bebida prehispánica a base de maíz fermentado.', 19, 1),
 (16, 'Enchiladas Rojas', 1, 25, 13.00, 'Tortillas rellenas bañadas en salsa roja.', 17, 1),
 
--- Platos para Menú Wok Fusion (idMenu: 5, idSeccion: 21-25)
 (17, 'Wok de Pollo Teriyaki', 1, 35, 14.00, 'Pollo salteado con vegetales y salsa teriyaki.', 21, 1),
 (18, 'Arroz Frito Especial', 2, 40, 10.50, 'Arroz con camarones, pollo y vegetales.', 23, 1),
 (19, 'Rollitos Primavera', 1, 50, 7.00, 'Vegetales frescos envueltos y fritos.', 24, 1),
 (20, 'Fideos de Arroz con Camarones', 1, 30, 16.00, 'Fideos finos con camarones y salsa suave.', 22, 1),
 
--- Platos para Menú Curry Tradicional (idMenu: 6, idSeccion: 26-30)
 (21, 'Curry Rojo de Res', 1, 25, 17.00, 'Carne de res en curry rojo tailandés.', 26, 1),
 (22, 'Curry Verde de Pollo', 2, 30, 15.50, 'Pollo en cremoso curry verde.', 27, 1),
 (23, 'Arroz Basmati', 1, 50, 4.00, 'Arroz aromático para acompañar.', 29, 1),
 (24, 'Pan Naan', 1, 40, 3.00, 'Pan plano tradicional indio.', 29, 1),
 
--- Platos para Menú Mediterráneo (idMenu: 7, idSeccion: 31-35)
 (25, 'Hummus con Pan Pita', 1, 40, 8.50, 'Crema de garbanzos con pan árabe.', 31, 1),
 (26, 'Moussaka', 1, 20, 16.00, 'Pastel de berenjenas, carne y bechamel.', 34, 1),
 (27, 'Ensalada Griega', 1, 35, 9.50, 'Tomate, pepino, cebolla, aceitunas y queso feta.', 33, 1),
 (28, 'Souvlaki de Pollo', 1, 28, 14.00, 'Brochetas de pollo a la parrilla.', 32, 1),
 
--- Platos para Menú Arepera 24/7 (idMenu: 8, idSeccion: 36-40)
 (29, 'Arepa Reina Pepiada', 1, 60, 9.00, 'Rellena de pollo desmechado con aguacate.', 36, 1),
 (30, 'Arepa Pelúa', 2, 55, 9.50, 'Rellena de carne mechada con queso amarillo.', 36, 1),
 (31, 'Empanada de Carne', 1, 70, 4.00, 'Crujiente empanada frita rellena de carne.', 39, 1),
 (32, 'Jugo de Parchita', 1, 50, 3.50, 'Jugo natural de maracuyá.', 40, 1),
 
--- Platos para Menú Boulangerie (idMenu: 9, idSeccion: 41-45)
 (33, 'Croissant de Almendras', 1, 40, 4.50, 'Crujiente croissant con crema de almendras.', 42, 1),
 (34, 'Baguette Clásica', 1, 30, 3.00, 'Pan francés recién horneado.', 41, 1),
 (35, 'Éclair de Chocolate', 1, 25, 5.00, 'Dulce francés relleno de crema y cubierto de chocolate.', 43, 1),
 (36, 'Café Latte', 1, 60, 4.00, 'Café con leche espumosa.', 45, 1),
 
--- Platos para Menú Paellero (idMenu: 10, idSeccion: 46-50)
 (37, 'Paella de Mariscos', 1, 20, 25.00, 'Arroz con azafrán y una variedad de mariscos.', 46, 1),
 (38, 'Tapas de Gambas al Ajillo', 1, 30, 12.00, 'Gambas salteadas en aceite de oliva y ajo.', 49, 1),
 (39, 'Paella Mixta', 2, 18, 24.00, 'Arroz con pollo, cerdo y mariscos.', 47, 1),
 (40, 'Sangría Tradicional', 1, 25, 8.00, 'Vino tinto con frutas y especias.', 50, 1),
 
--- Platos para Menú Cevichero (idMenu: 11, idSeccion: 51-55)
 (41, 'Ceviche Clásico de Pescado', 1, 30, 18.00, 'Pescado blanco marinado en leche de tigre.', 51, 1),
 (42, 'Tiradito de Pulpo', 1, 25, 19.50, 'Finas láminas de pulpo con salsa de aceitunas.', 52, 1),
 (43, 'Causa Limeña', 1, 28, 14.00, 'Puré de papa amarilla relleno de atún o pollo.', 52, 1),
 (44, 'Chicha Morada', 1, 40, 4.00, 'Bebida de maíz morado.', 55, 1),
 
--- Platos para Menú Churrasco (idMenu: 12, idSeccion: 56-60)
 (45, 'Picanha a la Espada', 1, 20, 28.00, 'Corte estrella de la churrasquería brasileña.', 56, 1),
 (46, 'Fraldinha', 2, 22, 26.00, 'Corte de falda jugoso y lleno de sabor.', 56, 1),
 (47, 'Arroz Blanco', 1, 50, 4.00, 'Arroz suelto y perfecto para acompañar.', 58, 1),
 (48, 'Brigadeiro', 1, 35, 3.00, 'Dulce de chocolate brasileño.', 60, 1),
 
--- Platos para Menú Coreano (idMenu: 13, idSeccion: 61-65)
 (49, 'Bibimbap', 1, 30, 16.00, 'Arroz mezclado con vegetales, carne y huevo.', 63, 1),
 (50, 'Kimchi Jjigae', 1, 25, 14.00, 'Estofado picante de kimchi con tofu y carne.', 61, 1),
 (51, 'Japchae', 1, 28, 13.50, 'Fideos de batata salteados con vegetales y carne.', 62, 1),
 (52, 'Kimchi', 1, 50, 5.00, 'Col fermentada picante, acompañamiento esencial.', 64, 1),
 
--- Platos para Menú Thai (idMenu: 14, idSeccion: 66-70)
 (53, 'Pad Thai con Pollo', 1, 35, 14.00, 'Fideos de arroz salteados con pollo, huevo y cacahuetes.', 67, 1),
 (54, 'Tom Yum Goong', 1, 28, 12.00, 'Sopa picante de camarones con hierbas aromáticas.', 68, 1),
 (55, 'Curry Massaman con Res', 1, 20, 17.50, 'Curry suave y aromático con cacahuetes y papa.', 66, 1),
 (56, 'Mango Sticky Rice', 1, 25, 7.00, 'Arroz pegajoso con mango fresco y leche de coco.', 70, 1),
 
--- Platos para Menú Vietnamita (idMenu: 15, idSeccion: 71-75)
 (57, 'Pho Bo (Sopa de Res)', 1, 30, 15.00, 'Sopa de fideos de arroz con carne de res y hierbas.', 71, 1),
 (58, 'Gỏi Cuốn (Rollos de Verano)', 1, 40, 9.00, 'Rollos frescos con camarones, cerdo y vegetales.', 72, 1),
 (59, 'Bún Chả', 1, 25, 16.00, 'Fideos de arroz con carne de cerdo a la parrilla.', 74, 1),
 (60, 'Café Vietnamita con Leche Condensada', 1, 35, 5.00, 'Café fuerte con leche condensada dulce.', 75, 1),
 
--- Platos para Menú Colombiano (idMenu: 16, idSeccion: 76-80)
 (61, 'Bandeja Paisa', 1, 20, 20.00, 'Plato insignia con carne, frijoles, arroz, huevo, etc.', 76, 1),
 (62, 'Ajiaco Santafereño', 1, 25, 15.00, 'Sopa de pollo y papas con mazorca y aguacate.', 78, 1),
 (63, 'Empanadas Colombianas', 1, 40, 3.50, 'Empanadas de maíz rellenas de papa y carne.', 77, 1),
 (64, 'Postre de Natilla', 1, 30, 5.00, 'Postre cremoso tradicional.', 79, 1),
 (121, 'Aguapanela', 3, 80, 7.00, 'Una bebida dulce hecha con agua y panela.', 80, 1),
--- Platos para Menú Sin Gluten (idMenu: 17, idSeccion: 81-85)
+
 (65, 'Salmón al Horno con Vegetales Asados', 1, 25, 21.00, 'Plato principal saludable y sin gluten.', 82, 1),
 (66, 'Pasta de Lentejas con Pesto de Albahaca', 1, 30, 15.00, 'Pasta sin gluten con salsa pesto casera.', 83, 1),
 (67, 'Brownie de Chocolate Sin Gluten', 1, 35, 6.00, 'Delicioso brownie apto para celíacos.', 84, 1),
 (68, 'Ensalada Quinoa y Aguacate', 1, 40, 12.00, 'Ensalada nutritiva con proteína completa.', 81, 1),
 
--- Platos para Menú Salvadoreño (idMenu: 18, idSeccion: 86-90)
 (69, 'Pupusa de Queso con Loroco', 1, 45, 4.00, 'Pupusa rellena de queso y flor de loroco.', 86, 1),
 (70, 'Pupusa Revuelta', 2, 40, 4.50, 'Pupusa con chicharrón, frijol y queso.', 86, 1),
 (71, 'Yuca con Chicharrón', 1, 30, 10.00, 'Yuca cocida o frita con trozos de cerdo crujientes.', 87, 1),
 (72, 'Sopa de Res Salvadoreña', 1, 20, 14.00, 'Caldo sustancioso con vegetales y carne.', 88, 1),
 (123, 'Horchata de Morro', 4, 50, 3.50, 'Bebida dulce a base de morro y especias.', 90, 1),
 
--- Platos para Menú Griego (idMenu: 19, idSeccion: 91-95)
 (73, 'Gyros de Cerdo', 1, 30, 13.00, 'Carne de cerdo en pan pita con tzatziki.', 92, 1),
 (74, 'Moussaka', 1, 25, 16.50, 'Capas de berenjena, carne picada y bechamel.', 92, 1),
 (75, 'Tzatziki con Pan Pita', 1, 40, 7.50, 'Salsa de yogur, pepino y ajo.', 91, 1),
 (76, 'Baklava', 1, 35, 6.00, 'Postre de hojaldre con nueces y almíbar.', 95, 1),
 
--- Platos para Menú Turco (idMenu: 20, idSeccion: 96-100)
 (77, 'Adana Kebab', 1, 28, 15.00, 'Brocheta de carne picada sazonada y asada.', 98, 1),
 (78, 'Lahmacun', 1, 35, 9.00, 'Pizza turca con carne picada y vegetales.', 99, 1),
 (79, 'Hummus', 1, 40, 7.00, 'Crema de garbanzos tradicional.', 96, 1),
 (80, 'Künefe', 1, 20, 8.00, 'Postre de queso caliente con cabello de ángel.', 100, 1),
 
--- Platos para Menú Alemán (idMenu: 21, idSeccion: 101-105)
 (81, 'Bratwurst con Sauerkraut', 1, 30, 14.00, 'Salchicha alemana con col fermentada.', 101, 1),
 (82, 'Wiener Schnitzel', 1, 25, 18.00, 'Escalope de ternera empanado y frito.', 102, 1),
 (83, 'Kartoffelsalat', 1, 40, 6.00, 'Ensalada de papa al estilo alemán.', 104, 1),
 (84, 'Apfelstrudel', 1, 30, 6.50, 'Strudel de manzana con helado o crema.', 105, 1),
 
--- Platos para Menú Fusión (idMenu: 22, idSeccion: 106-110)
 (85, 'Tacos de Kimchi y Cerdo', 1, 35, 12.00, 'Fusión coreano-mexicana.', 106, 1),
 (86, 'Sushi Burger', 1, 28, 16.00, 'Hamburguesa con pan de arroz y relleno de sushi.', 109, 1),
 (87, 'Pasta al Curry y Leche de Coco', 1, 25, 15.00, 'Combinación de sabores italianos y asiáticos.', 107, 1),
 (88, 'Cheesecake de Matcha', 1, 20, 8.00, 'Postre clásico con toque japonés.', 110, 1),
 
--- Platos para Menú Orgánico (idMenu: 23, idSeccion: 111-115)
 (89, 'Ensalada de Lentejas y Vegetales Orgánicos', 1, 40, 11.00, 'Opción saludable y nutritiva.', 111, 1),
 (90, 'Pollo Orgánico al Limón con Quinoa', 1, 30, 19.00, 'Plato principal con ingredientes de calidad.', 112, 1),
 (91, 'Sopa de Calabaza Asada Orgánica', 1, 35, 9.00, 'Crema cremosa y natural.', 114, 1),
 (92, 'Smoothie Verde Detox', 1, 50, 7.00, 'Mezcla de frutas y vegetales frescos.', 115, 1),
 
--- Platos para Menú Casero (idMenu: 24, idSeccion: 116-120)
 (93, 'Pabellón Criollo Completo', 1, 25, 17.00, 'Plato nacional venezolano con todos sus componentes.', 117, 1),
 (94, 'Sopa de Costilla Casera', 1, 30, 12.00, 'Caldo sustancioso con costilla de res.', 116, 1),
 (95, 'Arroz con Leche', 1, 40, 5.00, 'Postre cremoso de arroz y leche.', 119, 1),
 (96, 'Asado Negro', 1, 20, 18.00, 'Versión casera del clásico venezolano.', 117, 1),
 (124, 'Papelon con Limon', 2, 30, 10.05, 'Bebida dulce y refrescante hecha con panela y jugo de limón',120, 1),
 
--- Platos para Menú Tex-Mex (idMenu: 25, idSeccion: 121-125)
 (97, 'Fajitas de Pollo', 1, 30, 15.00, 'Tiras de pollo a la parrilla con pimientos y cebolla.', 122, 1),
 (98, 'Nachos Supremos', 1, 40, 11.00, 'Tortillas de maíz con queso, frijoles y más.', 121, 1),
 (99, 'Burrito de Carne Asada', 1, 35, 13.00, 'Relleno de carne asada, arroz, frijoles y salsa.', 123, 1),
 (100, 'Chili con Carne', 1, 25, 10.00, 'Estofado de carne picada con frijoles y especias.', 124, 1),
 (125, 'Cerveza de Raíz', 8, 24, 13.55, 'Bebida carbonatada tradicionalmente endulzada y aromatizada con raíz de sasafrás o zarzaparrilla',125, 1 ),
--- Platos para Menú Street Food (idMenu: 26, idSeccion: 126-130)
+
 (101, 'Taco de Carnitas', 1, 45, 4.00, 'Mini taco con cerdo confitado y cilantro.', 126, 1),
 (102, 'Hamburguesa Clásica con Papas', 1, 35, 12.00, 'Carne, queso, lechuga, tomate y papas fritas.', 127, 1),
 (103, 'Churros con Chocolate', 1, 50, 6.00, 'Masa frita con azúcar y salsa de chocolate.', 129, 1),
 (104, 'Arepa con Queso Telita', 1, 40, 7.50, 'Arepa rellena de queso fresco y suave.', 126, 1),
 (126, 'Smoothie Atardecer Tropical', 1, 45, 3.54, 'Smoothie dulce, ácido y con vibras tropicales', 130, 1),
--- Platos para Menú Saludable (idMenu: 27, idSeccion: 131-135)
+
 (105, 'Bowl de Salmón y Aguacate', 1, 30, 16.00, 'Salmón a la plancha, aguacate, quinoa y vegetales.', 133, 1),
 (106, 'Ensalada de Pollo a la Parrilla', 1, 35, 13.00, 'Pechuga de pollo, mix de lechugas, aderezo ligero.', 131, 1),
 (107, 'Lentejas Estofadas con Verduras', 1, 28, 10.00, 'Plato vegano y nutritivo.', 132, 1),
 (108, 'Barra Energética Casera', 1, 40, 4.00, 'Avena, frutos secos y miel.', 134, 1),
 
--- Platos para Menú Comfort Food (idMenu: 28, idSeccion: 136-140)
 (109, 'Mac and Cheese Clásico', 1, 30, 12.00, 'Macarrones con cremosa salsa de queso.', 137, 1),
 (110, 'Albóndigas en Salsa de Tomate', 1, 25, 14.00, 'Albóndigas de carne en salsa casera.', 137, 1),
 (111, 'Puré de Papa Cremoso', 1, 40, 6.00, 'Acompañamiento clásico.', 138, 1),
 (112, 'Brownie con Helado', 1, 35, 7.00, 'Cálido brownie con bola de helado de vainilla.', 139, 1),
-
--- Platos para Menú Mar y Tierra (idMenu: 29, idSeccion: 141-145)
 (113, 'Surf & Turf', 1, 20, 35.00, 'Filet mignon con cola de langosta.', 143, 1),
 (114, 'Ribeye a la Parrilla', 1, 25, 29.00, 'Corte premium de carne.', 141, 1),
 (115, 'Camarones al Ajillo', 1, 30, 18.00, 'Camarones salteados en aceite de oliva y ajo.', 142, 1),
 (116, 'Espárragos Asados', 1, 40, 7.00, 'Guarnición fresca y saludable.', 144, 1),
-
--- Platos para Menú Pizza Napolitana (idMenu: 30, idSeccion: 146-150)
 (117, 'Pizza Margherita', 1, 40, 14.00, 'Clásica pizza con tomate, mozzarella y albahaca.', 146, 1),
 (118, 'Pizza Diavola', 2, 35, 16.00, 'Pizza picante con salami y chile.', 147, 1),
 (119, 'Calzone Relleno', 1, 25, 15.00, 'Masa de pizza doblada con ricotta, jamón y mozzarella.', 148, 1),
@@ -1263,264 +1199,127 @@ INSERT INTO PlatoOpcion (idPlato, idOpcion) VALUES
 (119, 1),
 (120, 35);
 
--- Platos 1-10 (Ejemplo: Asado Negro, Punta Trasera, Chorizo, etc.)
+
 INSERT INTO PlatoOpcionValor (idPlato, idOpcionValor, idOpcion) VALUES
--- Plato 1: Asado Negro Criollo (Contornos: 9, Tipo de queso: 11)
 (1, 24, 9), (1, 25, 9), (1, 26, 9), (1, 30, 11), (1, 31, 11), (1, 32, 11),
--- Plato 2: Punta Trasera a la Brasa (Contornos: 9, Extra Proteína: 30)
 (2, 24, 9), (2, 25, 9), (2, 26, 9), (2, 78, 30),
--- Plato 3: Chorizo Parrillero (Contornos: 9, Opción vegana: 23, Extra Proteína: 30)
 (3, 24, 9), (3, 25, 9), (3, 26, 9), (3, 62, 23), (3, 78, 30),
--- Plato 4: Ensalada Rallada (Vegetales Extras: 31, Tipo de base: 35)
 (4, 58, 31), (4, 59, 31), (4, 60, 31), (4, 88, 35), (4, 89, 35), (4, 90, 35),
--- Plato 5: Roll California (Tamaño: 1, Nivel de picante: 2, Toppings: 6)
 (5, 1, 1), (5, 2, 1), (5, 3, 1), (5, 4, 2), (5, 5, 2), (5, 6, 2), (5, 7, 2), (5, 17, 6), (5, 18, 6), (5, 19, 6),
--- Plato 6: Nigiri Salmón (Tamaño: 1, Nivel de picante: 2, Extras: 7)
 (6, 1, 1), (6, 2, 1), (6, 3, 1), (6, 4, 2), (6, 5, 2), (6, 6, 2), (6, 7, 2), (6, 20, 7), (6, 21, 7),
--- Plato 7: Sopa Miso (Tamaño: 1, Extras: 7, Opción sin gluten: 22)
 (7, 1, 1), (7, 2, 1), (7, 3, 1), (7, 20, 7), (7, 21, 7), (7, 61, 22),
--- Plato 8: Ebi Tempura (Tamaño: 1, Opción sin gluten: 22)
 (8, 1, 1), (8, 2, 1), (8, 3, 1), (8, 61, 22),
--- Plato 9: Fettuccine Alfredo (Tamaño: 1, Tipo de pasta: 4, Salsas adicionales: 5)
 (9, 1, 1), (9, 2, 1), (9, 3, 1), (9, 11, 4), (9, 12, 4), (9, 13, 4), (9, 14, 5), (9, 15, 5), (9, 16, 5),
--- Plato 10: Lasagna Clásica (Salsas adicionales: 5, Exclusiones: 8)
 (10, 14, 5), (10, 15, 5), (10, 16, 5), (10, 22, 8), (10, 23, 8),
-
--- Platos 11-20 (Ensalada Caprese, Tiramisú, Tacos al Pastor, etc.)
--- Plato 11: Ensalada Caprese (Extras: 7, Vegetales Extras: 31)
 (11, 20, 7), (11, 21, 7), (11, 58, 31), (11, 59, 31), (11, 60, 31),
--- Plato 12: Tiramisú (Decoración: 16, Tipo de topping dulce: 28, Cobertura: 36)
 (12, 45, 16), (12, 46, 16), (12, 74, 28), (12, 75, 28), (12, 91, 36), (12, 92, 36),
--- Plato 13: Tacos al Pastor (Tamaño: 1, Nivel de picante: 2, Toppings: 18)
 (13, 1, 1), (13, 2, 1), (13, 3, 1), (13, 4, 2), (13, 5, 2), (13, 6, 2), (13, 7, 2), (13, 76, 18), (13, 77, 18),
--- Plato 14: Burrito de Carnitas (Tamaño: 1, Toppings: 19, Opción vegana: 23)
 (14, 1, 1), (14, 2, 1), (14, 3, 1), (14, 76, 19), (14, 77, 19), (14, 62, 23),
--- Plato 15: Guacamole con Totopos (Extras: 7, Sin Nueces: 21, Exclusiones: 22)
 (15, 20, 7), (15, 21, 7), (15, 56, 21), (15, 22, 22), (15, 23, 22),
--- Plato 16: Enchiladas Rojas (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
 (16, 1, 1), (16, 2, 1), (16, 3, 1), (16, 4, 2), (16, 5, 2), (16, 6, 2), (16, 7, 2), (16, 14, 5), (16, 15, 5), (16, 16, 5),
--- Plato 17: Wok de Pollo Teriyaki (Tamaño: 1, Tipo de pasta: 4, Vegetales Extras: 31)
 (17, 1, 1), (17, 2, 1), (17, 3, 1), (17, 11, 4), (17, 12, 4), (17, 13, 4), (17, 58, 31), (17, 59, 31), (17, 60, 31),
--- Plato 18: Arroz Frito Especial (Tamaño: 1, Tipo de arroz: 17, Vegetales Extras: 31)
 (18, 1, 1), (18, 2, 1), (18, 3, 1), (18, 47, 17), (18, 48, 17), (18, 49, 17), (18, 58, 31), (18, 59, 31), (18, 60, 31),
--- Plato 19: Rollitos Primavera (Extras: 7, Vegetales Extras: 31, Tipo de topping dulce: 28)
 (19, 20, 7), (19, 21, 7), (19, 58, 31), (19, 59, 31), (19, 60, 31), (19, 74, 28), (19, 75, 28),
--- Plato 20: Fideos de Arroz con Camarones (Tamaño: 1, Tipo de pasta: 4, Nivel de sal: 32)
 (20, 1, 1), (20, 2, 1), (20, 3, 1), (20, 11, 4), (20, 12, 4), (20, 13, 4), (20, 79, 32), (20, 80, 32), (20, 81, 32),
-
--- Platos 21-30 (Curry Rojo de Res, Curry Verde de Pollo, Arroz Basmati, etc.)
--- Plato 21: Curry Rojo de Res (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
 (21, 1, 1), (21, 2, 1), (21, 3, 1), (21, 4, 2), (21, 5, 2), (21, 6, 2), (21, 7, 2), (21, 14, 5), (21, 15, 5), (21, 16, 5),
--- Plato 22: Curry Verde de Pollo (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
 (22, 1, 1), (22, 2, 1), (22, 3, 1), (22, 4, 2), (22, 5, 2), (22, 6, 2), (22, 7, 2), (22, 14, 5), (22, 15, 5), (22, 16, 5),
--- Plato 23: Arroz Basmati (Tipo de arroz: 17, Vegetales Extras: 31, Tipo de base: 35)
 (23, 47, 17), (23, 48, 17), (23, 49, 17), (23, 58, 31), (23, 59, 31), (23, 60, 31), (23, 88, 35), (23, 89, 35), (23, 90, 35),
--- Plato 24: Pan Naan (Tipo de pan: 3, Sin Lactosa: 20, Extras: 21)
 (24, 8, 3), (24, 9, 3), (24, 10, 3), (24, 56, 20), (24, 57, 21),
--- Plato 25: Hummus con Pan Pita (Tipo de pan: 3, Extras: 7, Sin Lactosa: 20)
 (25, 8, 3), (25, 9, 3), (25, 10, 3), (25, 20, 7), (25, 21, 7), (25, 56, 20),
--- Plato 26: Moussaka (Tamaño: 1, Exclusiones: 8, Nivel de sal: 32)
 (26, 1, 1), (26, 2, 1), (26, 3, 1), (26, 22, 8), (26, 23, 8), (26, 79, 32), (26, 80, 32), (26, 81, 32),
--- Plato 27: Ensalada Griega (Extras: 7, Vegetales Extras: 31, Sin Lactosa: 20)
 (27, 20, 7), (27, 21, 7), (27, 58, 31), (27, 59, 31), (27, 60, 31), (27, 56, 20),
--- Plato 28: Souvlaki de Pollo (Tamaño: 1, Toppings: 18, Extra Proteína: 30)
 (28, 1, 1), (28, 2, 1), (28, 3, 1), (28, 76, 18), (28, 77, 18), (28, 78, 30),
--- Plato 29: Arepa Reina Pepiada (Extras: 7, Opción vegana: 23)
 (29, 20, 7), (29, 21, 7), (29, 62, 23),
--- Plato 30: Arepa Pelúa (Extras: 7, Tipo de queso: 11)
 (30, 20, 7), (30, 21, 7), (30, 30, 11), (30, 31, 11), (30, 32, 11),
-
--- Platos 31-40 (Empanada de Carne, Jugo de Parchita, Croissant de Almendras, etc.)
--- Plato 31: Empanada de Carne (Extras: 7, Sin Lactosa: 20)
 (31, 20, 7), (31, 21, 7), (31, 56, 20),
--- Plato 32: Jugo de Parchita (Tamaño de bebida: 13, Tipo de leche: 14, Tipo de azúcar: 15)
 (32, 36, 13), (32, 37, 13), (32, 38, 13), (32, 39, 14), (32, 40, 14), (32, 41, 14), (32, 42, 15), (32, 43, 15), (32, 44, 15),
--- Plato 33: Croissant de Almendras (Decoración: 16, Tipo de topping dulce: 28, Cobertura: 36)
 (33, 45, 16), (33, 46, 16), (33, 74, 28), (33, 75, 28), (33, 91, 36), (33, 92, 36),
--- Plato 34: Baguette Clásica (Tipo de pan: 3, Nivel de tostado: 39)
 (34, 8, 3), (34, 9, 3), (34, 10, 3), (34, 99, 39), (34, 100, 39), (34, 101, 39),
--- Plato 35: Éclair de Chocolate (Decoración: 16, Cobertura: 36, Sabor de helado: 27)
 (35, 45, 16), (35, 46, 16), (35, 91, 36), (35, 92, 36), (35, 71, 27), (35, 72, 27), (35, 73, 27),
--- Plato 36: Café Latte (Tipo de leche: 14, Tipo de azúcar: 15, Nivel de azúcar: 24)
 (36, 39, 14), (36, 40, 14), (36, 41, 14), (36, 42, 15), (36, 43, 15), (36, 44, 15), (36, 63, 24), (36, 64, 24), (36, 65, 24),
--- Plato 37: Paella de Mariscos (Contornos: 9, Extra Proteína: 30, Tipo de cobertura de pizza: 40)
 (37, 24, 9), (37, 25, 9), (37, 26, 9), (37, 78, 30), (37, 102, 40), (37, 103, 40), (37, 104, 40),
--- Plato 38: Tapas de Gambas al Ajillo (Nivel de picante: 2, Extras: 7, Extra Proteína: 30)
 (38, 4, 2), (38, 5, 2), (38, 6, 2), (38, 7, 2), (38, 20, 7), (38, 21, 7), (38, 78, 30),
--- Plato 39: Paella Mixta (Contornos: 9, Tipo de queso: 11, Extra Proteína: 30)
 (39, 24, 9), (39, 25, 9), (39, 26, 9), (39, 30, 11), (39, 31, 11), (39, 32, 11), (39, 78, 30),
--- Plato 40: Sangría Tradicional (Tamaño de bebida: 13, Nivel de azúcar: 24)
- (40, 36, 13), (40, 37, 13), (40, 38, 13), (40, 63, 24), (40, 64, 24), (40, 65, 24),
-
--- Platos 41-50 (Ceviche Clásico, Tiradito de Pulpo, Causa Limeña, etc.)
--- Plato 41: Ceviche Clásico de Pescado (Tamaño: 1, Nivel de picante: 2, Toppings: 6)
+(40, 36, 13), (40, 37, 13), (40, 38, 13), (40, 63, 24), (40, 64, 24), (40, 65, 24),
 (41, 1, 1), (41, 2, 1), (41, 3, 1), (41, 4, 2), (41, 5, 2), (41, 6, 2), (41, 7, 2), (41, 17, 6), (41, 18, 6), (41, 19, 6),
--- Plato 42: Tiradito de Pulpo (Tamaño: 1, Nivel de picante: 2, Toppings: 18)
 (42, 1, 1), (42, 2, 1), (42, 3, 1), (42, 4, 2), (42, 5, 2), (42, 6, 2), (42, 7, 2), (42, 76, 18), (42, 77, 18),
--- Plato 43: Causa Limeña (Tamaño: 1, Vegetales Extras: 31, Tipo de base: 35)
 (43, 1, 1), (43, 2, 1), (43, 3, 1), (43, 58, 31), (43, 59, 31), (43, 60, 31), (43, 88, 35), (43, 89, 35), (43, 90, 35),
--- Plato 44: Chicha Morada (Tipo de bebida: 33, Sabor de bebida: 34, Nivel de azúcar: 24)
 (44, 82, 33), (44, 83, 33), (44, 84, 33), (44, 85, 34), (44, 86, 34), (44, 87, 34), (44, 63, 24), (44, 64, 24), (44, 65, 24),
--- Plato 45: Picanha a la Espada (Tamaño: 1, Toppings: 18, Contornos: 9)
 (45, 1, 1), (45, 2, 1), (45, 3, 1), (45, 76, 18), (45, 77, 18), (45, 24, 9), (45, 25, 9), (45, 26, 9),
--- Plato 46: Fraldinha (Tamaño: 1, Toppings: 18, Extra Proteína: 30)
 (46, 1, 1), (46, 2, 1), (46, 3, 1), (46, 76, 18), (46, 77, 18), (46, 78, 30),
--- Plato 47: Arroz Blanco (Tipo de arroz: 17, Vegetales Extras: 31, Tipo de base: 35)
 (47, 47, 17), (47, 48, 17), (47, 49, 17), (47, 58, 31), (47, 59, 31), (47, 60, 31), (47, 88, 35), (47, 89, 35), (47, 90, 35),
--- Plato 48: Brigadeiro (Decoración: 16, Cobertura: 36, Sabor de helado: 27)
 (48, 45, 16), (48, 46, 16), (48, 91, 36), (48, 92, 36), (48, 71, 27), (48, 72, 27), (48, 73, 27),
--- Plato 49: Bibimbap (Tamaño: 1, Vegetales Extras: 31, Tipo de base: 35)
 (49, 1, 1), (49, 2, 1), (49, 3, 1), (49, 58, 31), (49, 59, 31), (49, 60, 31), (49, 88, 35), (49, 89, 35), (49, 90, 35),
--- Plato 50: Kimchi Jjigae (Nivel de picante: 2, Extras: 7, Nivel de sal: 32)
 (50, 4, 2), (50, 5, 2), (50, 6, 2), (50, 7, 2), (50, 20, 7), (50, 21, 7), (50, 79, 32), (50, 80, 32), (50, 81, 32),
--- Platos 51-60 (Japchae, Kimchi, Pad Thai, Tom Yum Goong, etc.)
--- Plato 51: Japchae (Tipo de pasta: 4, Extras: 7, Vegetales Extras: 31)
 (51, 11, 4), (51, 12, 4), (51, 13, 4), (51, 20, 7), (51, 21, 7), (51, 58, 31), (51, 59, 31), (51, 60, 31),
--- Plato 52: Kimchi (Extras: 7, Opción sin gluten: 22, Sin Lactosa: 20)
 (52, 20, 7), (52, 21, 7), (52, 61, 22), (52, 56, 20),
--- Plato 53: Pad Thai con Pollo (Tamaño: 1, Nivel de picante: 2, Vegetales Extras: 31)
 (53, 1, 1), (53, 2, 1), (53, 3, 1), (53, 4, 2), (53, 5, 2), (53, 6, 2), (53, 7, 2), (53, 58, 31), (53, 59, 31), (53, 60, 31),
--- Plato 54: Tom Yum Goong (Nivel de picante: 2, Extras: 7, Nivel de sal: 32)
 (54, 4, 2), (54, 5, 2), (54, 6, 2), (54, 7, 2), (54, 20, 7), (54, 21, 7), (54, 79, 32), (54, 80, 32), (54, 81, 32),
--- Plato 55: Curry Massaman con Res (Tamaño: 1, Nivel de picante: 2, Salsas adicionales: 5)
 (55, 1, 1), (55, 2, 1), (55, 3, 1), (55, 4, 2), (55, 5, 2), (55, 6, 2), (55, 7, 2), (55, 14, 5), (55, 15, 5), (55, 16, 5),
--- Plato 56: Mango Sticky Rice (Fruta adicional: 26, Nivel de azúcar: 24, Cobertura: 36)
 (56, 69, 26), (56, 70, 26), (56, 63, 24), (56, 64, 24), (56, 65, 24), (56, 91, 36), (56, 92, 36),
--- Plato 57: Pho Bo (Sopa de Res) (Tamaño: 1, Tipo de arroz: 17)
 (57, 1, 1), (57, 2, 1), (57, 3, 1), (57, 47, 17), (57, 48, 17), (57, 49, 17),
--- Plato 58: Gỏi Cuốn (Rollos de Verano) (Tipo de base: 35)
 (58, 88, 35), (58, 89, 35), (58, 90, 35),
--- Plato 59: Bún Chả (Tamaño: 1)
 (59, 1, 1), (59, 2, 1), (59, 3, 1),
--- Plato 60: Café Vietnamita con Leche Condensada (Tipo de leche: 14, Tipo de azúcar: 15)
 (60, 39, 14), (60, 40, 14), (60, 41, 14), (60, 42, 15), (60, 43, 15), (60, 44, 15),
-
--- Platos 61-70 (Bandeja Paisa, Ajiaco Santafereño, Empanadas Colombianas, etc.)
--- Plato 61: Bandeja Paisa (Contornos: 9)
 (61, 24, 9), (61, 25, 9), (61, 26, 9),
--- Plato 62: Ajiaco Santafereño (Contornos: 9)
 (62, 24, 9), (62, 25, 9), (62, 26, 9),
--- Plato 63: Empanadas Colombianas (Extras: 7, Sin Lactosa: 20)
 (63, 20, 7), (63, 21, 7), (63, 56, 20),
--- Plato 64: Postre de Natilla (Cobertura: 36)
 (64, 91, 36), (64, 92, 36),
--- Plato 65: Salmón al Horno con Vegetales Asados (Extra Proteína: 30)
 (65, 78, 30),
--- Plato 66: Pasta de Lentejas con Pesto (Tipo de pasta: 4)
 (66, 11, 4), (66, 12, 4), (66, 13, 4),
--- Plato 67: Brownie de Chocolate Sin Gluten (Cobertura: 36)
 (67, 91, 36), (67, 92, 36),
--- Plato 68: Ensalada Quinoa y Aguacate (Vegetales Extras: 31)
 (68, 58, 31), (68, 59, 31), (68, 60, 31),
--- Plato 69: Pupusa de Queso con Loroco (Tipo de Tortilla: 19)
 (69, 54, 19), (69, 55, 19),
--- Plato 70: Pupusa Revuelta (Tipo de Tortilla: 19)
 (70, 54, 19), (70, 55, 19),
-
--- Platos 71-80 (Yuca con Chicharrón, Sopa de Res Salvadoreña, Gyros de Cerdo, etc.)
--- Plato 71: Yuca con Chicharrón (Contornos: 9)
 (71, 24, 9), (71, 25, 9), (71, 26, 9),
--- Plato 72: Sopa de Res Salvadoreña (Contornos: 9)
 (72, 24, 9), (72, 25, 9), (72, 26, 9),
--- Plato 73: Gyros de Cerdo (Tipo de pan: 3)
 (73, 8, 3), (73, 9, 3), (73, 10, 3),
--- Plato 74: Moussaka (Tamaño: 1)
 (74, 1, 1), (74, 2, 1), (74, 3, 1),
--- Plato 75: Tzatziki con Pan Pita (Extras: 7)
 (75, 20, 7), (75, 21, 7),
--- Plato 76: Baklava (Cobertura: 36)
 (76, 91, 36), (76, 92, 36),
--- Plato 77: Adana Kebab (Toppings: 18)
 (77, 76, 18), (77, 77, 18),
--- Plato 78: Lahmacun (Tamaño: 1)
 (78, 1, 1), (78, 2, 1), (78, 3, 1),
--- Plato 79: Hummus (Extras: 7)
 (79, 20, 7), (79, 21, 7),
--- Plato 80: Künefe (Cobertura: 36)
 (80, 91, 36), (80, 92, 36),
--- Platos 81-90 (Bratwurst con Sauerkraut, Wiener Schnitzel, Kartoffelsalat, etc.)
--- Plato 81: Bratwurst con Sauerkraut (Contornos: 9)
 (81, 24, 9), (81, 25, 9), (81, 26, 9),
--- Plato 82: Wiener Schnitzel (Toppings: 18)
 (82, 76, 18), (82, 77, 18),
--- Plato 83: Kartoffelsalat (Vegetales Extras: 31)
 (83, 58, 31), (83, 59, 31), (83, 60, 31),
--- Plato 84: Apfelstrudel (Cobertura: 36)
 (84, 91, 36), (84, 92, 36),
--- Plato 85: Tacos de Kimchi y Cerdo (Tamaño: 1)
 (85, 1, 1), (85, 2, 1), (85, 3, 1),
--- Plato 86: Sushi Burger (Tipo de pan: 3)
 (86, 8, 3), (86, 9, 3), (86, 10, 3),
--- Plato 87: Pasta al Curry y Leche de Coco (Tipo de pasta: 4)
 (87, 11, 4), (87, 12, 4), (87, 13, 4),
--- Plato 88: Cheesecake de Matcha (Cobertura: 36)
 (88, 91, 36), (88, 92, 36),
--- Plato 89: Ensalada de Lentejas y Vegetales Orgánicos (Vegetales Extras: 31)
 (89, 58, 31), (89, 59, 31), (89, 60, 31),
--- Plato 90: Pollo Orgánico al Limón con Quinoa (Extra Proteína: 30)
 (90, 78, 30),
--- Platos 91-100 (Sopa de Calabaza Asada, Smoothie Verde, Pabellón Criollo, etc.)
--- Plato 91: Sopa de Calabaza Asada (Tipo de pasta: 4)
 (91, 11, 4), (91, 12, 4), (91, 13, 4),
--- Plato 92: Smoothie Verde Detox (Fruta adicional: 26)
 (92, 69, 26), (92, 70, 26),
--- Plato 93: Pabellón Criollo Completo (Contornos: 9)
 (93, 24, 9), (93, 25, 9), (93, 26, 9),
--- Plato 94: Sopa de Costilla Casera (Contornos: 9)
 (94, 24, 9), (94, 25, 9), (94, 26, 9),
--- Plato 95: Arroz con Leche (Cobertura: 36)
 (95, 91, 36), (95, 92, 36),
--- Plato 96: Asado Negro (Contornos: 9)
 (96, 24, 9), (96, 25, 9), (96, 26, 9),
--- Plato 97: Fajitas de Pollo (Tamaño: 1)
 (97, 1, 1), (97, 2, 1), (97, 3, 1),
--- Plato 98: Nachos Supremos (Toppings: 6)
 (98, 17, 6), (98, 18, 6), (98, 19, 6),
--- Plato 99: Burrito de Carne Asada (Toppings: 19)
 (99, 76, 19), (99, 77, 19),
--- Plato 100: Chili con Carne (Nivel de picante: 2)
 (100, 4, 2), (100, 5, 2), (100, 6, 2), (100, 7, 2),
--- Platos 101-110 (Taco de Carnitas, Hamburguesa Clásica, Churros, etc.)
--- Plato 101: Taco de Carnitas (Tamaño: 1)
 (101, 1, 1), (101, 2, 1), (101, 3, 1),
--- Plato 102: Hamburguesa Clásica con Papas (Tamaño: 1)
 (102, 1, 1), (102, 2, 1), (102, 3, 1),
--- Plato 103: Churros con Chocolate (Cobertura: 36)
 (103, 91, 36), (103, 92, 36),
--- Plato 104: Arepa con Queso Telita (Extras: 7)
 (104, 20, 7), (104, 21, 7),
--- Plato 105: Bowl de Salmón y Aguacate (Vegetales Extras: 31)
 (105, 58, 31), (105, 59, 31), (105, 60, 31),
--- Plato 106: Ensalada de Pollo a la Parrilla (Extras: 7)
 (106, 20, 7), (106, 21, 7),
--- Plato 107: Lentejas Estofadas con Verduras (Vegetales Extras: 31)
 (107, 58, 31), (107, 59, 31), (107, 60, 31),
--- Plato 108: Barra Energética Casera (Cobertura: 36)
 (108, 91, 36), (108, 92, 36),
--- Plato 109: Mac and Cheese Clásico (Tamaño: 1)
 (109, 1, 1), (109, 2, 1), (109, 3, 1),
--- Plato 110: Albóndigas en Salsa de Tomate (Contornos: 9)
 (110, 24, 9), (110, 25, 9), (110, 26, 9),
--- Platos 111-120 (Puré de Papa, Brownie con Helado, Surf & Turf, etc.)
--- Plato 111: Puré de Papa (Contornos: 9)
 (111, 24, 9), (111, 25, 9), (111, 26, 9),
--- Plato 112: Brownie con Helado (Cobertura: 36)
 (112, 91, 36), (112, 92, 36),
--- Plato 113: Surf & Turf (Extra Proteína: 30)
 (113, 78, 30),
--- Plato 114: Ribeye a la Parrilla (Toppings: 18)
 (114, 76, 18), (114, 77, 18),
--- Plato 115: Camarones al Ajillo (Contornos: 9)
 (115, 24, 9), (115, 25, 9), (115, 26, 9),
--- Plato 116: Espárragos Asados (Vegetales Extras: 31)
 (116, 58, 31), (116, 59, 31), (116, 60, 31),
--- Plato 117: Pizza Margherita (Borde relleno: 29)
 (117, 76, 29), (117, 77, 29),
--- Plato 118: Pizza Diavola (Nivel de picante: 2)
 (118, 4, 2), (118, 5, 2), (118, 6, 2), (118, 7, 2),
--- Plato 119: Calzone Relleno (Tamaño: 1)
 (119, 1, 1), (119, 2, 1), (119, 3, 1),
--- Plato 120: Ensalada Rúcula y Parmesano (Tipo de base: 35)
 (120, 88, 35), (120, 89, 35), (120, 90, 35);
 
 INSERT INTO Repartidor (id, password, telefono, fecha_registro, correo, nombre, apellido, fecha_nac, nro_documento, detalle_vehiculo, estado) VALUES
@@ -1720,7 +1519,11 @@ INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total
 (172, 2, 3.00, 'Sin Nota', 22, 36.00),
 (173, 2, 3.00, 'Sin Nota', 23, 35.00),
 (174, 3, 3.00, 'Sin Nota', 20, 53.00),
-(175, 2, 3.00, 'Sin Nota', 21, 35.00);
+(175, 2, 3.00, 'Sin Nota', 21, 35.00),
+(176, 2, 4.00, 'Sin Nota', 20, 31.50),
+(177, 2, 3.50, 'Sin Nota', 22, 35.50),
+(178, 2, 4.25, 'Sin Nota', 25, 35.50),
+(179, 2, 3.75, 'Sin Nota', 18, 32.00);
 
 
 INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
@@ -1898,7 +1701,11 @@ INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 (99, 172, '2025-07-10'),
 (99, 173, '2025-07-09'),
 (99, 174, '2025-07-08'),
-(99, 175, '2025-07-07');
+(99, 175, '2025-07-07'),
+(100, 176, '2025-05-12'),
+(100, 177, '2025-06-03'),
+(100, 178, '2025-06-28'),
+(100, 179, '2025-07-10');
 
 INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, monto_total, idPedido) VALUES
 (1, '2023-07-16', 85.50, 16.00, 13.68, 99.18, 1),
@@ -2117,198 +1924,120 @@ INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentar
 (1, 20, '2025-07-01', 2, 'Se tardó demasiado'),
 (100, 17, '2025-07-10', 1, 'Tuvimos una discusión por la entrega'),
 (100, 9, '2025-07-17', 4, 'Rápido'),
-(100, 20, '2025-07-24', 5, 'Excelente repartidor');
+(100, 20, '2025-07-24', 5, 'Excelente repartidor'),
+(100, 7, '2025-05-12', 4, 'Buen servicio'),
+(100, 7, '2025-06-03', 5, 'Excelente'),
+(100, 7, '2025-06-28', 4, 'Todo bien'),
+(100, 7, '2025-07-10', 5, 'Rápido y amable');
 
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
--- Pedido 1 (8 items)
 (1, 2, 'Sin cebolla por favor', 37.00, 1, 1),
 (2, 1, 'Extra picante', 22.00, 1, 2),
 (3, 1, 'Sin Nota', 8.00, 1, 3),
 (4, 2, 'Sin Nota', 10.00, 1, 4),
 (5, 1, 'Para llevar', 12.00, 1, 5),
 (6, 1, 'Sin Nota', 3.50, 1, 6),
-
--- Pedido 2 (5 items)
 (7, 1, 'Sin gluten', 18.50, 2, 1),
 (8, 2, 'Bien cocido', 44.00, 2, 2),
 (9, 1, 'Sin Nota', 8.00, 2, 3),
 (10, 1, 'Sin Nota', 5.00, 2, 4),
-
--- Pedido 3 (7 items)
 (11, 1, 'Sin salsa', 12.00, 3, 5),
 (12, 2, 'Sin Nota', 7.00, 3, 6),
 (13, 1, 'Sin Nota', 4.00, 3, 7),
 (14, 1, 'Extra crujiente', 15.00, 3, 8),
 (15, 2, 'Sin Nota', 28.00, 3, 9),
-
--- Pedido 4 (2 items)
 (16, 1, 'Sin Nota', 10.00, 4, 13),
 (17, 1, 'Sin picante', 11.50, 4, 14),
-
--- Pedido 5 (9 items)
 (18, 2, 'Extra queso', 28.00, 5, 17),
 (19, 1, 'Sin Nota', 10.50, 5, 18),
 (20, 2, 'Sin Nota', 14.00, 5, 19),
 (21, 1, 'Sin ajo', 16.00, 5, 20),
 (22, 3, 'Sin Nota', 51.00, 5, 21),
-
--- Pedido 6 (6 items)
 (23, 1, 'Sin Nota', 15.50, 6, 22),
 (24, 2, 'Sin Nota', 8.00, 6, 23),
 (25, 1, 'Sin Nota', 3.00, 6, 24),
 (26, 1, 'Extra salsa', 8.50, 6, 25),
 (27, 1, 'Sin Nota', 16.00, 6, 26),
-
--- Pedido 7 (4 items)
 (28, 1, 'Sin Nota', 9.00, 7, 27),
 (29, 1, 'Sin aceitunas', 14.00, 7, 28),
 (30, 2, 'Sin Nota', 18.00, 7, 29),
-
--- Pedido 8 (10 items)
 (31, 2, 'Sin Nota', 18.00, 8, 29),
 (32, 2, 'Sin Nota', 19.00, 8, 30),
 (33, 3, 'Sin Nota', 12.00, 8, 31),
 (34, 1, 'Sin Nota', 3.50, 8, 32),
 (35, 2, 'Sin Nota', 9.00, 8, 33),
-
--- Pedido 9 (3 items)
 (36, 1, 'Sin Nota', 4.50, 9, 33),
 (37, 1, 'Sin Nota', 3.00, 9, 34),
 (38, 1, 'Sin Nota', 5.00, 9, 35),
-
--- Pedido 10 (7 items)
 (39, 1, 'Sin Nota', 25.00, 10, 37),
 (40, 1, 'Sin Nota', 12.00, 10, 38),
 (41, 2, 'Sin Nota', 48.00, 10, 39),
 (42, 1, 'Sin Nota', 8.00, 10, 40),
 (43, 2, 'Sin Nota', 4.00, 10, 41),
-
--- Pedido 11 (5 items)
 (44, 1, 'Sin Nota', 18.00, 11, 41),
 (45, 1, 'Sin Nota', 19.50, 11, 42),
 (46, 1, 'Sin Nota', 14.00, 11, 43),
 (47, 1, 'Sin Nota', 4.00, 11, 44),
 (48, 1, 'Sin Nota', 10.00, 11, 45),
-
--- Pedido 12 (8 items)
 (49, 1, 'Sin Nota', 28.00, 12, 45),
 (50, 1, 'Sin Nota', 26.00, 12, 46),
 (51, 2, 'Sin Nota', 8.00, 12, 47),
 (52, 1, 'Sin Nota', 3.00, 12, 48),
 (53, 3, 'Sin Nota', 48.00, 12, 49),
-
--- Pedido 13 (2 items)
 (54, 1, 'Sin Nota', 16.00, 13, 49),
 (55, 1, 'Sin Nota', 14.00, 13, 50),
-
--- Pedido 14 (6 items)
 (56, 1, 'Sin Nota', 13.50, 14, 51),
 (57, 1, 'Sin Nota', 5.00, 14, 52),
 (58, 2, 'Sin Nota', 28.00, 14, 53),
 (59, 1, 'Sin Nota', 12.00, 14, 54),
 (60, 1, 'Sin Nota', 7.00, 14, 55),
-
--- Pedido 15 (9 items)
 (61, 2, 'Sin Nota', 30.00, 15, 57),
 (62, 1, 'Sin Nota', 9.00, 15, 58),
 (63, 1, 'Sin Nota', 16.00, 15, 59),
 (64, 1, 'Sin Nota', 5.00, 15, 60),
 (65, 4, 'Sin Nota', 80.00, 15, 61),
-
--- Pedido 16 (4 items)
 (66, 1, 'Sin Nota', 20.00, 16, 61),
 (67, 1, 'Sin Nota', 15.00, 16, 62),
 (68, 1, 'Sin Nota', 3.50, 16, 63),
 (69, 1, 'Sin Nota', 5.00, 16, 64),
-
--- Pedido 17 (7 items)
 (70, 1, 'Sin Nota', 21.00, 17, 65),
 (71, 1, 'Sin Nota', 15.00, 17, 66),
 (72, 1, 'Sin Nota', 6.00, 17, 67),
 (73, 1, 'Sin Nota', 12.00, 17, 68),
 (74, 3, 'Sin Nota', 36.00, 17, 69),
-
--- Pedido 18 (3 items)
 (75, 1, 'Sin Nota', 4.00, 18, 69),
 (76, 1, 'Sin Nota', 4.50, 18, 70),
 (77, 1, 'Sin Nota', 10.00, 18, 71),
-
--- Pedido 19 (10 items)
 (78, 2, 'Sin Nota', 8.00, 19, 69),
 (79, 2, 'Sin Nota', 9.00, 19, 70),
 (80, 3, 'Sin Nota', 30.00, 19, 71),
 (81, 1, 'Sin Nota', 14.00, 19, 72),
 (82, 2, 'Sin Nota', 10.00, 19, 73),
-
--- Pedido 20 (5 items)
 (83, 1, 'Sin Nota', 13.00, 20, 73),
 (84, 1, 'Sin Nota', 16.50, 20, 74),
 (85, 1, 'Sin Nota', 6.00, 20, 75),
 (86, 1, 'Sin Nota', 7.50, 20, 76),
 (87, 1, 'Sin Nota', 15.00, 20, 77),
--- Pedido 21 (ID 21 en tabla Pedido: nota 'Sin Nota')
-
-
--- Pedido 22 (ID 22 en tabla Pedido: nota 'Sin Nota')
 (88, 1, 'Sin Nota', 15.00, 22, 77),
-
--- Pedido 23 (ID 23 en tabla Pedido: nota "Con opciones adicionales")
 (89, 1, 'Sin ajo, Extra pimentón', 7.50, 23, 79),
-
--- Pedido 24 (ID 24 en tabla Pedido: nota 'Sin Nota')
 (90, 1, 'Sin Nota', 14.00, 24, 81),
-
--- Pedido 25 (ID 25 en tabla Pedido: nota 'Sin Nota')
 (91, 1, 'Sin Nota', 6.00, 25, 83),
-
--- Pedido 26 (ID 26 en tabla Pedido: nota "Con opciones adicionales")
 (92, 1, 'Penne, Picante medio', 13.50, 26, 85),
-
--- Pedido 27 (ID 27 en tabla Pedido: nota 'Sin Nota')
 (93, 1, 'Sin Nota', 15.00, 27, 87),
-
--- Pedido 28 (ID 28 en tabla Pedido: nota 'Sin Nota')
 (94, 1, 'Sin Nota', 11.00, 28, 89),
-
--- Pedido 29 (ID 29 en tabla Pedido: nota "Con opciones adicionales")
 (95, 1, 'Extra crema, Pan tostado medio', 10.25, 29, 91),
-
 (96, 1, 'Sin Nota', 24.20, 67, 65),
-
--- Pedido 30 (ID 30 en tabla Pedido: nota 'Sin Nota')
 (97, 1, 'Sin Nota', 17.00, 30, 93),
-
--- Pedido 31 (ID 31 en tabla Pedido: nota 'Sin Nota')
 (98, 1, 'Sin Nota', 5.00, 31, 95),
-
--- Pedido 32 (ID 32 en tabla Pedido: nota "Con opciones adicionales")
 (99, 1, 'Extra vegetales, Término medio', 16.00, 32, 97),
-
--- Pedido 33 (ID 33 en tabla Pedido: nota 'Sin Nota')
 (100, 1, 'Sin Nota', 13.00, 33, 99),
-
--- Pedido 34 (ID 34 en tabla Pedido: nota 'Sin Nota')
 (101, 1, 'Sin Nota', 4.00, 34, 101),
-
--- Pedido 35 (ID 35 en tabla Pedido: nota "Con opciones adicionales")
 (102, 1, 'Extra chocolate, Muy dulce', 7.04, 35, 103),
-
--- Pedido 36 (ID 36 en tabla Pedido: nota 'Sin Nota')
 (103, 1, 'Sin Nota', 16.00, 36, 105),
-
--- Pedido 37 (ID 37 en tabla Pedido: nota 'Sin Nota')
 (104, 1, 'Sin Nota', 10.00, 37, 107),
-
--- Pedido 38 (ID 38 en tabla Pedido: nota "Con opciones adicionales")
 (105, 1, 'Extra queso, Queso cheddar', 13.50, 38, 109),
-
--- Pedido 39 (ID 39 en tabla Pedido: nota 'Sin Nota')
 (106, 1, 'Sin Nota', 6.00, 39, 111),
-
--- Pedido 40 (ID 40 en tabla Pedido: nota 'Sin Nota')
 (107, 1, 'Sin Nota', 35.00, 40, 113),
-
--- Pedidos 41-60
 (108, 1, 'Sin Nota', 18.00, 41, 114),
 (109, 1, 'Sin Nota', 7.00, 42, 116),
 (110, 1, 'Vegetales extra, Sin sal', 7.00, 43, 116),
@@ -2329,8 +2058,6 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (125, 1, 'Extra picante, Tofu extra', 15.50, 58, 50),
 (126, 1, 'Sin Nota', 13.50, 59, 51),
 (127, 1, 'Sin Nota', 5.00, 60, 52),
-
--- Pedidos 61-80
 (128, 1, 'Sin Nota', 14.00, 61, 53),
 (129, 1, 'Sin Nota', 12.00, 62, 54),
 (130, 1, 'Sin camarones, Extra vegetales', 12.00, 63, 54),
@@ -2351,8 +2078,6 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (145, 1, 'Extra canela', 5.50, 78, 64),
 (146, 1, 'Sin Nota', 21.00, 79, 65),
 (147, 1, 'Sin Nota', 15.00, 80, 66),
-
--- Pedidos 81-100
 (148, 1, 'Sin Nota', 6.00, 81, 67),
 (149, 1, 'Sin Nota', 12.00, 82, 68),
 (150, 1, 'Quinoa extra, Aguacate extra', 14.00, 83, 68),
@@ -2393,8 +2118,6 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (185, 1, 'Extra jengibre', 8.00, 118, 92),
 (186, 1, 'Sin Nota', 17.00, 119, 93),
 (187, 1, 'Sin Nota', 12.00, 120, 94),
-
--- Pedidos 121-150
 (188, 1, 'Sin Nota', 5.00, 121, 95),
 (189, 1, 'Sin Nota', 18.00, 122, 96),
 (190, 1, 'Sin cebolla', 18.00, 123, 96),
@@ -2432,27 +2155,48 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (222, 1, 'Sin Nota', 22.50, 153, 32),
 (223, 1, 'Sin Nota', 36.00, 154, 26),
 (224, 1, 'Sin Nota', 21.00, 154, 36),
-(225, 1, 'Sin Nota', 15.00, 155, 17), (226, 1, 'Sin Nota', 15.00, 155, 18),
+(225, 1, 'Sin Nota', 15.00, 155, 17), 
+(226, 1, 'Sin Nota', 15.00, 155, 18),
 (227, 1, 'Sin Nota', 14.00, 156, 17),
-(228, 1, 'Sin Nota', 17.00, 157, 18), (229, 1, 'Sin Nota', 16.00, 157, 19), (230, 1, 'Sin Nota', 15.00, 157, 20),
-(231, 1, 'Sin Nota', 15.00, 158, 17), (232, 1, 'Sin Nota', 16.00, 158, 19),
-(233, 1, 'Sin Nota', 16.00, 159, 18), (234, 1, 'Sin Nota', 16.00, 159, 20),
+(228, 1, 'Sin Nota', 17.00, 157, 18), 
+(229, 1, 'Sin Nota', 16.00, 157, 19), 
+(230, 1, 'Sin Nota', 15.00, 157, 20),
+(231, 1, 'Sin Nota', 15.00, 158, 17), 
+(232, 1, 'Sin Nota', 16.00, 158, 19),
+(233, 1, 'Sin Nota', 16.00, 159, 18), 
+(234, 1, 'Sin Nota', 16.00, 159, 20),
 (235, 1, 'Sin Nota', 16.00, 160, 19),
-(236, 1, 'Sin Nota', 16.00, 161, 18), (237, 1, 'Sin Nota', 17.00, 161, 19),
-(238, 1, 'Sin Nota', 17.00, 162, 17), (239, 1, 'Sin Nota', 16.00, 162, 18), (240, 1, 'Sin Nota', 17.00, 162, 20),
-(241, 1, 'Sin Nota', 15.00, 163, 17), (242, 1, 'Sin Nota', 15.00, 163, 18),
-(243, 1, 'Sin Nota', 16.00, 164, 18), (244, 1, 'Sin Nota', 16.00, 164, 19),
+(236, 1, 'Sin Nota', 16.00, 161, 18), 
+(237, 1, 'Sin Nota', 17.00, 161, 19),
+(238, 1, 'Sin Nota', 17.00, 162, 17), 
+(239, 1, 'Sin Nota', 16.00, 162, 18), 
+(240, 1, 'Sin Nota', 17.00, 162, 20),
+(241, 1, 'Sin Nota', 15.00, 163, 17), 
+(242, 1, 'Sin Nota', 15.00, 163, 18),
+(243, 1, 'Sin Nota', 16.00, 164, 18), 
+(244, 1, 'Sin Nota', 16.00, 164, 19),
 (245, 1, 'Sin Nota', 14.00, 165, 17),
-(246, 1, 'Sin Nota', 16.00, 166, 19), (247, 1, 'Sin Nota', 15.00, 166, 20),
-(248, 1, 'Sin Nota', 18.00, 167, 17), (249, 1, 'Sin Nota', 16.00, 167, 18), (250, 1, 'Sin Nota', 18.00, 167, 20),
-(251, 1, 'Sin Nota', 18.00, 168, 18), (252, 1, 'Sin Nota', 15.00, 168, 19),
-(253, 1, 'Sin Nota', 16.00, 169, 19), (254, 1, 'Sin Nota', 16.00, 169, 20),
-(255, 1, 'Sin Nota', 16.00, 170, 18), (256, 1, 'Sin Nota', 15.00, 170, 19),
+(246, 1, 'Sin Nota', 16.00, 166, 19), 
+(247, 1, 'Sin Nota', 15.00, 166, 20),
+(248, 1, 'Sin Nota', 18.00, 167, 17), 
+(249, 1, 'Sin Nota', 16.00, 167, 18), 
+(250, 1, 'Sin Nota', 18.00, 167, 20),
+(251, 1, 'Sin Nota', 18.00, 168, 18), 
+(252, 1, 'Sin Nota', 15.00, 168, 19),
+(253, 1, 'Sin Nota', 16.00, 169, 19), 
+(254, 1, 'Sin Nota', 16.00, 169, 20),
+(255, 1, 'Sin Nota', 16.00, 170, 18), 
+(256, 1, 'Sin Nota', 15.00, 170, 19),
 (257, 1, 'Sin Nota', 15.00, 171, 20),
-(258, 1, 'Sin Nota', 18.00, 172, 17), (259, 1, 'Sin Nota', 18.00, 172, 18),
-(260, 1, 'Sin Nota', 16.00, 173, 19), (261, 1, 'Sin Nota', 16.00, 173, 20),
-(262, 1, 'Sin Nota', 19.00, 174, 17), (263, 1, 'Sin Nota', 17.00, 174, 18), (264, 1, 'Sin Nota', 17.00, 174, 20),
-(265, 1, 'Sin Nota', 17.00, 175, 18), (266, 1, 'Sin Nota', 15.00, 175, 19);
+(258, 1, 'Sin Nota', 18.00, 172, 17), 
+(259, 1, 'Sin Nota', 18.00, 172, 18),
+(260, 1, 'Sin Nota', 16.00, 173, 19), 
+(261, 1, 'Sin Nota', 16.00, 173, 20),
+(262, 1, 'Sin Nota', 19.00, 174, 17), 
+(263, 1, 'Sin Nota', 17.00, 174, 18), 
+(264, 1, 'Sin Nota', 17.00, 174, 20),
+(265, 1, 'Sin Nota', 17.00, 175, 18), 
+(266, 1, 'Sin Nota', 15.00, 175, 19);
 
 INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (1, 1, 45),
@@ -3044,27 +2788,48 @@ INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) 
 (217, 17, 5),
 (218, 38, 13),
 (218, 3, 1),
-(225, 1, 1), (226, 1, 1),
+(225, 1, 1), 
+(226, 1, 1),
 (227, 1, 1),
-(228, 1, 1), (229, 1, 1), (230, 1, 1),
-(231, 1, 1), (232, 1, 1),
-(233, 1, 1), (234, 1, 1),
+(228, 1, 1), 
+(229, 1, 1), 
+(230, 1, 1),
+(231, 1, 1), 
+(232, 1, 1),
+(233, 1, 1), 
+(234, 1, 1),
 (235, 1, 1),
-(236, 1, 1), (237, 1, 1),
-(238, 1, 1), (239, 1, 1), (240, 1, 1),
-(241, 1, 1), (242, 1, 1),
-(243, 1, 1), (244, 1, 1),
+(236, 1, 1), 
+(237, 1, 1),
+(238, 1, 1), 
+(239, 1, 1), 
+(240, 1, 1),
+(241, 1, 1), 
+(242, 1, 1),
+(243, 1, 1), 
+(244, 1, 1),
 (245, 1, 1),
-(246, 1, 1), (247, 1, 1),
-(248, 1, 1), (249, 1, 1), (250, 1, 1),
-(251, 1, 1), (252, 1, 1),
-(253, 1, 1), (254, 1, 1),
-(255, 1, 1), (256, 1, 1),
+(246, 1, 1), 
+(247, 1, 1),
+(248, 1, 1), 
+(249, 1, 1), 
+(250, 1, 1),
+(251, 1, 1), 
+(252, 1, 1),
+(253, 1, 1), 
+(254, 1, 1),
+(255, 1, 1), 
+(256, 1, 1),
 (257, 1, 1),
-(258, 1, 1), (259, 1, 1),
-(260, 1, 1), (261, 1, 1),
-(262, 1, 1), (263, 1, 1), (264, 1, 1),
-(265, 1, 1), (266, 1, 1);
+(258, 1, 1), 
+(259, 1, 1),
+(260, 1, 1), 
+(261, 1, 1),
+(262, 1, 1), 
+(263, 1, 1), 
+(264, 1, 1),
+(265, 1, 1), 
+(266, 1, 1);
 
 INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
 (1, 1, CONVERT(DATETIME, '2025-05-18 16:53:35')), (1, 2, CONVERT(DATETIME, '2025-05-18 17:05:35')), (1, 3, CONVERT(DATETIME, '2025-05-18 17:28:35')), (1, 4, CONVERT(DATETIME, '2025-05-18 17:35:35')), (1, 5, CONVERT(DATETIME, '2025-05-18 17:42:35')),  (1, 6, CONVERT(DATETIME, '2025-05-18 18:24:35')),
@@ -3237,7 +3002,11 @@ INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
 (172, 1, CONVERT(DATETIME, '2025-07-10 13:00')), (172, 5, CONVERT(DATETIME, '2025-07-10 13:20')), (172, 2, CONVERT(DATETIME, '2025-07-10 13:45')),
 (173, 1, CONVERT(DATETIME, '2025-07-09 09:00')), (173, 5, CONVERT(DATETIME, '2025-07-09 09:20')), (173, 2, CONVERT(DATETIME, '2025-07-09 09:45')), (173, 3, CONVERT(DATETIME, '2025-07-09 10:10')),
 (174, 1, CONVERT(DATETIME, '2025-07-08 10:00')), (174, 4, CONVERT(DATETIME, '2025-07-08 10:30')),
-(175, 1, CONVERT(DATETIME, '2025-07-07 11:00')), (175, 5, CONVERT(DATETIME, '2025-07-07 11:25'));
+(175, 1, CONVERT(DATETIME, '2025-07-07 11:00')), (175, 5, CONVERT(DATETIME, '2025-07-07 11:25')),
+(176, 1, CONVERT(DATETIME, '2025-05-12 10:00:00')), (176, 5, CONVERT(DATETIME, '2025-05-12 10:20:00')), (176, 2, CONVERT(DATETIME, '2025-05-12 10:45:00')), (176, 3, CONVERT(DATETIME, '2025-05-12 11:15:00')),
+(177, 1, CONVERT(DATETIME, '2025-06-03 09:00:00')), (177, 5, CONVERT(DATETIME, '2025-06-03 09:25:00')), (177, 2, CONVERT(DATETIME, '2025-06-03 09:50:00')), (177, 3, CONVERT(DATETIME, '2025-06-03 10:20:00')),
+(178, 1, CONVERT(DATETIME, '2025-06-28 11:00:00')), (178, 5, CONVERT(DATETIME, '2025-06-28 11:25:00')), (178, 2, CONVERT(DATETIME, '2025-06-28 11:50:00')), (178, 3, CONVERT(DATETIME, '2025-06-28 12:30:00')),
+(179, 1, CONVERT(DATETIME, '2025-07-10 10:00:00')), (179, 5, CONVERT(DATETIME, '2025-07-10 10:25:00')), (179, 2, CONVERT(DATETIME, '2025-07-10 10:50:00')), (179, 3, CONVERT(DATETIME, '2025-07-10 11:20:00'));
 
 -- 21 inserts a mano en ClienteConClienteReferido(idCliente, idClienteReferido, fecha_referido) el resto lo hace el trigger automaticamente
 INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido) VALUES
