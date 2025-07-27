@@ -24,14 +24,14 @@ BEGIN
     DECLARE @idPedido INT;
     SELECT @idPedido = idPedido FROM Factura WHERE numero = @numeroFactura;
 
-    -- Sumar los totales base
+    -- cantidad de platos del pedido
     DECLARE @totalItems DECIMAL(10,2) = (
         SELECT SUM(total)
         FROM PedidoDetalle
         WHERE idPedido = @idPedido
     );
 
-    -- Sumar los extras personalizados
+    -- cantidad de extras del pedido
     DECLARE @extras DECIMAL(10,2) = (
         SELECT SUM(ov.precio_extra)
         FROM PedidoDetalle pd
@@ -40,7 +40,6 @@ BEGIN
         WHERE pd.idPedido = @idPedido
     );
 
-    -- Devolver suma segura
     RETURN ISNULL(@totalItems, 0) + ISNULL(@extras, 0);
 END;
 
@@ -57,14 +56,13 @@ BEGIN
     DECLARE @porcentaje DECIMAL(5,2);
     DECLARE @idPedido INT;
 
-    -- 1. Obtener el idPedido relacionado a esa factura
+    -- Obtener el idPedido relacionado a esa factura
     SELECT 
         @idPedido = idPedido, 
         @porcentaje = porcentajeIva
     FROM Factura
     WHERE numero = @numeroFactura;
 
-    -- 2. Calcular el subtotal del pedido
     SELECT @sub_total = 
         ISNULL((
             SELECT SUM(total)
@@ -79,7 +77,7 @@ BEGIN
             WHERE PD.idPedido = @idPedido
         ), 0);
 
-    -- 3. Calcular el IVA real
+    -- subtotal del pedido x iva
     RETURN ROUND(@sub_total * (@porcentaje / 100.0), 2);
 END;
 
@@ -104,18 +102,10 @@ BEGIN
     RETURN ROUND(@sub_total + @iva + @envio, 2);
 END;
 
---SELECT 
-    --numero AS Factura,
-    --dbo.fn_ObtenerSubTotal(numero) AS SubTotal,
-    --dbo.fn_ObtenerMontoIVA(numero) AS IVA,
-   -- dbo.fn_ObtenerCostoEnvio(numero) AS Envio,
-    --dbo.fn_ObtenerMontoTotal(numero) AS TotalFinal
---FROM Factura
---WHERE numero = 152;
 
 
 
----------B-------
+--------Funcion B-------
 
 CREATE FUNCTION fn_RepartidorDisponible (
     @idRepartidor INT
