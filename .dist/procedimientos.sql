@@ -1,33 +1,29 @@
---A
-
---procedure A V2
-CREATE TYPE DetallePedidoType AS TABLE (
+--------------- A -------------------------
+CREATE TYPE DetallePedidoTipo AS TABLE (
     idPedidoDetalle INT,
     idPlato INT,
     cantidad INT,
     nota NVARCHAR(500)
 );
-CREATE PROCEDURE sp_CrearPedidoCompletoV2
+
+CREATE PROCEDURE CrearPedido
     @idCliente INT,
     @costo_envio DECIMAL(10, 2),
     @nota NVARCHAR(500),
     @tiempo_entrega INT,
-    @detallesPedido DetallePedidoType READONLY
+    @detallesPedido DetallePedidoTipo READONLY
 AS
 BEGIN
     SET NOCOUNT ON;
 
     DECLARE @cantidad_items INT;
     SELECT @cantidad_items = COUNT(*) FROM @detallesPedido;
-
-    -- Generar nuevo idPedido (ejemplo)
     DECLARE @idPedido INT = (SELECT ISNULL(MAX(id), 0) + 1 FROM Pedido);
 
-    -- Insertar pedido sin fecha ni cliente
+    -- pedido sin fecha ni cliente
     INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, total, tiempo_entrega)
     VALUES (@idPedido, @cantidad_items, @costo_envio, @nota, 0, @tiempo_entrega);
 
-    -- Insertar detalles con total calculado
     INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
     SELECT 
         idPedidoDetalle,
@@ -39,7 +35,7 @@ BEGIN
     FROM @detallesPedido dp
     JOIN Plato p ON p.id = dp.idPlato;
 
-    -- Actualizar total en Pedido sumando los totales de los detalles
+    -- Actualizar total en Pedido sumando el total de cada tupla en DetallePedido asociada al pedido
     UPDATE Pedido
     SET total = (
         SELECT SUM(total)
@@ -52,7 +48,7 @@ BEGIN
     INSERT INTO ClientePedido (idCliente, idPedido, fecha)
     VALUES (@idCliente, @idPedido, GETDATE());
 
-    -- Insertar estado pendiente
+    -- el estado del pedido nuevo sera Pendiente
     INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio)
     VALUES (@idPedido, 1, GETDATE());
 

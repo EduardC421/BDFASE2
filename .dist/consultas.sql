@@ -296,7 +296,7 @@ ClientesValidos AS (
     GROUP BY p.idCliente
     HAVING
         COUNT(DISTINCT p.idPedido) >= 3 AND
-        SUM(pmf.tiene_moto) >= 1
+        SUM(pmf.tiene_moto) >= 1),
 
 PromedioGastoGlobal AS (
     SELECT AVG(p.total) AS promedio_global

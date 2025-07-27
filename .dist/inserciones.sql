@@ -1696,7 +1696,11 @@ INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total
 (148, 8, 8.15, 'Entrega en el mostrador', 50, 108.15),
 (149, 2, 4.00, 'Sin nota', 23, 24.00),
 (150, 6, 6.50, 'Sin nota', 39, 78.50),
-(151, 2, 33.00, 'Envio a Andorra', 124, 153.00);
+(151, 2, 3.50, 'Envio a Andorra', 124, 96.00),
+(152, 2, 4.00, 'Pedido A', 20, 58.00),
+(153, 2, 4.50, 'Pedido B', 22, 155.00),
+(154, 2, 5.30, 'Pedido C', 25, 200.00);
+
 
 INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 (14, 1, '2024-11-20'),
@@ -1849,7 +1853,10 @@ INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 (52, 148, '2024-04-17'),
 (66, 149, '2025-02-05'),
 (1, 151, '2025-07-01'),
-(27, 150, '2023-07-20');
+(27, 150, '2023-07-20'),
+(100, 152, '2025-07-10'),
+(100, 153, '2025-07-17'),
+(100, 154, '2025-07-24');
 
 INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, monto_total, idPedido) VALUES
 (1, '2023-07-16', 85.50, 16.00, 13.68, 99.18, 1),
@@ -2045,7 +2052,10 @@ INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentar
 (38, 18, '2024-03-07', 4, 'Buen trabajo, ninguna queja.'),
 (39, 20, '2025-07-02', 5, 'Simplemente excelente, volvería a pedir.'),
 (40, 1, '2023-01-28', 4, 'Cumplió con las expectativas.'),
-(1, 20, '2025-07-01', 2, 'Se tardó demasiado');
+(1, 20, '2025-07-01', 2, 'Se tardó demasiado'),
+(100, 17, '2025-07-10', 1, 'Tuvimos una discusión por la entrega'),
+(100, 9, '2025-07-17', 4, 'Rápido'),
+(100, 20, '2025-07-24', 5, 'Excelente repartidor');
 
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 -- Pedido 1 (8 items)
@@ -2353,7 +2363,13 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (215, 1, 'Sin Nota', 18.00, 148, 115),
 (216, 1, 'Sin Nota', 7.00, 149, 116),
 (217, 1, 'Sin Nota', 14.00, 150, 117),
-(218, 1, 'Sangria Grande', 8.00, 151, 40);
+(218, 1, 'Sangria Grande', 8.00, 151, 40),
+(219, 1, 'Plato principal', 35.00, 152, 26), 
+(220, 1, 'Bebida', 19.00, 152, 122),
+(221, 1, 'Principal 2', 38.00, 153, 26),
+(222, 1, 'Bebida 2', 22.50, 153, 32),
+(223, 1, 'Principal 3', 36.00, 154, 26),
+(224, 1, 'Bebida 3', 21.00, 154, 36);
 
 INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (1, 1, 45),
@@ -2506,7 +2522,10 @@ INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (8, 148, 50),
 (9, 149, 23),
 (10, 150, 39),
-(20, 151, 151);
+(20, 151, 151),
+(17, 152, 20),
+(9, 153, 22),
+(20, 154, 25);
 
 INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) VALUES
 (1, 18, 6),

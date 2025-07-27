@@ -1,6 +1,5 @@
 --triggers parte a
 
-
 -- Factura
 CREATE TRIGGER trg_GenerarFactura
 ON Pedido
@@ -109,7 +108,7 @@ END;
 
 
 
-
+--------------b--------------
 
 CREATE TRIGGER trg_InsteadOfDelete_PedidoDetalle
 ON PedidoDetalle
@@ -134,6 +133,7 @@ BEGIN
     DELETE FROM PedidoDetalle
     WHERE id IN (SELECT id FROM DELETED);
 END;
+
 
 
 ----------------------C---------------------------
@@ -161,19 +161,15 @@ INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total
 SELECT * FROM Pedido;
 SELECT * FROM Factura;
 
---Es el D
-
 -- El plato tiene 5 unidades disponibles
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
 VALUES (1001, 2, 'Sin cebolla', 25.00, 218, 1);
 -- Esperado: éxito, y el inventario se reduce a 3 unidades
 
-
 -- El plato ahora tiene solo 3 unidades disponibles
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
 VALUES (1002, 4, 'Extra picante', 50.00, 218, 1);
 -- Esperado: ERROR -> “No hay unidades suficientes del producto para esta compra”
-
 
 -- Manualmente dejamos el inventario en 0 para simular agotado
 UPDATE Plato SET cantidadDisponible = 0 WHERE id = 1;
@@ -183,6 +179,9 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
 VALUES (1003, 1, 'Sin sal', 12.00, 218, 1);
 -- Esperado: ERROR -> “El producto no está disponible por los momentos”
 
+
+
+------------- Es el D ------------------
 CREATE TRIGGER trg_validar_inventario_pedido_detalle
 ON PedidoDetalle
 INSTEAD OF INSERT
