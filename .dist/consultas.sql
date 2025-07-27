@@ -23,11 +23,11 @@ WITH TiemposCalculados AS (
 )
 
 SELECT 
-  TC.nombre AS 'Nombre del Estado',
-  COUNT(*) AS 'Cantidad de Veces Usado',
-  CAST(AVG(TC.tiempo_real) AS DECIMAL(10,2)) AS 'Tiempo Promedio Real (min)',
-  CAST(AVG(TC.tiempo_estimado) AS DECIMAL(10,2)) AS 'Tiempo Promedio Estimado (min)',
-  CAST(SUM(TC.cumplio) * 100.0 / COUNT(TC.cumplio) AS DECIMAL(10,2)) AS 'Porcentaje de Cumplimiento (%)'
+  TC.nombre AS 'Estado',
+  COUNT(*) AS 'Cantidad de veces usado',
+  CAST(AVG(TC.tiempo_real) AS DECIMAL(10,2)) AS 'Tiempo promedio (min)',
+  CAST(AVG(TC.tiempo_estimado) AS DECIMAL(10,2)) AS 'Tiempo promedio estimado (min)',
+  CAST(SUM(TC.cumplio) * 100.0 / COUNT(TC.cumplio) AS DECIMAL(10,2)) AS 'Porcentaje de cumplimiento'
 FROM 
   TiemposCalculados TC
 GROUP BY 
@@ -37,7 +37,7 @@ HAVING
 ORDER BY 
   COUNT(*) DESC;
 
---CONSULTA B
+------------- B----------------------
 DECLARE @FechaInicio DATE = DATEADD(MONTH, -1, GETDATE());
 
 WITH comercios_base AS (
@@ -130,7 +130,8 @@ LEFT JOIN cocina_principal cp ON cp.idComercio = cf.id_comercio
 LEFT JOIN plato_mas_pedido pm ON pm.idComercio = cf.id_comercio
 ORDER BY cf.total_facturado DESC;
 
---Consulta C
+
+-------------- C ------------
 WITH RECENT_DELIVERED_ORDERS AS (
     SELECT
         p.id AS PedidoID,
@@ -209,23 +210,25 @@ FROM
 ORDER BY
     qco.MontoTotalGastado DESC;
 
+
 --Consulta D
 SELECT 
-    CCR.idClienteReferido AS IdReferido,
-    C.nombre + ' ' + C.apellido AS NombreCompleto,
-    COUNT(DISTINCT CP.idPedido) AS TotalPedidos,
-    ISNULL(SUM(F.monto_total), 0) AS TotalGastado,
+    CCR.idClienteReferido AS id_referido,
+    C.nombre + ' ' + C.apellido AS nombre_completo,
+    COUNT(DISTINCT CP.idPedido) AS total_pedidos,
+    ISNULL(SUM(F.monto_total), 0) AS total_gastado,
     CASE 
         WHEN COUNT(DISTINCT CCR2.idClienteReferido) > 0 THEN 'SI'
         ELSE 'NO'
-    END AS HaGeneradoReferidos
+    END AS ha_generado_referidos
 FROM ClienteConClienteReferido CCR
 JOIN Cliente C ON CCR.idClienteReferido = C.id
 LEFT JOIN ClientePedido CP ON CP.idCliente = C.id
 LEFT JOIN Factura F ON F.idPedido = CP.idPedido
 LEFT JOIN ClienteConClienteReferido CCR2 ON CCR2.idCliente = C.id
 GROUP BY CCR.idClienteReferido, C.nombre, C.apellido
-ORDER BY TotalGastado DESC;
+ORDER BY Total_Gastado DESC;
+
 
 --Consulta E
 SELECT
@@ -249,6 +252,7 @@ LEFT JOIN PedidoEstadoPedido pe ON rp.idPedido = pe.idPedido
 
 GROUP BY r.id, r.nombre, r.apellido
 ORDER BY r.id;
+
 
 --Consulta F
 WITH PedidosUltimos3Meses AS (
@@ -314,6 +318,7 @@ JOIN Cliente c ON c.id = cv.idCliente
 CROSS JOIN PromedioGastoGlobal pg
 WHERE cv.total_gastado > pg.promedio_global;
 
+
 --Consulta G
 WIth PedidoUltimoMes AS (
  Select C.id, COUNT(DISTINCT CP.idPedido) AS TotalPedidos 
@@ -344,6 +349,7 @@ JOIN CocinasChinas as CHI ON C.id = CHI.idComercio
         END) * 7 >= 50
         ORDER BY PUM.TotalPedidos;
 
+
 --Consulta H
 SELECT
     C.id AS ID_Cliente,
@@ -370,7 +376,7 @@ ORDER BY
     C.id;
 
 --Consulta I
-Select D.municipio, C.nombre, P.nombre, SUM(PD.cantidad) as 'Cantidad Total Vendida'
+Select D.municipio, C.nombre, P.nombre, SUM(PD.cantidad) as 'cantidad_total_vendida'
 From Plato as P
 JOIN Seccion as S on P.idSeccion = S.id
 JOIN Menu as M on S.idMenu = M.id
@@ -383,16 +389,16 @@ JOIN DireccionCliente AS DC on CL.id = DC.idCliente
 JOIN Direccion as D ON DC.idDireccion = D.id
 WHERE P.nombre LIKE '%Pizza%'
 GROUP BY D.municipio, C.nombre, P.nombre
-ORDER BY 'Cantidad Total Vendida' ASC
+ORDER BY 'cantidad_total_vendida' ASC
 
 --Consulta J
 SELECT 
-    p.nombre AS NombrePlato,
-    s.nombre AS NombreSeccion,
+    p.nombre AS nombre_plato,
+    s.nombre AS nombre_seccion,
     ISNULL(
         STRING_AGG(ov.nombre + ' ($' + FORMAT(ov.precio_extra, 'N2') + ')', ', '),
         'Sin opciones registradas'
-    ) AS Opciones
+    ) AS opciones
 FROM Plato p
 JOIN Seccion s ON p.idSeccion = s.id
 LEFT JOIN PlatoOpcionValor pov ON pov.idPlato = p.id
@@ -410,11 +416,11 @@ UltimoAnio AS (
         MONTH(fecha_emision) AS mes
     FROM Factura
     WHERE fecha_emision >= DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
-    AND fecha_emision < CAST(GETDATE() AS DATE) -- Quitamos el mes actual que esta incompleto
+    AND fecha_emision < CAST(GETDATE() AS DATE) -- Quitamos el mes actual que está incompleto
 ),
 AnioAnterior AS (
     SELECT 
-        SUM(monto_total) AS anioAnterior
+        CAST(ROUND(SUM(monto_total), 2) AS DECIMAL(18,2)) AS anioAnterior
     FROM Factura
     WHERE fecha_emision >= DATEADD(MONTH, -24, CAST(GETDATE() AS DATE))
     AND fecha_emision < DATEADD(MONTH, -12, CAST(GETDATE() AS DATE))
@@ -423,29 +429,24 @@ ResumenMensual AS (
     SELECT 
         anio,
         mes,
-        SUM(monto_total) AS total_mensual
+        CAST(ROUND(SUM(monto_total), 2) AS DECIMAL(18,2)) AS total_mensual
     FROM UltimoAnio
     GROUP BY anio, mes
 ),
-
 Totales AS (
     SELECT
-        AVG(total_mensual) AS avg_mensual,
-        SUM(total_mensual) AS ultimoAnio,
-        (SELECT anioAnterior FROM AnioAnterior) AS anioAnterior
+        CAST(ROUND(AVG(total_mensual), 2) AS DECIMAL(18,2)) AS avg_mensual,
+        CAST(ROUND(SUM(total_mensual), 2) AS DECIMAL(18,2)) AS ultimoAnio,
+        CAST((SELECT anioAnterior FROM AnioAnterior) AS DECIMAL(18,2)) AS anioAnterior
     FROM ResumenMensual
 )
-
 SELECT 
-    avg_mensual AS AVG_ingreso_mensual,
-    
-    ultimoAnio AS ingreso_total_ultimo_anio,
-    
-    avg_mensual * 12 AS ingreso_proyectado_12meses,
-    
+    CAST(avg_mensual AS DECIMAL(18,2)) AS AVG_ingreso_mensual,
+    CAST(ultimoAnio AS DECIMAL(18,2)) AS ingreso_total_ultimo_anio,
+    CAST(ROUND(avg_mensual * 12, 2) AS DECIMAL(18,2)) AS ingreso_proyectado_12meses,
     -- Variación porcentual estimada comparada con el año anterior
     CASE 
         WHEN anioAnterior = 0 THEN NULL
-        ELSE (ABS(ultimoAnio - anioAnterior) / (anioAnterior)) * 100
+        ELSE CAST(ROUND((ABS(ultimoAnio - anioAnterior) / NULLIF(anioAnterior, 0)) * 100, 2) AS DECIMAL(18,2))
     END AS variacion_porcentual_estimada
 FROM Totales;

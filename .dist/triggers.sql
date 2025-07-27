@@ -109,8 +109,8 @@ END;
 
 
 --------------b--------------
-
-CREATE TRIGGER trg_InsteadOfDelete_PedidoDetalle
+-- Al eliminar una fila de PedidoDetalle, se interpreta como devolución
+CREATE TRIGGER devolucion_PedidoDetalle
 ON PedidoDetalle
 INSTEAD OF DELETE
 AS
@@ -137,7 +137,8 @@ END;
 
 
 ----------------------C---------------------------
-CREATE TRIGGER trg_InsertarOpciones_PedidoDetalle
+--al insertar en PedidoDetalle, se insertan los valores de las opciones tambien
+CREATE TRIGGER InsertarOpciones_PedidoDetalle
 ON PedidoDetalle
 AFTER INSERT
 AS
@@ -153,31 +154,31 @@ BEGIN
     INNER JOIN PlatoOpcionValor pov ON pov.idPlato = i.idPlato;
 END;
 
-
--- nuevo pedido
+--ejemplo de prueba del trigger c
+-- creamos un nuevo pedido
 INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total) VALUES
 (151, 6, 6.50, 'prueba', 39, 78.50);
 
 SELECT * FROM Pedido;
 SELECT * FROM Factura;
 
--- El plato tiene 5 unidades disponibles
+-- hay 5 unidades disponibles de este plato
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
 VALUES (1001, 2, 'Sin cebolla', 25.00, 218, 1);
--- Esperado: éxito, y el inventario se reduce a 3 unidades
+-- ejemplo de cuando hay suficientes unidades disponibles del plato ahora es 3
 
 -- El plato ahora tiene solo 3 unidades disponibles
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
 VALUES (1002, 4, 'Extra picante', 50.00, 218, 1);
--- Esperado: ERROR -> “No hay unidades suficientes del producto para esta compra”
+-- ejmplo de cuando no hay unidades suficientes del producto para esta compra”
 
--- Manualmente dejamos el inventario en 0 para simular agotado
+-- dejamos la disponibilidad del plato en 0 para simular agotado
 UPDATE Plato SET cantidadDisponible = 0 WHERE id = 1;
 
 -- Intentamos pedir 1 unidad
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato)
 VALUES (1003, 1, 'Sin sal', 12.00, 218, 1);
--- Esperado: ERROR -> “El producto no está disponible por los momentos”
+-- Error: “El producto no está disponible por los momentos”
 
 
 

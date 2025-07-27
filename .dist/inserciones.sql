@@ -2364,12 +2364,12 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (216, 1, 'Sin Nota', 7.00, 149, 116),
 (217, 1, 'Sin Nota', 14.00, 150, 117),
 (218, 1, 'Sangria Grande', 8.00, 151, 40),
-(219, 1, 'Plato principal', 35.00, 152, 26), 
-(220, 1, 'Bebida', 19.00, 152, 122),
-(221, 1, 'Principal 2', 38.00, 153, 26),
-(222, 1, 'Bebida 2', 22.50, 153, 32),
-(223, 1, 'Principal 3', 36.00, 154, 26),
-(224, 1, 'Bebida 3', 21.00, 154, 36);
+(219, 1, 'Sin Nota', 35.00, 152, 26), 
+(220, 1, 'Sin Nota', 19.00, 152, 122),
+(221, 1, 'Sin Nota', 38.00, 153, 26),
+(222, 1, 'Sin Nota', 22.50, 153, 32),
+(223, 1, 'Sin Nota', 36.00, 154, 26),
+(224, 1, 'Sin Nota', 21.00, 154, 36);
 
 INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (1, 1, 45),
