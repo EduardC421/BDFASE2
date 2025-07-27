@@ -132,83 +132,86 @@ ORDER BY cf.total_facturado DESC;
 
 
 -------------- C ------------
-WITH RECENT_DELIVERED_ORDERS AS (
+WITH pedidos_recientes_entregados AS (
     SELECT
-        p.id AS PedidoID,
-        cp.idCliente,
+        p.id AS id_pedido,
+        cp.idcliente,
         f.monto_total,
         f.fecha_emision
     FROM
-        Pedido p
-        JOIN ClientePedido cp ON p.id = cp.idPedido
-        JOIN Factura f ON p.id = f.idPedido
+        pedido p
+        JOIN clientepedido cp ON p.id = cp.idpedido
+        JOIN factura f ON p.id = f.idpedido
         JOIN (
-            SELECT idPedido, MAX(fecha_inicio) AS last_status_date
-            FROM PedidoEstadoPedido
-            GROUP BY idPedido
-        ) AS latest_status ON p.id = latest_status.idPedido
-        JOIN PedidoEstadoPedido pep ON pep.idPedido = p.id AND pep.fecha_inicio = latest_status.last_status_date
+            SELECT idpedido, MAX(fecha_inicio) AS ultima_fecha_estado
+            FROM pedidoestadopedido
+            GROUP BY idpedido
+        ) AS ultimo_estado ON p.id = ultimo_estado.idpedido
+        JOIN pedidoestadopedido pep ON pep.idpedido = p.id AND pep.fecha_inicio = ultimo_estado.ultima_fecha_estado
     WHERE
-        pep.idEstadoPedido = 6
-        AND f.fecha_emision >= DATEADD(MONTH, -6, CAST('2025-07-18' AS DATE))
+        pep.idestadopedido = 6 
+        AND f.fecha_emision >= DATEADD(MONTH, -6, CAST('2025-07-18' AS DATE)) -- Fecha de referencia para los últimos 6 meses
 ),
-ORDER_DISH_SECTION_COUNTS AS (
+conteo_platos_secciones_por_pedido AS (
     SELECT
-        rd.PedidoID,
-        COUNT(DISTINCT pd.idPlato) AS DistinctPlatos,
-        COUNT(DISTINCT s.id) AS DistinctSecciones
+        pre.id_pedido,
+        COUNT(DISTINCT pd.idplato) AS total_platos_distintos,
+        COUNT(DISTINCT s.id) AS total_secciones_distintas
     FROM
-        RECENT_DELIVERED_ORDERS rd
-        JOIN PedidoDetalle pd ON rd.PedidoID = pd.idPedido
-        JOIN Plato pl ON pd.idPlato = pl.id
-        JOIN Seccion s ON pl.idSeccion = s.id
+        pedidos_recientes_entregados pre
+        JOIN pedidodetalle pd ON pre.id_pedido = pd.idpedido
+        JOIN plato pl ON pd.idplato = pl.id
+        JOIN seccion s ON pl.idseccion = s.id
     GROUP BY
-        rd.PedidoID
+        pre.id_pedido
     HAVING
-        COUNT(DISTINCT pd.idPlato) >= 2
+        COUNT(DISTINCT pd.idplato) >= 2
         AND COUNT(DISTINCT s.id) >= 2
 ),
-QUALIFIED_CUSTOMER_ORDERS AS (
+clientes_pedidos_calificados AS (
     SELECT
-        rdo.idCliente,
-        COUNT(DISTINCT rdo.PedidoID) AS TotalPedidosValidos,
-        SUM(rdo.monto_total) AS MontoTotalGastado
+        pre.idcliente,
+        COUNT(DISTINCT pre.id_pedido) AS cantidad_pedidos_validos,
+        SUM(pre.monto_total) AS monto_total_gastado
     FROM
-        RECENT_DELIVERED_ORDERS rdo
-        JOIN ORDER_DISH_SECTION_COUNTS odsc ON rdo.PedidoID = odsc.PedidoID
+        pedidos_recientes_entregados pre
+        JOIN conteo_platos_secciones_por_pedido cpspp ON pre.id_pedido = cpspp.id_pedido
     GROUP BY
-        rdo.idCliente
+        pre.idcliente
     HAVING
-        COUNT(DISTINCT rdo.PedidoID) >= 4
+        COUNT(DISTINCT pre.id_pedido) >= 4
 ),
-CUSTOMER_BEST_DELIVERY_PERSON AS (
+repartidor_mejor_calificado_por_cliente AS (
     SELECT
-        cr.idCliente,
-        r.nombre AS NombreRepartidor,
-        r.apellido AS ApellidoRepartidor,
+        cr.idcliente,
+        r.nombre AS nombre_repartidor,
+        r.apellido AS apellido_repartidor,
         cr.puntaje,
-        ROW_NUMBER() OVER (PARTITION BY cr.idCliente ORDER BY cr.puntaje DESC, r.nombre) AS rn
+        ROW_NUMBER() OVER (PARTITION BY cr.idcliente ORDER BY cr.puntaje DESC, r.nombre) AS rn
     FROM
-        ClienteRepartidor cr
-        JOIN Repartidor r ON cr.idRepartidor = r.id
+        clienterepartidor cr
+        JOIN repartidor r ON cr.idrepartidor = r.id
     WHERE
         cr.puntaje >= 4
 )
 SELECT
-    c.nombre AS NombreCliente,
-    c.apellido AS ApellidoCliente,
-    qco.TotalPedidosValidos,
-    qco.MontoTotalGastado,
-    cbdp.NombreRepartidor,
-    cbdp.ApellidoRepartidor
+    c.nombre AS nombre_cliente,
+    c.apellido AS apellido_cliente,
+    cpc.cantidad_pedidos_validos,
+    cpc.monto_total_gastado,
+    ISNULL(rmcc.nombre_repartidor, 'N/A') AS nombre_repartidor_preferido,
+    ISNULL(rmcc.apellido_repartidor, 'N/A') AS apellido_repartidor_preferido
 FROM
-    Cliente c
-    JOIN QUALIFIED_CUSTOMER_ORDERS qco ON c.id = qco.idCliente
+    cliente c
+    JOIN clientes_pedidos_calificados cpc ON c.id = cpc.idcliente
     LEFT JOIN (
-        SELECT * FROM CUSTOMER_BEST_DELIVERY_PERSON WHERE rn = 1
-    ) AS cbdp ON c.id = cbdp.idCliente
+        SELECT idcliente, nombre_repartidor, apellido_repartidor
+        FROM repartidor_mejor_calificado_por_cliente
+        WHERE rn = 1
+    ) AS rmcc ON c.id = rmcc.idcliente
 ORDER BY
-    qco.MontoTotalGastado DESC;
+    cpc.monto_total_gastado DESC;
+
 
 
 ----------- D------------------------------
