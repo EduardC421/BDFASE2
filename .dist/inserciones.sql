@@ -154,8 +154,8 @@ INSERT INTO Cliente (id, password, telefono, fecha_registro, correo, nombre, ape
 (97, 'clave097', '04163332532', '2023-07-13', 'juan.torres97@gmail.com', 'Juan', 'Torres', '1996-04-18', 'V22001311'),
 (98, 'clave098', '04240053930', '2020-07-13', 'paula.sanchez98@gmail.com', 'Paula', 'Sanchez', '1975-07-27', 'V8764002'),
 (99, 'clave099', '04149909999', '2021-07-13', 'laura.vargas99@gmail.com', 'Laura', 'Vargas', '2003-08-25', 'V30235888'),
-(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1970-12-10', 'V9768576');
-
+(100, 'clave100', '04260010302', '2022-07-13', 'miguel.castro100@gmail.com', 'Miguel', 'Castro', '1970-12-10', 'V9768576'),
+(101, 'cliente123', '04247714567', '2024-01-15', 'anitaaa@example.com', 'Ana', 'Gómez', '1990-05-20', 'V6839567');-----
 
 INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) VALUES
 (1, '1010', 'Av. Principal', 'Caracas', 'Casa', 'Quinta Carmen'),
@@ -257,7 +257,8 @@ INSERT INTO Direccion (id, codigo_postal, calle, municipio, alias, nombre_edif) 
 (97, '1871', 'Calle 8', 'Puerto Ordaz', 'Casa', 'Villa Cielo Azul'),
 (98, '1881', 'Calle 6', 'Ciudad Bolívar', 'Casa', 'Villa de Las Flores'),
 (99, '1891', 'Calle 21', 'Guarenas', 'Apartamento', 'Res. Río Verde'),
-(100, '1901', 'Calle 9', 'Mérida', 'Casa', 'Casa del Río');
+(100, '1901', 'Calle 9', 'Mérida', 'Casa', 'Casa del Río'),
+(101, '1010', 'Av. Principal', 'Chacao', 'Casa', 'Torre A');---
 
 -- Clientes con 1 dirección
 INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
@@ -276,8 +277,8 @@ INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
 (61, 61), (62, 62), (63, 63), (64, 64), (65, 65),
 (66, 66), (67, 67), (68, 68), (69, 69), (70, 70),
 (71, 71), (72, 72), (73, 73), (74, 74), (75, 75),
-(76, 76), (77, 77), (78, 78), (79, 79), (80, 80);
-
+(76, 76), (77, 77), (78, 78), (79, 79), (80, 80),
+(101, 101);---
 
 -- Clientes con 2 o más direcciones
 INSERT INTO DireccionCliente (idCliente, idDireccion) VALUES
@@ -1342,7 +1343,8 @@ INSERT INTO Repartidor (id, password, telefono, fecha_registro, correo, nombre, 
 (17, 'repartidor017', '04125556677', '2023-02-14', 'ursula.gonzalez17@gmail.com', 'Ursula', 'Gonzalez', '1990-11-25', 'E26333444', 'Bicicleta de Carga placa C6523', 'Inactivo'),
 (18, 'clave018', '04240003333', '2024-04-13', 'javier.soto18@gmail.com', 'Javier', 'Soto', '1979-05-25', 'V27000133', 'Automóvil Fiat Palio placa A3840', 'Activo'),
 (19, 'clave019', '04160004444', '2021-07-13', 'sofia.martin19@gmail.com', 'Sofia', 'Martin', '2025-07-13', 'V28000144', 'Bicicleta de Ruta Specialized', 'Inactivo'),
-(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155', 'Moto Honda placa C6430202', 'Activo');
+(20, 'clave020', '04240005555', '2022-03-13', 'david.rojas20@gmail.com', 'David', 'Rojas', '1991-01-09', 'V29090155', 'Moto Honda placa C6430202', 'Activo'),
+(21, 'clave672125', '04241151811', '2024-01-01', 'carlos_ve@example.com', 'Carlos', 'Méndez', '1985-08-15', 'V8765421', 'Moto Honda placa CB250', 'Activo'); ---
 
 INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total) VALUES
 (1, 8, 7.62, 'Añadir cubiertos extra', 45, 107.62),
@@ -1523,8 +1525,11 @@ INSERT INTO Pedido (id, cantidad_items, costo_envio, nota, tiempo_entrega, total
 (176, 2, 4.00, 'Sin Nota', 20, 31.50),
 (177, 2, 3.50, 'Sin Nota', 22, 35.50),
 (178, 2, 4.25, 'Sin Nota', 25, 35.50),
-(179, 2, 3.75, 'Sin Nota', 18, 32.00);
-
+(179, 2, 3.75, 'Sin Nota', 18, 32.00),
+(200, 3, 2.50, 'Sin cebolla por favor', 35, 45.50),
+(201, 4, 3.00, 'Entregar en portería', 40, 68.00),
+(202, 2, 2.50, 'Llamar antes de llegar', 30, 32.50),
+(203, 3, 3.00, 'Dejar con conserje', 38, 55.00);---
 
 INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 (14, 1, '2024-11-20'),
@@ -1705,7 +1710,11 @@ INSERT INTO ClientePedido (idCliente, idPedido, fecha) VALUES
 (100, 176, '2025-05-12'),
 (100, 177, '2025-06-03'),
 (100, 178, '2025-06-28'),
-(100, 179, '2025-07-10');
+(100, 179, '2025-07-10'),--
+(101, 200, '2025-02-15'),
+(101, 201, '2025-04-20'),
+(101, 202, '2025-05-10'),
+(101, 203, '2025-07-05');--
 
 INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, monto_total, idPedido) VALUES
 (1, '2023-07-16', 85.50, 16.00, 13.68, 99.18, 1),
@@ -1878,7 +1887,12 @@ INSERT INTO Factura (numero, fecha_emision, sub_total, porcentajeIva, montoIva, 
 (172, '2025-07-10', 33.00, 16.00, 5.28, 36.00, 172),
 (173, '2025-07-09', 32.00, 16.00, 5.12, 35.00, 173),
 (174, '2025-07-08', 50.00, 16.00, 8.00, 53.00, 174),
-(175, '2025-07-07', 32.00, 16.00, 5.12, 35.00, 175);
+(175, '2025-07-07', 32.00, 16.00, 5.12, 35.00, 175),--
+(176, '2025-02-15', 45.50, 16.00, 7.28, 52.78, 200),
+(177, '2025-04-20', 68.00, 16.00, 10.88, 78.88, 201),
+(178, '2025-05-10', 32.50, 16.00, 5.20, 37.70, 202),
+(179, '2025-07-05', 55.00, 16.00, 8.80, 63.80, 203);
+
 
 INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentario) VALUES
 (1, 1, '2025-07-10', 5, 'Excelente servicio, muy rápido y amable.'),
@@ -1928,7 +1942,12 @@ INSERT INTO ClienteRepartidor (idCliente, idRepartidor, fecha, puntaje, comentar
 (100, 7, '2025-05-12', 4, 'Buen servicio'),
 (100, 7, '2025-06-03', 5, 'Excelente'),
 (100, 7, '2025-06-28', 4, 'Todo bien'),
-(100, 7, '2025-07-10', 5, 'Rápido y amable');
+(100, 7, '2025-07-10', 5, 'Rápido y amable'),--
+(101, 21, '2025-02-15', 5, 'Excelente servicio, muy puntual'),
+(101, 21, '2025-04-20', 5, 'Muy amable y profesional'),
+(101, 21, '2025-05-10', 5, 'La comida llegó perfecta'),
+(101, 21, '2025-07-05', 5, 'El mejor repartidor que he tenido');
+
 
 INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (1, 2, 'Sin cebolla por favor', 37.00, 1, 1),
@@ -2196,7 +2215,20 @@ INSERT INTO PedidoDetalle (id, cantidad, nota, total, idPedido, idPlato) VALUES
 (263, 1, 'Sin Nota', 17.00, 174, 18), 
 (264, 1, 'Sin Nota', 17.00, 174, 20),
 (265, 1, 'Sin Nota', 17.00, 175, 18), 
-(266, 1, 'Sin Nota', 15.00, 175, 19);
+(266, 1, 'Sin Nota', 15.00, 175, 19),--
+
+(267, 1, 'Sin cebolla', 18.50, 200, 1),
+(268, 1, 'Extra aguacate', 9.00, 200, 29),
+
+(269, 1, 'Sin wasabi', 12.00, 201, 5),
+(270, 1, 'Picante medio', 14.00, 201, 17),
+
+(271, 1, 'Al dente', 14.50, 202, 9),
+(272, 1, 'Extra pan', 8.50, 202, 25),
+
+(273, 1, 'Extra limón', 25.00, 203, 37),
+(274, 1, 'Sin gluten', 21.00, 203, 65);
+
 
 INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (1, 1, 45),
@@ -2352,7 +2384,11 @@ INSERT INTO RepartidorPedido (idRepartidor, idPedido, tiempo_entrega) VALUES
 (20, 151, 151),
 (17, 152, 20),
 (9, 153, 22),
-(20, 154, 25);
+(20, 154, 25),--
+(21, 200, 35),
+(21, 201, 40),
+(21, 202, 30),
+(21, 203, 38);
 
 INSERT INTO PedidoDetalleOpcionValor (idPedidoDetalle, idOpcionValor, idOpcion) VALUES
 (1, 18, 6),
@@ -3006,7 +3042,12 @@ INSERT INTO PedidoEstadoPedido (idPedido, idEstadoPedido, fecha_inicio) VALUES
 (176, 1, CONVERT(DATETIME, '2025-05-12 10:00:00')), (176, 5, CONVERT(DATETIME, '2025-05-12 10:20:00')), (176, 2, CONVERT(DATETIME, '2025-05-12 10:45:00')), (176, 3, CONVERT(DATETIME, '2025-05-12 11:15:00')),
 (177, 1, CONVERT(DATETIME, '2025-06-03 09:00:00')), (177, 5, CONVERT(DATETIME, '2025-06-03 09:25:00')), (177, 2, CONVERT(DATETIME, '2025-06-03 09:50:00')), (177, 3, CONVERT(DATETIME, '2025-06-03 10:20:00')),
 (178, 1, CONVERT(DATETIME, '2025-06-28 11:00:00')), (178, 5, CONVERT(DATETIME, '2025-06-28 11:25:00')), (178, 2, CONVERT(DATETIME, '2025-06-28 11:50:00')), (178, 3, CONVERT(DATETIME, '2025-06-28 12:30:00')),
-(179, 1, CONVERT(DATETIME, '2025-07-10 10:00:00')), (179, 5, CONVERT(DATETIME, '2025-07-10 10:25:00')), (179, 2, CONVERT(DATETIME, '2025-07-10 10:50:00')), (179, 3, CONVERT(DATETIME, '2025-07-10 11:20:00'));
+(179, 1, CONVERT(DATETIME, '2025-07-10 10:00:00')), (179, 5, CONVERT(DATETIME, '2025-07-10 10:25:00')), (179, 2, CONVERT(DATETIME, '2025-07-10 10:50:00')), (179, 3, CONVERT(DATETIME, '2025-07-10 11:20:00')),
+(200, 1, CONVERT(DATETIME, '2025-02-15 12:00:00')), (200, 2, CONVERT(DATETIME, '2025-02-15 12:05:00')), (200, 3, CONVERT(DATETIME, '2025-02-15 12:25:00')), (200, 4, CONVERT(DATETIME, '2025-02-15 12:35:00')), (200, 5, CONVERT(DATETIME, '2025-02-15 12:40:00')), (200, 6, CONVERT(DATETIME, '2025-02-15 13:15:00')),
+(201, 1, CONVERT(DATETIME, '2025-04-20 18:30:00')), (201, 2, CONVERT(DATETIME, '2025-04-20 18:35:00')), (201, 3, CONVERT(DATETIME, '2025-04-20 18:55:00')), (201, 4, CONVERT(DATETIME, '2025-04-20 19:05:00')), (201, 5, CONVERT(DATETIME, '2025-04-20 19:10:00')), (201, 6, CONVERT(DATETIME, '2025-04-20 19:50:00')),
+(202, 1, CONVERT(DATETIME, '2025-05-10 13:15:00')), (202, 2, CONVERT(DATETIME, '2025-05-10 13:20:00')), (202, 3, CONVERT(DATETIME, '2025-05-10 13:40:00')), (202, 4, CONVERT(DATETIME, '2025-05-10 13:45:00')), (202, 5, CONVERT(DATETIME, '2025-05-10 13:50:00')), (202, 6, CONVERT(DATETIME, '2025-05-10 14:20:00')),
+(203, 1, CONVERT(DATETIME, '2025-07-05 20:00:00')), (203, 2, CONVERT(DATETIME, '2025-07-05 20:05:00')), (203, 3, CONVERT(DATETIME, '2025-07-05 20:25:00')), (203, 4, CONVERT(DATETIME, '2025-07-05 20:30:00')), (203, 5, CONVERT(DATETIME, '2025-07-05 20:35:00')), (203, 6, CONVERT(DATETIME, '2025-07-05 21:10:00'));
+
 
 -- 21 inserts a mano en ClienteConClienteReferido(idCliente, idClienteReferido, fecha_referido) el resto lo hace el trigger automaticamente
 INSERT INTO ClienteConClienteReferido (idCliente, idClienteReferido, fecha_referido) VALUES

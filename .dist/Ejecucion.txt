@@ -1,0 +1,14 @@
+Andreina Lacruz, 30356458, C2
+Manuel Briceño, 29611486, C2 
+Eduard Cañizales, 27812173, C1 
+
+Orden de Ejecución:
+
+Ejecutar el archivo tablas.sql 
+Ejecutar el archivo inserciones.sql
+Ejecutar las funciones antes de ejecutar los triggers y los procedures ya que son usadas por estos.
+Ejecutar los triggers uno por uno.
+Ejecutar los procedures uno por uno. 
+Para ejecutar el procedure CrearPedido, se debe ejecutar primero la creación de la tabla DetallePedidoTipo y luego el procedure.
+Para ejecutar el procedure B, se tiene que crear el pedido con el procedimiento a, además, asumimos que como apenas le estamos asignando el pedido al repartidor, la fecha de entrega es null porque el pedido no se ha entregado aún.
+Ejecutar las consultas.
